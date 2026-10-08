@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.library.management.notice.mapper.NoticeMapper">
+ <select id="byId" resultType="com.library.management.common.DbRecord">SELECT id,title,content,status,published_at,created_at,updated_at FROM notices WHERE id=#{id}</select>
+ <select id="list" resultType="com.library.management.common.DbRecord">SELECT id,title,content,status,published_at,created_at,updated_at FROM notices <where><if test="status != null and status != ''">status=#{status}</if></where> ORDER BY COALESCE(published_at,created_at) DESC,id DESC LIMIT #{size} OFFSET #{offset}</select>
+ <select id="count" resultType="long">SELECT COUNT(*) FROM notices <where><if test="status != null and status != ''">status=#{status}</if></where></select>
+ <insert id="insert" parameterType="map" useGeneratedKeys="true" keyProperty="id">INSERT INTO notices(title,content,status) VALUES(#{title},#{content},'DRAFT')</insert>
+ <update id="update">UPDATE notices SET title=#{title},content=#{content} WHERE id=#{id} AND status IN ('DRAFT','WITHDRAWN')</update>
+ <update id="publish">UPDATE notices SET status='PUBLISHED',published_at=UTC_TIMESTAMP(3),publisher_id=#{actor} WHERE id=#{id} AND status IN ('DRAFT','WITHDRAWN')</update>
+ <update id="withdraw">UPDATE notices SET status='WITHDRAWN' WHERE id=#{id} AND status='PUBLISHED'</update>
+</mapper>

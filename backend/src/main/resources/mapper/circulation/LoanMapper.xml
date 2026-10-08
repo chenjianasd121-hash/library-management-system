@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.library.management.circulation.mapper.LoanMapper">
+ <sql id="columns">l.id,l.book_id,l.copy_id,l.reader_id,b.title book_title,u.display_name reader_name,bc.barcode copy_barcode,l.borrowed_at,l.due_date,l.returned_at,l.renewal_count,l.status</sql>
+ <sql id="from">FROM loans l JOIN books b ON b.id=l.book_id JOIN book_copies bc ON bc.id=l.copy_id JOIN users u ON u.id=l.reader_id</sql>
+ <select id="byId" resultType="com.library.management.common.DbRecord">SELECT <include refid="columns"/> <include refid="from"/> WHERE l.id=#{id}</select>
+ <select id="lockById" resultType="com.library.management.common.DbRecord">SELECT <include refid="columns"/> <include refid="from"/> WHERE l.id=#{id} FOR UPDATE</select>
+ <insert id="insert" parameterType="map" useGeneratedKeys="true" keyProperty="id">INSERT INTO loans(book_id,copy_id,reader_id,borrowed_at,due_date,renewal_count,status,handled_by) VALUES(#{bookId},#{copyId},#{readerId},UTC_TIMESTAMP(3),#{dueDate},0,'ACTIVE',#{handledBy})</insert>
+ <select id="activeCount" resultType="int">SELECT COUNT(*) FROM loans WHERE reader_id=#{readerId} AND status='ACTIVE'</select>
+ <select id="activeBookCount" resultType="int">SELECT COUNT(*) FROM loans WHERE reader_id=#{readerId} AND book_id=#{bookId} AND status='ACTIVE'</select>
+ <update id="close">UPDATE loans SET status='RETURNED',returned_at=UTC_TIMESTAMP(3) WHERE id=#{id} AND status='ACTIVE'</update>
+ <update id="renew">UPDATE loans SET due_date=#{dueDate},renewal_count=1 WHERE id=#{id} AND status='ACTIVE' AND renewal_count=0</update>
+ <sql id="filter"><where>
+   <if test="readerId != null">AND l.reader_id=#{readerId}</if>
+   <if test="readerKeyword != null and readerKeyword != ''">AND (u.username LIKE CONCAT('%',#{readerKeyword},'%') OR u.display_name LIKE CONCAT('%',#{readerKeyword},'%'))</if>
+   <if test="barcode != null and barcode != ''">AND bc.barcode=#{barcode}</if>
+   <if test="status != null and status != ''">AND l.status=#{status}</if>
+   <if test="overdue != null and overdue">AND l.status='ACTIVE' AND l.due_date &lt; #{today}</if>
+   <if test="overdue != null and !overdue">AND NOT(l.status='ACTIVE' AND l.due_date &lt; #{today})</if>
+ </where></sql>
+ <select id="list" resultType="com.library.management.common.DbRecord">SELECT <include refid="columns"/> <include refid="from"/> <include refid="filter"/> ORDER BY l.borrowed_at DESC,l.id DESC LIMIT #{size} OFFSET #{offset}</select>
+ <select id="count" resultType="long">SELECT COUNT(*) <include refid="from"/> <include refid="filter"/></select>
+</mapper>

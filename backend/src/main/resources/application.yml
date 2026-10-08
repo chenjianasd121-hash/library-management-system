@@ -1,0 +1,29 @@
+server:
+  port: ${SERVER_PORT:8080}
+  servlet:
+    session:
+      cookie:
+        http-only: true
+        same-site: lax
+        secure: ${SESSION_COOKIE_SECURE:false}
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/library_management?connectionTimeZone=UTC&forceConnectionTimeZoneToSession=true}
+    username: ${DB_USER:library_app}
+    password: ${DB_PASSWORD:}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jackson:
+    time-zone: Asia/Shanghai
+  flyway:
+    enabled: true
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 3MB
+mybatis:
+  mapper-locations: classpath*:mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+library:
+  covers-directory: ${COVERS_DIR:./data/covers}

@@ -1,0 +1,10 @@
+spring:
+  config:
+    activate:
+      on-profile: demo
+library:
+  demo:
+    enabled: true
+    admin-password: ${DEMO_ADMIN_PASSWORD:}
+    librarian-password: ${DEMO_LIBRARIAN_PASSWORD:}
+    reader-password: ${DEMO_READER_PASSWORD:}

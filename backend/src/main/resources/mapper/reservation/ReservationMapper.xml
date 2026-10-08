@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.library.management.reservation.mapper.ReservationMapper">
+ <sql id="columns">r.id,r.book_id,r.reader_id,u.display_name reader_name,b.title book_title,r.status,r.requested_at,r.ready_at,r.copy_id,
+    CASE WHEN r.status='READY' THEN bc.barcode ELSE NULL END copy_barcode,
+    CASE WHEN r.status='READY' THEN bc.shelf_location ELSE NULL END shelf_location,
+    r.pickup_deadline,
+    CASE WHEN r.status='WAITING' THEN (SELECT COUNT(*)+1 FROM reservations q WHERE q.book_id=r.book_id AND q.status='WAITING' AND (q.requested_at &lt; r.requested_at OR (q.requested_at=r.requested_at AND q.id &lt; r.id))) ELSE NULL END queue_position</sql>
+ <sql id="from">FROM reservations r JOIN books b ON b.id=r.book_id JOIN users u ON u.id=r.reader_id LEFT JOIN book_copies bc ON bc.id=r.copy_id</sql>
+ <select id="byId" resultType="com.library.management.common.DbRecord">SELECT <include refid="columns"/> <include refid="from"/> WHERE r.id=#{id}</select>
+ <select id="lockById" resultType="com.library.management.common.DbRecord">SELECT <include refid="columns"/> <include refid="from"/> WHERE r.id=#{id} FOR UPDATE</select>
+ <insert id="insert" parameterType="map" useGeneratedKeys="true" keyProperty="id">INSERT INTO reservations(book_id,reader_id,status,requested_at) VALUES(#{bookId},#{readerId},'WAITING',UTC_TIMESTAMP(3))</insert>
+ <select id="countActiveReader" resultType="int">SELECT COUNT(*) FROM reservations WHERE reader_id=#{readerId} AND status IN ('WAITING','READY')</select>
+ <select id="countActiveBook" resultType="int">SELECT COUNT(*) FROM reservations WHERE book_id=#{bookId} AND status IN ('WAITING','READY')</select>
+ <select id="countWaiting" resultType="int">SELECT COUNT(*) FROM reservations WHERE book_id=#{bookId} AND status='WAITING'</select>
+ <select id="hasActiveReaderBook" resultType="int">SELECT COUNT(*) FROM reservations WHERE reader_id=#{readerId} AND book_id=#{bookId} AND status IN ('WAITING','READY')</select>
+ <select id="hasActiveLoan" resultType="int">SELECT COUNT(*) FROM loans WHERE reader_id=#{readerId} AND book_id=#{bookId} AND status='ACTIVE'</select>
+ <select id="firstWaiting" resultType="com.library.management.common.DbRecord">SELECT r.id,r.reader_id FROM reservations r JOIN users u ON u.id=r.reader_id WHERE r.book_id=#{bookId} AND r.status='WAITING' AND u.status='ACTIVE' ORDER BY r.requested_at,r.id LIMIT 1 FOR UPDATE</select>
+ <select id="readyForCopy" resultType="com.library.management.common.DbRecord">SELECT id,reader_id,book_id,pickup_deadline FROM reservations WHERE copy_id=#{copyId} AND status='READY' FOR UPDATE</select>
+ <select id="expiredForBook" resultType="com.library.management.common.DbRecord">SELECT id,copy_id FROM reservations WHERE book_id=#{bookId} AND status='READY' AND pickup_deadline &lt; #{today} ORDER BY id FOR UPDATE</select>
+ <select id="expiredBookIds" resultType="long">SELECT DISTINCT book_id FROM reservations WHERE status='READY' AND pickup_deadline &lt; #{today} ORDER BY book_id</select>
+ <update id="markReady">UPDATE reservations SET status='READY',copy_id=#{copyId},ready_at=UTC_TIMESTAMP(3),pickup_deadline=#{deadline} WHERE id=#{id} AND status='WAITING'</update>
+ <update id="close">UPDATE reservations SET status=#{to},closed_at=UTC_TIMESTAMP(3) WHERE id=#{id} AND status=#{from}</update>
+ <update id="fulfill">UPDATE reservations SET status='FULFILLED',fulfilled_at=UTC_TIMESTAMP(3),closed_at=UTC_TIMESTAMP(3) WHERE id=#{id} AND status='READY'</update>
+ <sql id="filter"><where>
+   <if test="readerId != null">AND r.reader_id=#{readerId}</if>
+   <if test="status != null and status != '' and status != 'HISTORY'">AND r.status=#{status}</if>
+   <if test="status == 'HISTORY'">AND r.status IN ('FULFILLED','CANCELLED','EXPIRED')</if>
+   <if test="bookId != null">AND r.book_id=#{bookId}</if>
+   <if test="readerKeyword != null and readerKeyword != ''">AND (u.username LIKE CONCAT('%',#{readerKeyword},'%') OR u.display_name LIKE CONCAT('%',#{readerKeyword},'%'))</if>
+ </where></sql>
+ <select id="list" resultType="com.library.management.common.DbRecord">SELECT <include refid="columns"/> <include refid="from"/> <include refid="filter"/> ORDER BY r.requested_at DESC,r.id DESC LIMIT #{size} OFFSET #{offset}</select>
+ <select id="count" resultType="long">SELECT COUNT(*) <include refid="from"/> <include refid="filter"/></select>
+ <select id="activeIdsForReader" resultType="long">SELECT id FROM reservations WHERE reader_id=#{readerId} AND status IN ('WAITING','READY') ORDER BY id</select>
+ <select id="activeIdsForBook" resultType="long">SELECT id FROM reservations WHERE book_id=#{bookId} AND status IN ('WAITING','READY') ORDER BY id</select>
+</mapper>

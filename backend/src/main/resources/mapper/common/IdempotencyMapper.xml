@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.library.management.common.mapper.IdempotencyMapper">
+ <select id="find" resultType="com.library.management.common.DbRecord">SELECT request_hash,response_code,response_json,expires_at FROM idempotency_records WHERE actor_id=#{actorId} AND method=#{method} AND path=#{path} AND idempotency_key=#{key}</select>
+ <delete id="deleteExpired">DELETE FROM idempotency_records WHERE actor_id=#{actorId} AND method=#{method} AND path=#{path} AND idempotency_key=#{key} AND expires_at &lt; UTC_TIMESTAMP(3)</delete>
+ <insert id="insert">INSERT INTO idempotency_records(actor_id,method,path,idempotency_key,request_hash,response_code,response_json,expires_at) VALUES(#{actorId},#{method},#{path},#{key},#{hash},#{responseCode},#{responseJson},#{expiresAt})</insert>
+</mapper>

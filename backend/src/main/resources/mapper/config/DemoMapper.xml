@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.library.management.config.demo.DemoMapper">
+ <select id="userCount" resultType="int">SELECT COUNT(*) FROM users</select>
+ <insert id="user" parameterType="map" useGeneratedKeys="true" keyProperty="id">INSERT INTO users(username,password_hash,display_name,role,status,must_change_password) VALUES(#{username},#{passwordHash},#{displayName},#{role},'ACTIVE',FALSE)</insert>
+ <insert id="category" parameterType="map" useGeneratedKeys="true" keyProperty="id">INSERT INTO categories(name,code,enabled,sort_order) VALUES(#{name},#{code},TRUE,#{sortOrder})</insert>
+ <insert id="book" parameterType="map" useGeneratedKeys="true" keyProperty="id">INSERT INTO books(title,author,category_id,keywords,enabled) VALUES(#{title},#{author},#{categoryId},#{keywords},TRUE)</insert>
+ <insert id="copy" parameterType="map" useGeneratedKeys="true" keyProperty="id">INSERT INTO book_copies(book_id,barcode,shelf_location,status) VALUES(#{bookId},#{barcode},#{shelfLocation},#{status})</insert>
+ <insert id="loan">INSERT INTO loans(book_id,copy_id,reader_id,borrowed_at,due_date,returned_at,status,handled_by) VALUES(#{bookId},#{copyId},#{readerId},TIMESTAMPADD(DAY,-#{daysAgo},UTC_TIMESTAMP(3)),#{dueDate},<choose><when test="status == 'RETURNED'">TIMESTAMPADD(DAY,-5,UTC_TIMESTAMP(3))</when><otherwise>NULL</otherwise></choose>,#{status},#{handlerId})</insert>
+ <insert id="reservation">INSERT INTO reservations(book_id,reader_id,copy_id,status,requested_at,ready_at,pickup_deadline,closed_at) VALUES(#{bookId},#{readerId},#{copyId},#{status},TIMESTAMPADD(DAY,-2,UTC_TIMESTAMP(3)),<choose><when test="status == 'READY'">TIMESTAMPADD(DAY,-1,UTC_TIMESTAMP(3))</when><otherwise>NULL</otherwise></choose>,#{deadline},<choose><when test="status == 'CANCELLED'">UTC_TIMESTAMP(3)</when><otherwise>NULL</otherwise></choose>)</insert>
+ <insert id="notice">INSERT INTO notices(title,content,status,published_at,publisher_id) VALUES('欢迎使用图书馆','演示环境已上线，欢迎检索馆藏并体验预约与借阅。','PUBLISHED',UTC_TIMESTAMP(3),#{publisherId})</insert>
+</mapper>

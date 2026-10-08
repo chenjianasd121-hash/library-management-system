@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.library.management.catalog.mapper.CatalogMapper">
+ <select id="categories" resultType="com.library.management.common.DbRecord">SELECT id,name,code,enabled,sort_order FROM categories <where><if test="enabled != null">enabled=#{enabled}</if></where> ORDER BY sort_order,id</select>
+ <select id="category" resultType="com.library.management.common.DbRecord">SELECT id,name,code,enabled,sort_order FROM categories WHERE id=#{id}</select>
+ <insert id="insertCategory" parameterType="map" useGeneratedKeys="true" keyProperty="id">INSERT INTO categories(name,code,enabled,sort_order) VALUES(#{name},#{code},#{enabled},#{sortOrder})</insert>
+ <update id="updateCategory">UPDATE categories SET name=COALESCE(#{name},name),code=COALESCE(#{code},code),enabled=COALESCE(#{enabled},enabled),sort_order=COALESCE(#{sortOrder},sort_order) WHERE id=#{id}</update>
+ <sql id="bookColumns">b.id,b.isbn,b.title,b.author,b.publisher,b.published_on,b.description,b.category_id,c.name category_name,b.cover_path,b.keywords,b.enabled,
+   (SELECT COUNT(*) FROM book_copies bc WHERE bc.book_id=b.id AND bc.status!='RETIRED') total_copies,
+   (SELECT COUNT(*) FROM book_copies bc WHERE bc.book_id=b.id AND bc.status='AVAILABLE') available_copies,
+   (SELECT COUNT(*) FROM book_copies bc WHERE bc.book_id=b.id AND bc.status='READY') ready_copies,
+   (SELECT COUNT(*) FROM book_copies bc WHERE bc.book_id=b.id AND bc.status='BORROWED') borrowed_copies</sql>
+ <select id="book" resultType="com.library.management.common.DbRecord">SELECT <include refid="bookColumns"/> FROM books b JOIN categories c ON c.id=b.category_id WHERE b.id=#{id}</select>
+ <select id="lockBook" resultType="com.library.management.common.DbRecord">SELECT id,isbn,title,author,category_id,enabled FROM books WHERE id=#{id} FOR UPDATE</select>
+ <sql id="bookFilter"><where>
+   <if test="keyword != null and keyword != ''">AND (b.title LIKE CONCAT('%',#{keyword},'%') OR b.author LIKE CONCAT('%',#{keyword},'%') OR b.isbn LIKE CONCAT('%',#{keyword},'%'))</if>
+   <if test="categoryId != null">AND b.category_id=#{categoryId}</if>
+   <if test="enabled != null">AND b.enabled=#{enabled}</if>
+   <if test="availableOnly != null and availableOnly">AND EXISTS(SELECT 1 FROM book_copies bc WHERE bc.book_id=b.id AND bc.status='AVAILABLE')</if>
+ </where></sql>
+ <select id="books" resultType="com.library.management.common.DbRecord">SELECT <include refid="bookColumns"/> FROM books b JOIN categories c ON c.id=b.category_id <include refid="bookFilter"/> ORDER BY b.created_at DESC,b.id DESC LIMIT #{size} OFFSET #{offset}</select>
+ <select id="countBooks" resultType="long">SELECT COUNT(*) FROM books b <include refid="bookFilter"/></select>
+ <insert id="insertBook" parameterType="map" useGeneratedKeys="true" keyProperty="id">INSERT INTO books(isbn,title,author,publisher,published_on,description,category_id,cover_path,keywords,enabled) VALUES(#{isbn},#{title},#{author},#{publisher},#{publishedOn},#{description},#{categoryId},#{coverPath},#{keywords},#{enabled})</insert>
+ <update id="updateBook" parameterType="map">UPDATE books SET isbn=#{isbn},title=#{title},author=#{author},publisher=#{publisher},published_on=#{publishedOn},description=#{description},category_id=#{categoryId},cover_path=#{coverPath},keywords=#{keywords},enabled=#{enabled} WHERE id=#{id}</update>
+</mapper>

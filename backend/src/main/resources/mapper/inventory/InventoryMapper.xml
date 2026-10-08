@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.library.management.inventory.mapper.InventoryMapper">
+ <sql id="columns">bc.id,bc.book_id,bc.barcode,bc.shelf_location,bc.status,bc.version</sql>
+ <select id="byId" resultType="com.library.management.common.DbRecord">SELECT <include refid="columns"/>,b.title book_title FROM book_copies bc JOIN books b ON b.id=bc.book_id WHERE bc.id=#{id}</select>
+ <select id="byBarcode" resultType="com.library.management.common.DbRecord">SELECT <include refid="columns"/>,b.title book_title FROM book_copies bc JOIN books b ON b.id=bc.book_id WHERE bc.barcode=#{barcode}</select>
+ <select id="lockById" resultType="com.library.management.common.DbRecord">SELECT <include refid="columns"/>,b.title book_title FROM book_copies bc JOIN books b ON b.id=bc.book_id WHERE bc.id=#{id} FOR UPDATE</select>
+ <select id="list" resultType="com.library.management.common.DbRecord">SELECT id,barcode,shelf_location,status,version FROM book_copies WHERE book_id=#{bookId}<if test="status != null and status != ''"> AND status=#{status}</if> ORDER BY id LIMIT #{size} OFFSET #{offset}</select>
+ <select id="count" resultType="long">SELECT COUNT(*) FROM book_copies WHERE book_id=#{bookId}<if test="status != null and status != ''"> AND status=#{status}</if></select>
+ <insert id="insert" parameterType="map" useGeneratedKeys="true" keyProperty="id">INSERT INTO book_copies(book_id,barcode,shelf_location,status) VALUES(#{bookId},#{barcode},#{shelfLocation},'AVAILABLE')</insert>
+ <update id="updateManual">UPDATE book_copies SET status=#{target},shelf_location=COALESCE(#{shelfLocation},shelf_location),version=version+1 WHERE id=#{id} AND version=#{version} AND status=#{current}</update>
+ <update id="changeStatus">UPDATE book_copies SET status=#{to},version=version+1 WHERE id=#{id} AND status=#{from}</update>
+ <select id="firstAvailable" resultType="com.library.management.common.DbRecord">SELECT id,book_id,barcode,shelf_location,status,version FROM book_copies WHERE book_id=#{bookId} AND status='AVAILABLE' ORDER BY id LIMIT 1 FOR UPDATE</select>
+ <select id="activeLoan" resultType="com.library.management.common.DbRecord">SELECT l.id,l.reader_id,u.display_name reader_name,l.borrowed_at,l.due_date FROM loans l JOIN users u ON u.id=l.reader_id WHERE l.copy_id=#{copyId} AND l.status='ACTIVE'</select>
+ <select id="readyReservation" resultType="com.library.management.common.DbRecord">SELECT id,reader_id FROM reservations WHERE copy_id=#{copyId} AND status='READY'</select>
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.library.management.statistics.mapper.StatisticsMapper">
+ <select id="overview" resultType="com.library.management.common.DbRecord">SELECT
+   (SELECT COUNT(*) FROM books) book_count,
+   (SELECT COUNT(*) FROM book_copies WHERE status!='RETIRED') total_copies,
+   (SELECT COUNT(*) FROM book_copies WHERE status='AVAILABLE') available_copies,
+   (SELECT COUNT(*) FROM loans WHERE status='ACTIVE') active_loans,
+   (SELECT COUNT(*) FROM loans WHERE status='ACTIVE' AND due_date &lt; #{today}) overdue_loans,
+   (SELECT COUNT(*) FROM reservations WHERE status='READY') ready_reservations,
+   (SELECT COUNT(*) FROM users WHERE role='READER' AND status='ACTIVE') reader_count</select>
+ <select id="trend" resultType="com.library.management.common.DbRecord">SELECT day date,SUM(borrowed_count) borrowed_count,SUM(returned_count) returned_count FROM (
+   SELECT DATE(CONVERT_TZ(borrowed_at,'+00:00','+08:00')) day,COUNT(*) borrowed_count,0 returned_count FROM loans WHERE borrowed_at &gt;= #{from} GROUP BY DATE(CONVERT_TZ(borrowed_at,'+00:00','+08:00'))
+   UNION ALL
+   SELECT DATE(CONVERT_TZ(returned_at,'+00:00','+08:00')) day,0 borrowed_count,COUNT(*) returned_count FROM loans WHERE returned_at &gt;= #{from} GROUP BY DATE(CONVERT_TZ(returned_at,'+00:00','+08:00'))
+ ) t GROUP BY day ORDER BY day</select>
+ <select id="topBooks" resultType="com.library.management.common.DbRecord">SELECT b.id book_id,b.title,COUNT(l.id) borrow_count FROM loans l JOIN books b ON b.id=l.book_id WHERE l.borrowed_at &gt;= #{from} GROUP BY b.id,b.title ORDER BY borrow_count DESC,b.id ASC LIMIT #{limit}</select>
+</mapper>

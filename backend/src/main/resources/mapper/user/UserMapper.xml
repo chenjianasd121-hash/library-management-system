@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.library.management.user.mapper.UserMapper">
+  <sql id="columns">id,username,password_hash,display_name,phone,role,status,must_change_password,session_version</sql>
+  <select id="byUsername" resultType="com.library.management.common.DbRecord">SELECT <include refid="columns"/> FROM users WHERE username=#{username}</select>
+  <select id="byId" resultType="com.library.management.common.DbRecord">SELECT <include refid="columns"/> FROM users WHERE id=#{id}</select>
+  <select id="lockById" resultType="com.library.management.common.DbRecord">SELECT <include refid="columns"/> FROM users WHERE id=#{id} FOR UPDATE</select>
+  <insert id="insert" parameterType="map" useGeneratedKeys="true" keyProperty="id">INSERT INTO users(username,password_hash,display_name,phone,role,status,must_change_password) VALUES(#{username},#{passwordHash},#{displayName},#{phone},#{role},#{status},#{mustChangePassword})</insert>
+  <update id="updateProfile">UPDATE users SET display_name=#{displayName},phone=#{phone} WHERE id=#{id}</update>
+  <update id="changePassword">UPDATE users SET password_hash=#{hash},must_change_password=FALSE,session_version=session_version+1 WHERE id=#{id}</update>
+  <update id="resetPassword">UPDATE users SET password_hash=#{hash},must_change_password=TRUE,session_version=session_version+1 WHERE id=#{id}</update>
+  <update id="updateUser">UPDATE users SET display_name=COALESCE(#{displayName},display_name),phone=COALESCE(#{phone},phone),status=COALESCE(#{status},status),session_version=session_version+1 WHERE id=#{id}</update>
+  <select id="countActiveAdmins" resultType="int">SELECT COUNT(*) FROM users WHERE role='ADMIN' AND status='ACTIVE'</select>
+  <select id="lockActiveAdminIds" resultType="long">SELECT id FROM users WHERE role='ADMIN' AND status='ACTIVE' ORDER BY id FOR UPDATE</select>
+  <sql id="filter"><where><if test="role != null and role != ''">AND role=#{role}</if><if test="status != null and status != ''">AND status=#{status}</if><if test="keyword != null and keyword != ''">AND (username LIKE CONCAT('%',#{keyword},'%') OR display_name LIKE CONCAT('%',#{keyword},'%'))</if></where></sql>
+  <select id="list" resultType="com.library.management.common.DbRecord">SELECT id,username,display_name,phone,role,status,must_change_password FROM users <include refid="filter"/> ORDER BY id DESC LIMIT #{size} OFFSET #{offset}</select>
+  <select id="count" resultType="long">SELECT COUNT(*) FROM users <include refid="filter"/></select>
+  <select id="readerLookup" resultType="com.library.management.common.DbRecord">SELECT u.id,u.username,u.display_name,u.status,(SELECT COUNT(*) FROM loans l WHERE l.reader_id=u.id AND l.status='ACTIVE') active_loan_count,(SELECT COUNT(*) FROM loans l WHERE l.reader_id=u.id AND l.status='ACTIVE' AND l.due_date &lt; #{today}) overdue_loan_count FROM users u WHERE u.username=#{username} AND u.role='READER'</select>
+  <select id="overdueCount" resultType="int">SELECT COUNT(*) FROM loans WHERE reader_id=#{id} AND status='ACTIVE' AND due_date &lt; #{today}</select>
+</mapper>
