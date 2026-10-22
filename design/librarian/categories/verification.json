@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-20",
+  "timezone": "Asia/Shanghai",
+  "role": "LIBRARIAN",
+  "status": "selected",
+  "verification": "PNG decoding and source-copy hashes checked programmatically; six exact category names/codes, sort1-6, five enabled plus one disabled, librarian navigation, new/edit actions and no unsupported list controls checked visually.",
+  "candidates": [
+    {
+      "display_number": 1,
+      "file": "clear-category-table.png",
+      "width": 1484,
+      "height": 1060,
+      "sha256": "a4c389e99ce89767127832bba035f3f15eb3e0044bbf0544c5362a7fc15ddee8",
+      "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-26e64f58-20b6-46b2-a886-dc819667a1b9.png",
+      "identical_to_source": true
+    },
+    {
+      "display_number": 2,
+      "file": "category-card-grid.png",
+      "width": 1484,
+      "height": 1060,
+      "sha256": "50bb504e8430f4095803d9fda0704f4a097a16b176d2ae1c7824dd868b8a60c1",
+      "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-058c23e8-b4f1-4624-a263-5062edba2b8d.png",
+      "identical_to_source": true
+    },
+    {
+      "display_number": 3,
+      "file": "status-grouped-categories.png",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "4da318911124d050267333ca1efe6f07e27d5a7200cfc8e1142be0c9a0e49277",
+      "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-fd8cfd4b-c639-4573-979d-2050cbc832ff.png",
+      "identical_to_source": true
+    }
+  ],
+  "pending_supplemental_states": [
+    "create category dialog",
+    "edit category dialog",
+    "disable confirmation",
+    "validation/error feedback"
+  ],
+  "selected_candidate": 3,
+  "selected_date": "2026-10-20",
+  "final_file": "final.png",
+  "final_sha256": "4da318911124d050267333ca1efe6f07e27d5a7200cfc8e1142be0c9a0e49277"
+}

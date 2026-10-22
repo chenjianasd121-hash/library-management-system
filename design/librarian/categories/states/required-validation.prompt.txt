@@ -1,0 +1,13 @@
+Use case: ui-mockup / precise-object-edit.
+Edit target: attached selected LIBRARIAN 新增分类 dialog with right-side填写说明. Produce ONE fixed supplementary “required fields validation” state, not a layout alternative. Whole desktop frame1487×1058, same aspect ratio. Current date anchor2026-10-20 Asia/Shanghai; no added visible dates. Crisp readable Chinese, realistic production UI, no browserchrome/collage/optionnumber/outsideannotation.
+Preserve all original brand, navy sidebar, white topbar,馆avatar欢迎回来，馆员,分类管理 active; original dimmed six-category grouped list at its original position, 共6个分类，启用5个，停用1个. Keeprecords计算机类CS1启用,文学类LIT2启用,历史类HIS3启用,经济管理ECON4启用,自然科学SCI5启用,艺术类ART6停用. Natural modalocclusion, don't rearrange rows to reveal hiddenfields.
+Preserve selected modal width around770px, two-area body with left four-fieldform and right pale-blue填写说明 helper. Only enlarge modal vertically enough for ONE inline error strip beneath its header, keep it centered and entirelyvisible. White12–14pxcorners, restrainedshadow, navy#152747, muted#70809c, border#e7edf6, blue#2775ea, errorred#d94b5f. Original modalheader 新增分类, bluefoldericon andcloseX.
+STATE: user clicked 保存 with both name andcode stillEMPTY; client returned immediately without sending APIrequest. Add one light-red fullwidth erroralert underheader above theform, smallred erroricon and exacttext 分类名称和编码不能为空. The erroralert has NOclosebutton.
+Leftform retains:
+*分类名称, empty input placeholder请输入分类名称.
+*分类编码, empty input placeholder请输入分类编码.
+排序 actual0 with disabledminus andenabledplus, min0.
+启用 blueONtoggle andtext启用.
+Onlyname/code have requiredstars. Do not invent inline validation texts or red fieldborders; this captures a direct submit without previous fieldblur, so ONLY the global erroralert is shown. Standardneutral inputborders and emptyplaceholders.
+Righthelper remains same selectedpanel withheading填写说明 and exactlythreefacts: 分类名称最多80字。 编码为2–32位字母、数字、下划线或连字符。 排序数字越小，显示越靠前。 No newrules or controls.
+Samefooter: secondary取消 andblueprimary保存 alignedright, no loading,spinner,disabledsave,success,messagebox,extraactions, parentcategory/automaticcode/colors/fields. Requiredform remainsopen forcorrection withvaluespreserved. Focus the clear errorstrip and consistent selecteddesign, avoiddecorations and crampedlayout.

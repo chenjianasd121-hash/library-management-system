@@ -1,0 +1,23 @@
+Use case: ui-mockup. Create one realistic production-quality Chinese LIBRARIAN “预约管理” screen, direction “待取预约核对台”. Target1440 x1024 full landscape desktop app screenshot. No browser/device chrome, comparison board, option number or outside caption.
+Input1 approved librarian loan list sets navy/blue styling, input2 approved librarian home sets role/shell, input3 old reservation test screenshot grounds supported filters and cancel action. NEW master/detail arrangement: full-width filter band, LEFT approx61% compact ten-row reservation list, RIGHT39% a read-only selected READY reservation summary with allocated-copy fields and navigation to checkout. Do not draw a full-width seven-column table or standalone cover cards.
+Chinese14–16px body,28px title, strong hierarchy, purposeful spacing,12–14px white corners and restrained shadows. Navy#142747–#1a3156 sidebar, #f3f7fc canvas, #152747 ink, #70809c muted, #e7edf6 rules, #2775ea blue, waiting purple#7659c9, fulfilled green#159f85, deadline orange#d98a22, historical cancelledgray/expiredmutedred. No nested cards, charts or metrics.
+248px sidebar 图书管理系统 / LIBRARY MANAGEMENT. Neutral 首页概览, collapsed 图书管理; active expanded 借阅管理 with neutral办理借出/办理归还/借阅记录, ACTIVEblue预约管理; neutral读者查找/分类管理/数据统计/系统设置. No admin account/employee/audit entries. White60px topbar global search 搜索图书、作者、分类等…; 馆 avatar, 欢迎回来，馆员.
+Header预约管理, subtitle选中待取预约，核对副本与取书期限. No global 新增预约 or direct fulfillment action.
+White top filter band: dropdown全部 selected (supported other states待取/排队中/已履约/已取消/已过期), empty读者关键词 placeholder输入姓名或用户名, empty书目编号 placeholder输入书目编号（可选）, small blue筛选. No date/reset/export/sort tools or counters.
+Below two white sibling panes with16px gap. LEFT heading预约清单, small点选记录查看右侧信息. Four columns图书与读者, 状态, 队列 / 截止, 申请时间. Bold book title with reader NAME beneath; no cover image, username, ID or assigned barcode in list. Requested date can omit time here; selected complete time appears at right. Ten compact readable rows48–52px and footer all fit.
+EXACT descending data (book|reader|state|queue-or-deadline|requested-date):
+解忧杂货店|林晓|排队中|第2位|2026-10-18
+数据结构与算法|周明|待取|2026-10-21|2026-10-18
+Java编程思想|苏晴|待取|2026-10-20|2026-10-17
+解忧杂货店|顾宁|排队中|第1位|2026-10-17
+人类简史|陈晨|待取 + 今日截止|2026-10-19|2026-10-16
+三体|李青|排队中|第1位|2026-10-15
+经济学原理|刘洋|已履约|2026-10-16|2026-10-12
+活着|刘洋|已取消|—|2026-10-10
+三体|李四|已过期|2026-10-13|2026-10-09
+百年孤独|许然|排队中|第1位|2026-10-08
+Use blue待取/purple排队中/green已履约/gray已取消/mutedred已过期. Highlight ONLY FIFTH ROW 人类简史/陈晨 with pale blue selection and left blue stripe. Keep status待取 and small orange今日截止. Waiting rows queue only, no allocated copy/deadline. Past fulfilled deadline remains historical, not expired. No separate list action column because selected-record action is at right; no bulk checkbox.
+Left footer plain每页10条 · 共20条, disabledprevious / activeblue1 / neutral2 / enablednext. No page-size selector or jump field.
+RIGHT heading待取预约核对 with blue待取 badge. Simple book-outline icon and bold人类简史, NO book cover or author. Exact labeled fields: 读者陈晨; 申请时间2026-10-16 08:20; 待取开始2026-10-16 09:30; 待取截止2026-10-19 当日结束前; 副本条码BK0015; 馆藏位置A 区 3 排. Exact location character排, barcode ends0015, NOT BK0012 which is another currently borrowed copy. These are real fields for an allocated READY record; no extra reader account, student ID, phone or fake identifiers.
+Small orange今日截止 notice and concise请在当日结束前办理取书. Blue main button前往办理借出 and red secondary text取消预约, muted helper取消预约须填写业务原因. Main button ONLY NAVIGATES to existing checkout flow, not direct fulfillment, not automatic username-prefill. Never label it确认取书/完成预约/已履约. No modal open.
+Current date2026-10-19 Asia/Shanghai. Fifth ready record requested/ready dates10-16 and deadline10-19 (three-day hold), not expired before day end. All data illustrative. No manual copy allocation, queue reordering, new reservations, bulk cancellation, SMS/reminders, fees, imports/exports, author/ISBN/cover, other-loan counts, account states, loan在借/已归还 statuses or API/server/framework mechanics. Keep selected row and details perfectly consistent, all10 rows, footer and action buttons unclipped. Render one complete coherent independent focused screenshot.

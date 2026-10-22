@@ -1,0 +1,18 @@
+Create ONE new independent high-fidelity Chinese LIBRARIAN 个人资料 desktop screenshot, direction “通栏分区资料”: ONE naturally sized wide whitecard with a modest horizontal identitystrip, then readonly account section, then editable display section, then actions. Recompose reference's separate leftidentitycard/rightform; no separateleftcard in this direction. Full frame approx1440×1024, no browserchrome/collage/optionnumber. Dateanchor2026-10-20 Asia/Shanghai, no datevisible.
+
+Preserve exact navy230–250px sidebar #142747–#1a3156, white60px topbar, #f3f7fc canvas, dark #152747, muted #70809c, blue #2775ea, #e7edf6 fine dividers, white12px roundedcard with subtle shadow, clear Chinese sans-serif28px heading and14–16px fields. Brand 图书管理系统 / LIBRARY MANAGEMENT.
+Sidebar 首页概览, 图书管理 collapsed, 借阅管理 collapsed, 读者查找, 分类管理, 数据统计, 系统设置 expanded with 公告管理 unselected, 个人资料 ACTIVEblue, 公开公告 unselected. No admin user/audit or readerpersonal menus. Topbar global 搜索图书、作者、分类等… with搜索 affordance, rightavatar 馆, 欢迎回来，馆员.
+Breadcrumb 系统设置 / 个人资料. Title 个人资料. Subtitle 更新您的公开显示信息. No headerbuttons.
+
+One wide card about1000–1100pxwide, naturalheight~580–620px, belowheading, no oversizedempty form. Topstrip modest staticblue avatar 馆 about56px, displayname馆员, smallusername staff and subtle角色馆员badge, horizontallycomposed. No camera/plus/upload, no online/status/activity numbers.
+Thin divider.
+Section 账号信息. Two equalwidth DISABLED inputs sidebyside:
+用户名 actual staff; 角色 actual 馆员. Palegrayfill, small lockicons optional. Neither editable or required. Helper 用户名和角色仅供查看. No internal LIBRARIAN code.
+Thin divider.
+Section 显示信息. Two equalwidth controls sidebyside:
+*显示名 editable input actualdarkvalue馆员, counter2 / 40; helper显示名需为2–40字.
+手机号 editable EMPTY input, lightplaceholder请输入手机号（可选）. Optional, no star, no fakephone.
+Onlydisplayname required. No phone verification/binding/SMS or inventedvalidation.
+Bottom action area separated byhairline: primaryblue 保存资料 and secondaryoutlined 修改密码. Exactlytwoactions, enabledloadedunchanged state, no save elsewhere/header, cancel/reset/logout/deleteaccount or passwordfields. Keep allcontrols andlabels aligned and visible, quiet breathingroom below card.
+
+All4corefields and sameexactdata as reference. No email, department, employeeID/jobtitle, editablepermissions, registration/lastlogin date, accountmanagement, avatarupload, borrowingstats, charts, activity or otherbusiness. No errors/loading/success/unsavedwarning. Simple polished roleaware profile maintenance with coherent hierarchy and continuous reading order. Do not fill blankcanvas with fakecontent.

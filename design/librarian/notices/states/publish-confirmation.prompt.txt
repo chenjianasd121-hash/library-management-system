@@ -1,0 +1,6 @@
+Precise UI edit of attached librarian 公告预览 screenshot to add the actual pre-publish confirmation. One fixed workflow state, full1487×1058, dateanchor2026-10-20 Asia/Shanghai. Keep underlyingapp AND existing readonlypreview unchanged, including title/aboutopeninghours and bothparagraphs, closeX, navy sidebar馆identity,公告管理active, sixdrafts. Background publicfooter remainsall访客.
+Add one small WHITE warningconfirmation dialog above the preview, centered aroundx743,y529, width560px height260px,12pxcorners, restrainedshadow. Add subtleadditional scrim so preview isvisiblebutinactive. Match selectednavy/blue/white libraryUI, crisp14–16px Chinese.
+Foregroundheader 确认操作, orange warningicon, closeX.
+Exactbody: 确认发布公告《关于图书馆开放时间调整的通知》？公告将对所有访客可见。
+Use2–3cleanlines, noextra consequence. Foregroundfooter ONLY取消 secondary and确定 blueprimary, alignedright. Noextra fields/checkbox/publicrange/schedule/reddeletebutton. Underlyingpreview title/body may naturally be obscured; do not move it out of place.
+The publicvisibility wording must be ALL VISITORS, not only authenticatedreaders. This is before confirmation, no success or published state yet. No editorform, browserchrome/collage/optionslabels/outsideannotation.

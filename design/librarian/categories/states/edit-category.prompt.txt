@@ -1,0 +1,10 @@
+Use case ui-mockup / precise-object-edit. Edit target is attached SELECTED librarian create-category modal screenshot, change ONLY the form to EDIT an existing enabled category. This is a supplementary state of the already selected design, not a new alternative. Whole desktop frame1487x1058, match aspect ratio and resolution. Dateanchor2026-10-20 Asia/Shanghai, no visible date. Realistic production quality Chinese UI, crisp readable text; no browserchrome, collage, optionnumber or outsideannotation.
+FREEZE brand, navy sidebar, white topbar,馆 avatar and欢迎回来，馆员,分类管理 active, dimmedcategory mainlayout andrecords, modal size/position, corner14, typographic hierarchy, right pale-blue填写说明 helper,footer andbuttons. Underlying data stays six categories5enabled1disabled:计算机类 CS1启用;文学类 LIT2启用;历史类 HIS3启用;经济管理 ECON4启用;自然科学 SCI5启用;艺术类 ART6停用.
+Onlychanges to selectedmodal:
+Header title 编辑分类 (same bluefolder icon and closeX).
+Name actual text 计算机类 and code actual CS, bothrequired withredasterisk. NOT placeholders.
+排序 actual1; bothminus/plusenabled because min0.
+启用 ONblue switch andtext启用.
+Righthelper stays verbatim 分类名称最多80字。 编码为2–32位字母、数字、下划线或连字符。 排序数字越小，显示越靠前。
+Footer remains secondary取消 andblueprimary保存. Same exactlyfourfields; no automaticcode,counts,delete,parent,icons/colorfield,filters or additionalnav.
+Noerrors,confirmation,success,loading, unsaved badge or extraactions. Preserve natural modalocclusion. All fields andfooter visible. This is initial editing CS before anychanges.

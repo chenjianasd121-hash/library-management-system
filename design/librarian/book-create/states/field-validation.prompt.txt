@@ -1,0 +1,8 @@
+Use case: ui-mockup. Edit the attached selected librarian 新增书目 form into its failed local field-validation state. Keep the same 1486×1058 full desktop, librarian sidebar with 新增书目 selected, three form sections, all original optional fields, cover placeholder, enabled switch ON, footer and primary save button.
+The form has blank 书名, blank 作者, blank 分类, and ISBN-13 entered as 9787115546082 (invalid checksum). Show red borders plus one inline error below each affected field:
+书名需为 1–200 字
+作者需为 1–120 字
+请输入有效的 ISBN-13
+请选择分类
+Title counter stays 0/200; description blank with 0/5000. Optional publisher/date/keywords are blank and not red. No global error strip because this is local field validation, no request/loading/success. Keep upload cover neutral and existing helper JPEG/PNG/WebP最大2MiB.
+Maintain selected two-column form organization. Adjust vertical spacing slightly so all controls and footer are fully inside frame. No new reset/delete/AI/extra actions, no modal, option numbers, browser chrome or collage. Crisp readable Chinese.

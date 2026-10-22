@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-21",
+  "role": "LIBRARIAN",
+  "historical_snapshot": true,
+  "superseded_by": "continuation-2026-10-21.manifest.json",
+  "phase": "return-and-overdue-filter",
+  "image_limit": 3,
+  "phase_complete": true,
+  "all_remaining_designs_complete": false,
+  "images": [
+    "return/states/no-active-loan.png",
+    "return/states/return-success.png",
+    "loans/states/overdue-filter.png"
+  ],
+  "next_unfinished": "reservations/states/ready-filter.png",
+  "following": [
+    "reservations/states/waiting-filter.png",
+    "reservations/states/cancel-reason-validation.png"
+  ],
+  "application_code_written": false,
+  "review_status": "ready_for_user_review_after_generation"
+}

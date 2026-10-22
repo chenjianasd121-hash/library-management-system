@@ -1,0 +1,6 @@
+Use case: ui-mockup. Edit the attached selected librarian notice list into its WITHDRAWN filter state, preserving the same 1487×1058 desktop composition, navy librarian sidebar, white topbar, pale blue canvas, type and spacing.
+Move the active blue underline from 已发布 to 已撤下. 草稿 and 已发布 become inactive. There is exactly ONE row, the same notice 关于图书馆开放时间调整的通知 with its existing short summary. Change its green 已发布 badge to a quiet neutral grey 已撤下 badge. The row actions are now 编辑, 预览, 发布, in that order. Do NOT keep 撤下.
+Keep the displayed label 发布时间 and original timestamp 2026-10-19 10:00: withdrawal does not erase or replace publishedAt.
+Change top-right counter to 共1条已撤下 and bottom count to 共1条已撤下 · 每页10条. Page 1 active, previous and next disabled. The other five notices remain drafts, so do not add them to this filter.
+No overlays, no success toast, no loader or validation. Preserve 新建公告 and 刷新. Exact page footer 发布后公告将对所有访客可见。
+This is ONE complete state, no multiple options, annotation board, device frame or browser chrome.

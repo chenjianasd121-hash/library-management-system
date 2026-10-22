@@ -1,0 +1,19 @@
+Create a realistic production-quality Chinese desktop web UI, one full “借阅管理” screen for an administrator. Target 1440 × 1024, flat app screenshot, no browser/device, no multi-screen board or option numbers. Named direction “清晰借阅清单”.
+Input image 1 is the user's approved book-management design and is the visual source to follow closely: recognisable dark navy sidebar, white topbar, cool pale-blue canvas, rounded white surfaces, clear blue action buttons, calm generous spacing. Input image 2 is existing borrowing-records page, for functional grounding. Keep a consistent system, not a new style.
+Purpose: administrator finds loans by reader and physical-copy barcode, spots overdue loans and navigates to return processing. Show only supported workflows. No fines, batch returns, SMS, export, renewal by staff, date-range filtering or invented totals/metric panels.
+Existing palette: sidebar #142747 to #1a3156, background #f3f7fc, ink #152747, muted #70809c, line #e7edf6, blue #2775ea, teal #159f85, red #d94b5f, purple #7659c9. 12–14px corners, subtle shadows, Chinese sans-serif, body 14–16px, heading 28px. Differentiate using typography, whitespace and thin row rules first; no nested cards.
+248px left sidebar and 60px topbar. Brand “图书管理系统” / LIBRARY MANAGEMENT. Navigation “首页概览”, “图书管理”, highlighted “借阅管理” expanded to “办理借出”, “办理归还”, active “借阅记录”, “预约管理”; below “读者管理”, “分类管理”, “数据统计”, “系统设置”. Top global search and admin account as approved image.
+Main title “借阅管理”, subtitle “检索借阅记录，及时处理逾期图书”. Top-right primary blue “办理归还”, secondary light outline “办理借出”.
+A single tidy filter band below heading has large field “读者姓名或账号”, field “副本条码”, dropdown “全部状态”, blue “查询” and light “重置”. Tabs inside list header can replace the dropdown, but choose one system only: “全部”, “在借”, “已归还”, “逾期” with no invented tab counts. Prefer dropdown in filter band and a quiet record total “共 28 条借阅记录”.
+White rounded list surface with 8 comfortable table rows. Columns “图书 / 副本条码”, “借阅者”, “借出时间”, “应还日期”, “状态”, “操作”. First cell includes 42×56 realistic book-cover thumbnail, semibold title, small barcode beneath. Readers have small initials avatars and name plus account, purely identity not extra fields.
+Today is 2026-10-08 Asia/Shanghai. Plausible rows:
+Java编程思想 / BK0001 / 张三 / zhangsan / borrowed 2026-09-20 14:22 / due 2026-10-20 / 在借.
+人类简史 / BK0012 / 李四 / lisi / borrowed 2026-09-02 10:18 / due 2026-10-02 / 逾期 6 天.
+解忧杂货店 / BK0025 / 王五 / wangwu / borrowed 2026-09-25 09:40 / due 2026-10-25 / 在借.
+数据结构与算法 / BK0033 / 赵六 / zhaoliu / borrowed 2026-09-04 16:05 / due 2026-10-04 / 逾期 4 天.
+经济学原理 / BK0041 / 陈晨 / chenchen / borrowed 2026-09-10 13:08 / due 2026-10-10 / 已归还.
+活着 / BK0052 / 林晓 / linxiao / borrowed 2026-09-28 11:16 / due 2026-10-28 / 在借.
+Python编程 / BK0064 / 周明 / zhouming / borrowed 2026-09-15 15:30 / due 2026-10-15 / 已归还.
+三体 / BK0073 / 刘洋 / liuyang / borrowed 2026-10-01 10:02 / due 2026-10-31 / 在借.
+Overdue is an active loan shown clearly red “逾期 6 天”, not a returned loan; highlight due date with restrained red and very faint row tint. 在借 pill blue, 已归还 pill mint. Active and overdue rows have small blue “去归还” action. Returned rows have an em dash, no active return button. Keep all dates chronological relative to supplied today and make text fit without clipping.
+Footer has “每页 10 条” and pagination “1 2 3” with active first page. Do not add charts or blanket explanation panels. Entire screen calm, crisp Chinese, with comfortable readable density and matches approved reference. All displayed records illustrative.

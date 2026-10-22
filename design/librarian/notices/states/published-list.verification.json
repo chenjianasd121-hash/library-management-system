@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-20",
+  "role": "LIBRARIAN",
+  "file": "published-list.png",
+  "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-b6d83b24-3e76-4d23-a8d3-e51e55c58207.png",
+  "width": 1487,
+  "height": 1058,
+  "sha256": "e934d96bcdfe742c59923cddacc9d1e5444b48b535328be0e2ffc11deb1d1b66",
+  "identical_to_source": true,
+  "visual_check": "Published active tab, one existing notice, published time2026-10-19 10:00, only preview/withdraw. Count1/page10 with disabled prev/next. Other5drafts not shown. Librarian shell and public visitors wording correct.",
+  "review_status": "ready_for_user_review"
+}

@@ -1,0 +1,1293 @@
+{
+  "batch": "LOCAL_TEST_20261022",
+  "startedAt": "2026-10-22T13:47:57.0938228+08:00",
+  "phase": "complete",
+  "originalDataReset": false,
+  "accounts": [
+    {
+      "displayName": "测试管理员",
+      "id": "17",
+      "role": "ADMIN",
+      "username": "test_admin_1022"
+    },
+    {
+      "displayName": "测试馆员",
+      "id": "18",
+      "role": "LIBRARIAN",
+      "username": "test_librarian_1022"
+    },
+    {
+      "displayName": "测试读者一",
+      "id": "19",
+      "role": "READER",
+      "username": "test_reader1_1022"
+    },
+    {
+      "displayName": "测试读者二",
+      "id": "20",
+      "role": "READER",
+      "username": "test_reader2_1022"
+    },
+    {
+      "displayName": "测试逾期读者",
+      "id": "21",
+      "role": "READER",
+      "username": "test_overdue_1022"
+    }
+  ],
+  "categories": [
+    {
+      "id": "6",
+      "name": "测试·文学小说",
+      "code": "TEST1022_1",
+      "enabled": true,
+      "sortOrder": 20
+    },
+    {
+      "id": "7",
+      "name": "测试·历史文化",
+      "code": "TEST1022_2",
+      "enabled": true,
+      "sortOrder": 21
+    },
+    {
+      "id": "8",
+      "name": "测试·计算机技术",
+      "code": "TEST1022_3",
+      "enabled": true,
+      "sortOrder": 22
+    },
+    {
+      "id": "9",
+      "name": "测试·自然科学",
+      "code": "TEST1022_4",
+      "enabled": true,
+      "sortOrder": 23
+    },
+    {
+      "id": "10",
+      "name": "测试·艺术设计",
+      "code": "TEST1022_5",
+      "enabled": true,
+      "sortOrder": 24
+    },
+    {
+      "id": "11",
+      "name": "测试·心理成长",
+      "code": "TEST1022_6",
+      "enabled": true,
+      "sortOrder": 25
+    },
+    {
+      "id": "12",
+      "name": "测试·经管社会",
+      "code": "TEST1022_7",
+      "enabled": true,
+      "sortOrder": 26
+    },
+    {
+      "id": "13",
+      "name": "测试·学习方法",
+      "code": "TEST1022_8",
+      "enabled": true,
+      "sortOrder": 27
+    }
+  ],
+  "books": [
+    {
+      "enabled": true,
+      "id": "29",
+      "title": "【测试】三体",
+      "copies": [
+        {
+          "id": "29",
+          "barcode": "TEST1022-001-01",
+          "shelfLocation": "测试书架-01",
+          "status": "BORROWED",
+          "version": 1
+        },
+        {
+          "id": "30",
+          "barcode": "TEST1022-001-02",
+          "shelfLocation": "测试书架-01",
+          "status": "AVAILABLE",
+          "version": 0
+        },
+        {
+          "id": "31",
+          "barcode": "TEST1022-001-03",
+          "shelfLocation": "测试书架-01",
+          "status": "AVAILABLE",
+          "version": 0
+        }
+      ],
+      "categoryId": "6"
+    },
+    {
+      "enabled": true,
+      "id": "30",
+      "title": "【测试】活着",
+      "copies": [
+        {
+          "id": "32",
+          "barcode": "TEST1022-002-01",
+          "shelfLocation": "测试书架-01",
+          "status": "BORROWED",
+          "version": 1
+        },
+        {
+          "id": "33",
+          "barcode": "TEST1022-002-02",
+          "shelfLocation": "测试书架-01",
+          "status": "AVAILABLE",
+          "version": 0
+        },
+        {
+          "id": "34",
+          "barcode": "TEST1022-002-03",
+          "shelfLocation": "测试书架-01",
+          "status": "AVAILABLE",
+          "version": 0
+        }
+      ],
+      "categoryId": "6"
+    },
+    {
+      "enabled": true,
+      "id": "31",
+      "title": "【测试】平凡的世界",
+      "copies": [
+        {
+          "id": "35",
+          "barcode": "TEST1022-003-01",
+          "shelfLocation": "测试书架-01",
+          "status": "READY",
+          "version": 1
+        },
+        {
+          "id": "36",
+          "barcode": "TEST1022-003-02",
+          "shelfLocation": "测试书架-01",
+          "status": "AVAILABLE",
+          "version": 0
+        },
+        {
+          "id": "37",
+          "barcode": "TEST1022-003-03",
+          "shelfLocation": "测试书架-01",
+          "status": "AVAILABLE",
+          "version": 0
+        }
+      ],
+      "categoryId": "6"
+    },
+    {
+      "enabled": true,
+      "id": "32",
+      "title": "【测试】万历十五年",
+      "copies": [
+        {
+          "id": "38",
+          "barcode": "TEST1022-004-01",
+          "shelfLocation": "测试书架-02",
+          "status": "BORROWED",
+          "version": 2
+        },
+        {
+          "id": "39",
+          "barcode": "TEST1022-004-02",
+          "shelfLocation": "测试书架-02",
+          "status": "AVAILABLE",
+          "version": 0
+        },
+        {
+          "id": "40",
+          "barcode": "TEST1022-004-03",
+          "shelfLocation": "测试书架-02",
+          "status": "AVAILABLE",
+          "version": 0
+        }
+      ],
+      "categoryId": "7"
+    },
+    {
+      "enabled": true,
+      "id": "33",
+      "title": "【测试】人类简史",
+      "copies": [
+        {
+          "id": "41",
+          "barcode": "TEST1022-005-01",
+          "shelfLocation": "测试书架-02",
+          "status": "BORROWED",
+          "version": 1
+        },
+        {
+          "id": "42",
+          "barcode": "TEST1022-005-02",
+          "shelfLocation": "测试书架-02",
+          "status": "AVAILABLE",
+          "version": 0
+        },
+        {
+          "id": "43",
+          "barcode": "TEST1022-005-03",
+          "shelfLocation": "测试书架-02",
+          "status": "AVAILABLE",
+          "version": 0
+        }
+      ],
+      "categoryId": "7"
+    },
+    {
+      "enabled": true,
+      "id": "34",
+      "title": "【测试】史记选读",
+      "copies": [
+        {
+          "id": "44",
+          "barcode": "TEST1022-006-01",
+          "shelfLocation": "测试书架-02",
+          "status": "AVAILABLE",
+          "version": 2
+        },
+        {
+          "id": "45",
+          "barcode": "TEST1022-006-02",
+          "shelfLocation": "测试书架-02",
+          "status": "AVAILABLE",
+          "version": 0
+        },
+        {
+          "id": "46",
+          "barcode": "TEST1022-006-03",
+          "shelfLocation": "测试书架-02",
+          "status": "AVAILABLE",
+          "version": 0
+        }
+      ],
+      "categoryId": "7"
+    },
+    {
+      "enabled": true,
+      "id": "35",
+      "title": "【测试】深入理解计算机系统",
+      "copies": [
+        {
+          "id": "47",
+          "barcode": "TEST1022-007-01",
+          "shelfLocation": "测试书架-03",
+          "status": "AVAILABLE",
+          "version": 0
+        },
+        {
+          "id": "48",
+          "barcode": "TEST1022-007-02",
+          "shelfLocation": "测试书架-03",
+          "status": "AVAILABLE",
+          "version": 0
+        },
+        {
+          "id": "49",
+          "barcode": "TEST1022-007-03",
+          "shelfLocation": "测试书架-03",
+          "status": "AVAILABLE",
+          "version": 0
+        }
+      ],
+      "categoryId": "8"
+    },
+    {
+      "enabled": true,
+      "id": "36",
+      "title": "【测试】代码大全",
+      "copies": [],
+      "categoryId": "8"
+    },
+    {
+      "enabled": true,
+      "id": "37",
+      "title": "【测试】算法导论",
+      "copies": [
+        {
+          "id": "50",
+          "barcode": "TEST1022-009-01",
+          "shelfLocation": "测试书架-03",
+          "status": "BORROWED",
+          "version": 1
+        },
+        {
+          "id": "51",
+          "barcode": "TEST1022-009-02",
+          "shelfLocation": "测试书架-03",
+          "status": "AVAILABLE",
+          "version": 0
+        },
+        {
+          "id": "52",
+          "barcode": "TEST1022-009-03",
+          "shelfLocation": "测试书架-03",
+          "status": "AVAILABLE",
+          "version": 0
+        }
+      ],
+      "categoryId": "8"
+    },
+    {
+      "enabled": true,
+      "id": "38",
+      "title": "【测试】时间简史",
+      "copies": [
+        {
+          "id": "53",
+          "barcode": "TEST1022-010-01",
+          "shelfLocation": "测试书架-04",
+          "status": "READY",
+          "version": 1
+        }
+      ],
+      "categoryId": "9"
+    },
+    {
+      "enabled": true,
+      "id": "39",
+      "title": "【测试】从一到无穷大",
+      "copies": [
+        {
+          "id": "54",
+          "barcode": "TEST1022-011-01",
+          "shelfLocation": "测试书架-04",
+          "status": "AVAILABLE",
+          "version": 2
+        },
+        {
+          "id": "55",
+          "barcode": "TEST1022-011-02",
+          "shelfLocation": "测试书架-04",
+          "status": "AVAILABLE",
+          "version": 0
+        },
+        {
+          "id": "56",
+          "barcode": "TEST1022-011-03",
+          "shelfLocation": "测试书架-04",
+          "status": "AVAILABLE",
+          "version": 0
+        }
+      ],
+      "categoryId": "9"
+    },
+    {
+      "enabled": true,
+      "id": "40",
+      "title": "【测试】物种起源",
+      "copies": [
+        {
+          "id": "57",
+          "barcode": "TEST1022-012-01",
+          "shelfLocation": "测试书架-04",
+          "status": "AVAILABLE",
+          "version": 2
+        },
+        {
+          "id": "58",
+          "barcode": "TEST1022-012-02",
+          "shelfLocation": "测试书架-04",
+          "status": "AVAILABLE",
+          "version": 0
+        },
+        {
+          "id": "59",
+          "barcode": "TEST1022-012-03",
+          "shelfLocation": "测试书架-04",
+          "status": "AVAILABLE",
+          "version": 0
+        }
+      ],
+      "categoryId": "9"
+    },
+    {
+      "enabled": true,
+      "id": "41",
+      "title": "【测试】艺术的故事",
+      "copies": [
+        {
+          "id": "60",
+          "barcode": "TEST1022-013-01",
+          "shelfLocation": "测试书架-05",
+          "status": "AVAILABLE",
+          "version": 2
+        },
+        {
+          "id": "61",
+          "barcode": "TEST1022-013-02",
+          "shelfLocation": "测试书架-05",
+          "status": "AVAILABLE",
+          "version": 0
+        },
+        {
+          "id": "62",
+          "barcode": "TEST1022-013-03",
+          "shelfLocation": "测试书架-05",
+          "status": "AVAILABLE",
+          "version": 0
+        }
+      ],
+      "categoryId": "10"
+    },
+    {
+      "enabled": true,
+      "id": "42",
+      "title": "【测试】设计心理学",
+      "copies": [
+        {
+          "id": "63",
+          "barcode": "TEST1022-014-01",
+          "shelfLocation": "测试书架-05",
+          "status": "AVAILABLE",
+          "version": 2
+        },
+        {
+          "id": "64",
+          "barcode": "TEST1022-014-02",
+          "shelfLocation": "测试书架-05",
+          "status": "AVAILABLE",
+          "version": 0
+        },
+        {
+          "id": "65",
+          "barcode": "TEST1022-014-03",
+          "shelfLocation": "测试书架-05",
+          "status": "AVAILABLE",
+          "version": 0
+        }
+      ],
+      "categoryId": "10"
+    },
+    {
+      "enabled": true,
+      "id": "43",
+      "title": "【测试】美的历程",
+      "copies": [
+        {
+          "id": "66",
+          "barcode": "TEST1022-015-01",
+          "shelfLocation": "测试书架-05",
+          "status": "AVAILABLE",
+          "version": 2
+        },
+        {
+          "id": "67",
+          "barcode": "TEST1022-015-02",
+          "shelfLocation": "测试书架-05",
+          "status": "AVAILABLE",
+          "version": 0
+        },
+        {
+          "id": "68",
+          "barcode": "TEST1022-015-03",
+          "shelfLocation": "测试书架-05",
+          "status": "AVAILABLE",
+          "version": 0
+        }
+      ],
+      "categoryId": "10"
+    },
+    {
+      "enabled": true,
+      "id": "44",
+      "title": "【测试】被讨厌的勇气",
+      "copies": [
+        {
+          "id": "69",
+          "barcode": "TEST1022-016-01",
+          "shelfLocation": "测试书架-06",
+          "status": "AVAILABLE",
+          "version": 2
+        },
+        {
+          "id": "70",
+          "barcode": "TEST1022-016-02",
+          "shelfLocation": "测试书架-06",
+          "status": "AVAILABLE",
+          "version": 0
+        },
+        {
+          "id": "71",
+          "barcode": "TEST1022-016-03",
+          "shelfLocation": "测试书架-06",
+          "status": "AVAILABLE",
+          "version": 0
+        }
+      ],
+      "categoryId": "11"
+    },
+    {
+      "enabled": true,
+      "id": "45",
+      "title": "【测试】终身成长",
+      "copies": [
+        {
+          "id": "72",
+          "barcode": "TEST1022-017-01",
+          "shelfLocation": "测试书架-06",
+          "status": "AVAILABLE",
+          "version": 2
+        },
+        {
+          "id": "73",
+          "barcode": "TEST1022-017-02",
+          "shelfLocation": "测试书架-06",
+          "status": "AVAILABLE",
+          "version": 0
+        },
+        {
+          "id": "74",
+          "barcode": "TEST1022-017-03",
+          "shelfLocation": "测试书架-06",
+          "status": "AVAILABLE",
+          "version": 0
+        }
+      ],
+      "categoryId": "11"
+    },
+    {
+      "enabled": true,
+      "id": "46",
+      "title": "【测试】思考，快与慢",
+      "copies": [
+        {
+          "id": "75",
+          "barcode": "TEST1022-018-01",
+          "shelfLocation": "测试书架-06",
+          "status": "AVAILABLE",
+          "version": 2
+        },
+        {
+          "id": "76",
+          "barcode": "TEST1022-018-02",
+          "shelfLocation": "测试书架-06",
+          "status": "AVAILABLE",
+          "version": 0
+        },
+        {
+          "id": "77",
+          "barcode": "TEST1022-018-03",
+          "shelfLocation": "测试书架-06",
+          "status": "AVAILABLE",
+          "version": 0
+        }
+      ],
+      "categoryId": "11"
+    },
+    {
+      "enabled": true,
+      "id": "47",
+      "title": "【测试】经济学原理",
+      "copies": [
+        {
+          "id": "78",
+          "barcode": "TEST1022-019-01",
+          "shelfLocation": "测试书架-07",
+          "status": "MAINTENANCE",
+          "version": 1
+        },
+        {
+          "id": "79",
+          "barcode": "TEST1022-019-02",
+          "shelfLocation": "测试书架-07",
+          "status": "AVAILABLE",
+          "version": 0
+        },
+        {
+          "id": "80",
+          "barcode": "TEST1022-019-03",
+          "shelfLocation": "测试书架-07",
+          "status": "AVAILABLE",
+          "version": 0
+        }
+      ],
+      "categoryId": "12"
+    },
+    {
+      "enabled": true,
+      "id": "48",
+      "title": "【测试】乡土中国",
+      "copies": [
+        {
+          "id": "81",
+          "barcode": "TEST1022-020-01",
+          "shelfLocation": "测试书架-07",
+          "status": "RETIRED",
+          "version": 1
+        },
+        {
+          "id": "82",
+          "barcode": "TEST1022-020-02",
+          "shelfLocation": "测试书架-07",
+          "status": "AVAILABLE",
+          "version": 0
+        },
+        {
+          "id": "83",
+          "barcode": "TEST1022-020-03",
+          "shelfLocation": "测试书架-07",
+          "status": "AVAILABLE",
+          "version": 0
+        }
+      ],
+      "categoryId": "12"
+    },
+    {
+      "enabled": true,
+      "id": "49",
+      "title": "【测试】学会提问",
+      "copies": [
+        {
+          "id": "84",
+          "barcode": "TEST1022-021-01",
+          "shelfLocation": "测试书架-07",
+          "status": "AVAILABLE",
+          "version": 0
+        },
+        {
+          "id": "85",
+          "barcode": "TEST1022-021-02",
+          "shelfLocation": "测试书架-07",
+          "status": "MAINTENANCE",
+          "version": 1
+        },
+        {
+          "id": "86",
+          "barcode": "TEST1022-021-03",
+          "shelfLocation": "测试书架-07",
+          "status": "AVAILABLE",
+          "version": 0
+        }
+      ],
+      "categoryId": "12"
+    },
+    {
+      "enabled": true,
+      "id": "50",
+      "title": "【测试】如何阅读一本书",
+      "copies": [
+        {
+          "id": "87",
+          "barcode": "TEST1022-022-01",
+          "shelfLocation": "测试书架-08",
+          "status": "AVAILABLE",
+          "version": 0
+        },
+        {
+          "id": "88",
+          "barcode": "TEST1022-022-02",
+          "shelfLocation": "测试书架-08",
+          "status": "AVAILABLE",
+          "version": 0
+        },
+        {
+          "id": "89",
+          "barcode": "TEST1022-022-03",
+          "shelfLocation": "测试书架-08",
+          "status": "RETIRED",
+          "version": 1
+        }
+      ],
+      "categoryId": "13"
+    },
+    {
+      "enabled": true,
+      "id": "51",
+      "title": "【测试】学习之道",
+      "copies": [
+        {
+          "id": "90",
+          "barcode": "TEST1022-023-01",
+          "shelfLocation": "测试书架-08",
+          "status": "AVAILABLE",
+          "version": 0
+        },
+        {
+          "id": "91",
+          "barcode": "TEST1022-023-02",
+          "shelfLocation": "测试书架-08",
+          "status": "AVAILABLE",
+          "version": 0
+        },
+        {
+          "id": "92",
+          "barcode": "TEST1022-023-03",
+          "shelfLocation": "测试书架-08",
+          "status": "AVAILABLE",
+          "version": 0
+        }
+      ],
+      "categoryId": "13"
+    },
+    {
+      "enabled": false,
+      "id": "52",
+      "title": "【测试】刻意练习",
+      "copies": [
+        {
+          "id": "93",
+          "barcode": "TEST1022-024-01",
+          "shelfLocation": "测试书架-08",
+          "status": "AVAILABLE",
+          "version": 0
+        },
+        {
+          "id": "94",
+          "barcode": "TEST1022-024-02",
+          "shelfLocation": "测试书架-08",
+          "status": "AVAILABLE",
+          "version": 0
+        },
+        {
+          "id": "95",
+          "barcode": "TEST1022-024-03",
+          "shelfLocation": "测试书架-08",
+          "status": "AVAILABLE",
+          "version": 0
+        }
+      ],
+      "categoryId": "13"
+    }
+  ],
+  "loans": [
+    {
+      "id": "15",
+      "bookId": "33",
+      "copyId": "41",
+      "readerId": "20",
+      "readerName": "测试读者二",
+      "bookTitle": "【测试】人类简史",
+      "copyBarcode": "TEST1022-005-01",
+      "borrowedAt": "2026-10-22T13:47:59.406+08:00",
+      "dueDate": "2026-11-21",
+      "returnedAt": null,
+      "renewalCount": 0,
+      "status": "ACTIVE",
+      "overdueDays": 0,
+      "allowedActions": {
+        "canRenew": true,
+        "reasonCode": null
+      }
+    },
+    {
+      "id": "14",
+      "bookId": "32",
+      "copyId": "38",
+      "readerId": "19",
+      "readerName": "测试读者一",
+      "bookTitle": "【测试】万历十五年",
+      "copyBarcode": "TEST1022-004-01",
+      "borrowedAt": "2026-10-22T13:47:59.388+08:00",
+      "dueDate": "2026-11-21",
+      "returnedAt": null,
+      "renewalCount": 0,
+      "status": "ACTIVE",
+      "overdueDays": 0,
+      "allowedActions": {
+        "canRenew": true,
+        "reasonCode": null
+      }
+    },
+    {
+      "id": "13",
+      "bookId": "30",
+      "copyId": "32",
+      "readerId": "19",
+      "readerName": "测试读者一",
+      "bookTitle": "【测试】活着",
+      "copyBarcode": "TEST1022-002-01",
+      "borrowedAt": "2026-10-22T13:47:59.265+08:00",
+      "dueDate": "2026-12-06",
+      "returnedAt": null,
+      "renewalCount": 1,
+      "status": "ACTIVE",
+      "overdueDays": 0,
+      "allowedActions": {
+        "canRenew": false,
+        "reasonCode": "RENEWAL_NOT_ALLOWED"
+      }
+    },
+    {
+      "id": "12",
+      "bookId": "29",
+      "copyId": "29",
+      "readerId": "19",
+      "readerName": "测试读者一",
+      "bookTitle": "【测试】三体",
+      "copyBarcode": "TEST1022-001-01",
+      "borrowedAt": "2026-10-22T13:47:59.246+08:00",
+      "dueDate": "2026-11-21",
+      "returnedAt": null,
+      "renewalCount": 0,
+      "status": "ACTIVE",
+      "overdueDays": 0,
+      "allowedActions": {
+        "canRenew": true,
+        "reasonCode": null
+      }
+    },
+    {
+      "id": "17",
+      "bookId": "39",
+      "copyId": "54",
+      "readerId": "20",
+      "readerName": "测试读者二",
+      "bookTitle": "【测试】从一到无穷大",
+      "copyBarcode": "TEST1022-011-01",
+      "borrowedAt": "2026-10-19T13:47:59+08:00",
+      "dueDate": "2026-11-18",
+      "returnedAt": "2026-10-21T13:47:59+08:00",
+      "renewalCount": 0,
+      "status": "RETURNED",
+      "overdueDays": 0,
+      "allowedActions": {
+        "canRenew": false,
+        "reasonCode": "RENEWAL_NOT_ALLOWED"
+      }
+    },
+    {
+      "id": "18",
+      "bookId": "40",
+      "copyId": "57",
+      "readerId": "20",
+      "readerName": "测试读者二",
+      "bookTitle": "【测试】物种起源",
+      "copyBarcode": "TEST1022-012-01",
+      "borrowedAt": "2026-10-16T13:47:59+08:00",
+      "dueDate": "2026-11-15",
+      "returnedAt": "2026-10-18T13:47:59+08:00",
+      "renewalCount": 0,
+      "status": "RETURNED",
+      "overdueDays": 0,
+      "allowedActions": {
+        "canRenew": false,
+        "reasonCode": "RENEWAL_NOT_ALLOWED"
+      }
+    },
+    {
+      "id": "19",
+      "bookId": "41",
+      "copyId": "60",
+      "readerId": "20",
+      "readerName": "测试读者二",
+      "bookTitle": "【测试】艺术的故事",
+      "copyBarcode": "TEST1022-013-01",
+      "borrowedAt": "2026-10-13T13:47:59+08:00",
+      "dueDate": "2026-11-12",
+      "returnedAt": "2026-10-15T13:47:59+08:00",
+      "renewalCount": 0,
+      "status": "RETURNED",
+      "overdueDays": 0,
+      "allowedActions": {
+        "canRenew": false,
+        "reasonCode": "RENEWAL_NOT_ALLOWED"
+      }
+    },
+    {
+      "id": "20",
+      "bookId": "42",
+      "copyId": "63",
+      "readerId": "20",
+      "readerName": "测试读者二",
+      "bookTitle": "【测试】设计心理学",
+      "copyBarcode": "TEST1022-014-01",
+      "borrowedAt": "2026-10-10T13:47:59+08:00",
+      "dueDate": "2026-11-09",
+      "returnedAt": "2026-10-12T13:47:59+08:00",
+      "renewalCount": 0,
+      "status": "RETURNED",
+      "overdueDays": 0,
+      "allowedActions": {
+        "canRenew": false,
+        "reasonCode": "RENEWAL_NOT_ALLOWED"
+      }
+    },
+    {
+      "id": "21",
+      "bookId": "43",
+      "copyId": "66",
+      "readerId": "20",
+      "readerName": "测试读者二",
+      "bookTitle": "【测试】美的历程",
+      "copyBarcode": "TEST1022-015-01",
+      "borrowedAt": "2026-10-07T13:47:59+08:00",
+      "dueDate": "2026-11-06",
+      "returnedAt": "2026-10-09T13:47:59+08:00",
+      "renewalCount": 0,
+      "status": "RETURNED",
+      "overdueDays": 0,
+      "allowedActions": {
+        "canRenew": false,
+        "reasonCode": "RENEWAL_NOT_ALLOWED"
+      }
+    },
+    {
+      "id": "22",
+      "bookId": "44",
+      "copyId": "69",
+      "readerId": "20",
+      "readerName": "测试读者二",
+      "bookTitle": "【测试】被讨厌的勇气",
+      "copyBarcode": "TEST1022-016-01",
+      "borrowedAt": "2026-10-04T13:47:59+08:00",
+      "dueDate": "2026-11-03",
+      "returnedAt": "2026-10-06T13:47:59+08:00",
+      "renewalCount": 0,
+      "status": "RETURNED",
+      "overdueDays": 0,
+      "allowedActions": {
+        "canRenew": false,
+        "reasonCode": "RENEWAL_NOT_ALLOWED"
+      }
+    },
+    {
+      "id": "23",
+      "bookId": "45",
+      "copyId": "72",
+      "readerId": "20",
+      "readerName": "测试读者二",
+      "bookTitle": "【测试】终身成长",
+      "copyBarcode": "TEST1022-017-01",
+      "borrowedAt": "2026-10-01T13:47:59+08:00",
+      "dueDate": "2026-10-31",
+      "returnedAt": "2026-10-03T13:47:59+08:00",
+      "renewalCount": 0,
+      "status": "RETURNED",
+      "overdueDays": 0,
+      "allowedActions": {
+        "canRenew": false,
+        "reasonCode": "RENEWAL_NOT_ALLOWED"
+      }
+    },
+    {
+      "id": "24",
+      "bookId": "46",
+      "copyId": "75",
+      "readerId": "20",
+      "readerName": "测试读者二",
+      "bookTitle": "【测试】思考，快与慢",
+      "copyBarcode": "TEST1022-018-01",
+      "borrowedAt": "2026-09-28T13:47:59+08:00",
+      "dueDate": "2026-10-28",
+      "returnedAt": "2026-09-30T13:47:59+08:00",
+      "renewalCount": 0,
+      "status": "RETURNED",
+      "overdueDays": 0,
+      "allowedActions": {
+        "canRenew": false,
+        "reasonCode": "RENEWAL_NOT_ALLOWED"
+      }
+    },
+    {
+      "id": "16",
+      "bookId": "37",
+      "copyId": "50",
+      "readerId": "21",
+      "readerName": "测试逾期读者",
+      "bookTitle": "【测试】算法导论",
+      "copyBarcode": "TEST1022-009-01",
+      "borrowedAt": "2026-09-15T13:47:59+08:00",
+      "dueDate": "2026-10-15",
+      "returnedAt": null,
+      "renewalCount": 0,
+      "status": "ACTIVE",
+      "overdueDays": 7,
+      "allowedActions": {
+        "canRenew": false,
+        "reasonCode": "RENEWAL_NOT_ALLOWED"
+      }
+    }
+  ],
+  "reservations": [
+    {
+      "id": "19",
+      "bookId": "34",
+      "readerId": "19",
+      "readerName": "测试读者一",
+      "bookTitle": "【测试】史记选读",
+      "status": "CANCELLED",
+      "requestedAt": "2026-10-22T13:47:59.421+08:00",
+      "readyAt": "2026-10-22T13:47:59.423+08:00",
+      "queuePosition": null,
+      "copyId": "44",
+      "copyBarcode": null,
+      "shelfLocation": null,
+      "pickupDeadline": "2026-10-25",
+      "allowedActions": {
+        "canCancel": false
+      }
+    },
+    {
+      "id": "18",
+      "bookId": "32",
+      "readerId": "19",
+      "readerName": "测试读者一",
+      "bookTitle": "【测试】万历十五年",
+      "status": "FULFILLED",
+      "requestedAt": "2026-10-22T13:47:59.37+08:00",
+      "readyAt": "2026-10-22T13:47:59.372+08:00",
+      "queuePosition": null,
+      "copyId": "38",
+      "copyBarcode": null,
+      "shelfLocation": null,
+      "pickupDeadline": "2026-10-25",
+      "allowedActions": {
+        "canCancel": false
+      }
+    },
+    {
+      "id": "17",
+      "bookId": "31",
+      "readerId": "20",
+      "readerName": "测试读者二",
+      "bookTitle": "【测试】平凡的世界",
+      "status": "READY",
+      "requestedAt": "2026-10-22T13:47:59.354+08:00",
+      "readyAt": "2026-10-22T13:47:59.356+08:00",
+      "queuePosition": null,
+      "copyId": "35",
+      "copyBarcode": "TEST1022-003-01",
+      "shelfLocation": "测试书架-01",
+      "pickupDeadline": "2026-10-25",
+      "allowedActions": {
+        "canCancel": true
+      }
+    },
+    {
+      "id": "16",
+      "bookId": "36",
+      "readerId": "19",
+      "readerName": "测试读者一",
+      "bookTitle": "【测试】代码大全",
+      "status": "WAITING",
+      "requestedAt": "2026-10-22T13:47:59.338+08:00",
+      "readyAt": null,
+      "queuePosition": 1,
+      "copyId": null,
+      "copyBarcode": null,
+      "shelfLocation": null,
+      "pickupDeadline": null,
+      "allowedActions": {
+        "canCancel": true
+      }
+    },
+    {
+      "id": "15",
+      "bookId": "38",
+      "readerId": "20",
+      "readerName": "测试读者二",
+      "bookTitle": "【测试】时间简史",
+      "status": "WAITING",
+      "requestedAt": "2026-10-22T13:47:59.321+08:00",
+      "readyAt": null,
+      "queuePosition": 1,
+      "copyId": null,
+      "copyBarcode": null,
+      "shelfLocation": null,
+      "pickupDeadline": null,
+      "allowedActions": {
+        "canCancel": true
+      }
+    },
+    {
+      "id": "14",
+      "bookId": "38",
+      "readerId": "19",
+      "readerName": "测试读者一",
+      "bookTitle": "【测试】时间简史",
+      "status": "READY",
+      "requestedAt": "2026-10-22T13:47:59.3+08:00",
+      "readyAt": "2026-10-22T13:47:59.302+08:00",
+      "queuePosition": null,
+      "copyId": "53",
+      "copyBarcode": "TEST1022-010-01",
+      "shelfLocation": "测试书架-04",
+      "pickupDeadline": "2026-10-25",
+      "allowedActions": {
+        "canCancel": true
+      }
+    }
+  ],
+  "notices": [
+    {
+      "id": "2",
+      "title": "【测试】开馆时间与借阅须知",
+      "content": "本公告为本机验收测试数据。\n开放时间：周一至周日 08:30—20:30（示例）。\n每位读者最多同时借阅 5 本，借期 30 天；符合条件时可续借 1 次、延长 15 天。实际资格以后端规则为准。",
+      "status": "PUBLISHED",
+      "publishedAt": "2026-10-22T13:47:59.927+08:00",
+      "createdAt": "2026-10-22T13:47:59.915+08:00",
+      "updatedAt": "2026-10-22T13:47:59.927+08:00"
+    },
+    {
+      "id": "3",
+      "title": "【测试】新书推荐与主题书架",
+      "content": "本周测试书目已加入文学、历史、科学、计算机、设计等分类。\n可通过关键词或分类查找，进入详情查看可借数量。标注【测试】的书目均为验收数据。",
+      "status": "PUBLISHED",
+      "publishedAt": "2026-10-22T13:47:59.948+08:00",
+      "createdAt": "2026-10-22T13:47:59.941+08:00",
+      "updatedAt": "2026-10-22T13:47:59.948+08:00"
+    },
+    {
+      "id": "4",
+      "title": "【测试】预约取书与排队说明",
+      "content": "预约分为排队中与待取。待取后请在截止日期当日结束前到馆，由馆员核对账号和副本条码办理借出。\n本公告用于测试列表、详情和长文本换行。",
+      "status": "PUBLISHED",
+      "publishedAt": "2026-10-22T13:47:59.969+08:00",
+      "createdAt": "2026-10-22T13:47:59.959+08:00",
+      "updatedAt": "2026-10-22T13:47:59.969+08:00"
+    },
+    {
+      "id": "5",
+      "title": "【测试】阅读活动安排（草稿）",
+      "content": "草稿用于测试公告编辑与预览，仅员工可见。",
+      "status": "DRAFT",
+      "publishedAt": null,
+      "createdAt": "2026-10-22T13:47:59.979+08:00",
+      "updatedAt": "2026-10-22T13:47:59.979+08:00"
+    },
+    {
+      "id": "6",
+      "title": "【测试】已结束的活动通知（撤下）",
+      "content": "撤下公告用于测试历史状态，不在公开公告列表中显示。",
+      "status": "WITHDRAWN",
+      "publishedAt": "2026-10-22T13:48:00.003+08:00",
+      "createdAt": "2026-10-22T13:47:59.995+08:00",
+      "updatedAt": "2026-10-22T13:48:00.01+08:00"
+    }
+  ],
+  "verification": {
+    "trendActiveDays": 10,
+    "overview": {
+      "bookCount": 52,
+      "totalCopies": 92,
+      "availableCopies": 77,
+      "activeLoans": 7,
+      "overdueLoans": 3,
+      "readyReservations": 5,
+      "readerCount": 17,
+      "generatedAt": "2026-10-22T13:48:00.404351879+08:00"
+    },
+    "checks": [
+      "Verified login and role: test_admin_1022",
+      "Verified login and role: test_librarian_1022",
+      "Verified login and role: test_reader1_1022",
+      "Verified login and role: test_reader2_1022",
+      "Verified login and role: test_overdue_1022",
+      "Reader one has three active loans and all four reservation states.",
+      "Dedicated overdue reader has one overdue loan; original readers untouched.",
+      "Second reader is queued behind the first reader for the same single-copy book.",
+      "Draft and withdrawn notices stay private.",
+      "Real statistics have 30 trend points and activity on at least eight days."
+    ],
+    "result": "PASS",
+    "popularBooks": [
+      {
+        "bookId": "21",
+        "title": "联调图书 49392b77",
+        "borrowCount": 1
+      },
+      {
+        "bookId": "22",
+        "title": "联调图书 7172e49f",
+        "borrowCount": 1
+      },
+      {
+        "bookId": "23",
+        "title": "联调图书 f230ea42",
+        "borrowCount": 1
+      },
+      {
+        "bookId": "24",
+        "title": "联调图书 14e59851",
+        "borrowCount": 1
+      },
+      {
+        "bookId": "25",
+        "title": "联调图书 a2ebba2c",
+        "borrowCount": 1
+      },
+      {
+        "bookId": "26",
+        "title": "联调图书 eeb65189",
+        "borrowCount": 1
+      },
+      {
+        "bookId": "27",
+        "title": "联调图书 874ac8ff",
+        "borrowCount": 1
+      },
+      {
+        "bookId": "28",
+        "title": "联调图书 cf9e26cb",
+        "borrowCount": 1
+      },
+      {
+        "bookId": "29",
+        "title": "【测试】三体",
+        "borrowCount": 1
+      },
+      {
+        "bookId": "30",
+        "title": "【测试】活着",
+        "borrowCount": 1
+      }
+    ]
+  },
+  "summary": {
+    "loans": 13,
+    "returnedLoans": 8,
+    "overdueLoans": 1,
+    "reservations": 6,
+    "visibleNewBooks": 23,
+    "copies": 67,
+    "activeLoans": 5,
+    "categories": 8,
+    "notices": 5,
+    "books": 24,
+    "accounts": 5
+  },
+  "portalLoginChecks": [
+    {
+      "username": "test_admin_1022",
+      "role": "ADMIN",
+      "url": "http://127.0.0.3:5175",
+      "login": "PASS",
+      "mustChangePassword": false
+    },
+    {
+      "username": "test_librarian_1022",
+      "role": "LIBRARIAN",
+      "url": "http://127.0.0.2:5174",
+      "login": "PASS",
+      "mustChangePassword": false
+    },
+    {
+      "username": "test_reader1_1022",
+      "role": "READER",
+      "url": "http://127.0.0.1:5173",
+      "login": "PASS",
+      "mustChangePassword": false
+    },
+    {
+      "username": "test_reader2_1022",
+      "role": "READER",
+      "url": "http://127.0.0.1:5173",
+      "login": "PASS",
+      "mustChangePassword": false
+    },
+    {
+      "username": "test_overdue_1022",
+      "role": "READER",
+      "url": "http://127.0.0.1:5173",
+      "login": "PASS",
+      "mustChangePassword": false
+    }
+  ],
+  "verifiedAt": "2026-10-22T13:49:08.1667654+08:00"
+}

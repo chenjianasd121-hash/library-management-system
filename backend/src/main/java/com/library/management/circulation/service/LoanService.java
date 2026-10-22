@@ -18,6 +18,7 @@ import java.util.List;
 import java.util.Map;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.annotation.Isolation;
 
 @Service
 public class LoanService {
@@ -33,8 +34,9 @@ public class LoanService {
     }
     private LocalDate today() { return LocalDate.now(Rows.SHANGHAI); }
     public Map<String,Object> byId(long id) { return Rows.row(mapper.byId(id)); }
-    @Transactional public Map<String,Object> checkout(long actor,long readerId,String barcode,String key) {
-        return idempotency.execute(actor,"POST","/api/v1/loans",key,Map.of("readerId",readerId,"copyBarcode",barcode),201,() -> checkoutInternal(actor,readerId,barcode));
+    @Transactional(isolation=Isolation.READ_COMMITTED) public Map<String,Object> checkout(long actor,long readerId,String barcode,String key) {
+        // Lock the reader before creating the idempotency row (which has a user foreign key).
+        return idempotency.execute(actor,"POST","/api/v1/loans",key,Map.of("readerId",readerId,"copyBarcode",barcode),201,() -> users.lock(readerId),() -> checkoutInternal(actor,readerId,barcode));
     }
     private Map<String,Object> checkoutInternal(long actor,long readerId,String barcode) {
         Map<String,Object> reader=users.lock(readerId);
@@ -62,8 +64,8 @@ public class LoanService {
         loan.put("dueDate",today().plusDays(30));loan.put("handledBy",actor);mapper.insert(loan);
         long id=((Number)loan.get("id")).longValue();audit.record(actor,"LOAN_CHECKED_OUT","LOAN",id);return dto(byId(id));
     }
-    @Transactional public Map<String,Object> returnLoan(long actor,long id,String barcode,String key) {
-        return idempotency.execute(actor,"POST","/api/v1/loans/"+id+"/return",key,Map.of("copyBarcode",barcode),200,() -> returnInternal(actor,id,barcode));
+    @Transactional(isolation=Isolation.READ_COMMITTED) public Map<String,Object> returnLoan(long actor,long id,String barcode,String key) {
+        return idempotency.execute(actor,"POST","/api/v1/loans/"+id+"/return",key,Map.of("copyBarcode",barcode),200,() -> users.lock(((Number)byId(id).get("readerId")).longValue()),() -> returnInternal(actor,id,barcode));
     }
     private Map<String,Object> returnInternal(long actor,long id,String barcode) {
         Map<String,Object> observed=byId(id);
@@ -77,8 +79,8 @@ public class LoanService {
         audit.record(actor,"LOAN_RETURNED","LOAN",id);
         Map<String,Object> out=dto(byId(id));out.put("copyStatus",inventory.byId(copyId).get("status"));return out;
     }
-    @Transactional public Map<String,Object> renew(long actor,long id,String key) {
-        return idempotency.execute(actor,"POST","/api/v1/loans/"+id+"/renew",key,Map.of(),200,() -> renewInternal(actor,id));
+    @Transactional(isolation=Isolation.READ_COMMITTED) public Map<String,Object> renew(long actor,long id,String key) {
+        return idempotency.execute(actor,"POST","/api/v1/loans/"+id+"/renew",key,Map.of(),200,() -> users.lock(actor),() -> renewInternal(actor,id));
     }
     private Map<String,Object> renewInternal(long actor,long id) {
         Map<String,Object> observed=byId(id);

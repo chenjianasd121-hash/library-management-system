@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-20",
+  "role": "LIBRARIAN",
+  "state": "create-category-required-validation",
+  "file": "required-validation.png",
+  "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-1b0ae649-ae2a-4d75-892c-01c25356b2bd.png",
+  "width": 1487,
+  "height": 1058,
+  "sha256": "2cc1a59dfd539f8bcb36b3ca620fa79bda4928cfe151809892677cecb94fff1b",
+  "identical_to_source": true,
+  "visual_check": "Selected create dialog layout preserved. Global required-fields error strip, blank name and code, neutral input borders, sort0 with minus disabled, enabledON, unchanged helper and cancel/save/close. No loading, submitted request, or success state.",
+  "approval_status": "user_confirmed",
+  "confirmation_date": "2026-10-20",
+  "confirmation_evidence": "User replied 2, then attached the exact required-validation state after clarification. Attachment decoded RGBA pixels match saved state. Create-category selected option remains 3.",
+  "confirmation_attachment": "C:\\Users\\en\\AppData\\Local\\Temp\\codex-clipboard-7571e4eb-f3f8-40c9-8253-1d2f1c6ab365.png",
+  "attachment_sha256": "6c43071723445db7f7a2515db286b348c2596a458e67777b635469abf637127c",
+  "attachment_pixels_identical": true
+}

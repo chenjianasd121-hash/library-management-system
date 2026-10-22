@@ -1,0 +1,19 @@
+Create ONE new independent high-fidelity Chinese LIBRARIAN 公告管理 desktop screenshot, direction “状态导航清单”. Recompose reference table into status TABS plus six notice-list records with short body excerpts. Full frame approx1440×1024, allsixrecords and footer visible, no browserchrome/collage/designnumbers. Dateanchor2026-10-20 Asia/Shanghai; no dates needed. Reference grounds exactrole/shell/titles/state/actions; don't retain table header/rows layout.
+
+Preserve navy230–250px sidebar #142747–#1a3156, white60px topbar, pale #f3f7fc canvas, dark #152747 ink, muted #70809c, primaryblue #2775ea, amber draftchips, teal publishlinks, #e7edf6 fine rules,12px rounded white panel, restrained shadow and clear Chinese sans-serif. Title28px, recordtitles16–18px, body14–16px.
+Brand 图书管理系统 / LIBRARY MANAGEMENT. Nav 首页概览, 图书管理 collapsed, 借阅管理 collapsed, 读者查找, 分类管理, 数据统计, 系统设置 expanded with 公告管理 ACTIVEblue, 个人资料, 公开公告. Other menus unselected, no admin user/audit. Topbar 搜索图书、作者、分类等… and avatar 馆, 欢迎回来，馆员.
+Main breadcrumb 系统设置 / 公告管理. Title 公告管理, subtitle 保存草稿、预览并发布馆内通知, top-right primary ＋ 新建公告.
+
+Main wide white panel: toolbar has exactly THREE horizontal status tabs 草稿 selectedblue, 已发布, 已撤下. These replace status dropdown; don't duplicate dropdown or add 全部. No counts on other tabs. Right outlined 刷新, small 共6条草稿.
+Below SIX fullwidth list records about100–105px tall, separated byfine rules, not floating individual poster cards. Each record has small restrained notice icon, boldtitle, amber 草稿 tag, one short plain-text bodyexcerpt below title, and 发布时间 —. Right actions 编辑 blue, 预览 navy, 发布 teal. Arrange metadata and actions cleanly; don't clip titles or actionlinks.
+Exact record order and excerpt:
+1 关于图书馆开放时间调整的通知; excerpt 图书馆将调整开放时间，请读者留意现场通知。
+2 新书上架与主题书展通知; excerpt 新一批图书即将上架，馆内将同步设置主题书展。
+3 关于馆内网络维护的通知; excerpt 馆内网络将进行维护，具体时间与影响范围将在正式公告中说明。
+4 图书借阅与归还办理提示; excerpt 借阅与归还请携带借阅证，到馆员服务台办理。
+5 关于阅览区域使用的温馨提示; excerpt 请保持阅览区域安静，按馆内指引使用座位。
+6 关于图书馆消防演练的通知; excerpt 图书馆拟开展消防演练，具体安排将另行公布。
+Allsix status草稿, every 发布时间 is —, allsix actions 编辑/预览/发布. No withdrawfor draft, no rowselection, no openmodal/editor.
+Footer 共6条草稿 · 每页10条; disabled 上一页, activeblue1, disabled 下一页. Fixed10perpage, onlyonepage, no size selector or extra pages. Quiet help 发布后公告将对所有访客可见。 If space tight keep note small near footer rather than hiding anyrecord.
+
+This is existing notice content rendered as excerpts, not new metadata. No author names, categories, priorities/pins, readcounts, sendcounts, recipients, schedules, approvals, attachments, richtexttools, keyword/datefilter, checkboxes, sort controls, bulk, delete, import/export, KPI/charts, coverart or book-copyform. Publication never given a fake timestamp. Existing publish preview/confirmation and withdraw confirmation remain later states, not instantaction. Mature complete librarian workflow layout, readable coherent exactChinese and clear statusnavigation alternative.

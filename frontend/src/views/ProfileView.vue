@@ -47,21 +47,38 @@ async function save() {
 }
 </script>
 <template>
-  <PageHeading title="个人资料" description="更新您的公开显示信息" />
-  <section class="panel form-panel">
+  <PageHeading title="个人中心" description="管理您的个人资料和账号安全" />
+  <section class="panel account-panel">
+    <h2>个人资料</h2>
     <el-alert
       v-if="error"
       type="error"
       :title="error"
       :closable="false"
       class="form-alert"
-    /><el-form :model="form" :rules="rules" label-width="110px" @submit.prevent="save"
+    /><el-form
+      class="account-form"
+      :model="form"
+      :rules="rules"
+      label-width="120px"
+      @submit.prevent="save"
       ><el-form-item label="用户名"
         ><el-input :model-value="auth.user?.username" disabled /></el-form-item
-      ><el-form-item label="角色"><el-input :model-value="auth.user?.role" disabled /></el-form-item
+      ><el-form-item label="角色"
+        ><el-input
+          :model-value="
+            auth.user?.role === 'ADMIN'
+              ? '管理员'
+              : auth.user?.role === 'LIBRARIAN'
+                ? '馆员'
+                : '读者'
+          "
+          disabled /></el-form-item
       ><el-form-item label="显示名" prop="displayName" :error="fields.displayName" required
-        ><el-input v-model="form.displayName" maxlength="40" show-word-limit /></el-form-item
-      ><el-form-item label="手机号" :error="fields.phone"><el-input v-model="form.phone" /></el-form-item
+        ><el-input v-model="form.displayName" maxlength="40" />
+        <p class="field-hint">2–40 字，用于页面显示和借阅记录。</p></el-form-item
+      ><el-form-item label="手机号" :error="fields.phone"
+        ><el-input v-model="form.phone" /></el-form-item
       ><el-form-item
         ><el-button type="primary" native-type="submit" :loading="busy">保存资料</el-button
         ><RouterLink to="/change-password"

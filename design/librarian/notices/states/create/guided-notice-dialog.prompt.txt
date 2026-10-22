@@ -1,0 +1,14 @@
+Use case ui-mockup. Edit the attached selected LIBRARIAN 公告管理 screen to show ONE independent 新建公告 initial-empty-form alternative named “说明辅助弹窗”. Match whole desktopframe1487×1058 and existing visualsystem. Dateanchor2026-10-20 Asia/Shanghai, no new visible date. Crisp Chinese14–16px, realistic productionquality, clear hierarchy, generous usable formspace. No browserchrome/collage/deviceframe/optionnumber/externalannotation.
+Freeze underlying selected screenshot: navy sidebar with librarybrand, white topbar,馆avatar欢迎回来，馆员;系统设置expanded/公告管理active. Same公告管理heading, three status tabs with草稿active, refresh, same sixdraftrows in same positions, publishedtime — for all, actions编辑/预览/发布, total6/page10/page1. Natural modalocclusion, don't move rows arounddialog. Backgroundfooter MUST remain exactly 发布后公告将对所有访客可见。 Do NOT change访客 to读者; visibility includes unauthenticatedvisitors. This is contextual text already in source, no extra visibilitycontrol.
+Overlay neutral20–30% backdrop and centered WHITE modal about930pxwide and630pxhigh,12–14pxcorners, restrainedshadow. Palette navy#152747, muted#70809c, primaryblue#2775ea, borders#e7edf6. Header blue noticeicon plus新建公告, closeXright.
+Body TWO areas: left editableform around570pxwide, right pale-blue read-only guidanceblock around230pxwide, gap24px. Two fields only, labels ABOVE:
+* 标题, EMPTY singlelineinput withplaceholder请输入公告标题 andactualcount0/120 inside right.
+* 正文, EMPTY plain textarea10rows/about280pxhigh withplaceholder请输入公告正文 andactualcount0/10000 bottomright.
+Name/title andbody eachrequired redstar; no valuesfilled, no errors, no redinputborders. Body is ordinaryplain text, NO formattingtoolbar or livepreview.
+Rightblockheading填写说明 withsmallinfoicon, exact factual paragraphs only:
+标题需为1–120字。
+正文不可为空且不超过10000字。
+保存后为草稿，发布需另行操作。
+Don't add links, steps, checkmarks, controls or validationpassed indicators.
+Fullwidthfooter with fine topdivider: secondary预览 atLEFT, then atRIGHT secondary取消 followed by blueprimary保存草稿. Exactlythreefooteractions pluscloseX. No直接发布,富文本,附件,定时发布,作者,读者范围,审批,置顶,模板,AI,自动保存,statusselectororotherfeatures.
+Allfields,counters,helper,footer fullyvisible. Same initialnewdraftstate as the other candidates, not editing existingnotice or showingpreview. Preserve rest oforiginalscreen without changing its role, data or footermeaning.

@@ -7,6 +7,7 @@ import { useAuthStore } from '@/stores/auth'
 import { roleHome, safeRedirect } from '@/router'
 import { errorText, fieldErrors } from '@/api/http'
 import { portal, portalTitle } from '@/portal'
+import { Right } from '@element-plus/icons-vue'
 
 const auth = useAuthStore()
 const router = useRouter()
@@ -84,25 +85,28 @@ async function submit() {
 <template>
   <div class="portal-login" :class="`portal-${portal}`">
     <section class="portal-visual" :aria-label="`${portalTitle}介绍`">
-      <div class="portal-brand"><span class="portal-brand-mark">▦</span><span>图书管理系统</span></div>
+      <div class="portal-brand">
+        <img :src="'/design/brand-mark.png'" alt="" /><span
+          ><strong>图书管理系统</strong><small>LIBRARY MANAGEMENT</small></span
+        >
+      </div>
       <div class="portal-visual-content">
         <div class="portal-eyebrow">{{ copy.eyebrow }} <span></span> {{ portalTitle }}</div>
         <h1>{{ copy.headline }}</h1>
         <p>{{ copy.description }}</p>
-        <div class="portal-book-scene" aria-hidden="true">
-          <div class="portal-halo"></div>
-          <div class="portal-book portal-book-one"><span></span></div>
-          <div class="portal-book portal-book-two"><span></span></div>
-          <div class="portal-book portal-book-three"><span></span></div>
-          <div class="portal-book-base"></div>
-        </div>
       </div>
       <div class="portal-note"><span class="portal-note-line"></span>{{ copy.note }}</div>
     </section>
     <main class="portal-form-side">
-      <div class="portal-form-brand"><span class="portal-brand-mark">▦</span> 图书管理系统</div>
+      <div v-if="portal === 'admin'" class="admin-welcome">
+        <h1>看见全局，管理有序。</h1>
+        <p>统一掌握馆藏、账号、统计与审计，让管理决策更清晰。</p>
+        <span>以清晰的数据守护每一份馆藏</span>
+      </div>
       <section class="portal-form-card" :aria-label="copy.heading">
-        <div class="portal-role-pill"><span class="portal-role-dot"></span>{{ portalTitle }} · 专属通道</div>
+        <div v-if="portal !== 'reader'" class="portal-role-pill">
+          {{ portal === 'admin' ? '管理员端' : '馆员端' }} · 专属通道
+        </div>
         <h2>{{ copy.heading }}</h2>
         <p class="portal-form-subtitle">{{ copy.subtitle }}</p>
         <el-alert
@@ -139,8 +143,8 @@ async function submit() {
             size="large"
             :loading="submitting"
             class="portal-submit"
-            >{{ copy.button }} <span aria-hidden="true">→</span></el-button
-          >
+            >{{ copy.button }} <el-icon><Right /></el-icon
+          ></el-button>
         </el-form>
         <p v-if="portal === 'reader'" class="portal-form-footer">
           还没有读者账号？<RouterLink to="/register">立即注册</RouterLink>

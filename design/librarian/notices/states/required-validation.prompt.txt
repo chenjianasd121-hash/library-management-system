@@ -1,0 +1,7 @@
+Use case: ui-mockup. Edit the attached selected 新建公告 dialog screenshot into its blank-form submit validation state. Preserve its single compact white dialog, left-aligned fields, blue megaphone, navy librarian sidebar, muted notice list under the backdrop, white topbar and 1487×1058 frame.
+Insert ONE pale red horizontal nonclosable error alert directly beneath the dialog header and before the 标题 label. Red error icon and exact text: 标题需为 1–120 字，正文不超过 10000 字
+Keep title and body entirely blank with placeholders 请输入公告标题 / 请输入公告正文, counters 0/120 and 0/10000. Keep existing helpers 标题需为1–120字。 and 正文不可为空且不超过10000字。
+This is direct blank submit without field blur: use normal neutral input borders; no additional inline field errors, no focus, no spinner or success. Footer keeps 预览 left, 取消 and 保存草稿 right, and 保存后为草稿。
+Allow the dialog to expand vertically slightly to accommodate the alert while retaining comfortable margins and selected proportions. No new fields or actions.
+Correct the background page footer to exactly 发布后公告将对所有访客可见。 It must say 访客, not 读者.
+One full-screen state only, no collage, variant numbering, browser frame or explanatory labels.

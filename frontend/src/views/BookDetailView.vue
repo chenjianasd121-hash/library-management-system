@@ -8,6 +8,7 @@ import type { BookDetail, LoanItem, ReservationItem } from '@/api/types'
 import { newKey } from '@/utils/format'
 import { useAuthStore } from '@/stores/auth'
 import LoadState from '@/components/LoadState.vue'
+import { Reading, InfoFilled } from '@element-plus/icons-vue'
 const route = useRoute()
 const router = useRouter()
 const auth = useAuthStore()
@@ -93,43 +94,60 @@ watch(
 )
 </script>
 <template>
-  <div class="page-heading">
-    <div>
-      <div class="eyebrow">BOOK DETAIL</div>
-      <h1>图书详情</h1>
-    </div>
-    <RouterLink to="/books" class="muted">← 返回目录</RouterLink>
+  <div class="detail-breadcrumb">
+    <RouterLink to="/books">图书目录</RouterLink><span>/</span><span>图书详情</span>
   </div>
-  <LoadState :loading="loading" :error="error" :empty="!book" @retry="load"
-    ><section v-if="book" class="panel detail-layout">
-      <div>
+  <div class="page-heading">
+    <div><h1>图书详情</h1></div>
+    <RouterLink to="/books"><el-button>← 返回目录</el-button></RouterLink>
+  </div>
+  <LoadState :loading="loading" :error="error" :empty="!book" @retry="load">
+    <template v-if="book">
+      <section class="panel detail-summary">
         <img
           v-if="book.coverPath"
           class="detail-cover"
           :src="book.coverPath"
           :alt="`${book.title}封面`"
         />
-        <div v-else class="detail-cover detail-cover-placeholder">📖</div>
-      </div>
-      <div>
-        <el-tag :type="book.availableCopies ? 'success' : 'warning'">{{
-          book.availableCopies ? '馆内有可借副本' : '可预约排队'
-        }}</el-tag>
-        <h1>{{ book.title }}</h1>
-        <p class="muted">{{ book.author }} · {{ book.categoryName }}</p>
-        <el-descriptions :column="1" border
-          ><el-descriptions-item label="ISBN">{{ book.isbn || '暂无' }}</el-descriptions-item
-          ><el-descriptions-item label="出版社">{{ book.publisher || '暂无' }}</el-descriptions-item
-          ><el-descriptions-item label="出版日期">{{
-            book.publishedOn || '暂无'
-          }}</el-descriptions-item
-          ><el-descriptions-item label="副本数量"
-            >总册 {{ book.totalCopies }} · 可借 {{ book.availableCopies }} · 待取
-            {{ book.readyCopies }} · 借出 {{ book.borrowedCopies }}</el-descriptions-item
-          ><el-descriptions-item label="关键词">{{
-            book.keywords || '暂无'
-          }}</el-descriptions-item></el-descriptions
-        >
+        <div v-else class="detail-cover cover-placeholder">
+          <el-icon><Reading /></el-icon><span>暂无封面</span>
+        </div>
+        <div class="detail-summary-body">
+          <el-tag :type="book.availableCopies ? 'success' : 'warning'">{{
+            book.availableCopies ? '馆内有可借副本' : '可预约排队'
+          }}</el-tag>
+          <h2>{{ book.title }}</h2>
+          <p>{{ book.author }}<span>·</span>{{ book.categoryName }}</p>
+          <div class="detail-counts">
+            <span
+              >可借 <strong>{{ book.availableCopies }}</strong></span
+            ><span>总册 {{ book.totalCopies }}</span
+            ><span>待取 {{ book.readyCopies }}</span
+            ><span>借出 {{ book.borrowedCopies }}</span>
+          </div>
+        </div>
+      </section>
+      <section class="panel book-metadata">
+        <h2>书目信息</h2>
+        <dl>
+          <div>
+            <dt>ISBN</dt>
+            <dd>{{ book.isbn || '暂无' }}</dd>
+          </div>
+          <div>
+            <dt>出版日期</dt>
+            <dd>{{ book.publishedOn || '暂无' }}</dd>
+          </div>
+          <div>
+            <dt>出版社</dt>
+            <dd>{{ book.publisher || '暂无' }}</dd>
+          </div>
+          <div>
+            <dt>关键词</dt>
+            <dd>{{ book.keywords || '暂无' }}</dd>
+          </div>
+        </dl>
         <h3>内容简介</h3>
         <p class="pre-wrap">{{ book.description || '暂无简介' }}</p>
         <el-alert
@@ -139,20 +157,29 @@ watch(
           :closable="false"
           class="form-alert"
         />
-        <p v-if="restriction" class="muted">{{ restriction }}</p>
-        <div class="action-row">
-          <el-button
-            type="primary"
-            size="large"
-            :loading="busy"
-            :disabled="!!restriction || !!userError || !book.enabled"
-            @click="reserve"
-            >{{ book.availableCopies ? '预约待取' : '预约排队' }}</el-button
-          ><RouterLink v-if="auth.user?.role === 'READER'" to="/me/reservations"
-            ><el-button size="large">查看我的预约</el-button></RouterLink
-          >
+        <div class="detail-actions">
+          <p>
+            <el-icon><InfoFilled /></el-icon
+            >{{
+              restriction ||
+              (book.availableCopies
+                ? '预约成功后，请在待取截止日期前到馆取书。'
+                : '暂无可借副本，预约后将按顺序排队。')
+            }}
+          </p>
+          <div class="action-row">
+            <RouterLink v-if="auth.user?.role === 'READER'" to="/me/reservations"
+              ><el-button>查看我的预约</el-button></RouterLink
+            ><el-button
+              type="primary"
+              :loading="busy"
+              :disabled="!!restriction || !!userError || !book.enabled"
+              @click="reserve"
+              >{{ book.availableCopies ? '预约待取' : '预约排队' }}</el-button
+            >
+          </div>
         </div>
-      </div>
-    </section></LoadState
-  >
+      </section>
+    </template>
+  </LoadState>
 </template>

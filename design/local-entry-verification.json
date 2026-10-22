@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-22T13:36:05.926334+08:00",
+  "result": "PASS",
+  "scope": "Read-only HTTP verification; not browser or visual acceptance",
+  "backend": "http://localhost:8080",
+  "portals": [
+    {
+      "role": "READER",
+      "url": "http://127.0.0.1:5173/",
+      "frontendStatus": 200,
+      "proxiedCatalogCode": "OK",
+      "catalogTotal": 28,
+      "csrfAvailable": true,
+      "brandAssetStatus": 200
+    },
+    {
+      "role": "LIBRARIAN",
+      "url": "http://127.0.0.2:5174/",
+      "frontendStatus": 200,
+      "proxiedCatalogCode": "OK",
+      "catalogTotal": 28,
+      "csrfAvailable": true,
+      "brandAssetStatus": 200
+    },
+    {
+      "role": "ADMIN",
+      "url": "http://127.0.0.3:5175/",
+      "frontendStatus": 200,
+      "proxiedCatalogCode": "OK",
+      "catalogTotal": 28,
+      "csrfAvailable": true,
+      "brandAssetStatus": 200
+    }
+  ]
+}

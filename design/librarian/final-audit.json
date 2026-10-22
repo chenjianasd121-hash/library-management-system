@@ -1,0 +1,934 @@
+{
+  "date": "2026-10-21",
+  "role": "LIBRARIAN",
+  "result": "passed",
+  "scope": "Saved design artifacts and provenance; not a claim of user approval or application implementation",
+  "checks": [
+    {
+      "check": "Recovered originals are all byte-identical",
+      "passed": true,
+      "count": 95
+    },
+    {
+      "check": "Selected main-page hashes unchanged",
+      "passed": true,
+      "count": 14
+    },
+    {
+      "check": "New images match manifests and generated source files",
+      "passed": true,
+      "count": 20
+    },
+    {
+      "check": "Reader references match their provenance and sources",
+      "passed": true,
+      "count": 7
+    },
+    {
+      "check": "All generated images retain prompt files",
+      "passed": true,
+      "count": 20
+    },
+    {
+      "check": "No image phase exceeds three images",
+      "passed": true,
+      "count": 7
+    },
+    {
+      "check": "All PNGs decode and expected inventory exists",
+      "passed": true,
+      "count": 122
+    },
+    {
+      "check": "Review contains 59 unique existing images and 20 new images",
+      "passed": true,
+      "count": 59
+    },
+    {
+      "check": "Review preserves the specifically confirmed classification validation",
+      "passed": true
+    },
+    {
+      "check": "All librarian Markdown documents have no missing local links",
+      "passed": true,
+      "count": 51
+    },
+    {
+      "check": "Offline gallery has no missing image or document links",
+      "passed": true,
+      "count": 122
+    }
+  ],
+  "phase_counts": {
+    "return-and-overdue-filter": 3,
+    "reservation-filters-and-cancel": 3,
+    "account-validation": 3,
+    "first-login-and-submit-feedback": 3,
+    "shared-feedback-and-list-states": 3,
+    "list-failure-and-empty-statistics": 2,
+    "public-role-adaptations": 3
+  },
+  "broken_links": [],
+  "gallery_missing_links": [],
+  "png_inventory": [
+    {
+      "file": "book-copies/combined-copy-workspace.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1470823,
+      "sha256": "1c25b648f1f4eb17f50af4e8e21fef7fe5db5edac82b4c7160823cc44649fcac"
+    },
+    {
+      "file": "book-copies/final.png",
+      "width": 1484,
+      "height": 1060,
+      "bytes": 1389043,
+      "sha256": "033477fa5499b763690222135bd152a3b58768399ac7a2ca8de505db7714f2d6"
+    },
+    {
+      "file": "book-copies/side-entry-copy-desk.png",
+      "width": 1484,
+      "height": 1060,
+      "bytes": 1398960,
+      "sha256": "e8c299c9d61554ca9048beb8220218ed7f9f04bdc8325dcc3b2a03b5484e6554"
+    },
+    {
+      "file": "book-copies/states/barcode-validation.png",
+      "width": 1484,
+      "height": 1060,
+      "bytes": 1577609,
+      "sha256": "2a484c01d9f917bff5d82767165545c03062ade0239d306dde8d7a5b105ec88e"
+    },
+    {
+      "file": "book-copies/states/location-dialog.png",
+      "width": 1484,
+      "height": 1060,
+      "bytes": 1485143,
+      "sha256": "62920a554d7a5620c8edc265e3a7f86468697d1ab4d883ebfaa02ee70636f0f6"
+    },
+    {
+      "file": "book-copies/states/maintenance-confirmation.png",
+      "width": 1484,
+      "height": 1060,
+      "bytes": 1476421,
+      "sha256": "82b5115dfe778b3c5918171a271a638c41fa6cff36a919f07c8c551f1e020d70"
+    },
+    {
+      "file": "book-copies/top-entry-copy-list.png",
+      "width": 1484,
+      "height": 1060,
+      "bytes": 1389043,
+      "sha256": "033477fa5499b763690222135bd152a3b58768399ac7a2ca8de505db7714f2d6"
+    },
+    {
+      "file": "book-create/cover-led-entry.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1319154,
+      "sha256": "008c658f61516effd484651cf1e1f3eb05e09089a3c182623695396ef9d060ab"
+    },
+    {
+      "file": "book-create/final.png",
+      "width": 1486,
+      "height": 1058,
+      "bytes": 1286464,
+      "sha256": "ef72e20ed4b8eaab1e31f2824e01560ec74b7876570d631d601647d00ca7ad5f"
+    },
+    {
+      "file": "book-create/reference-existing-book-create.png",
+      "width": 1366,
+      "height": 768,
+      "bytes": 69660,
+      "sha256": "96696a732d05ea50821211e1592d6946b3b69aac642d9202287ae789c305043e"
+    },
+    {
+      "file": "book-create/sectioned-entry-form.png",
+      "width": 1486,
+      "height": 1058,
+      "bytes": 1286464,
+      "sha256": "ef72e20ed4b8eaab1e31f2824e01560ec74b7876570d631d601647d00ca7ad5f"
+    },
+    {
+      "file": "book-create/split-cataloguing.png",
+      "width": 1488,
+      "height": 1057,
+      "bytes": 1291692,
+      "sha256": "92b78ecef0ca115af13b44ca6bc6f2985358c8a1b649c4a134d740f6b87d5177"
+    },
+    {
+      "file": "book-create/states/cover-feedback.png",
+      "width": 1586,
+      "height": 992,
+      "bytes": 1265228,
+      "sha256": "067ea389cdb2444c9dbde518d6430f8460281e167127d3299f8a984e0e7c079c"
+    },
+    {
+      "file": "book-create/states/field-validation.png",
+      "width": 1484,
+      "height": 1060,
+      "bytes": 1522733,
+      "sha256": "1163c0390d32906175eeb21420acd0111234f0a67751ec95d6909afb4c259ca3"
+    },
+    {
+      "file": "book-create/states/isbn-conflict.png",
+      "width": 1485,
+      "height": 1059,
+      "bytes": 1461742,
+      "sha256": "802fae395cc9f0532c2ac27f51f86ec949ba3042854bddccec4374a054ab594b"
+    },
+    {
+      "file": "book-edit/cover-led-book-editor.png",
+      "width": 1484,
+      "height": 1060,
+      "bytes": 1446903,
+      "sha256": "98bdd3441041dcb1d531a8564ec8b19a92fc29e14b540966406e719b74ea5570"
+    },
+    {
+      "file": "book-edit/final.png",
+      "width": 1484,
+      "height": 1060,
+      "bytes": 1389108,
+      "sha256": "13d86dd02d55acb83b1bfbcf69963f902e385517af4987534e37af7c01663c7d"
+    },
+    {
+      "file": "book-edit/modular-book-editor.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1338902,
+      "sha256": "f27c93675e6411f079cc1a0e86d13caf2ff7b36a1a3b533356f4e5d36d0a2ca8"
+    },
+    {
+      "file": "book-edit/sectioned-book-editor.png",
+      "width": 1484,
+      "height": 1060,
+      "bytes": 1389108,
+      "sha256": "13d86dd02d55acb83b1bfbcf69963f902e385517af4987534e37af7c01663c7d"
+    },
+    {
+      "file": "books/book-review-desk.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1460552,
+      "sha256": "b0188bffd15a3f5b6e8a37f5fd5ece2f5c6e92141b377cdd5694816dfa7094e9"
+    },
+    {
+      "file": "books/category-cover-catalogue.png",
+      "width": 1488,
+      "height": 1057,
+      "bytes": 1514323,
+      "sha256": "73d6968cece6e0ea599770361f64c7aeda6e060168e1fa67a2d44a314fa533a5"
+    },
+    {
+      "file": "books/cover-book-table.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1495429,
+      "sha256": "a40f345726c2e7b2613febe70e8bfb9369739f314a6c3fc5445ca7f9fb083e59"
+    },
+    {
+      "file": "books/final-before-sync-2026-10-20.png",
+      "width": 1488,
+      "height": 1057,
+      "bytes": 1514323,
+      "sha256": "73d6968cece6e0ea599770361f64c7aeda6e060168e1fa67a2d44a314fa533a5"
+    },
+    {
+      "file": "books/final.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1556271,
+      "sha256": "b11b3469537b2e3ae1681f5eea81120fdee8a0ba7bee3c32acbbceaa8be30ee3"
+    },
+    {
+      "file": "books/reference-existing-books.png",
+      "width": 1366,
+      "height": 768,
+      "bytes": 79157,
+      "sha256": "ad5ea1354fa95770b379ebd058ecc39efbf024e0e9cd3db191fbb87cd332b899"
+    },
+    {
+      "file": "books/states/disable-confirmation.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1557382,
+      "sha256": "dd72610e17a23ecf42650205588016c5670ce613efb1ac4dec7efb263ed486ce"
+    },
+    {
+      "file": "categories/category-card-grid.png",
+      "width": 1484,
+      "height": 1060,
+      "bytes": 1337022,
+      "sha256": "50bb504e8430f4095803d9fda0704f4a097a16b176d2ae1c7824dd868b8a60c1"
+    },
+    {
+      "file": "categories/clear-category-table.png",
+      "width": 1484,
+      "height": 1060,
+      "bytes": 1251038,
+      "sha256": "a4c389e99ce89767127832bba035f3f15eb3e0044bbf0544c5362a7fc15ddee8"
+    },
+    {
+      "file": "categories/final.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1421668,
+      "sha256": "4da318911124d050267333ca1efe6f07e27d5a7200cfc8e1142be0c9a0e49277"
+    },
+    {
+      "file": "categories/states/create/final.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1404678,
+      "sha256": "8874bdf63f47891b535967b9da09e6f5850ed610b9cbbf93bf163b5e3a0e6fb0"
+    },
+    {
+      "file": "categories/states/create/grouped-category-dialog.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1384296,
+      "sha256": "59e0cdc7d2e52bcdcea8d804de18961790e21ff304436463bdee177dfed52e72"
+    },
+    {
+      "file": "categories/states/create/guided-category-dialog.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1404678,
+      "sha256": "8874bdf63f47891b535967b9da09e6f5850ed610b9cbbf93bf163b5e3a0e6fb0"
+    },
+    {
+      "file": "categories/states/create/stacked-category-dialog.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1397236,
+      "sha256": "045c80a38117d06caa09eb29017f763e857b375592e0a46831ea50d3d47fedc9"
+    },
+    {
+      "file": "categories/states/disable-confirmation.png",
+      "width": 1485,
+      "height": 1059,
+      "bytes": 1474470,
+      "sha256": "8bfdb992476256b292449b2298ffc248387d9f34a21e83a7755e3d607daf9a32"
+    },
+    {
+      "file": "categories/states/edit-category.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1569871,
+      "sha256": "ee898fae7bd0e01f677a3d027ca4e8286bc97674c229ac20c7bbd27d3d7f3aa3"
+    },
+    {
+      "file": "categories/states/required-validation.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1476990,
+      "sha256": "2cc1a59dfd539f8bcb36b3ca620fa79bda4928cfe151809892677cecb94fff1b"
+    },
+    {
+      "file": "categories/status-grouped-categories.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1421668,
+      "sha256": "4da318911124d050267333ca1efe6f07e27d5a7200cfc8e1142be0c9a0e49277"
+    },
+    {
+      "file": "change-password/account-password-split.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1286197,
+      "sha256": "d1b08ea66c40348b9551d9b4df79e4c5cb66e2868e06f0ed56299a6c4f248477"
+    },
+    {
+      "file": "change-password/final.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1353387,
+      "sha256": "32c75816badd17804cfc9290ba4e148f7ecf631e41fda80ea1898e8202ba5e7e"
+    },
+    {
+      "file": "change-password/focused-password-form.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1290821,
+      "sha256": "bb699ab6583effd6f797007cd6f31bfcb8e6843e52fe845438c0ddc35918d784"
+    },
+    {
+      "file": "change-password/sectioned-password-workspace.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1353387,
+      "sha256": "32c75816badd17804cfc9290ba4e148f7ecf631e41fda80ea1898e8202ba5e7e"
+    },
+    {
+      "file": "change-password/states/current-password-incorrect.png",
+      "width": 1485,
+      "height": 1059,
+      "bytes": 1435459,
+      "sha256": "2089a05669696fb3a8fd23ceaceedd4081d60dfa48ce73d04e65ecf5edfa7e6e"
+    },
+    {
+      "file": "change-password/states/first-login-required.png",
+      "width": 1486,
+      "height": 1058,
+      "bytes": 1530426,
+      "sha256": "cdb12fe805e058d4918567e556dc812f1e4472525b7f9d42aae3240ccaef0d80"
+    },
+    {
+      "file": "change-password/states/password-mismatch.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1473957,
+      "sha256": "b7ca51bb1d52992e7f55532435e759a6e736e359b681a1f36111d793757fb8d1"
+    },
+    {
+      "file": "checkout/continuous-checkout.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1328048,
+      "sha256": "9fa37b4c6755e83121106c9c11c87c2d64a94dc12e9156f5f95bc23f69582ac8"
+    },
+    {
+      "file": "checkout/final.png",
+      "width": 1486,
+      "height": 1058,
+      "bytes": 1585107,
+      "sha256": "1ceeb7e326fb27e309023ad3136f1540beafb216b165c2f70f09ff6cba43c3b7"
+    },
+    {
+      "file": "checkout/parallel-verification-draft.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1370455,
+      "sha256": "fb8f2be6e98ac2e2c9eefa8523a5f77f66dc150618bde5c1f0dc8dd0bfff8bb4"
+    },
+    {
+      "file": "checkout/parallel-verification.png",
+      "width": 1486,
+      "height": 1058,
+      "bytes": 1585107,
+      "sha256": "1ceeb7e326fb27e309023ad3136f1540beafb216b165c2f70f09ff6cba43c3b7"
+    },
+    {
+      "file": "checkout/reference-existing-checkout.png",
+      "width": 1366,
+      "height": 768,
+      "bytes": 74627,
+      "sha256": "f8599887663cada780412a83394e08627ac57f4f360a7541ec0378a96222c10c"
+    },
+    {
+      "file": "checkout/side-confirmation.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1417724,
+      "sha256": "e6c276b5796953a4c1c05fa430a66b9875dee1f20df0da38080cbe1f42d96317"
+    },
+    {
+      "file": "checkout/states/blocked-checkout.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1573400,
+      "sha256": "a103ef77252eaf5c8a68a70eebf145937ddebdecdd1d2f877535918ef97caf75"
+    },
+    {
+      "file": "checkout/states/checkout-success.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1590541,
+      "sha256": "dae795c7fc8be77fdd2d414cf65f8d2eecdfc64e55a208d623d7be52914ded9f"
+    },
+    {
+      "file": "dashboard/circulation-overview.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1533602,
+      "sha256": "71eee699fe5874fdf78b6ad10ad54a1368fbe7f68fa7f3bdbc0a6ce18e977577"
+    },
+    {
+      "file": "dashboard/final-before-sync-2026-10-20.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1533602,
+      "sha256": "71eee699fe5874fdf78b6ad10ad54a1368fbe7f68fa7f3bdbc0a6ce18e977577"
+    },
+    {
+      "file": "dashboard/final.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1428271,
+      "sha256": "34c60699d9b4876a3d58e4640c4fa32cb925663c07df4c93450162ebf01e0e52"
+    },
+    {
+      "file": "dashboard/operations-first.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1488859,
+      "sha256": "210afb930d0310688cf168400dafd42b089a6158be797901e0a7bdf4dba2add6"
+    },
+    {
+      "file": "dashboard/reference-existing-dashboard.png",
+      "width": 1366,
+      "height": 768,
+      "bytes": 337544,
+      "sha256": "773aebfd913f023aaf5e7073fdac7512611d89fe417821d9c1e10001ce61640e"
+    },
+    {
+      "file": "dashboard/shift-overview.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1503627,
+      "sha256": "0a120cb5ce3b90fbb3755558ed9746d7423e6d485b61ad0adca0e91b697d997d"
+    },
+    {
+      "file": "loans/clear-loan-table.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1439398,
+      "sha256": "b3bfb57afc887081919dcd9b491e234ded0f13804c545ead6899c522a8e39b0a"
+    },
+    {
+      "file": "loans/final.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1439398,
+      "sha256": "b3bfb57afc887081919dcd9b491e234ded0f13804c545ead6899c522a8e39b0a"
+    },
+    {
+      "file": "loans/loan-review-desk.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1446759,
+      "sha256": "821a03fbf31e46e70961e31fe4a8156787f92fdca150967c7e15286d8b5bbcb9"
+    },
+    {
+      "file": "loans/reference-existing-loans.png",
+      "width": 1366,
+      "height": 768,
+      "bytes": 64190,
+      "sha256": "236058c365382ac5ce3778e13007d7c25cbc2d50a310608ab41993cdc47d2fde"
+    },
+    {
+      "file": "loans/states/overdue-filter.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1463296,
+      "sha256": "47444f52308052095b95dc076031fbac6e7dfd006663996ca7777a07f9156a5b"
+    },
+    {
+      "file": "loans/status-led-records.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1385425,
+      "sha256": "d8ca06ca87d97ca0fc5a4f269453dae33289b1d1806ed51ef1859a9b0091a617"
+    },
+    {
+      "file": "notices/clear-draft-table.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1424888,
+      "sha256": "c572d65fdf28b2b57e57856c47b8dbb8a6740da7544afaf21d8bda9fa43e0e80"
+    },
+    {
+      "file": "notices/final.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1438509,
+      "sha256": "c33e5e30c3d85611f40f651a47d8c45468b101c81595197cf59cbca3bb3a4a78"
+    },
+    {
+      "file": "notices/notice-preview-desk.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1435253,
+      "sha256": "9e49cc1af23eede7a634ebb1b912c024967378471a7b027885e6942db0ea2889"
+    },
+    {
+      "file": "notices/states/create/compact-notice-dialog-footer-corrected.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1563436,
+      "sha256": "fc61df08ac41395047a945424b143dc11b5dc548902c2c84a067ddc0e9643e5e"
+    },
+    {
+      "file": "notices/states/create/compact-notice-dialog.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1388104,
+      "sha256": "b958d58f120b92ad87ce9c7c87d441864148b485ca626cb793830ba0f7ccafdc"
+    },
+    {
+      "file": "notices/states/create/final.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1563436,
+      "sha256": "fc61df08ac41395047a945424b143dc11b5dc548902c2c84a067ddc0e9643e5e"
+    },
+    {
+      "file": "notices/states/create/guided-notice-dialog.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1359866,
+      "sha256": "da59287c25e304fdd9dade3b0495fd6c83543066cc75e251ee19221f44433027"
+    },
+    {
+      "file": "notices/states/create/wide-notice-dialog.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1350961,
+      "sha256": "bb1cb78fa9c88042bf4bbc7fea7ff109992912493ace5eac2b0674805c8e3653"
+    },
+    {
+      "file": "notices/states/edit-notice.png",
+      "width": 1486,
+      "height": 1058,
+      "bytes": 1550592,
+      "sha256": "fe49b6435cd5479fcf8477fa4007cdbef8be0ac413ed79e2e55b98e782fe35c4"
+    },
+    {
+      "file": "notices/states/preview-notice.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1477790,
+      "sha256": "08f90e5aa81fd325b57697fc2046b3189d44c921ef598302b832a5d0577b1d59"
+    },
+    {
+      "file": "notices/states/publish-confirmation.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1458634,
+      "sha256": "20c80c5e6430dab623aa86eebf8e4989490f684887e5ba9a8d6ad1e44d1cccaf"
+    },
+    {
+      "file": "notices/states/published-list.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1395733,
+      "sha256": "e934d96bcdfe742c59923cddacc9d1e5444b48b535328be0e2ffc11deb1d1b66"
+    },
+    {
+      "file": "notices/states/required-validation.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1507796,
+      "sha256": "533cafc52a674f3a8afdfd39e67272897b5d85a976c704b8ef15015a45f893c6"
+    },
+    {
+      "file": "notices/states/withdraw-confirmation.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1438614,
+      "sha256": "2a1bab849dd985080fcce3d5a36958ecba4563365de139dd187d0e4ec2ff8d73"
+    },
+    {
+      "file": "notices/states/withdrawn-list.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1454220,
+      "sha256": "fc323b05eb64dde8af97eddebe2397504318d4a493f2a0af9258ddd52648d6a5"
+    },
+    {
+      "file": "notices/status-notice-list.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1438509,
+      "sha256": "c33e5e30c3d85611f40f651a47d8c45468b101c81595197cf59cbca3bb3a4a78"
+    },
+    {
+      "file": "profile/final.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1486059,
+      "sha256": "97ba9159270f9fd2c1d83154ba1857267ed690f794747ac85f54cd7a38b441b3"
+    },
+    {
+      "file": "profile/identity-profile-split.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1264979,
+      "sha256": "040fc9dbe5e4ce5838b05d8383e168d40ff446d89ba0369249d5b6aa4af8613d"
+    },
+    {
+      "file": "profile/profile-account-panels.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1486059,
+      "sha256": "97ba9159270f9fd2c1d83154ba1857267ed690f794747ac85f54cd7a38b441b3"
+    },
+    {
+      "file": "profile/sectioned-profile-form.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1229670,
+      "sha256": "b8e19a0db5e74d01f44a8614920ef745594cfcc2d540eda8f5135a4b0e45c781"
+    },
+    {
+      "file": "profile/states/display-name-validation.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1463322,
+      "sha256": "2aeda18ee23966de3f5ccb12dd738dfcbe6b50129621f75a9c795e27eca53678"
+    },
+    {
+      "file": "profile/states/save-failed.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1427619,
+      "sha256": "c5c92843593653ac7638d84173f8a0815f0f39b2c768adddeccc286e6d0abf0f"
+    },
+    {
+      "file": "profile/states/save-pending.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1481787,
+      "sha256": "38be8f7eb5b97e5664f2f4410d4021c4e807db0f1be3ea715762fb44008106eb"
+    },
+    {
+      "file": "profile/states/save-success.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1491910,
+      "sha256": "e17107a81aea8d723f0ceb442c5379ff03dc367c8750659db1cecbc8a98c7ca1"
+    },
+    {
+      "file": "public/book-detail.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1555007,
+      "sha256": "e7f9dbac21c80bd026d6819932b0d4e2c5870dcec37d1d71cd34e31c66e8c16b"
+    },
+    {
+      "file": "public/catalogue.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1656485,
+      "sha256": "366bced7707c39e79d248a5901a2d85ccd3266043462fddc1fc21ffae13d240c"
+    },
+    {
+      "file": "public/login.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1511127,
+      "sha256": "9ddfb454362c73c8e6b597d0380181cec307e5de70623bcf561a41e6cd07bc38"
+    },
+    {
+      "file": "public/references/reader-book-detail.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1576111,
+      "sha256": "be74fafd66de47616ee64ce1929c76e0da6836b66f4a16717521e9209ddad63d"
+    },
+    {
+      "file": "public/references/reader-catalogue.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1587281,
+      "sha256": "78e2b5f69af9b33394ea098d1acd79e0de59f2073eabc7c7775f41bcf2f03892"
+    },
+    {
+      "file": "public/references/reader-forbidden.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1256964,
+      "sha256": "3e441b50d6b144461c5d529e0aaf9c4b650f81fbf6a6edbf8d270580a2a20e74"
+    },
+    {
+      "file": "public/references/reader-login.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1403636,
+      "sha256": "0087bbbc783cb2c4e2bfaa70c28fd884fcfd99f7af22626999619e20607b0d0c"
+    },
+    {
+      "file": "public/references/reader-not-found.png",
+      "width": 1485,
+      "height": 1059,
+      "bytes": 1389851,
+      "sha256": "752457589ebfa31840dd203f80ca6487db7bee6a4f2c4932783f4c99a4566d70"
+    },
+    {
+      "file": "public/references/reader-notice-detail.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1295953,
+      "sha256": "298586f44cd52bb8041c007f9fd158e49414d8b51de37f03e3d55de4aa73c81a"
+    },
+    {
+      "file": "public/references/reader-notices.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1392325,
+      "sha256": "2383996e7ca4e41d6f8327e45345532f2322035cc1525470f1b35cb63ee0f1eb"
+    },
+    {
+      "file": "reservations/clear-reservation-table.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1361783,
+      "sha256": "33e7f911e6f44b4876c1439208ba82122bf1225c7de375a8e3e3187a3317ddd5"
+    },
+    {
+      "file": "reservations/final.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1605192,
+      "sha256": "58d5b6233fda51c55f82ae74008d83c90f06f23e2c09a3f1865a83c37e1dbfb9"
+    },
+    {
+      "file": "reservations/pickup-reservation-desk.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1602292,
+      "sha256": "250c33987cf50a7f1a601f6f8e078061d407d566d2010ba4864ac8c03e033780"
+    },
+    {
+      "file": "reservations/reference-existing-reservations.png",
+      "width": 1366,
+      "height": 768,
+      "bytes": 63481,
+      "sha256": "62f8fb49e07d8d57199a359511f250973c6ef5b18a418e3e200983ff2c051107"
+    },
+    {
+      "file": "reservations/states/cancel-reason-validation.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1368341,
+      "sha256": "65b8fd47fffa1f4531d1e4dd31425acc331e4e79693925d48770afb2cfbf0695"
+    },
+    {
+      "file": "reservations/states/ready-filter.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1520197,
+      "sha256": "e460d476595dfbb125e9e078e3b8cdebfcbb3adb57ee8894198ae5cc675bb11e"
+    },
+    {
+      "file": "reservations/states/waiting-filter.png",
+      "width": 1486,
+      "height": 1059,
+      "bytes": 1374583,
+      "sha256": "33b37130c1d4515db3b788e58be91290579b6576828d9e8a83a301b113cf2f5a"
+    },
+    {
+      "file": "reservations/status-reservation-records.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1605192,
+      "sha256": "58d5b6233fda51c55f82ae74008d83c90f06f23e2c09a3f1865a83c37e1dbfb9"
+    },
+    {
+      "file": "return/continuous-return-desk.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1353509,
+      "sha256": "560df1963df4219d6511a9a7e6bfd8f2f3f7e86697b487f94c7ab95bd3085122"
+    },
+    {
+      "file": "return/final.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1610226,
+      "sha256": "a4a5ea5a7e9a695387ce8e087e9f59f73cd5545d206704f31492ee45a9fe6888"
+    },
+    {
+      "file": "return/parallel-return-check.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1482582,
+      "sha256": "3e330fd3ccbf77ef48553345d82107bcbdc3913a97fa4d04dbe375c24fd0dfc9"
+    },
+    {
+      "file": "return/reference-existing-return.png",
+      "width": 1366,
+      "height": 768,
+      "bytes": 61007,
+      "sha256": "9c2429c6173531c3415ba364c32202c9e55c261d1c0ed5cb77726e585ac1cb50"
+    },
+    {
+      "file": "return/side-return-confirmation-draft.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1508143,
+      "sha256": "780a3fff46fc13a52f16715908308ea1296084e12a3263809ef80e06b19550b3"
+    },
+    {
+      "file": "return/side-return-confirmation.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1610226,
+      "sha256": "a4a5ea5a7e9a695387ce8e087e9f59f73cd5545d206704f31492ee45a9fe6888"
+    },
+    {
+      "file": "return/states/no-active-loan.png",
+      "width": 1486,
+      "height": 1058,
+      "bytes": 1428201,
+      "sha256": "56f2e7c3d088c6448f48ac053c12aa0796fcd68201a5b2683f733743f3b11ab4"
+    },
+    {
+      "file": "return/states/return-success.png",
+      "width": 1486,
+      "height": 1058,
+      "bytes": 1521275,
+      "sha256": "ca95dd1f56e877e651d6e969b09d76f9fddc7e8ef0146727bf0fbd9ff3949f41"
+    },
+    {
+      "file": "shared/list-empty.png",
+      "width": 1486,
+      "height": 1058,
+      "bytes": 1269463,
+      "sha256": "cc95b6f8d52d49ee178f8adf72cc699040fad96abeeab6a39d69d486419c3cd8"
+    },
+    {
+      "file": "shared/list-failed.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1323604,
+      "sha256": "9e793f8e46b56d41a32e6aa63c705dfdc6efc49c772e1091ff5d7c9fb50037ab"
+    },
+    {
+      "file": "shared/list-loading.png",
+      "width": 1483,
+      "height": 1061,
+      "bytes": 1341525,
+      "sha256": "b609050d0e0b283ca00ba11a70edecb07a906dffb0e01adc00561dbc108c24f1"
+    },
+    {
+      "file": "stats/balanced-statistics.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1475240,
+      "sha256": "c97deb706c10f23139c9aec58dad59154b8e9ef85156db3e9f911de4c631e19b"
+    },
+    {
+      "file": "stats/final.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1393741,
+      "sha256": "38f65efe2fe3fac7f2ea19e7c00bddef447aa1234e76b36ea7f117f2f2909a3d"
+    },
+    {
+      "file": "stats/side-metric-statistics.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1603581,
+      "sha256": "1d13778726efe02bd5f5a9f8e91bff8f30b48b82e1559d42a60aa2a3116e1906"
+    },
+    {
+      "file": "stats/states/empty-data.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1535257,
+      "sha256": "901ddc439a76c584548fa80f1e304993baffd66ae69a5a8f16619bda21182dc4"
+    },
+    {
+      "file": "stats/trend-first-statistics.png",
+      "width": 1487,
+      "height": 1058,
+      "bytes": 1393741,
+      "sha256": "38f65efe2fe3fac7f2ea19e7c00bddef447aa1234e76b36ea7f117f2f2909a3d"
+    }
+  ],
+  "review_items": 59,
+  "new_images": 20,
+  "application_code_written": false,
+  "user_review_required": true,
+  "other_role_design_completion": "outside this continuation scope"
+}

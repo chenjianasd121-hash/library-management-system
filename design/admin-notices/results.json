@@ -1,0 +1,38 @@
+{
+  "page": "公告管理",
+  "route": "/staff/notices",
+  "createdDate": "2026-10-19",
+  "timezone": "Asia/Shanghai",
+  "status": "selected",
+  "selection": 2,
+  "displayOrder": [
+    {
+      "number": 1,
+      "direction": "清晰公告表格",
+      "file": "clear-notice-table.png",
+      "original": "exec-2e2306f5-a9a8-4f04-a7a9-bf47b5015fbd.png"
+    },
+    {
+      "number": 2,
+      "direction": "标题优先公告清单",
+      "file": "title-led-notice-list.png",
+      "original": "exec-5cc51581-e45e-4d02-816e-85523372914c.png",
+      "refinementIfSelected": "去掉重复的状态和发布时间独立两列，保留标题下元信息与操作组"
+    },
+    {
+      "number": 3,
+      "direction": "公告预览工作台",
+      "file": "notice-preview-workspace.png",
+      "original": "exec-1f79dfcc-febc-4dba-a78e-885e27c25231.png"
+    }
+  ],
+  "format": "PNG",
+  "width": 1487,
+  "height": 1058,
+  "mode": "RGB",
+  "selectedDate": "2026-10-19",
+  "finalFile": "final.png",
+  "refinementFile": "title-led-notice-list-refined.png",
+  "finalWidth": 1484,
+  "finalHeight": 1060
+}

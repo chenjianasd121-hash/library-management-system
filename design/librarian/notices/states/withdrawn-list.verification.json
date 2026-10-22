@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-21",
+  "role": "LIBRARIAN",
+  "file": "withdrawn-list.png",
+  "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-b9de54c2-2135-4728-a970-d014f725881b.png",
+  "width": 1487,
+  "height": 1058,
+  "sha256": "fc323b05eb64dde8af97eddebe2397504318d4a493f2a0af9258ddd52648d6a5",
+  "identical_to_source": true,
+  "visual_check": "Withdrawn filter active; one record, withdrawn grey badge; original published timestamp retained; edit, preview, publish actions; no modal or invented records.",
+  "review_status": "ready_for_user_review"
+}

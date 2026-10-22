@@ -8,6 +8,7 @@ import { dateTime } from '@/utils/format'
 import { useAuthStore } from '@/stores/auth'
 import BookCard from '@/components/BookCard.vue'
 import LoadState from '@/components/LoadState.vue'
+import { Search, Reading, Calendar, Bell, ArrowRight } from '@element-plus/icons-vue'
 const router = useRouter()
 const auth = useAuthStore()
 const keyword = ref('')
@@ -21,7 +22,7 @@ async function load() {
   try {
     const [b, n] = await Promise.all([
       api.books({ page: 1, size: 4 }),
-      api.notices({ page: 1, size: 5 }),
+      api.notices({ page: 1, size: 3, status: 'PUBLISHED' }),
     ])
     books.value = b.items
     notices.value = n.items
@@ -41,94 +42,74 @@ onMounted(load)
 </script>
 <template>
   <section class="hero home-hero">
-    <div class="eyebrow">✦ GRADUATION PROJECT</div>
-    <h1>基于SpringBoot+Vue的图书管理系统</h1>
-    <p>让每一本书被看见，让每一次阅读更从容</p>
-    <div class="hero-notes">
-      <span>◈ 简洁高效</span><span>◉ 馆藏可查</span><span>▣ 借阅有序</span>
-    </div>
-    <div class="hero-script">让阅读<br />遇见更好的自己</div>
-  </section>
-  <div class="home-search surface">
-    <form @submit.prevent="search">
-      <el-input
-        v-model="keyword"
-        size="large"
-        placeholder="输入书名、作者或 ISBN 搜索馆藏"
-        clearable
-      /><el-button type="primary" size="large" native-type="submit">搜索图书</el-button>
+    <h1>让阅读，遇见更好的自己</h1>
+    <p>搜索馆藏，找到下一本想读的书</p>
+    <form class="home-search" @submit.prevent="search">
+      <el-input v-model="keyword" placeholder="输入书名、作者或 ISBN 搜索馆藏" clearable
+        ><template #prefix
+          ><el-icon><Search /></el-icon></template
+      ></el-input>
+      <el-button type="primary" native-type="submit" :icon="Search">搜索图书</el-button>
     </form>
     <div class="home-shortcuts">
-      <RouterLink to="/books">浏览图书目录 →</RouterLink
-      ><RouterLink to="/notices">查看系统公告 →</RouterLink
-      ><RouterLink v-if="auth.user?.role === 'READER'" to="/me/reservations">我的预约 →</RouterLink
-      ><RouterLink
-        v-if="auth.user?.role === 'ADMIN' || auth.user?.role === 'LIBRARIAN'"
-        to="/staff/dashboard"
-        >进入工作台 →</RouterLink
-      >
+      <RouterLink to="/books"
+        >浏览图书目录 <el-icon><ArrowRight /></el-icon></RouterLink
+      ><RouterLink to="/notices"
+        >查看系统公告 <el-icon><ArrowRight /></el-icon></RouterLink
+      ><RouterLink v-if="auth.user?.role === 'READER'" to="/me/reservations"
+        >我的预约 <el-icon><ArrowRight /></el-icon
+      ></RouterLink>
     </div>
-  </div>
+  </section>
   <div class="home-columns">
-    <section class="panel">
+    <section class="panel home-books">
       <div class="section-head">
-        <h2>新到馆藏</h2>
-        <RouterLink to="/books">查看全部 →</RouterLink>
+        <h2>
+          <el-icon><Reading /></el-icon>新到馆藏
+        </h2>
+        <RouterLink to="/books"
+          >查看全部 <el-icon><ArrowRight /></el-icon
+        ></RouterLink>
       </div>
       <LoadState :loading="loading" :error="error" :empty="!books.length" @retry="load"
         ><div class="book-grid"><BookCard v-for="book in books" :key="book.id" :book="book" /></div
       ></LoadState>
     </section>
-    <section class="panel">
-      <div class="section-head">
-        <h2>最新公告</h2>
-        <RouterLink to="/notices">查看全部 →</RouterLink>
-      </div>
-      <LoadState :loading="loading" :error="error" :empty="!notices.length" @retry="load"
-        ><div v-for="notice in notices" :key="notice.id" class="notice-row">
-          <span class="notice-dot" /><RouterLink :to="`/notices/${notice.id}`">{{
-            notice.title
-          }}</RouterLink
-          ><time>{{ dateTime(notice.publishedAt) }}</time>
-        </div></LoadState
-      >
-    </section>
+    <div class="home-aside">
+      <section class="panel home-notices">
+        <div class="section-head">
+          <h2>
+            <el-icon><Bell /></el-icon>最新公告
+          </h2>
+          <RouterLink to="/notices"
+            >更多 <el-icon><ArrowRight /></el-icon
+          ></RouterLink>
+        </div>
+        <LoadState :loading="loading" :error="error" :empty="!notices.length" @retry="load"
+          ><RouterLink
+            v-for="notice in notices"
+            :key="notice.id"
+            :to="`/notices/${notice.id}`"
+            class="home-notice"
+            ><span><i class="notice-dot" />{{ notice.title }}</span
+            ><time>{{ dateTime(notice.publishedAt).slice(0, 10) }}</time></RouterLink
+          ></LoadState
+        >
+      </section>
+      <section class="panel home-services">
+        <div class="section-head"><h2>我的服务</h2></div>
+        <div class="service-links">
+          <RouterLink to="/me/loans"
+            ><span class="service-icon"
+              ><el-icon><Reading /></el-icon></span
+            ><strong>我的借阅</strong><small>查看借阅 · 在线续借</small></RouterLink
+          ><RouterLink to="/me/reservations"
+            ><span class="service-icon green"
+              ><el-icon><Calendar /></el-icon></span
+            ><strong>我的预约</strong><small>排队进度 · 待取信息</small></RouterLink
+          >
+        </div>
+      </section>
+    </div>
   </div>
 </template>
-<style scoped>
-.home-search {
-  margin: 16px 0;
-  padding: 18px;
-}
-.home-search form {
-  display: flex;
-  gap: 10px;
-  max-width: 800px;
-}
-.home-shortcuts {
-  display: flex;
-  gap: 22px;
-  flex-wrap: wrap;
-  margin-top: 14px;
-  color: #2c78e7;
-  font-size: 13px;
-}
-.home-columns {
-  display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
-  gap: 14px;
-}
-.home-columns .book-grid {
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-}
-@media (max-width: 900px) {
-  .home-columns {
-    grid-template-columns: 1fr;
-  }
-}
-@media (max-width: 600px) {
-  .home-search form {
-    flex-direction: column;
-  }
-}
-</style>

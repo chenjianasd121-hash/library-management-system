@@ -1,0 +1,27 @@
+{
+  "anchorDate": "2026-10-21",
+  "timezone": "Asia/Shanghai",
+  "mockData": true,
+  "filter": "PUBLISHED",
+  "noticeId": 2001,
+  "rows": [
+    {
+      "id": 2001,
+      "title": "秋季阅读活动报名开放",
+      "status": "PUBLISHED",
+      "publishedAt": "2026-10-09T08:00:00+08:00"
+    },
+    {
+      "id": 2002,
+      "title": "国庆后开放时间安排",
+      "status": "PUBLISHED",
+      "publishedAt": "2026-10-08T09:30:00+08:00"
+    },
+    {
+      "id": 2003,
+      "title": "图书归还与预约取书提醒",
+      "status": "PUBLISHED",
+      "publishedAt": "2026-10-07T11:00:00+08:00"
+    }
+  ]
+}

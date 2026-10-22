@@ -1,0 +1,22 @@
+{
+  "source": "design/asset-work/admin-hero-reference.png",
+  "output": "frontend\\public\\design\\hero-admin.png",
+  "status": "saved",
+  "dimensions": [
+    1164,
+    210
+  ],
+  "generated_dimensions": [
+    2172,
+    724
+  ],
+  "generated_margin_crop": [
+    0,
+    159,
+    2172,
+    555
+  ],
+  "sha256": "3e55e593cf4507beb9b2e0c8dd9a9c4422cf724efc38bdb1b82b0ea0415620ed",
+  "method": "built-in imagegen foreground UI removal; crop white generator margins and normalize dimensions",
+  "color_notes": "Original pale-blue left photographic wash and blue glass/warm windows retained; exact pixels within former text regions necessarily restored, slight localized sky/cloud and tree drift."
+}

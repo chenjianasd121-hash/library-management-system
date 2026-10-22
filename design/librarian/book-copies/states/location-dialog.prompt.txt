@@ -1,0 +1,4 @@
+Use case: ui-mockup. Edit the selected librarian 副本管理 · Java编程思想 screen into the existing 修改位置 dialog state. Preserve the 1485×1059 full desktop, navy librarian sidebar and topbar, book summary 在册8册 / 可借3册, blank add-copy form and all nine original rows under a neutral 25% modal backdrop.
+At center place one compact white 520×270px prompt dialog with 12px corners and restrained shadow, styled like the current blue/navy interface. Header 修改位置 at left and close X at right.
+Prompt label 请输入新的馆藏位置, followed by one full-width text input prefilled A 区 2 排. Normal border, no error. Footer only 取消 outlined and 确定 primary blue, right aligned.
+The operation is on JAVA-001 and has not been saved; keep every row and inventory count unchanged beneath the overlay. No barcode field in the modal, no status switch, extra instructions, delete, toast, spinner or new actions. One complete state only, no option numbers or collage.

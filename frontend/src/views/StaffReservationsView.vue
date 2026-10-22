@@ -4,7 +4,7 @@ import { ElMessage, ElMessageBox } from 'element-plus'
 import { api } from '@/api'
 import { ApiError, errorText } from '@/api/http'
 import type { ReservationItem } from '@/api/types'
-import { dateTime, dueDate, newKey, statusLabel, statusTone } from '@/utils/format'
+import { dateTime, newKey, statusLabel, statusTone } from '@/utils/format'
 import LoadState from '@/components/LoadState.vue'
 import PageHeading from '@/components/PageHeading.vue'
 const filter = reactive({ status: 'READY', bookId: '', readerKeyword: '' }),
@@ -66,51 +66,66 @@ async function cancel(r: ReservationItem) {
     busy.value = ''
   }
 }
+function applyFilter() {
+  page.value = 1
+  void load()
+}
 onMounted(load)
 </script>
 <template>
-  <PageHeading title="预约管理" description="查看排队、待取与历史记录" />
-  <section class="panel">
-    <form
-      class="list-toolbar"
-      @submit.prevent="
-        () => {
-          page = 1
-          load()
-        }
-      "
-    >
-      <el-select v-model="filter.status"
-        ><el-option label="全部" value="" /><el-option label="待取" value="READY" /><el-option
-          label="排队中"
-          value="WAITING" /><el-option label="已履约" value="FULFILLED" /><el-option
-          label="已取消"
-          value="CANCELLED" /><el-option label="已过期" value="EXPIRED" /></el-select
-      ><el-input v-model="filter.readerKeyword" placeholder="读者关键词" /><el-input
-        v-model="filter.bookId"
-        placeholder="书目 ID"
-      /><el-button type="primary" native-type="submit">筛选</el-button>
+  <PageHeading title="预约管理" description="查看排队与待取预约，处理读者预约记录。" />
+  <section class="panel staff-record-panel">
+    <el-tabs v-model="filter.status" class="record-tabs" @tab-change="applyFilter"
+      ><el-tab-pane label="全部" name="" /><el-tab-pane label="待取" name="READY" /><el-tab-pane
+        label="排队中"
+        name="WAITING" /><el-tab-pane label="已履约" name="FULFILLED" /><el-tab-pane
+        label="已取消"
+        name="CANCELLED" /><el-tab-pane label="已过期" name="EXPIRED"
+    /></el-tabs>
+    <form class="record-query" @submit.prevent="applyFilter">
+      <label
+        >读者<el-input
+          v-model="filter.readerKeyword"
+          placeholder="输入读者用户名或姓名"
+          clearable /></label
+      ><label>书目 ID<el-input v-model="filter.bookId" placeholder="输入书目 ID" clearable /></label
+      ><el-button type="primary" native-type="submit">查询</el-button>
     </form>
     <LoadState :loading="loading" :error="error" :empty="!items.length" @retry="load"
       ><div class="table-scroll">
-        <el-table :data="items" stripe class="data-table"
-          ><el-table-column prop="bookTitle" label="书名" min-width="155" /><el-table-column
-            prop="readerName"
-            label="读者"
-            width="110"
-          /><el-table-column label="状态" width="110"
+        <el-table :data="items" class="management-table reservation-management-table">
+          <el-table-column label="图书 / 读者" min-width="260"
+            ><template #default="s"
+              ><strong>{{ s.row.bookTitle }}</strong
+              ><small>{{ s.row.readerName || '—' }}</small></template
+            ></el-table-column
+          >
+          <el-table-column label="状态" width="150"
             ><template #default="s"
               ><el-tag :type="statusTone(s.row.status)">{{
                 statusLabel[s.row.status as keyof typeof statusLabel]
               }}</el-tag></template
             ></el-table-column
-          ><el-table-column label="排队位置" width="90"
-            ><template #default="s">{{ s.row.queuePosition ?? '—' }}</template></el-table-column
-          ><el-table-column label="申请时间" width="170"
-            ><template #default="s">{{ dateTime(s.row.requestedAt) }}</template></el-table-column
-          ><el-table-column label="待取截止" width="170"
-            ><template #default="s">{{ dueDate(s.row.pickupDeadline) }}</template></el-table-column
-          ><el-table-column label="操作" width="110"
+          >
+          <el-table-column label="排队 / 待取信息" min-width="270"
+            ><template #default="s"
+              ><template v-if="s.row.status === 'WAITING'"
+                >排队第 <b class="text-primary">{{ s.row.queuePosition ?? '—' }}</b> 位</template
+              ><template v-else-if="s.row.status === 'READY'"
+                ><span>截止 {{ s.row.pickupDeadline || '—' }}</span
+                ><small>当日结束前到馆取书</small
+                ><small v-if="s.row.copyBarcode"
+                  >{{ s.row.copyBarcode }} · {{ s.row.shelfLocation || '待分配位置' }}</small
+                ></template
+              ><span v-else class="muted">—</span></template
+            ></el-table-column
+          >
+          <el-table-column label="申请时间" min-width="190"
+            ><template #default="s"
+              ><span class="wrapped-time">{{ dateTime(s.row.requestedAt) }}</span></template
+            ></el-table-column
+          >
+          <el-table-column label="操作" width="100"
             ><template #default="s"
               ><el-button
                 v-if="s.row.allowedActions?.canCancel"
@@ -118,14 +133,15 @@ onMounted(load)
                 type="danger"
                 :loading="busy === s.row.id"
                 @click="cancel(s.row)"
-                >取消</el-button
-              ><span v-else>—</span></template
+                >取消预约</el-button
+              ><span v-else class="muted">—</span></template
             ></el-table-column
-          ></el-table
-        >
+          >
+        </el-table>
       </div>
-      <div class="pager">
-        <el-pagination
+      <div class="staff-list-footer">
+        <span>共 {{ total }} 条记录</span
+        ><el-pagination
           background
           layout="prev, pager, next"
           :current-page="page"
@@ -140,4 +156,5 @@ onMounted(load)
         /></div
     ></LoadState>
   </section>
+  <p class="staff-page-footnote">取消预约需要填写业务原因；待取副本将按规则分配给下一位读者。</p>
 </template>

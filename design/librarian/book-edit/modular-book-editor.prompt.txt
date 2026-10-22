@@ -1,0 +1,21 @@
+Create ONE finished high-fidelity desktop UI mockup for Chinese library management software, LIBRARIAN 编辑书目. Independent alternative direction “信息卡片编辑台”: TWO equal-width modular cards at TOP of main content; basic book identifiers in LEFT card, publication metadata plus cover/status in RIGHT card; a full-width description card BELOW, and a shallow full-width bottom action bar. Make this visibly distinct from a unified long form or a left large-cover layout. Entire frame approx1440×1024, all fields and bottom buttons visible, no browser chrome, option label or collage. Currentdate2026-10-20 Asia/Shanghai, do not display it; existing publication date2020-01-01.
+References: selected librarian new-book form for visual system; selected librarian book catalogue for librarian shell and existing Java demo cover. All data is fully LOADED, unchanged EDIT state, not empty placeholders.
+
+Shell: navy sidebar230–250px #142747–#1a3156, white topbar60px, #f3f7fc canvas, navy #152747 ink, muted #70809c, blue #2775ea, fine rules #e7edf6. White cards12px rounded corners and understated shadows, readable Chinese sans-serif,28px heading and14–16px body, precisely aligned controls. Brand 图书管理系统 / LIBRARY MANAGEMENT. Sidebar 首页概览; 图书管理 expanded with 书目列表 ACTIVE blue, 新增书目 unselected, 公开目录; 借阅管理 collapsed; 读者查找; 分类管理; 数据统计; 系统设置. No administrator account or audit. Topbar global search 搜索图书、作者、分类等… and right avatar 馆, 欢迎回来，馆员.
+
+Page header breadcrumb 图书管理 / 编辑书目, title 编辑书目, subtitle 更新书目信息与上架状态, small * 为必填项.
+Two equally wide top cards about550px each, gap20px, heightapproximately420–450px:
+LEFT card title 基本信息. Four tidy stacked rows with labels above fullwidth controls:
+*书名 editable input value Java编程思想, counter8 / 200.
+*作者 editable input value Bruce Eckel.
+ISBN-13 editable input value9787115546081 (exact13digits).
+*分类 dropdown selected value计算机类.
+Only those THREE marked labels are required; ISBN optional, no star.
+RIGHT card title 出版与展示. First row two half-width controls: 出版社 actual value机械工业出版社; 出版日期 calendar control value2020-01-01. Second row 关键词 input fullwidth valueJava,编程, small helper 多个关键词使用逗号分隔.
+Lower portion of RIGHT card after subtle rule is a compact existing-cover-and-status area. Label 封面; portrait existing mock cover90×125px with black-gold Java type and warm tree/night landscape, consistent with catalogue, not gray placeholder. Next to it outlined 上传封面 file-selection button, helper JPEG / PNG / WebP，最大2 MiB. At right or beneath button an inline 上架状态, blue switchON and explicit 上架. Avoid duplicate state controls. No delete cover, no drag/drop, no real official-cover claims.
+Upper two cards must balance in height with sensible spacing and no squeezed controls.
+
+Below both cards, FULLWIDTH separate white card 内容简介. Editable textarea about110–130px high with EXACT actual sentence 系统介绍 Java 编程语言及面向对象思想。, counter22 / 5000 at bottom-right. Real dark text inside, not placeholder. No duplicated description elsewhere.
+Below description, shallow action bar with left muted 保存后进入副本管理, right secondary 返回列表 and main primaryblue 保存修改. Exactly one save, fully visible. No top header action buttons or creating-new label.
+
+Correct loaded field values in every input, title8 / 200 and description22 / 5000, exact ISBN9787115546081. Existing Java illustrative book cover preview, no 尚未上传封面. Required stars ONLY书名作者分类. Publicationdate must stay2020-01-01. No process steps, draft/undo/reset/version history, barcode, physical copy stock, shelf position, price/rating, delete, autoISBN retrieval, AI generation, import/export, error/loading/toast/unsaved-change warning. All components represent the supported existing book editor. Elegant modular software layout, high legibility and coherent spacing.

@@ -1,0 +1,232 @@
+{
+  "date": "2026-10-20",
+  "timezone": "Asia/Shanghai",
+  "illustrative_only": true,
+  "overview": {
+    "bookCount": 126,
+    "totalCopies": 12860,
+    "availableCopies": 12520,
+    "activeLoans": 268,
+    "overdueLoans": 39,
+    "readyReservations": 18,
+    "readerCount": 1532,
+    "generatedAt": "2026-10-20T10:00:00+08:00"
+  },
+  "window": {
+    "start": "2026-09-21",
+    "end": "2026-10-20",
+    "days": 30
+  },
+  "trend": [
+    {
+      "date": "2026-09-21",
+      "borrowedCount": 28,
+      "returnedCount": 30
+    },
+    {
+      "date": "2026-09-22",
+      "borrowedCount": 32,
+      "returnedCount": 29
+    },
+    {
+      "date": "2026-09-23",
+      "borrowedCount": 35,
+      "returnedCount": 32
+    },
+    {
+      "date": "2026-09-24",
+      "borrowedCount": 38,
+      "returnedCount": 35
+    },
+    {
+      "date": "2026-09-25",
+      "borrowedCount": 36,
+      "returnedCount": 33
+    },
+    {
+      "date": "2026-09-26",
+      "borrowedCount": 37,
+      "returnedCount": 39
+    },
+    {
+      "date": "2026-09-27",
+      "borrowedCount": 37,
+      "returnedCount": 34
+    },
+    {
+      "date": "2026-09-28",
+      "borrowedCount": 37,
+      "returnedCount": 34
+    },
+    {
+      "date": "2026-09-29",
+      "borrowedCount": 32,
+      "returnedCount": 29
+    },
+    {
+      "date": "2026-09-30",
+      "borrowedCount": 30,
+      "returnedCount": 27
+    },
+    {
+      "date": "2026-10-01",
+      "borrowedCount": 28,
+      "returnedCount": 30
+    },
+    {
+      "date": "2026-10-02",
+      "borrowedCount": 27,
+      "returnedCount": 24
+    },
+    {
+      "date": "2026-10-03",
+      "borrowedCount": 22,
+      "returnedCount": 19
+    },
+    {
+      "date": "2026-10-04",
+      "borrowedCount": 22,
+      "returnedCount": 19
+    },
+    {
+      "date": "2026-10-05",
+      "borrowedCount": 22,
+      "returnedCount": 19
+    },
+    {
+      "date": "2026-10-06",
+      "borrowedCount": 23,
+      "returnedCount": 25
+    },
+    {
+      "date": "2026-10-07",
+      "borrowedCount": 21,
+      "returnedCount": 18
+    },
+    {
+      "date": "2026-10-08",
+      "borrowedCount": 24,
+      "returnedCount": 21
+    },
+    {
+      "date": "2026-10-09",
+      "borrowedCount": 28,
+      "returnedCount": 25
+    },
+    {
+      "date": "2026-10-10",
+      "borrowedCount": 31,
+      "returnedCount": 28
+    },
+    {
+      "date": "2026-10-11",
+      "borrowedCount": 31,
+      "returnedCount": 33
+    },
+    {
+      "date": "2026-10-12",
+      "borrowedCount": 34,
+      "returnedCount": 31
+    },
+    {
+      "date": "2026-10-13",
+      "borrowedCount": 37,
+      "returnedCount": 34
+    },
+    {
+      "date": "2026-10-14",
+      "borrowedCount": 39,
+      "returnedCount": 36
+    },
+    {
+      "date": "2026-10-15",
+      "borrowedCount": 36,
+      "returnedCount": 33
+    },
+    {
+      "date": "2026-10-16",
+      "borrowedCount": 36,
+      "returnedCount": 38
+    },
+    {
+      "date": "2026-10-17",
+      "borrowedCount": 36,
+      "returnedCount": 33
+    },
+    {
+      "date": "2026-10-18",
+      "borrowedCount": 34,
+      "returnedCount": 31
+    },
+    {
+      "date": "2026-10-19",
+      "borrowedCount": 29,
+      "returnedCount": 26
+    },
+    {
+      "date": "2026-10-20",
+      "borrowedCount": 27,
+      "returnedCount": 24
+    }
+  ],
+  "topBooks": [
+    {
+      "bookId": "1001",
+      "title": "Java编程思想",
+      "borrowCount": 52
+    },
+    {
+      "bookId": "1002",
+      "title": "人类简史",
+      "borrowCount": 44
+    },
+    {
+      "bookId": "1003",
+      "title": "解忧杂货店",
+      "borrowCount": 36
+    },
+    {
+      "bookId": "1004",
+      "title": "数据结构与算法",
+      "borrowCount": 28
+    },
+    {
+      "bookId": "1005",
+      "title": "经济学原理",
+      "borrowCount": 20
+    },
+    {
+      "bookId": "1006",
+      "title": "活着",
+      "borrowCount": 18
+    },
+    {
+      "bookId": "1007",
+      "title": "月亮与六便士",
+      "borrowCount": 16
+    },
+    {
+      "bookId": "1008",
+      "title": "三体",
+      "borrowCount": 14
+    },
+    {
+      "bookId": "1009",
+      "title": "围城",
+      "borrowCount": 12
+    },
+    {
+      "bookId": "1010",
+      "title": "百年孤独",
+      "borrowCount": 10
+    }
+  ],
+  "consistency": {
+    "borrowed": 929,
+    "returned": 869,
+    "netLoans": 60,
+    "impliedActiveBeforeWindow": 208,
+    "top10Total": 250
+  },
+  "source_note": "Reuse the selected librarian home demo trend and top five, extend top array to ten for existing limit10. Not a database result. Generated chart shapes are illustrative; implementation must render API values."
+}

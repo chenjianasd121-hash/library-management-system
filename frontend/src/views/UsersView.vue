@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Search, User, Lock } from '@element-plus/icons-vue'
 import { onMounted, reactive, ref } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import type { FormRules } from 'element-plus'
@@ -150,56 +151,71 @@ async function reset(u: AdminUser) {
     rowBusy.value = ''
   }
 }
+function applyFilter() {
+  page.value = 1
+  void load()
+}
 onMounted(load)
 </script>
 <template>
-  <PageHeading title="账号管理" description="管理员维护员工与读者账号"
+  <PageHeading title="账号管理" description="管理系统账号，维护员工与读者的访问权限。"
     ><el-button type="primary" @click="open">＋ 创建员工</el-button></PageHeading
   >
-  <section class="panel">
-    <form
-      class="list-toolbar"
-      @submit.prevent="
-        () => {
-          page = 1
-          load()
-        }
-      "
-    >
-      <el-input v-model="filter.keyword" placeholder="用户名或显示名" clearable /><el-select
-        v-model="filter.role"
-        ><el-option label="全部角色" value="" /><el-option label="管理员" value="ADMIN" /><el-option
-          label="馆员"
-          value="LIBRARIAN" /><el-option label="读者" value="READER" /></el-select
-      ><el-select v-model="filter.status"
-        ><el-option label="全部状态" value="" /><el-option label="正常" value="ACTIVE" /><el-option
-          label="禁用"
-          value="DISABLED" /></el-select
-      ><el-button type="primary" native-type="submit">筛选</el-button>
-    </form>
+  <form class="panel staff-filter users-filter" @submit.prevent="applyFilter">
+    <el-input
+      v-model="filter.keyword"
+      placeholder="搜索用户名 / 显示名"
+      :prefix-icon="Search"
+      clearable
+    /><el-select v-model="filter.role"
+      ><el-option label="全部角色" value="" /><el-option label="管理员" value="ADMIN" /><el-option
+        label="馆员"
+        value="LIBRARIAN" /><el-option label="读者" value="READER" /></el-select
+    ><el-select v-model="filter.status"
+      ><el-option label="全部状态" value="" /><el-option label="正常" value="ACTIVE" /><el-option
+        label="禁用"
+        value="DISABLED" /></el-select
+    ><el-button type="primary" native-type="submit" :icon="Search">筛选</el-button>
+  </form>
+  <section class="panel users-panel">
+    <div class="management-section-heading">
+      <h2>账号列表</h2>
+      <span>共 {{ total }} 个账号</span>
+    </div>
     <LoadState :loading="loading" :error="error" :empty="!items.length" @retry="load"
       ><div class="table-scroll">
-        <el-table :data="items" stripe class="data-table"
-          ><el-table-column prop="username" label="用户名" min-width="130" /><el-table-column
-            prop="displayName"
+        <el-table :data="items" class="management-table users-table">
+          <el-table-column prop="username" label="用户名" min-width="205" /><el-table-column
             label="显示名"
-            min-width="120"
-          /><el-table-column label="角色" width="100"
-            ><template #default="s">{{
-              { ADMIN: '管理员', LIBRARIAN: '馆员', READER: '读者' }[
-                s.row.role as 'ADMIN' | 'LIBRARIAN' | 'READER'
-              ]
-            }}</template></el-table-column
-          ><el-table-column label="状态" width="90"
+            min-width="215"
+            ><template #default="s"
+              >{{ s.row.displayName }}
+              <el-tag v-if="s.row.id === auth.user?.id" class="current-account-tag" size="small"
+                >当前账号</el-tag
+              ></template
+            ></el-table-column
+          >
+          <el-table-column label="角色" min-width="140"
+            ><template #default="s"
+              ><el-icon><User /></el-icon>
+              {{
+                { ADMIN: '管理员', LIBRARIAN: '馆员', READER: '读者' }[
+                  s.row.role as 'ADMIN' | 'LIBRARIAN' | 'READER'
+                ]
+              }}</template
+            ></el-table-column
+          >
+          <el-table-column label="状态" min-width="110"
             ><template #default="s"
               ><el-tag :type="s.row.status === 'ACTIVE' ? 'success' : 'info'">{{
-                s.row.status === 'ACTIVE' ? '正常' : '禁用'
+                s.row.status === 'ACTIVE' ? '正常' : '已禁用'
               }}</el-tag></template
             ></el-table-column
-          ><el-table-column label="操作" width="220"
+          >
+          <el-table-column label="操作" width="295"
             ><template #default="s"
               ><el-button
-                link
+                plain
                 :type="s.row.status === 'ACTIVE' ? 'danger' : 'success'"
                 :disabled="
                   s.row.id === auth.user?.id ||
@@ -207,16 +223,19 @@ onMounted(load)
                 "
                 :loading="rowBusy === s.row.id"
                 @click="toggle(s.row)"
-                >{{ s.row.status === 'ACTIVE' ? '禁用' : '启用' }}</el-button
-              ><el-button link type="primary" :loading="rowBusy === s.row.id" @click="reset(s.row)"
+                >{{ s.row.status === 'ACTIVE' ? '禁用账号' : '启用账号' }}</el-button
+              ><el-button plain type="primary" :loading="rowBusy === s.row.id" @click="reset(s.row)"
                 >重置密码</el-button
+              ><small v-if="s.row.id === auth.user?.id" class="account-lock-hint"
+                ><el-icon><Lock /></el-icon>当前登录账号不能禁用</small
               ></template
             ></el-table-column
-          ></el-table
-        >
+          >
+        </el-table>
       </div>
-      <div class="pager">
-        <el-pagination
+      <div class="staff-list-footer">
+        <span>共 {{ total }} 条记录</span
+        ><el-pagination
           background
           layout="prev, pager, next"
           :current-page="page"

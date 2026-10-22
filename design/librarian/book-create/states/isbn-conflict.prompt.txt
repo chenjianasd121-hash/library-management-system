@@ -1,0 +1,6 @@
+Use case: ui-mockup. Edit the attached selected 新增书目 full-screen librarian form to show the server's already-existing ISBN save error. Preserve its navy sidebar with 新增书目 selected, white topbar, three form sections, footer actions, typography and approx1486×1058 frame.
+Fill a valid attempted new book: 书名 Java编程思想, counter8/200; 作者 Bruce Eckel; ISBN-13 9787115546081; 分类 计算机类; 出版社 机械工业出版社; 出版日期2020-01-01; 关键词 Java,编程; 简介 系统介绍 Java 编程语言及面向对象思想。, counter22/5000.
+Cover remains 未上传 placeholder. Enabled switch ON 上架.
+At top of the main white form panel before 基本信息 insert ONE pale red nonclosable error alert with exact text:
+ISBN 已存在。请到书目列表按 ISBN 搜索既有书目，再添加副本。
+Preserve the user's entries with normal input borders: this is a server conflict, not invalid ISBN syntax. Save button no longer spinning. Keep existing 返回列表 and 保存并添加副本 actions; do not add overwrite/merge/delete/create-copy/auto-search buttons. The duplicate record has not been saved. No success, modal, implementation terms, browser chrome, variants or collage. Reduce excess vertical space only enough to keep the footer fully visible.

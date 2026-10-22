@@ -1,0 +1,91 @@
+{
+  "status": "selected-verified",
+  "images": [
+    {
+      "file": "compact-password-reset.png",
+      "original": "C:\\Users\\en\\.codex\\generated_images\\01a15cec-dde6-7cd3-ba15-cf6f6e020cba\\exec-4c64f35c-ef60-4ba3-b20f-8539bb123f5d.png",
+      "dimensions": [
+        1487,
+        1058
+      ],
+      "mode": "RGB",
+      "sha256": "3fbc50330432f5035baecfe6ad88a90fa6a24f761bb35b0165a655233df6ee5e",
+      "matchesOriginal": true,
+      "visualReview": {
+        "titleCorrect": true,
+        "targetUsernameCorrect": true,
+        "oneEmptyPasswordInput": true,
+        "noPasswordValueOrVisibilityIcon": true,
+        "lengthHintCorrect": true,
+        "mustChangePasswordHelper": true,
+        "cancelAndConfirm": true,
+        "closeControl": true,
+        "onlyReaderManagementNavActive": true,
+        "adminIdentity": true,
+        "currentAdminDisableUnavailable": true,
+        "noErrorSuccessOrLoading": true,
+        "readableAndUnclipped": true
+      },
+      "notes": "紧凑顶部标签表单；单个空密码框，警示说明与下次改密提示准确，关闭和两个按钮清晰。"
+    },
+    {
+      "file": "aligned-password-reset.png",
+      "original": "C:\\Users\\en\\.codex\\generated_images\\01a15cec-dde6-7cd3-ba15-cf6f6e020cba\\exec-5d75f8dc-feaf-4eeb-b803-73537378455b.png",
+      "dimensions": [
+        1487,
+        1058
+      ],
+      "mode": "RGB",
+      "sha256": "a6b1ef84f275578e6e3ed1418f885175b9fa99d24be66e10998eb1211564e658",
+      "matchesOriginal": true,
+      "visualReview": {
+        "titleCorrect": true,
+        "targetUsernameCorrect": true,
+        "oneEmptyPasswordInput": true,
+        "noPasswordValueOrVisibilityIcon": true,
+        "lengthHintCorrect": true,
+        "mustChangePasswordHelper": true,
+        "cancelAndConfirm": true,
+        "closeControl": true,
+        "onlyReaderManagementNavActive": true,
+        "adminIdentity": true,
+        "currentAdminDisableUnavailable": true,
+        "noErrorSuccessOrLoading": true,
+        "readableAndUnclipped": true
+      },
+      "notes": "横向标签与密码框清晰对齐，帮助文字随输入左边缘；单字段初始状态正确，警示说明和操作完整。"
+    },
+    {
+      "file": "wide-password-reset.png",
+      "original": "C:\\Users\\en\\.codex\\generated_images\\01a15cec-dde6-7cd3-ba15-cf6f6e020cba\\exec-b333fcb8-3b6f-4488-89ee-4833bf16778e.png",
+      "dimensions": [
+        1487,
+        1058
+      ],
+      "mode": "RGB",
+      "sha256": "b7a2f96c38907cfd0468d0407db871d880c5563289d637241f645b3df696d59e",
+      "matchesOriginal": true,
+      "visualReview": {
+        "titleCorrect": true,
+        "targetUsernameCorrect": true,
+        "oneEmptyPasswordInput": true,
+        "noPasswordValueOrVisibilityIcon": true,
+        "lengthHintCorrect": true,
+        "mustChangePasswordHelper": true,
+        "cancelAndConfirm": true,
+        "closeControl": true,
+        "onlyReaderManagementNavActive": true,
+        "adminIdentity": true,
+        "currentAdminDisableUnavailable": true,
+        "noErrorSuccessOrLoading": true,
+        "readableAndUnclipped": true
+      },
+      "notes": "标题前警示图标，单个整宽密码框，下方改密提示与按钮同排，紧凑横向布局完整。"
+    }
+  ],
+  "applicationCodeChanged": false,
+  "selection": 3,
+  "finalFile": "final.png",
+  "finalSha256": "b7a2f96c38907cfd0468d0407db871d880c5563289d637241f645b3df696d59e",
+  "finalMatchesSelected": true
+}

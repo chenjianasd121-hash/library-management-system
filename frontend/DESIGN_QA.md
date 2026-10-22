@@ -1,31 +1,33 @@
-# 全站视觉验收记录
+# 本轮三端前端验收记录
 
-## 截图与检查范围
+更新日期：2026-10-22。当前总体验收状态见根目录 [design-qa.md](../design-qa.md)，阶段记录见 [implementation-checkpoints.md](../design/implementation-checkpoints.md)。
 
-- [1366×768 书目管理](tests/redesign-qa/librarian-staff-books-1366.png) · [1920×1080 书目管理](tests/redesign-qa/librarian-staff-books-1920.png)
-- [1366×768 馆员概览](tests/redesign-qa/librarian-staff-dashboard-1366.png) · [1920×1080 馆员概览](tests/redesign-qa/librarian-staff-dashboard-1920.png)
-- [1366×768 真实接口图书目录](tests/redesign-qa/real-visitor-books-1366.png) · [1920×1080 真实接口图书目录](tests/redesign-qa/real-visitor-books-1920.png)
-- [1366×768 真实接口访客首页](tests/redesign-qa/real-visitor-home-1366.png) · [1920×1080 真实接口访客首页](tests/redesign-qa/real-visitor-home-1920.png)
-- [1366×768 预约](tests/redesign-qa/reader-me-reservations-1366.png) · [1366×768 书目表单](tests/redesign-qa/librarian-staff-books-new-1366.png) · [1366×768 统计](tests/redesign-qa/librarian-staff-stats-1366.png)
-- [加载](tests/redesign-qa/librarian-staff-books-loading-1366.png) · [空数据](tests/redesign-qa/librarian-staff-books-empty-1366.png) · [接口错误](tests/redesign-qa/librarian-staff-books-error-1366.png)
+## 已通过
 
-视觉夹具覆盖访客、读者、馆员、管理员的 26 个路由，在两档视口生成 52 张截图；另检查了三种页面状态在目录、书目和账号页的 9 张截图。[完整布局与错误记录](tests/redesign-qa/report.json)、[状态记录](tests/redesign-qa/states.json)。真实后端可访问时，访客首页、图书目录、公告使用未拦截的接口另拍 6 张，[真实接口记录](tests/redesign-qa/real-public.json)。
+- 使用 Node 24.19.0 和现有锁文件完成 `npm ci`。
+- `npm run build`（包含 `vue-tsc --build`）与读者、馆员、管理员三个独立生产构建。
+- ESLint、Oxlint 的 `src` 检查，以及 Prettier 的 `src` 全量检查。
+- 现有 Vitest 单测 5/5。单测范围有限，不代表页面交互已完整走查。
+- Spring Boot + 独立 MySQL 8.4 上 35 项真实 HTTP/API 检查，未拦截请求或使用 mock。结果见 [api-verification-result.json](../design/api-verification-result.json)，脚本见 [verify-real-api.ps1](../design/verify-real-api.ps1)。
 
-## 对照三张参考图
+API 检查覆盖三端认证、注册、编目与副本、两人预约、排队优先权、借出、续借限制、归还后下一位待取、逾期归还后解除限制、公告、账号禁用/重置、统计、审计、上传、CSRF 和幂等。写入位于独立 QA 数据库；没有重置原库或原账号。脚本依赖全新演示数据中的逾期借阅，重复运行前应准备新的隔离数据库，不能直接指向原库。
 
-| 项目 | 检查与修正 |
-| --- | --- |
-| 图 2 的风格和比例 | 侧栏 248px、顶栏 60px、冷色画布和低阴影白卡。保留蓝色操作主轴，以青绿、紫、橙、红区分其他状态；仅首页主视觉使用大面积渐变。 |
-| 图 1 的臃肿与长页 | 页面标题缩到 24px；表格约 40–44px/行；列表每页 10 条并保留服务端分页。1366 的 10 条书目和分页在同一视口显示。 |
-| 图 3 的公告与借阅失衡 | 概览网格各卡按内容高度排布。单条公告卡约 103px，单条借阅卡约 142px，公告不再与借阅表格强制等高。 |
-| 真实目录多数据 | 真实接口在 1366 下曾显示半张第 4 行卡片；改为每页 9 张，三行完整显示并露出分页。 |
-| 统计页 | 第 7 个指标原本单独换行并推走图表；改为桌面单行七列。图表卡按内容收缩。 |
+## 待完成
 
-## 自动检查结果
+用户后续确认使用独立后台 Chrome 全面测试。真实页面 19 组流程和 60 个角色/路由/视口组合已通过，36 路由巡检也通过；截图、异常注入与并发修复结果见根目录 [TEST_REPORT.md](../TEST_REPORT.md)。没有操作其日常浏览器窗口。
 
-- 52 个夹具页面：没有 JavaScript 页面错误；`documentElement` 在两档视口均无横向或纵向溢出，主要内容区也没有意外溢出。
-- 9 个状态页面：骨架、空状态、错误重试入口均正确出现。
-- 6 个真实公开页面：无接口错误和页面错误；在两档视口均无横向或纵向页面溢出。
-- `vue-tsc --build`、`vite build`、Vitest 5 项测试均通过。构建仅保留现有大 chunk 提示。
+后续需在 Chrome 100% 缩放下，对照对应参考尺寸并检查 1366×768、1920×1080：
 
-馆员与管理员的视觉截图使用项目已有的隔离夹具；当前会话没有演示账号密码，未执行登录后的真实接口浏览器验收。视觉实现没有替换业务请求、权限路由、服务端状态含义或写操作流程。
+1. 三端全部页面与弹窗、加载/空/失败/冲突状态。
+2. 位置、间距、字体、色彩、阴影、装饰图及溢出，逐页截图比较和修正。
+3. 对当前功能截图与参考 PNG 逐页、同状态比较；Windows 显示缩放和实际颜色校准仍需记录。
+
+连接真实后端和 MySQL 的后台 Chrome 已执行注册、编目、预约、借还、资料、管理操作、刷新会话和退出后访问私有页。当前截图位于 `output/flow-stress-qa/run-20261022-140423/`。`tests/redesign-qa/` 的历史夹具截图不作为本轮新设计通过证据；功能流程通过也不等于色差校准完成。
+
+构建仍提示现有大 chunk（主包约 870kB、图表约 554kB，压缩前）；未影响构建，本轮未为消除提示改动依赖或拆包。
+
+## 视觉验收准备与首轮对照
+
+已建立 [视觉验收清单和复跑步骤](../design/visual-acceptance-plan.md)，本机对照台为 [127.0.0.1:5280](http://127.0.0.1:5280/?entry=admin-login)。53 个页面的三档截图共 159 张已保存，6 个代表页面完成首轮全景/细节比较，存在字体、色彩、导航、登录控件和首页/借出布局差异。57 个弹窗/状态仍需准备。视觉结论为 blocked，详见根目录 `design-qa.md`；本轮只准备验收基线，没有修改产品样式。
+
+用户补充全站内容过大、过宽后，已完成一轮桌面密度修订，产品样式现已更新。三端共用容器、字号、侧栏、表单、表格、登录/注册与矮屏借出布局已收紧，见 [桌面视觉修订记录](../design/DESKTOP_VISUAL_REFINEMENT.md)。最新 159 张截图、额外高 DPI/宽屏检查及 19 组真实 Chrome 回归均已完成；原 5173/5174/5175 可直接刷新查看。完整设计图逐项验收仍不等于已通过。

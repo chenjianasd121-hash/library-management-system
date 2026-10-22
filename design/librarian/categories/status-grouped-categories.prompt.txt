@@ -1,0 +1,20 @@
+Create ONE independent polished high-fidelity Chinese LIBRARIAN 分类管理 desktop screenshot. Direction “状态分组清单”: two vertically stacked status groups, five enabled category rows in first white panel and one disabled category in second white panel. Recompose the reference's single six-row table into an intentionally status-grouped overview, not a grid of cards. Complete desktop frame approx1440×1024, no browserchrome/collage/designnumber. Dateanchor2026-10-20 Asia/Shanghai, no visible date. Use reference for exact shell, palette, six records and existing functionality only.
+
+Professional calm university library UI: navy230–250px sidebar #142747–#1a3156, white60px topbar, pale #f3f7fc canvas, dark #152747 ink, muted #70809c, primaryblue #2775ea, teal enabled and gray disabled chips, fine #e7edf6 dividers, white panels12px corners, restrained shadows. Chinese sans-serif with28px title and14–16px readable metadata.
+Brand 图书管理系统 / LIBRARY MANAGEMENT. Sidebar seven main items 首页概览, 图书管理 COLLAPSED with right-pointing chevron (no submenu), 借阅管理 COLLAPSED, 读者查找, 分类管理 ACTIVEblue, 数据统计, 系统设置. Only categoryselected, no administrator user/audit. Topbar global search 搜索图书、作者、分类等… and avatar 馆, 欢迎回来，馆员.
+
+Breadcrumb 馆员工作台 / 分类管理. Title 分类管理; subtitle 维护目录分类及启用状态; top-right primaryblue ＋ 新增分类. Small unobtrusive count line 共6个分类 · 启用5个 · 停用1个, not KPI cards.
+FIRST fullwidth white panel heading with small teal dot 启用分类, muted5个 and smallhelper 组内按排序值升序展示. This heading is descriptive, NOT clickable filter/tab or collapsible control. Table-like aligned header 分类名称 | 分类编码 | 排序 | 状态 | 操作. Five spacious60–66px rows:
+计算机类 | CS | 1 | 启用 tealchip | 编辑 blue.
+文学类 | LIT | 2 | 启用 | 编辑.
+历史类 | HIS | 3 | 启用 | 编辑.
+经济管理 | ECON | 4 | 启用 | 编辑.
+自然科学 | SCI | 5 | 启用 | 编辑.
+Names strong, optional small categoryicons monitor/openbook/classicalbuilding/bars/flask in restrained distinct colors, uppercase codes exact, plain sortnumbers aligned (not controls).
+SECOND fullwidth white panel below with16–20pxgap, heading smallgraydot 停用分类, muted1个. One complete row aligned to same five columns above:
+艺术类 | ART | 6 | 停用 graychip | 编辑 BLUE.
+May repeat a subtle small column header if helpful but no giant empty card. ART editable, not disabled action. Palette categoryicon if used.
+Every record has only 编辑, no inline enabletoggles or direct停用/启用 actions. Global 新增分类 opens existing create modal; 编辑 opens existing editor, but initial screen shows NO openmodal. All6records visible at once, group headings cannot hide data.
+
+Quiet information line beneath groups: 停用分类后，读者将不能按该分类检索。 Do not imply books automatically offline or borrowing unavailable. Maintain thoughtful whitespace and no extra decorative content.
+No local search, filters, refresh, pagination, tabbar, checkboxes, draghandles, sortarrows, bulk actions, delete, import/export, hierarchical categorytree, bookcount, popularity, chart/KPI, coverart, date or copy-management leftovers. Initial loaded unchanged overview, no loading/error/toast/rowselection. Same six exact names/codes/sortvalues/states as reference, clearly grouped for operational status review. Attractive readable complete production software design.

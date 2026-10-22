@@ -1,0 +1,16 @@
+{
+  "source": "design/frontend-handoff/管理员端/pages/login.png",
+  "output": "frontend\\public\\design\\login-admin-background.png",
+  "status": "saved",
+  "method": "built-in imagegen edit; size normalization only via Pillow",
+  "original_generated_dimensions": [
+    1488,
+    1057
+  ],
+  "dimensions": [
+    1487,
+    1058
+  ],
+  "sha256": "f3dfb069f9bffb0b251f4487daa9a621c1a1cf2f8939004f06f66255c3d2605a",
+  "prompt": "Remove all foreground login UI, logos and text; seamlessly restore original blue-sky modern glass library courtyard photograph; preserve composition, books, trees, palette and lighting."
+}

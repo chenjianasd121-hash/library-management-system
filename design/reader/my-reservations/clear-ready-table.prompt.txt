@@ -1,0 +1,20 @@
+Use case: ui-mockup. Create one realistic, production-quality Chinese READER library web-app primary screen 我的预约. Target 1440 x 1024 desktop natural aspect ratio, flat app screenshot, no browser chrome/device frame/montage. Clear hierarchy, crisp Chinese typography, intentional spacing, full visible labels and footer, restrained rounded surfaces.
+
+Input image 1 is the user-selected 我的借阅 visual system. Preserve its navy sidebar, book logo, white topbar, pale blue-gray canvas, typography, blue actions, subtle lower-sidebar library line art. Input image 2 is the actual old 我的预约 screen, grounding existing fields and actions only; replace its outdated mock dates with the exact dates below. Make a new content composition for 我的预约 rather than borrowing loans fields.
+
+Visual system: navy #142747 sidebar about 248px; pale canvas #f3f7fc; ink #152747; muted #70809c; blue #2775ea; light rules #e7edf6. Chinese sans-serif body 14-16px, heading about 28px, 12px corners, subtle shadows only if needed. Use whitespace, aligned columns and lightweight dividers before extra boxes. Sidebar brand 图书管理系统 / LIBRARY MANAGEMENT and small 读者端. Exactly six menus: 首页概览, 图书目录, 系统公告, 我的借阅, 我的预约, 个人中心. Highlight 我的预约 in bright blue. Topbar global search placeholder 搜索图书、作者、分类等… with 搜索; avatar 张, 欢迎回来，张三, role 读者.
+
+Main page title 我的预约. Subtitle 查看排队进度与待取信息. Toolbar segmented filter 待取 active blue, 排队中, 历史, with quiet 刷新 on the right. Do not add tab counts. THIS IS THE DEFAULT READY FILTER, so every displayed record must be 待取. Do not mix queue or historical records into this screen.
+
+Exactly TWO reservation records, in this order and with exact fields:
+Java编程思想; 申请时间 2026/10/06 09:00; 待取截止 2026-10-10 with subordinate 当日结束前; 馆藏位置 A 区 2 排; 副本条码 BK0002; status 待取; enabled understated outline action 取消预约.
+解忧杂货店; 申请时间 2026/10/07 14:30; 待取截止 2026-10-11 with subordinate 当日结束前; 馆藏位置 C 区 1 排; 副本条码 BK0024; status 待取; enabled understated outline action 取消预约.
+
+Book titles readable, styled as quiet links to existing book detail. Blue-tinted 待取 pills. Keep all full dates, exact barcodes and Chinese location spacing. Current date anchor 2026-10-09 Asia/Shanghai. Both deadlines are in future. No expired warning or invented urgency countdown. Mock allocation dates 2026-10-07 and 2026-10-08 respectively comply with allocation + 3 days policy, but do not display allocation times.
+
+Include calm readable helper 请到馆由馆员办理借出。 under records or in record content. Footer pagination lower right: disabled previous chevron, active blue 1, disabled next chevron, exactly one page, no page-size dropdown. Fit both complete records, actions and footer with comfortable bottom margin. Do not fill extra space with invented features.
+
+Only supported controls: filters, refresh, pagination, book title detail link, individual cancellation. No statistics, totals, cover images, authors, loan due dates, renewal, queue positions on READY objects, request-new button, search of reservations, sorting, checkboxes, bulk actions, export, map, QR code, pickup appointments, reminders, instant self-checkout, fine/payment, extra menu, confirm modal or success state. No option numbers or direction titles inside the UI. Preserve the exact shared data while applying the requested layout direction.
+
+
+Layout direction: 清晰待取清单. One broad white grouped table surface. Toolbar inside top of this surface, above a soft-blue table header. Exact columns 书名 | 申请时间 | 待取截止 | 馆藏信息 | 状态 | 操作. Two comfortably tall rows, about 150px each. Book title bold and clickable, request date/time on two lines, deadline bold full ISO date plus 当日结束前, 馆藏信息 has shelf location plus subordinate 条码 and barcode, compact 待取 pill, outline 取消预约 action. Align each column consistently. No cover images or row checkbox. Calm helper below table with a small info icon; footer pagination aligned on its right. Leave ample canvas below rather than adding panels.

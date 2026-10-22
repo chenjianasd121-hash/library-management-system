@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-20",
+  "timezone": "Asia/Shanghai",
+  "role": "LIBRARIAN",
+  "state": "create-category-initial",
+  "status": "selected",
+  "base_image": "../../final.png",
+  "verification": "PNG decoding and source-copy SHA-256 checked programmatically. Empty required name/code, max80 name and2-32 code rule, sort0/min0, enabledON, cancel/save/close, same librarian category-group background checked visually. Three alternatives of one initial create state, not three different states.",
+  "candidates": [
+    {
+      "display_number": 1,
+      "file": "stacked-category-dialog.png",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "045c80a38117d06caa09eb29017f763e857b375592e0a46831ea50d3d47fedc9",
+      "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-6da80531-9267-4dfa-b042-4c1f9aa981e9.png",
+      "identical_to_source": true
+    },
+    {
+      "display_number": 2,
+      "file": "grouped-category-dialog.png",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "59e0cdc7d2e52bcdcea8d804de18961790e21ff304436463bdee177dfed52e72",
+      "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-40334f36-9b0a-43b9-b542-2528e6f0d1be.png",
+      "identical_to_source": true
+    },
+    {
+      "display_number": 3,
+      "file": "guided-category-dialog.png",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "8874bdf63f47891b535967b9da09e6f5850ed610b9cbbf93bf163b5e3a0e6fb0",
+      "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-e1091dd2-567d-49a1-8988-2fd2c1c44319.png",
+      "identical_to_source": true
+    }
+  ],
+  "selected_display_number": 3,
+  "selected_candidate": "guided-category-dialog.png",
+  "final_file": "final.png",
+  "final_sha256": "8874bdf63f47891b535967b9da09e6f5850ed610b9cbbf93bf163b5e3a0e6fb0"
+}

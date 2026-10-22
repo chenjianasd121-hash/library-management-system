@@ -1,0 +1,17 @@
+{
+  "anchorDate": "2026-10-21",
+  "timezone": "Asia/Shanghai",
+  "mockData": true,
+  "backgroundDataSource": "../admin-notices/demo-data.json",
+  "state": "edit-existing-draft",
+  "notice": {
+    "id": "2101",
+    "title": "十月新书推荐与阅读指南",
+    "status": "DRAFT",
+    "publishedAt": null,
+    "content": "读者朋友们：\n十月新书推荐书目已整理完成，欢迎到馆查阅与借阅。\n请通过公开图书目录查询书目和可借副本，办理借阅时携带有效读者证件。\n具体书目以馆内目录显示为准。"
+  },
+  "titleCharacterCount": 11,
+  "contentCharacterCount": 80,
+  "contentCountConvention": "Unicode characters, line breaks count as one"
+}

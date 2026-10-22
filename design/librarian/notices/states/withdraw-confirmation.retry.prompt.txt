@@ -1,0 +1,8 @@
+Use case: ui-mockup, precise state edit.
+Edit the attached librarian Published-notice list screenshot to show ONE withdrawal confirmation. Preserve the 1487×1058 desktop frame, no browser chrome, annotations or collage.
+Freeze the list beneath a neutral 25% dim backdrop: sidebar 馆 identity / 公告管理 active, 已发布 tab active, exactly one published first notice, timestamp 2026-10-19 10:00, original title, subtitle, actions, count 1 and page size 10. Nothing is withdrawn before confirming. There is no preview dialog behind this confirmation.
+Centered white warning message box about 570px wide and 260px high, 12px corners, subdued shadow, #152747 ink, #2775ea primary, #d98a22 warning.
+Header: 确认操作, orange warning icon, close X.
+Exact message: 确认撤下公告《关于图书馆开放时间调整的通知》？公开页面将不再显示。
+Readable two or three lines. Footer ONLY 取消 secondary and 确定 blue primary at right.
+No additional inputs, reason form, editor, deleting, success, error or loading. Preserve all other typography, spacing and the original page footer 发布后公告将对所有访客可见。

@@ -25,12 +25,10 @@ export const useAuthStore = defineStore('auth', () => {
         user.value = restored.role === portalRole ? restored : null
       } catch (error) {
         user.value = null
-        if (
-          !(
-            error instanceof ApiError &&
-            (error.status === 401 || error.code === 'PORTAL_ROLE_MISMATCH')
-          )
-        )
+        if (!(
+          error instanceof ApiError &&
+          (error.status === 401 || error.code === 'PORTAL_ROLE_MISMATCH')
+        ))
           backendError.value = error instanceof Error ? error.message : '会话恢复失败'
       }
       initialized.value = true

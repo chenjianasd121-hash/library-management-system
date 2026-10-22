@@ -1,0 +1,7 @@
+Use case: ui-mockup. Edit the selected librarian copy-management full screen into the add-form duplicate-barcode validation state. Keep its established navy sidebar, white topbar, book summary Java编程思想 / 在册8册 可借3册, layout, nine original rows and all row actions.
+Inside 新增副本 card, directly below the heading, insert one slim pale red nonclosable alert with red error icon and exact text 输入中存在重复条码.
+Fill the barcode textarea with exactly two separate lines:
+JAVA-010
+JAVA-010
+Fill 馆藏位置 input A 区 2 排. Keep 添加副本 button normal blue, no loading. The request was blocked locally, so do not add a tenth row or change counts, and no success.
+Adjust vertical gaps modestly to keep all nine original rows and pagination visible within the same approx1485×1060 desktop frame. Preserve table order and status colors. No modal, inline extra errors, invented barcode-generation/import/scan buttons, browser chrome, annotation labels or collage.

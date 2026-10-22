@@ -1,0 +1,11 @@
+Use case: ui-mockup, precise-object-edit.
+Create ONE supplementary “停用前确认” state of the attached already-selected LIBRARIAN category editing screenshot. Edit this image, preserve its visual system and whole1487×1058 desktop framing. Date anchor2026-10-20 Asia/Shanghai; no added date, browser chrome, presentation frame, collage, numbers or outside annotations. This is a fixed workflow state, not a new design alternative.
+Freeze the original navy sidebar, white topbar, 图书管理系统 brand, 馆 avatar, 欢迎回来，馆员, 分类管理 navigation, dimmed six-category grouped main and underlying 编辑分类 modal size/position. The existing category main is NOT updated yet: still 共6个分类，启用5个，停用1个. Records计算机类CS1启用,文学类LIT2启用,历史类HIS3启用,经济管理ECON4启用,自然科学SCI5启用,艺术类ART6停用. Natural occlusion is correct, never relocate rows or change groups.
+Behind the new confirmation keep 编辑分类 open with the same selected helper-right layout and four fields. Name计算机类; codeCS; sort1. The ONLY underlying edit change is toggle 启用 OFF, gray with knob left and adjacent visible text停用. These unsaved edits have not yet changed the background list. Keep existing right填写说明, exact original rules, cancellation and save footer.
+Add one compact white confirmation message box above the edit modal, centered in viewport aroundx743,y529, about500pxwide and220pxhigh, 12px corners, restrained shadow. Use an additional subtle neutral scrim over the existing edit dialog so this confirmation is the highest layer, while the surrounding edit title, bottom sort1/OFFtoggle and footer can still be recognized. Match navy#152747, readable Chinese14–16px, primaryblue#2775ea, warningorange#d98a22. Do not turn the confirmation into a large second full form.
+Foreground:
+header title 确认停用, closeX upperright, small orange warningicon.
+Body verbatim: 停用分类后读者将不能再按此分类检索。确认继续？
+Natural2-line wrapping, ample spacing, no extra business consequences, instructions or counts.
+Footer secondarybutton取消, primarybluebutton确定, right aligned.
+Exactly these2confirmation actions andcloseX; no extra formfields, checkbox, delete/return button or destructive redbutton. Behind it original edit actions remain naturally visible but dim/inactive. No success/error/loading state. Entire screenshot coherent and faithful to the supplied selected design.

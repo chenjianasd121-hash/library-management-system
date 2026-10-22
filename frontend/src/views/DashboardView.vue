@@ -7,7 +7,24 @@ import { dateTime, dueDate, statusLabel, statusTone } from '@/utils/format'
 import LoadState from '@/components/LoadState.vue'
 import TrendChart from '@/components/TrendChart.vue'
 import TopBooksChart from '@/components/TopBooksChart.vue'
-import { Reading, Refresh, UserFilled, WarningFilled } from '@element-plus/icons-vue'
+import { portal } from '@/portal'
+import PageHeading from '@/components/PageHeading.vue'
+import {
+  Reading,
+  Refresh,
+  UserFilled,
+  WarningFilled,
+  TrendCharts,
+  PieChart,
+  Clock,
+  Bell,
+  Right,
+  Back,
+  Plus,
+  Medal,
+  CircleCheck,
+  Grid,
+} from '@element-plus/icons-vue'
 const overview = ref<Overview | null>(null),
   trend = ref<TrendPoint[]>([]),
   top = ref<TopBook[]>([]),
@@ -24,7 +41,7 @@ async function load() {
       api.trend(),
       api.topBooks(),
       api.loans({ page: 1, size: 5 }),
-      api.notices({ page: 1, size: 5 }),
+      api.notices({ page: 1, size: 5, status: 'PUBLISHED' }),
     ])
     overview.value = o
     trend.value = t
@@ -40,14 +57,40 @@ async function load() {
 onMounted(load)
 </script>
 <template>
-  <section class="hero">
-    <div class="eyebrow">✦ GRADUATION PROJECT</div>
+  <PageHeading
+    v-if="portal === 'librarian'"
+    title="馆员工作台"
+    description="管理馆藏与借还业务，掌握今日工作动态。"
+  >
+    <RouterLink to="/staff/checkout"
+      ><el-button type="primary" :icon="Right">办理借出</el-button></RouterLink
+    >
+    <RouterLink to="/staff/return"><el-button :icon="Back">办理归还</el-button></RouterLink>
+    <RouterLink to="/staff/books/new"
+      ><el-button link type="primary" :icon="Plus">新增书目</el-button></RouterLink
+    >
+  </PageHeading>
+  <section v-else class="hero">
+    <div class="eyebrow">GRADUATION PROJECT</div>
     <h1>基于SpringBoot+Vue的图书管理系统</h1>
-    <p>毕业设计作品展示 · 智能、高效、现代化的图书管理平台</p>
+    <p>首页概览 · 馆藏与借阅运行情况</p>
     <div class="hero-notes">
-      <span>◈ 简洁高效</span><span>◉ 功能完善</span><span>▣ 支持扩展</span>
+      <span
+        ><el-icon><Medal /></el-icon> 简洁高效</span
+      ><span
+        ><el-icon><CircleCheck /></el-icon> 功能完善</span
+      ><span
+        ><el-icon><Grid /></el-icon> 支持扩展</span
+      >
     </div>
     <div class="hero-script">让阅读<br />遇见更好的自己</div>
+    <div class="hero-actions">
+      <RouterLink to="/staff/books/new"
+        ><el-button type="primary" :icon="Plus">新增书目</el-button></RouterLink
+      >
+      <RouterLink to="/staff/checkout"><el-button :icon="Right">办理借出</el-button></RouterLink>
+      <RouterLink to="/staff/return"><el-button :icon="Back">办理归还</el-button></RouterLink>
+    </div>
   </section>
   <LoadState :loading="loading" :error="error" :empty="!overview" @retry="load"
     ><template v-if="overview">
@@ -96,7 +139,9 @@ onMounted(load)
       <div class="dashboard-grid">
         <section class="panel dashboard-chart">
           <div class="section-head">
-            <h2>▥ 借阅趋势统计</h2>
+            <h2>
+              <el-icon><TrendCharts /></el-icon> 借阅趋势统计
+            </h2>
             <RouterLink to="/staff/stats">查看更多 →</RouterLink>
           </div>
           <p class="chart-caption">
@@ -109,7 +154,9 @@ onMounted(load)
         </section>
         <section class="panel">
           <div class="section-head">
-            <h2>◕ 热门书目</h2>
+            <h2>
+              <el-icon><PieChart /></el-icon> 热门书目
+            </h2>
             <RouterLink to="/staff/stats">查看更多 →</RouterLink>
           </div>
           <p class="chart-caption">近 30 天 · 按借出次数</p>
@@ -128,19 +175,11 @@ onMounted(load)
           </div>
           <el-empty v-else description="暂无借出记录" />
         </section>
-        <section class="panel dashboard-actions">
-            <div class="section-head"><h2>⚡ 快捷操作</h2></div>
-            <RouterLink to="/staff/books/new" class="quick-link"
-              >＋ 新增图书 <span>›</span></RouterLink
-            ><RouterLink to="/staff/checkout" class="quick-link"
-              >⇄ 办理借出 <span>›</span></RouterLink
-            ><RouterLink to="/staff/return" class="quick-link"
-              >↩ 办理归还 <span>›</span></RouterLink
-            >
-        </section>
         <section class="panel wide dashboard-loans">
           <div class="section-head">
-            <h2>◷ 最新借阅记录</h2>
+            <h2>
+              <el-icon><Clock /></el-icon> 最新借阅记录
+            </h2>
             <RouterLink to="/staff/loans">查看更多 →</RouterLink>
           </div>
           <div class="table-scroll">
@@ -169,75 +208,22 @@ onMounted(load)
             >
           </div>
         </section>
-          <section class="panel notice-panel">
-            <div class="section-head">
-              <h2>◈ 系统公告</h2>
-              <RouterLink to="/staff/notices">查看更多 →</RouterLink>
-            </div>
-            <template v-if="notices.length"
-              ><div v-for="n in notices" :key="n.id" class="notice-row">
-                <span class="notice-dot" /><RouterLink :to="`/notices/${n.id}`">{{
-                  n.title
-                }}</RouterLink
-                ><time>{{ dateTime(n.publishedAt) }}</time>
-              </div></template
-            ><el-empty v-else description="暂无公告" />
-          </section>
-      </div>
-    </template></LoadState
-  >
+        <section class="panel notice-panel">
+          <div class="section-head">
+            <h2>
+              <el-icon><Bell /></el-icon> 系统公告
+            </h2>
+            <RouterLink to="/staff/notices">查看更多 →</RouterLink>
+          </div>
+          <template v-if="notices.length"
+            ><div v-for="n in notices" :key="n.id" class="notice-row">
+              <span class="notice-dot" /><RouterLink :to="`/notices/${n.id}`">{{
+                n.title
+              }}</RouterLink
+              ><time>{{ dateTime(n.publishedAt) }}</time>
+            </div></template
+          ><el-empty v-else description="暂无公告" />
+        </section>
+      </div> </template
+  ></LoadState>
 </template>
-<style scoped>
-.chart-caption {
-  font-size: 11px;
-  color: #8794aa;
-  margin: 0 0 5px;
-}
-.dashboard-chart .chart-box {
-  height: 160px;
-}
-.popular-body {
-  height: 160px;
-  display: flex;
-  align-items: center;
-}
-.popular-body .chart-box {
-  width: 54%;
-  height: 160px;
-}
-.notice-panel { align-self: start; }
-.top-summary {
-  width: 46%;
-  display: grid;
-  gap: 9px;
-  font-size: 11px;
-  color: #56677f;
-}
-.top-summary > div {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.top-summary strong {
-  margin-left: auto;
-}
-.rank-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  flex: none;
-}
-.text-link {
-  color: #287bec;
-}
-@media (max-width: 600px) {
-  .popular-body {
-    height: auto;
-  }
-  .popular-body .chart-box {
-    height: 180px;
-  }
-}
-</style>

@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-21",
+  "role": "LIBRARIAN",
+  "file": "field-validation.png",
+  "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-0bdb39fe-2aad-416f-874f-0c5b4f857f90.png",
+  "width": 1484,
+  "height": 1060,
+  "sha256": "1163c0390d32906175eeb21420acd0111234f0a67751ec95d6909afb4c259ca3",
+  "identical_to_source": true,
+  "visual_check": "Four simultaneous field errors match source; invalid ISBN checksum; all optional fields neutral; full primary action visible, no global/server success.",
+  "review_status": "ready_for_user_review"
+}

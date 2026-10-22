@@ -1,0 +1,20 @@
+Create ONE polished high-fidelity Chinese library management desktop UI screenshot, LIBRARIAN 编辑书目 page. Single full frame approximately1440×1024, all controls and actions visible; no browser chrome, collage or design option label. Date anchor2026-10-20 Asia/Shanghai; keep book publication date2020-01-01, do not substitute today's date.
+Alternative direction “连贯分区编辑”: closely match the selected new-book reference's ONE wide white card, clear horizontal sections, bottom action bar, but now edit a fully loaded existing book. References: first selected librarian new-book form = layout/system; second selected librarian catalogue = role and Java cover art. This is NOT an empty new-book form.
+
+Shell: navy sidebar230–250px #142747–#1a3156, white topbar60px, #f3f7fc canvas, #152747 ink, #70809c secondary, blue #2775ea actions, fine #e7edf6 rules,12px corners and restrained shadow. Beautiful clear Chinese sans-serif. Brand 图书管理系统 / LIBRARY MANAGEMENT. Nav 首页概览; 图书管理 expanded with 书目列表 ACTIVE blue, 新增书目 UNSELECTED, 公开目录; 借阅管理 collapsed; 读者查找; 分类管理; 数据统计; 系统设置. Do not highlight 新增书目 and no admin account/audit. Topbar search 搜索图书、作者、分类等… and avatar 馆, 欢迎回来，馆员.
+
+Main breadcrumb 图书管理 / 编辑书目; title 编辑书目; subtitle 更新书目信息与上架状态.
+Wide white card with three sections matching selected new form, all values DARK readable text inside edit controls, not placeholders:
+基本信息 with small * 为必填项.
+row1 *书名 input actual value Java编程思想, counter8 / 200; *作者 input Bruce Eckel.
+row2 ISBN-13 input 9787115546081 (exact13digits); *分类 dropdown selected 计算机类.
+出版与检索 section separated by thin rule:
+row 出版社 input 机械工业出版社, 出版日期 calendar input 2020-01-01.
+Next fullwidth 关键词 input Java,编程. Small helper 多个关键词使用逗号分隔.
+展示与上架 section:
+Left about70%width 内容简介 textarea actual exact sentence 系统介绍 Java 编程语言及面向对象思想。 and counter22 / 5000.
+Right about30%width label 封面, portrait EXISTING demo Java cover preview about85×120px, black/gold tree and night landscape consistent with catalogue, with adjacent outlined 上传封面 file-selection button. Muted helper JPEG / PNG / WebP，最大2 MiB. This is an existing illustrative cover, no 尚未上传封面 placeholder. No delete cover or drag-and-drop. Existing cover title does not need fine print but external form title must be accurate.
+Below, 上架状态 blue switch ON, text 上架, muted 上架后读者可在目录中检索.
+Bottom card action bar: left muted 保存后进入副本管理; right secondary 返回列表 and single primary 保存修改. No second save action. All within frame.
+
+Required stars ONLY书名、作者、分类. Optional ISBN can be edited or blank in actual use, do not add star; current ISBN13digits must remain exactly9787115546081. Existing values in all fields, none empty. Book title uses Java编程思想 with no inserted extra characters; description22characters including spaces and punctuation. No steps/wizard, no summary metrics, physical copy counts, barcode, shelf location, price, ratings, delete, draft, undo, reset, version history, automatic ISBN lookup or AI text. No unsaved-change warning, errors, success or loading; loaded unchanged editing state. Professional restrained complete consistent UI, noticeably a filled editor with cover preview and 保存修改.

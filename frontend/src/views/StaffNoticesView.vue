@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Document, Refresh } from '@element-plus/icons-vue'
 import { onMounted, reactive, ref } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import type { FormRules } from 'element-plus'
@@ -104,73 +105,60 @@ async function action(n: Notice, kind: 'publish' | 'withdraw') {
     busy.value = false
   }
 }
+function showPreview(notice: Notice) {
+  form.title = notice.title
+  form.content = notice.content
+  preview.value = true
+}
+function applyFilter() {
+  page.value = 1
+  void load()
+}
 onMounted(load)
 </script>
 <template>
-  <PageHeading title="公告管理" description="保存草稿、预览并发布馆内通知"
+  <div class="staff-breadcrumb">系统设置 / <span>公告管理</span></div>
+  <PageHeading title="公告管理" description="发布馆内通知，让重要信息及时传达。"
     ><el-button type="primary" @click="open()">＋ 新建公告</el-button></PageHeading
   >
-  <section class="panel">
-    <div class="list-toolbar">
-      <el-select
-        v-model="status"
-        @change="
-          () => {
-            page = 1
-            load()
-          }
-        "
-        ><el-option label="草稿" value="DRAFT" /><el-option
+  <section class="panel staff-notice-panel">
+    <div class="notice-management-tools">
+      <el-tabs v-model="status" class="record-tabs" @tab-change="applyFilter"
+        ><el-tab-pane label="草稿" name="DRAFT" /><el-tab-pane
           label="已发布"
-          value="PUBLISHED" /><el-option label="已撤下" value="WITHDRAWN" /></el-select
-      ><el-button @click="load">刷新</el-button>
+          name="PUBLISHED" /><el-tab-pane label="已撤下" name="WITHDRAWN" /></el-tabs
+      ><el-button :icon="Refresh" @click="load">刷新</el-button><span>共 {{ total }} 条</span>
     </div>
     <LoadState :loading="loading" :error="error" :empty="!items.length" @retry="load"
-      ><div class="table-scroll">
-        <el-table :data="items" stripe class="data-table"
-          ><el-table-column prop="title" label="标题" min-width="230" /><el-table-column
-            label="状态"
-            width="110"
-            ><template #default="s"
-              ><el-tag :type="statusTone(s.row.status)">{{
-                statusLabel[s.row.status as keyof typeof statusLabel]
-              }}</el-tag></template
-            ></el-table-column
-          ><el-table-column label="发布时间" width="170"
-            ><template #default="s">{{ dateTime(s.row.publishedAt) }}</template></el-table-column
-          ><el-table-column label="操作" width="230"
-            ><template #default="s"
-              ><el-button
-                v-if="s.row.status !== 'PUBLISHED'"
-                link
-                type="primary"
-                @click="open(s.row)"
-                >编辑</el-button
-              ><el-button
-                link
-                @click="
-                  () => {
-                    form.title = s.row.title
-                    form.content = s.row.content
-                    preview = true
-                  }
-                "
-                >预览</el-button
-              ><el-button
-                v-if="s.row.status !== 'PUBLISHED'"
-                link
-                type="success"
-                @click="action(s.row, 'publish')"
-                >发布</el-button
-              ><el-button v-else link type="danger" @click="action(s.row, 'withdraw')"
-                >撤下</el-button
-              ></template
-            ></el-table-column
-          ></el-table
-        >
-      </div>
-      <div class="pager">
-        <el-pagination
+      ><article v-for="notice in items" :key="notice.id" class="managed-notice">
+        <el-icon class="managed-notice-icon"><Document /></el-icon>
+        <div class="managed-notice-text">
+          <h2>
+            {{ notice.title }}
+            <el-tag :type="statusTone(notice.status)">{{ statusLabel[notice.status] }}</el-tag>
+          </h2>
+          <p>{{ notice.content }}</p>
+        </div>
+        <time>{{ dateTime(notice.publishedAt || notice.updatedAt) }}</time>
+        <div class="managed-notice-actions">
+          <el-button v-if="notice.status !== 'PUBLISHED'" link type="primary" @click="open(notice)"
+            >编辑</el-button
+          ><el-button link type="primary" @click="showPreview(notice)">预览</el-button
+          ><el-button
+            v-if="notice.status !== 'PUBLISHED'"
+            link
+            type="success"
+            :loading="busy"
+            @click="action(notice, 'publish')"
+            >发布</el-button
+          ><el-button v-else link type="danger" :loading="busy" @click="action(notice, 'withdraw')"
+            >撤下</el-button
+          >
+        </div>
+      </article>
+      <div class="staff-list-footer">
+        <span>共 {{ total }} 条记录</span
+        ><el-pagination
           background
           layout="prev, pager, next"
           :current-page="page"
@@ -185,6 +173,7 @@ onMounted(load)
         /></div
     ></LoadState>
   </section>
+  <p class="staff-page-footnote">公告发布后对所有访客可见；撤下后将不再出现在公开公告列表。</p>
   <el-dialog v-model="dialog" :title="editing ? '编辑公告' : '新建公告'" width="650px"
     ><el-alert
       v-if="formError"

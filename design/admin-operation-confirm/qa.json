@@ -1,0 +1,47 @@
+{
+  "status": "selected-and-copy-verified",
+  "required": [
+    "Single modal on published announcement list",
+    "Accurate operation and visibility consequence",
+    "No deletion or invented irreversible claims",
+    "Approved navy/blue brand retained"
+  ],
+  "candidates": [
+    {
+      "number": 1,
+      "file": "icon-inline-confirmation.png",
+      "dimensions": [
+        1484,
+        1060
+      ],
+      "mode": "RGB",
+      "copyHashMatches": true,
+      "review": "Single confirmation layer; published tab and 3 published rows retained; correct announcement title, visibility consequence, cancel/confirm buttons and small amber warning icon; navy/blue brand consistent."
+    },
+    {
+      "number": 2,
+      "file": "centered-confirmation.png",
+      "dimensions": [
+        1484,
+        1060
+      ],
+      "mode": "RGB",
+      "copyHashMatches": true,
+      "review": "Single centered confirmation, accurate title and consequence, one amber outline warning icon, centered cancel and confirm row; approved published-list background and brand retained."
+    },
+    {
+      "number": 3,
+      "file": "structured-confirmation.png",
+      "dimensions": [
+        1484,
+        1060
+      ],
+      "mode": "RGB",
+      "copyHashMatches": true,
+      "review": "Single left-aligned confirmation with warning in header; accurate announcement title and visibility consequence, correct cancel/confirm actions, no invented delete or irreversible claims. Amber header icon is filled rather than outlined, a minor stylistic variation."
+    }
+  ],
+  "displayOrderVerified": true,
+  "selectedNumber": 2,
+  "finalCopyHashMatches": true
+}

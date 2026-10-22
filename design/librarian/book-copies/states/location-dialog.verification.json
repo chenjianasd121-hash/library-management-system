@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-21",
+  "role": "LIBRARIAN",
+  "file": "location-dialog.png",
+  "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-2a2e110d-055b-4046-ba83-d89532e83cf2.png",
+  "width": 1484,
+  "height": 1060,
+  "sha256": "62920a554d7a5620c8edc265e3a7f86468697d1ab4d883ebfaa02ee70636f0f6",
+  "identical_to_source": true,
+  "visual_check": "Single location prompt, existing location prefilled, cancel and confirm; all counts and nine original rows preserved beneath backdrop.",
+  "review_status": "ready_for_user_review"
+}

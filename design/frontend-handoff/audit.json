@@ -1,0 +1,58 @@
+{
+  "checked_at": "2026-10-21T20:12:31+08:00",
+  "status": "passed",
+  "physical_png_count": 110,
+  "manifest_entries": 114,
+  "checks": {
+    "all_copied_png_sha256_equal_source": true,
+    "all_110_png_decode": true,
+    "reader_21_match_manifest_and_selected_candidates": true,
+    "librarian_14_main_match_recorded_hashes": true,
+    "librarian_20_continuation_match_recorded_hashes": true,
+    "librarian_4_body_references_match_reader_originals": true,
+    "administrator_latest_corrected_dashboard_hash": true,
+    "all_27_existing_routes_mapped_with_role_restrictions": true,
+    "gallery_image_files_all_inside_package": true,
+    "frontend_backend_source_unchanged_during_collection": true
+  },
+  "historical_record_counts": {
+    "admin": 251,
+    "librarian": 177,
+    "reader": 165
+  },
+  "application_source_file_count": 116,
+  "browser_validation": {
+    "status": "passed",
+    "browser": "Chrome headless",
+    "checks": [
+      "initial 114 entries",
+      "administrator 34 entries",
+      "image viewer and Escape",
+      "librarian 59 entries including 4 body references",
+      "librarian 4 body references",
+      "reader 21 entries",
+      "reader reservation route returns READY, WAITING, history and cancel",
+      "all 53 complete pages",
+      "all 114 image references decode in browser",
+      "no browser errors or network dependencies"
+    ],
+    "screenshot": "gallery-preview.png"
+  },
+  "limits": [
+    "未生成应用前端代码；未执行应用构建或业务联调。",
+    "历史逐图确认状态未改写；以本次用户三端完成的整体交接指令整理。"
+  ],
+  "folder_classification": {
+    "checked_at": "2026-10-21T20:30:47+08:00",
+    "status": "passed",
+    "folders": {
+      "管理员端": 34,
+      "馆员端": 55,
+      "读者端": 21
+    },
+    "all_110_png_sha256_unchanged": true,
+    "all_114_manifest_paths_resolve": true,
+    "role_ownership_verified": true,
+    "body_references_kept_explicit": 4
+  }
+}

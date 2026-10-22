@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-21",
+  "role": "LIBRARIAN",
+  "file": "barcode-validation.png",
+  "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-120bad67-700f-49b5-b1c8-ff2b25f9fb2b.png",
+  "width": 1484,
+  "height": 1060,
+  "sha256": "2a484c01d9f917bff5d82767165545c03062ade0239d306dde8d7a5b105ec88e",
+  "identical_to_source": true,
+  "visual_check": "Duplicate JAVA-010 lines shown, one global error strip; position retained; original nine rows and inventory counts unchanged.",
+  "review_status": "ready_for_user_review"
+}

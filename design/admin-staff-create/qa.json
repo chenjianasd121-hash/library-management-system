@@ -1,0 +1,102 @@
+{
+  "status": "finalized",
+  "images": [
+    {
+      "file": "aligned-staff-create.png",
+      "original": "C:\\Users\\en\\.codex\\generated_images\\01a11f0d-1cca-75d0-92ce-6b7c296189ac\\exec-b5abf6f8-c040-47da-88fd-3ce0cea8fd8e.png",
+      "dimensions": [
+        1487,
+        1058
+      ],
+      "mode": "RGB",
+      "sha256": "354a96e7a92263899ce66574832de2419aec9dcf027fdff15424c8475645735b",
+      "matchesOriginal": true,
+      "visualReview": {
+        "titleCorrect": true,
+        "exactlyFourRequiredFields": true,
+        "textAndPasswordInputsEmpty": true,
+        "defaultRoleLibrarian": true,
+        "roleDropdownClosed": true,
+        "passwordVisibilityControl": true,
+        "validationHintsCorrect": true,
+        "cancelAndCreateAccountButtons": true,
+        "closeControl": true,
+        "onlyReaderManagementNavActive": true,
+        "adminIdentity": true,
+        "currentAdminDisableUnavailable": true,
+        "noErrorSuccessOrLoading": true,
+        "readableAndUnclipped": true
+      },
+      "notes": "固定左侧标签与右侧控件对齐；三输入为空，默认馆员，初始密码带可见性图标，四个字段与帮助文案准确。"
+    },
+    {
+      "file": "stacked-staff-create.png",
+      "original": "C:\\Users\\en\\.codex\\generated_images\\01a15cec-dde6-7cd3-ba15-cf6f6e020cba\\exec-77bad0ee-4e62-4b35-8d32-89293cffec25.png",
+      "dimensions": [
+        1487,
+        1058
+      ],
+      "mode": "RGB",
+      "sha256": "198fbc5526a3c1c91126c31ff18eb7c666337f8fa7f5a16ec7ebecca7918796a",
+      "matchesOriginal": true,
+      "visualReview": {
+        "titleCorrect": true,
+        "exactlyFourRequiredFields": true,
+        "textAndPasswordInputsEmpty": true,
+        "defaultRoleLibrarian": true,
+        "roleDropdownClosed": true,
+        "passwordVisibilityControl": true,
+        "validationHintsCorrect": true,
+        "cancelAndCreateAccountButtons": true,
+        "closeControl": true,
+        "onlyReaderManagementNavActive": true,
+        "adminIdentity": true,
+        "currentAdminDisableUnavailable": true,
+        "noErrorSuccessOrLoading": true,
+        "readableAndUnclipped": true
+      },
+      "notes": "纵向顶部标签，四字段顺序正确；三个文本与密码输入为空，角色默认馆员；密码眼睛控件、说明和两个页脚按钮清楚完整。"
+    },
+    {
+      "file": "paired-staff-create.png",
+      "original": "C:\\Users\\en\\.codex\\generated_images\\01a15cec-dde6-7cd3-ba15-cf6f6e020cba\\exec-5493f1a1-f99a-4b98-b730-4986d1c9c428.png",
+      "dimensions": [
+        1487,
+        1058
+      ],
+      "mode": "RGB",
+      "sha256": "95d56434f7b434b0eaa06aca6b0649c318699c06cca65920e939d6669f652a5c",
+      "matchesOriginal": true,
+      "visualReview": {
+        "titleCorrect": true,
+        "exactlyFourRequiredFields": true,
+        "textAndPasswordInputsEmpty": true,
+        "defaultRoleLibrarian": true,
+        "roleDropdownClosed": true,
+        "passwordVisibilityControl": true,
+        "validationHintsCorrect": true,
+        "cancelAndCreateAccountButtons": true,
+        "closeControl": true,
+        "onlyReaderManagementNavActive": true,
+        "adminIdentity": true,
+        "currentAdminDisableUnavailable": true,
+        "noErrorSuccessOrLoading": true,
+        "readableAndUnclipped": true
+      },
+      "notes": "双列表单，上排用户名和显示名，下排角色与初始密码；字段、必填标记、提示文案、眼睛图标及页脚完整，默认馆员且文本输入为空。"
+    }
+  ],
+  "applicationCodeChanged": false,
+  "selection": 3,
+  "final": {
+    "file": "final.png",
+    "source": "paired-staff-create.png",
+    "sha256": "95d56434f7b434b0eaa06aca6b0649c318699c06cca65920e939d6669f652a5c",
+    "dimensions": [
+      1487,
+      1058
+    ],
+    "matchesSelectedImage": true,
+    "unchangedCopy": true
+  }
+}

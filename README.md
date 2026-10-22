@@ -73,6 +73,8 @@ npm run dev:admin
 
 ## 演示账号和数据
 
+2026-10-22 已追加一批可直接登录的本机测试账号与书目/借还数据，入口及场景见 [本机测试数据说明](./design/LOCAL_TEST_DATA.md)。账号密码保存在本机被 Git 忽略的 `output/runtime/local-test-seed/accounts.private.json`，不写入版本库。
+
 仅本地演示时，启动前设置三个环境变量，再以 `local,demo` 配置启动：
 
 ```powershell
@@ -86,6 +88,8 @@ cd backend
 首次空库会初始化 `demo_admin`、`demo_librarian`、`demo_reader`、`demo_reader2`，以及 5 个分类、20 条书目、各类副本状态、借阅、预约和公告。演示密码只从环境变量读取并经自适应哈希保存；已有用户时不会重复播种。正式环境不要启用 `demo` 配置。
 
 ## 测试与验收
+
+2026-10-22 三端新设计的检查点见 [实施记录](./design/implementation-checkpoints.md)，视觉待验收项见 [design-qa.md](./design-qa.md)。全面流程测试已使用独立后台 Chrome 完成，修复 8 类缺陷；后端 20 项测试、7 组各 20 轮并发、三档各 60 秒压力通过。实际覆盖、指标和限制见 [TEST_REPORT.md](./TEST_REPORT.md)，复跑见 [流程测试说明](./frontend/tests/flow-qa/README.md)。参考图 1:1 色差校准仍待单独完成。
 
 ```powershell
 cd backend

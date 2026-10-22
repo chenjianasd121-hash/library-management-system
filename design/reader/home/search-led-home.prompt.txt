@@ -1,0 +1,18 @@
+Use case: ui-mockup. Create realistic, production-quality Chinese library READER homepage, direction “搜索优先首页”. Target 1440 x 1024 desktop landscape. ONE complete flat app screenshot, no browser/device chrome, comparison board or option number. Clear hierarchy, sharp Chinese text, realistic book-cover imagery and purposeful spacing.
+Input images: image1 user-approved catalogue for palette and book-cover styling; image2 existing public homepage for available workflows; image3 user's original dashboard screenshot for shared light blue visual mood. This is a logged-in READER view, not a staff dashboard and not the visitor reference state.
+Use navy sidebar #142747–#1a3156, pale canvas #f3f7fc, white surfaces, ink #152747, muted #70809c, rules #e7edf6, blue #2775ea, teal #159f85, orange #d98a22. Chinese sans-serif body14–16px, title28px, corners12–14px, restrained shadows. Prioritize space, typography and light dividers; no nested cards or superfluous metrics.
+Left sidebar approximately248px with 图书管理系统 / LIBRARY MANAGEMENT brand and small subdued 读者端 label. ONLY reader navigation: active blue 首页概览, 图书目录, 系统公告, 我的借阅, 我的预约, 个人中心. Simple white outline icons. No staff/admin menus, “图书管理”, category management or account management. Bottom calm quote 书籍是人类进步的阶梯.
+White60px topbar contains menu icon, compact global search 搜索图书、作者、分类等… and account avatar 张 with text 欢迎回来，张三 and subtle 读者 identity. No login/register controls because logged in. Main header small 读者首页, current date2026-10-09 optional but no other fictional counts.
+Search-led hero at top of main content: soft light-blue image of a modern university library fading into whitespace, quiet and readable, approximately220px high. Left headline “让阅读，遇见更好的自己”, supporting text “搜索馆藏，找到下一本想读的书”. Prominent search field with placeholder “输入书名、作者或 ISBN 搜索馆藏” and blue primary button “搜索图书”. Under search simple text links “浏览图书目录 →” and “我的预约 →”. Do not use technical stack title or graduation-project marketing.
+Below hero: two columns, left roughly70% “新到馆藏” grouped white surface and right30% “最新公告” grouped white surface. Headlines with quiet 查看全部 → links. Render four books as a spacious 2x2 grid of lightly separated horizontal book entries, not heavy nested cards. Each includes accurate realistic portrait book cover ~82x120px, title, author, category, numeric availability and 查看详情 →. Real cover imagery, no empty placeholder illustrations. Data EXACT:
+Java编程思想 / Bruce Eckel / 计算机类 / 可借 3 / 总册 8, teal text badge 可预约待取.
+人类简史 / 尤瓦尔·赫拉利 / 历史类 / 可借 2 / 总册 8, teal 可预约待取.
+解忧杂货店 / 东野圭吾 / 文学类 / 可借 0 / 总册 8, orange 预约排队.
+数据结构与算法 / 王道论坛 / 计算机类 / 可借 2 / 总册 8, teal 可预约待取.
+Keep titles legible outside covers. No ISBN strings needed and no stock-edit controls. BOOK ENTRY ACTION ONLY 查看详情; do not put 立即借阅 or admin actions.
+Right announcements three simple rows with subtle divider and exact plausible dates:
+关于图书馆开放时间调整的通知 — 2026-10-08
+新增馆藏已开放查询 — 2026-10-06
+借阅与预约服务说明 — 2026-10-03
+Below announcements within SAME right area, a thin rule and small “我的阅读” group with understated navigation rows “我的借阅 — 查看在借与归还记录 →” and “我的预约 — 查看排队与待取状态 →”. These are existing page navigation only, no invented personal data or counts. Avoid a new isolated card for every link.
+All main content fits screen with comfortable bottom margin, no cropped book rows and no tiny type. Do not invent recommendations algorithm, review stars, favorites, e-reader, fines/payment, self checkout, account administration, librarian duties, metric charts, personal overdue counts or alerts. This is a calm reader service portal. Current anchor2026-10-09 Asia/Shanghai; all announcement dates are past. Render one complete independent high-fidelity screen.

@@ -1,0 +1,31 @@
+Create ONE new independent high-fidelity Chinese LIBRARIAN 数据统计 desktop UI screenshot. Direction “趋势优先分析”: compact single horizontal summary strip of7metrics, FULLWIDTH trend chart below, FULLWIDTH two-column horizontal popular-book bar ranking at bottom. Recompose reference 4+3 metrics and side-by-side donut layout. Full frame approx1440×1024, all7metrics/all10rankings/timestamp visible, no browserchrome/collage/optionnumber. Dateanchor2026-10-20 Asia/Shanghai.
+Reference grounds exactvalues/role/palette. Navy230–250px sidebar #142747–#1a3156, white60px topbar, pale #f3f7fc canvas, #152747 ink, #70809c muted, primaryblue #2775ea, subtle #e7edf6 dividers,12px rounded white surfaces and restrained shadows, clear Chinese sans-serif28px heading and14–16px body.
+Brand 图书管理系统 / LIBRARY MANAGEMENT. Nav 首页概览, 图书管理 collapsed, 借阅管理 collapsed, 读者查找, 分类管理, 数据统计 ACTIVEblue, 系统设置 collapsed. No submenu/useradmin/audit. Topbar 搜索图书、作者、分类等… and avatar 馆, 欢迎回来，馆员.
+Breadcrumb 馆员工作台 / 数据统计. Title 数据统计. Subtitle 实时聚合馆藏、借阅与预约信息. Sole top-right primary 刷新数据.
+
+Belowheader one compact white summary surface with SEVEN equal-width segments separated by hairlines; not 4+3 rows. Each label/readablevalueunit and smalldefinition:
+书目数126种 / 全部书目，含下架
+总册数12,860册 / 不含退役副本
+可借册数12,520册 / 可借状态副本
+在借数268笔 / 当前未归还借阅
+逾期数39笔 / 在借中的逾期借阅 (redvalue)
+待取数18条 / 待取预约
+读者数1,532人 / 启用读者账号.
+Keep readable numbers ~26–28px and labels14px, definitions12px wrapping as needed. No percentage/sparklines/growth.
+Under summary 数据生成时间：2026-10-20 10:00（Asia/Shanghai）.
+FULLWIDTH white trendcard approx300–320px tall. Heading 近30天借出与归还趋势, small 2026-09-21 至 2026-10-20. Fine BLUE借出 and PURPLE归还 lines with light translucent fill, legendupperright. Yaxis次, scale0/10/20/30/40/50; xaxis09-21,09-27,10-03,10-09,10-15,10-20. 30datepoints plausiblewaves: start28/30, peakabout39, lowabout21/18, end27/24, not steadygrowth. Blue mostly abovepurple but crosses occasionally. Footer30个日期记录 · 单位：次.
+BOTTOM fullwidth white rankingcard approx260–300px tall. Heading 近30天热门书目, subtitle 按借出次数排序 · 单位：次. Horizontal bars in TWO columns ofFIVE, LEFT ranks1–5 then RIGHT6–10. Every row readable rank, title, thin proportional bar and exactcount次. Same maximum52 across bothcolumns, not eachcolumn autoscaled. Largest52length100%,44~85%,36~69%,28~54%,20~38%,18~35%,16~31%,14~27%,12~23%,10~19%. Simpleblue bars with subtlebackgroundtrack, not ten big cards.
+Exactrecords:
+1 Java编程思想52次
+2 人类简史44次
+3 解忧杂货店36次
+4 数据结构与算法28次
+5 经济学原理20次
+6 活着18次
+7 月亮与六便士16次
+8 三体14次
+9 围城12次
+10 百年孤独10次.
+Allten visible with no duplicate or omittedtitle. No donut in this direction.
+
+Only existing statistics and refresh; no exports/datepickers/rangebuttons/autorefreshsetting, KPI comparisons, ratios, currentday metrics, loanrecords, actions/notifications, fakefilters/pagination/other business. Datewindow is text not selector. Loaded state no error/loading. Complete polished wide analytical UI with precisevalues/units/date and efficient spacing within screenshot. Charts are designillustrations, not exact plotted source-evidence; semantic labels must remain accurate.

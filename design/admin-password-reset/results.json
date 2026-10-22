@@ -1,0 +1,45 @@
+{
+  "page": "管理员重置密码弹窗",
+  "portal": "admin",
+  "route": "/admin/users",
+  "state": "reset-password-initial-empty",
+  "createdDate": "2026-10-21",
+  "timezone": "Asia/Shanghai",
+  "status": "selected",
+  "selection": 3,
+  "finalFile": "final.png",
+  "toolMode": "built-in Image Gen",
+  "reference": "../admin-users/final.png",
+  "displayOrder": [
+    {
+      "number": 1,
+      "direction": "紧凑提示式",
+      "file": "compact-password-reset.png",
+      "prompt": "compact-password-reset.prompt.txt",
+      "status": "generated-reviewed",
+      "original": "C:\\Users\\en\\.codex\\generated_images\\01a15cec-dde6-7cd3-ba15-cf6f6e020cba\\exec-4c64f35c-ef60-4ba3-b20f-8539bb123f5d.png"
+    },
+    {
+      "number": 2,
+      "direction": "横向对齐式",
+      "file": "aligned-password-reset.png",
+      "prompt": "aligned-password-reset.prompt.txt",
+      "status": "generated-reviewed",
+      "original": "C:\\Users\\en\\.codex\\generated_images\\01a15cec-dde6-7cd3-ba15-cf6f6e020cba\\exec-5d75f8dc-feaf-4eeb-b803-73537378455b.png"
+    },
+    {
+      "number": 3,
+      "direction": "宽幅警示式",
+      "file": "wide-password-reset.png",
+      "prompt": "wide-password-reset.prompt.txt",
+      "status": "generated-reviewed",
+      "original": "C:\\Users\\en\\.codex\\generated_images\\01a15cec-dde6-7cd3-ba15-cf6f6e020cba\\exec-b333fcb8-3b6f-4488-89ee-4833bf16778e.png"
+    }
+  ],
+  "nextUnfinishedItem": "管理员公告编辑三方案，然后公告预览与其余必要状态",
+  "qaFile": "qa.json",
+  "displayedInThread": "codex://threads/01a15cec-dde6-7cd3-ba15-cf6f6e020cba",
+  "lastCheckpointDate": "2026-10-21",
+  "selectedDate": "2026-10-21",
+  "finalSha256": "b7a2f96c38907cfd0468d0407db871d880c5563289d637241f645b3df696d59e"
+}

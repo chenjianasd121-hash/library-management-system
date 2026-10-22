@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-21",
+  "role": "LIBRARIAN",
+  "file": "disable-confirmation.png",
+  "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-ad545ba8-730f-4670-88b6-ff817ecfff0e.png",
+  "width": 1487,
+  "height": 1058,
+  "sha256": "dd72610e17a23ecf42650205588016c5670ce613efb1ac4dec7efb263ed486ce",
+  "identical_to_source": true,
+  "visual_check": "Book-state warning states reservation and new-loan consequences; Java remains enabled before confirm; six-card directory preserved.",
+  "review_status": "ready_for_user_review"
+}

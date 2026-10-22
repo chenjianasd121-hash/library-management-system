@@ -1,0 +1,61 @@
+{
+  "portal": "admin",
+  "page": "通用列表状态",
+  "route": "/staff/notices",
+  "date": "2026-10-21",
+  "timezone": "Asia/Shanghai",
+  "toolMode": "built-in Image Gen",
+  "reference": "../admin-notices/final.png",
+  "status": "confirmed-final",
+  "userPreference": "加载、空结果、失败各一张统一样式",
+  "items": [
+    {
+      "state": "loading",
+      "file": "loading.png",
+      "prompt": "loading.prompt.txt",
+      "status": "confirmed-final",
+      "original": "C:\\Users\\en\\.codex\\generated_images\\01a15cec-dde6-7cd3-ba15-cf6f6e020cba\\exec-51bc85cc-3601-4b5f-af42-1974f14ba1b5.png",
+      "sha256": "fb941f9b619edf1a055a609214edc1580007d207d2baa0dfd3466c0acffab96c",
+      "dimensions": [
+        1484,
+        1060
+      ],
+      "mode": "RGB",
+      "copyHashMatches": true,
+      "review": "Loading spinner and five skeleton rows; unknown count and pagination hidden, existing navigation/tabs retained. Card is slightly shorter than reference, with balanced whitespace; no business-data change."
+    },
+    {
+      "state": "empty",
+      "file": "empty.png",
+      "prompt": "empty.prompt.txt",
+      "status": "confirmed-final",
+      "original": "C:\\Users\\en\\.codex\\generated_images\\01a15cec-dde6-7cd3-ba15-cf6f6e020cba\\exec-06c5d75a-990e-4768-a706-29089199771a.png",
+      "sha256": "8f1d9bd3fde1465f84d063f237adac36b835d1e639c28b4d0dcd4aef2bb67be4",
+      "dimensions": [
+        1484,
+        1060
+      ],
+      "mode": "RGB",
+      "copyHashMatches": true,
+      "review": "Zero count correctly shown; no records or pager; quiet empty tray, draft-specific title and guidance; sole creation action remains at page upper right; navigation and card geometry retained."
+    },
+    {
+      "state": "error",
+      "file": "error.png",
+      "prompt": "error.prompt.txt",
+      "status": "confirmed-final",
+      "original": "C:\\Users\\en\\.codex\\generated_images\\01a15cec-dde6-7cd3-ba15-cf6f6e020cba\\exec-2d0a189a-65a2-4394-b133-d692219e9d6e.png",
+      "sha256": "3ce9577b4fd0b18903ee7923f5f6cd74ebc7212a935dc64ccbc6f79e8c3b6227",
+      "dimensions": [
+        1484,
+        1060
+      ],
+      "mode": "RGB",
+      "copyHashMatches": true,
+      "review": "Clear amber warning, accurate failure title and neutral retry guidance; existing retry action labelled 重新加载; no unknown counts, old data, pager or invented outage cause. Shared brand and original panel geometry retained."
+    }
+  ],
+  "nextUnfinishedItem": "管理员端设计已全部确认，无待设计项。馆员、读者端由各自聊天维护；三端设计全部完成并确认后再进入应用代码实现。",
+  "confirmedAt": "2026-10-21",
+  "userConfirmation": "加载、空结果、请求失败：确认定稿"
+}

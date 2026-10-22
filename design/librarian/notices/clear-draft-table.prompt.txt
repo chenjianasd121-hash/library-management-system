@@ -1,0 +1,18 @@
+Create ONE high-fidelity polished Chinese LIBRARIAN library notice-management desktop screenshot. Direction “清晰草稿表格”: clear six-row drafts table with status dropdown and refresh. Full frame approx1440×1024, no browserchrome/collage/optionnumber. Dateanchor2026-10-20 Asia/Shanghai, no visible dates. Attached selected category design is visual-shell reference only. Replace categories entirely with notices, no categorycodes/statusgroups/stock/cover leftovers.
+
+System: navy sidebar230–250px #142747–#1a3156, white60px topbar, pale #f3f7fc canvas, ink #152747, muted #70809c, primaryblue #2775ea, amber draftchips, teal publishlinks, fine #e7edf6 rules,12px corners and restrained shadows. Clear Chinese sans-serif28px heading,14–16px readable text, careful spacing.
+Brand 图书管理系统 / LIBRARY MANAGEMENT. Sidebar seven main items 首页概览, 图书管理 collapsed, 借阅管理 collapsed, 读者查找, 分类管理 unselected, 数据统计, 系统设置 EXPANDED/active parent. Its children 公告管理 ACTIVE blue, 个人资料, 公开公告. Only 公告管理 child selected; no admin user/audit menus. Topbar global search 搜索图书、作者、分类等… and right avatar 馆, 欢迎回来，馆员.
+
+Main breadcrumb 系统设置 / 公告管理. Title 公告管理. Subtitle 保存草稿、预览并发布馆内通知. Main top-right primaryblue ＋ 新建公告.
+One wide white card under header. Toolbar heading 公告列表, compact status DROPDOWN selected 草稿, outlined 刷新 button, understated 共6条草稿. Only 草稿 selected, alternative dropdown options not open. No tabs in this direction.
+Table columns 公告标题 | 状态 | 发布时间 | 操作. Six spacious65–75px rows, titles dark strong and readable, optional small notice icon. Exact order:
+关于图书馆开放时间调整的通知 | 草稿 | — | 编辑 blue, 预览 navy/mutedblue, 发布 teal.
+新书上架与主题书展通知 | 草稿 | — | 编辑 预览 发布.
+关于馆内网络维护的通知 | 草稿 | — | 编辑 预览 发布.
+图书借阅与归还办理提示 | 草稿 | — | 编辑 预览 发布.
+关于阅览区域使用的温馨提示 | 草稿 | — | 编辑 预览 发布.
+关于图书馆消防演练的通知 | 草稿 | — | 编辑 预览 发布.
+All six records are UNPUBLISHED DRAFTS: every publicationtime is emdash —, no creation date passed off as published date. Each state subtle amber chip 草稿. Every row only 编辑/预览/发布, never 撤下 for draft, no inline status toggle, no deletion.
+Footer 共6条草稿 · 每页10条; disabled 上一页, blueactive1, disabled 下一页. Fixed10perpage, onlyonepage, no pages2 or size selector. Small quiet helpful note 发布后公告将对所有访客可见。 No confirmation modal in overview; publish retains preview and confirmation workflow.
+
+Initial loaded drafts overview, no open editor, rowselection, errors/loading/success. Existing functionality only: statusdropdown has 草稿/已发布/已撤下, no 全部状态; refresh. Do NOT add local keyword search/datefilter, global statuscounts, checkboxes, bulk, sort controls, pin, priority, scheduledpublish, approvals, attachments, richtexttools, author/publishernames, readers/readcounts, import/export, charts or fake statistics. Keep allsix exact titles and pagination visible. Intentional whitespace below simple content is good. Mature coherent library operations UI with precise Chinese typography and clear action hierarchy.

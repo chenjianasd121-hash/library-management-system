@@ -1,0 +1,59 @@
+{
+  "page": "管理员编辑公告弹窗",
+  "portal": "admin",
+  "route": "/staff/notices",
+  "state": "edit-existing-draft",
+  "createdDate": "2026-10-21",
+  "timezone": "Asia/Shanghai",
+  "status": "selected",
+  "selection": 1,
+  "finalFile": "final.png",
+  "toolMode": "built-in Image Gen",
+  "reference": "../admin-notices/final.png",
+  "displayOrder": [
+    {
+      "number": 1,
+      "direction": "顶部标签式",
+      "file": "top-label-notice-edit.png",
+      "prompt": "top-label-notice-edit.prompt.txt",
+      "status": "generated-reviewed",
+      "original": "C:\\Users\\en\\.codex\\generated_images\\01a15cec-dde6-7cd3-ba15-cf6f6e020cba\\exec-a1a4ab9d-530c-46cd-ab16-224e8e274fc7.png",
+      "sha256": "00109d02292eb0dbc562aa6022c34983722444d91d3b55f01630af834305b026",
+      "dimensions": [
+        1484,
+        1060
+      ]
+    },
+    {
+      "number": 2,
+      "direction": "左侧标签式",
+      "file": "left-label-notice-edit.png",
+      "prompt": "left-label-notice-edit.prompt.txt",
+      "status": "generated-reviewed",
+      "original": "C:\\Users\\en\\.codex\\generated_images\\01a15cec-dde6-7cd3-ba15-cf6f6e020cba\\exec-9fe0d034-18c2-4712-8fbc-fe578e837e00.png",
+      "sha256": "28bf43f9a2f6f6439e44ee6e06973e1cbfefe3f926bffadf018c529dd19b0fd9",
+      "dimensions": [
+        1484,
+        1060
+      ]
+    },
+    {
+      "number": 3,
+      "direction": "宽幅写作式",
+      "file": "wide-writing-notice-edit.png",
+      "prompt": "wide-writing-notice-edit.prompt.txt",
+      "status": "generated-reviewed",
+      "original": "C:\\Users\\en\\.codex\\generated_images\\01a15cec-dde6-7cd3-ba15-cf6f6e020cba\\exec-a49d1925-703b-40b3-9d6f-65afecd7bcc1.png",
+      "sha256": "a6c03fdde9c2cea7927bb63f8dc474038826948bfa4b6dc8f6edba28e7ad5c6a",
+      "dimensions": [
+        1484,
+        1060
+      ]
+    }
+  ],
+  "nextUnfinishedItem": "公告预览三方案",
+  "displayedInThread": "codex://threads/01a15cec-dde6-7cd3-ba15-cf6f6e020cba",
+  "lastCheckpointDate": "2026-10-21",
+  "finalSha256": "00109d02292eb0dbc562aa6022c34983722444d91d3b55f01630af834305b026",
+  "selectedDate": "2026-10-21"
+}

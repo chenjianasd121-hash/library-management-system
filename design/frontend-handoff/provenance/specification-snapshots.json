@@ -1,0 +1,37 @@
+[
+  {
+    "file": "specifications/前端开发规范.md",
+    "source_path": "C:\\Users\\en\\OneDrive\\桌面\\基于SpringBoot+vue的图书管理系统\\前端开发规范.md",
+    "sha256": "4bb9eddc56d90fd4c5727c2ed8de7c0d4a2286a78745fe4cfbfa97942f6211db"
+  },
+  {
+    "file": "specifications/后端开发规范.md",
+    "source_path": "C:\\Users\\en\\OneDrive\\桌面\\基于SpringBoot+vue的图书管理系统\\后端开发规范.md",
+    "sha256": "d7ce0af1942122a8eb9479f2111406690f1370b50ee148d3a58d2518ef18b993"
+  },
+  {
+    "file": "specifications/API_CONTRACT.md",
+    "source_path": "C:\\Users\\en\\OneDrive\\桌面\\基于SpringBoot+vue的图书管理系统\\API_CONTRACT.md",
+    "sha256": "a13e6014ae5ed93c3031be2962036ba42042525781196b4b257fd789538f3bf4"
+  },
+  {
+    "file": "specifications/DATABASE_DESIGN.md",
+    "source_path": "C:\\Users\\en\\OneDrive\\桌面\\基于SpringBoot+vue的图书管理系统\\DATABASE_DESIGN.md",
+    "sha256": "4cb9ad697993632573bc914b0123dfc1df2269cd98d793187943c00ce140a99f"
+  },
+  {
+    "file": "specifications/CONTRACT_GAP.md",
+    "source_path": "C:\\Users\\en\\OneDrive\\桌面\\基于SpringBoot+vue的图书管理系统\\CONTRACT_GAP.md",
+    "sha256": "4b489ce3f20e51093340c9037527f8db665ebb8a9c86f107466b359e901dc506"
+  },
+  {
+    "file": "specifications/INTEGRATION_REPORT.md",
+    "source_path": "C:\\Users\\en\\OneDrive\\桌面\\基于SpringBoot+vue的图书管理系统\\INTEGRATION_REPORT.md",
+    "sha256": "a7e3d79a59fa6c974cdc479b8f81d32b2d5c4e9b89231d6cf6fc8c87b80fa35c"
+  },
+  {
+    "file": "specifications/README.md",
+    "source_path": "C:\\Users\\en\\OneDrive\\桌面\\基于SpringBoot+vue的图书管理系统\\README.md",
+    "sha256": "8bcd5f8a1f85c04a01148d7c8d3cbc4b2aef749c1419fce231f138799b36fd97"
+  }
+]

@@ -1,0 +1,17 @@
+Use case: ui-mockup. Create one realistic, production-quality Chinese library administrator “编辑书目” desktop web screenshot, direction “双栏书目编辑”. Target 1440 x 1024 landscape, full app content with no browser/device chrome and no option number.
+Input references: image 1 is user-approved new-book split-entry layout; image 2 original existing edit-form screenshot establishes fields and demo values; image 3 approved catalogue establishes shell. Preserve the approved system styling while adapting from NEW to EDIT mode. The screen is a normal loaded existing-record editor, before any changes or saving.
+Strong hierarchy, readable Chinese typography, purposeful spacing, correct filled form values. One clear primary Save action, one return action. No dashboard metrics, irrelevant panels, promotional imagery, nested cards or unsupported features.
+Color palette navy sidebar #142747 to #1a3156, canvas #f3f7fc, white surfaces, text #152747, muted #70809c, rule #e7edf6, blue #2775ea. 248px sidebar, 60px white topbar, 12–14px round corners and restrained shadows, body14–16px and title28px.
+Sidebar 图书管理系统 / LIBRARY MANAGEMENT; 首页概览, blue highlighted 图书管理 expanded with active 书目列表, neutral 新增书目, neutral 公开目录; then 借阅管理, 读者管理, 分类管理, 数据统计, 系统设置. EDIT is accessed from catalogue, never highlight 新增书目. White topbar includes global search 搜索图书、作者、分类等… and 欢迎回来，管理员.
+Main breadcrumb 图书管理 / 编辑书目, title 编辑书目, subtitle 修改已有书目信息，保存后进入副本管理, small outline 返回书目列表 upper-right. No new-book wizard stepper.
+Below two sibling white surfaces, left approx72% complete metadata form, right28% cover and shelving settings, 18px gutter. Closely match selected new-book screenshot but with filled existing values and edit primary action.
+Left heading 基本书目信息. Required red asterisks only on 书名, 作者, 分类. Labels above controls. Two-column rows:
+1 required 书名 filled Java编程思想 (tiny 8 / 200 counter optional); required 作者 filled Bruce Eckel.
+2 optional ISBN-13 filled 9787115546081; required 分类 dropdown selected 计算机类.
+3 optional 出版社 filled 机械工业出版社; optional 出版日期 calendar control filled 2020-01-01.
+Then full-width 关键词 field filled Java,编程, with helper 多个关键词使用逗号分隔.
+Thin rule heading 内容简介, complete textarea filled exactly 系统介绍 Java 编程语言及面向对象思想。 (22 / 5000 counter). Approx140px high, no redundant preview of description.
+Bottom visible blue primary 保存修改, secondary 返回列表, small helper 保存后进入实体副本管理. All fields and actions visible without cropping.
+Right heading 封面与上架, optional empty portrait cover upload well with outline picture icon and 尚未上传封面. No invented existing book artwork because source edit record has no cover shown. Outline button 上传封面 and helper JPEG / PNG / WebP，最大 2 MiB. File selection only, no drag/drop, delete cover or camera button.
+Divider, label 上架状态, blue toggle ON with text 上架 and muted 上架后读者可在目录中检索.
+Supported fields ONLY the above plus enabled toggle. Do not add copy quantity, barcode, shelf location, price, edition, language, book ID, ISBN lookup, bulk import, AI writing, drafts, version history, revision comparison, undo, or delete book action. No success toast, changed-state marker or validation error. ISBN is checksum-valid demo data, do not alter its digits. Use current anchor 2026-10-08 Asia/Shanghai but preserve source publication date2020-01-01. Make this clearly an EDIT page. Render one complete independent screen.

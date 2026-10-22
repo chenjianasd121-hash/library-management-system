@@ -6,6 +6,7 @@ import type { FormRules } from 'element-plus'
 import { api } from '@/api'
 import { ApiError, errorText, fieldErrors } from '@/api/http'
 import type { BookInput, Category } from '@/api/types'
+import { Reading, Search, Picture, InfoFilled, Upload, Back, Check } from '@element-plus/icons-vue'
 import LoadState from '@/components/LoadState.vue'
 import PageHeading from '@/components/PageHeading.vue'
 const route = useRoute(),
@@ -135,80 +136,112 @@ watch(id, () => {
 })
 </script>
 <template>
+  <div class="staff-breadcrumb">
+    图书管理 / <span>{{ id ? '编辑书目' : '新增书目' }}</span>
+  </div>
   <PageHeading
     :title="id ? '编辑书目' : '新增书目'"
-    description="录入书目信息后可继续添加实体副本"
-  /><LoadState :loading="loading" :error="loadError" @retry="load"
-    ><section class="panel form-panel">
-      <el-alert
-        v-if="error"
-        type="error"
-        :title="error"
-        :closable="false"
-        class="form-alert"
-      /><el-form class="book-form" :model="form" :rules="rules" label-width="105px" @submit.prevent="submit"
-        ><div class="form-section-label">基本书目信息</div><el-form-item label="书名" prop="title" required :error="fields.title"
-          ><el-input v-model="form.title" maxlength="200" show-word-limit /></el-form-item
-        ><el-form-item label="作者" prop="author" required :error="fields.author"
-          ><el-input v-model="form.author" maxlength="120" /></el-form-item
-        ><el-form-item label="ISBN-13" :error="fields.isbn"
-          ><el-input v-model="form.isbn" placeholder="可留空；填写时校验 ISBN-13" /></el-form-item
-        ><el-form-item label="分类" prop="categoryId" required :error="fields.categoryId"
-          ><el-select v-model="form.categoryId" placeholder="选择分类"
-            ><el-option
-              v-for="c in categories"
-              :key="c.id"
-              :label="c.name"
-              :value="c.id" /></el-select></el-form-item
-        ><el-form-item label="出版社"><el-input v-model="form.publisher" /></el-form-item
-        ><el-form-item label="出版日期"
-          ><el-date-picker
-            v-model="form.publishedOn"
-            type="date"
-            value-format="YYYY-MM-DD"
-            placeholder="选择日期" /></el-form-item
-        ><el-form-item label="关键词"
-          ><el-input v-model="form.keywords" placeholder="关键词，使用逗号分隔" /></el-form-item
-        ><div class="form-section-label">展示与上架</div><el-form-item label="内容简介" prop="description" :error="fields.description"
-          ><el-input
-            v-model="form.description"
-            type="textarea"
-            :rows="5"
-            maxlength="5000"
-            show-word-limit /></el-form-item
-        ><el-form-item label="封面"
-          ><div>
-            <el-upload
-              :show-file-list="false"
-              :before-upload="upload"
-              accept="image/jpeg,image/png,image/webp"
-              ><el-button :loading="uploading">上传封面</el-button></el-upload
-            ><img
-              v-if="form.coverPath"
-              :src="form.coverPath"
-              alt="封面预览"
-              class="cover-preview"
-            /></div></el-form-item
-        ><el-form-item label="上架状态"
-          ><el-switch
-            v-model="form.enabled"
-            active-text="上架"
-            inactive-text="下架" /></el-form-item
-        ><el-form-item
-          ><el-button type="primary" native-type="submit" :loading="busy">保存书目</el-button
-          ><RouterLink to="/staff/books"><el-button>返回列表</el-button></RouterLink></el-form-item
-        ></el-form
-      >
+    description="录入书目信息，创建后可继续添加实体副本。"
+  />
+  <LoadState :loading="loading" :error="loadError" @retry="load"
+    ><section class="panel catalogue-form-panel">
+      <el-alert v-if="error" type="error" :title="error" :closable="false" class="form-alert" />
+      <el-form :model="form" :rules="rules" label-position="top" @submit.prevent="submit">
+        <div class="staff-form-section">
+          <h2>
+            <el-icon><Reading /></el-icon>基本书目信息
+          </h2>
+          <span><i>*</i> 为必填项</span>
+        </div>
+        <div class="staff-form-grid">
+          <el-form-item label="书名" prop="title" required :error="fields.title"
+            ><el-input v-model="form.title" maxlength="200" placeholder="请输入书名"
+          /></el-form-item>
+          <el-form-item label="作者" prop="author" required :error="fields.author"
+            ><el-input v-model="form.author" maxlength="120" placeholder="请输入作者"
+          /></el-form-item>
+          <el-form-item label="ISBN-13" :error="fields.isbn"
+            ><el-input v-model="form.isbn" placeholder="可留空；填写时需为有效 ISBN-13"
+          /></el-form-item>
+          <el-form-item label="分类" prop="categoryId" required :error="fields.categoryId"
+            ><el-select v-model="form.categoryId" placeholder="请选择分类" aria-label="分类"
+              ><el-option
+                v-for="c in categories"
+                :key="c.id"
+                :label="c.name"
+                :value="c.id" /></el-select
+          ></el-form-item>
+        </div>
+        <div class="staff-form-section divider">
+          <h2>
+            <el-icon><Search /></el-icon>出版与检索
+          </h2>
+        </div>
+        <div class="staff-form-grid inline-fields">
+          <el-form-item label="出版社"
+            ><el-input v-model="form.publisher" placeholder="请输入出版社（可选）" /></el-form-item
+          ><el-form-item label="出版日期"
+            ><el-date-picker
+              v-model="form.publishedOn"
+              type="date"
+              value-format="YYYY-MM-DD"
+              placeholder="请选择日期（可选）" /></el-form-item
+          ><el-form-item class="span-2" label="关键词"
+            ><el-input
+              v-model="form.keywords"
+              placeholder="使用逗号分隔多个关键词，方便检索（可选）"
+          /></el-form-item>
+        </div>
+        <div class="staff-form-section divider">
+          <h2>
+            <el-icon><Picture /></el-icon>展示与上架
+          </h2>
+        </div>
+        <div class="staff-display-fields">
+          <el-form-item label="内容简介" prop="description" :error="fields.description"
+            ><el-input
+              v-model="form.description"
+              type="textarea"
+              :rows="5"
+              maxlength="5000"
+              show-word-limit
+              placeholder="请输入内容简介（可选）"
+          /></el-form-item>
+          <div class="staff-cover-upload">
+            <label>封面（可选）</label>
+            <div class="cover-upload-body">
+              <div class="cover-upload-preview">
+                <img v-if="form.coverPath" :src="form.coverPath" alt="封面预览" /><el-icon v-else
+                  ><Picture
+                /></el-icon>
+              </div>
+              <div>
+                <el-upload
+                  :show-file-list="false"
+                  :before-upload="upload"
+                  accept="image/jpeg,image/png,image/webp"
+                  ><el-button :icon="Upload" :loading="uploading">上传封面</el-button></el-upload
+                >
+                <p>JPEG / PNG / WebP<br />大小不超过 2 MiB</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="staff-enabled-row">
+          <span>上架状态</span><el-switch v-model="form.enabled" /><strong>{{
+            form.enabled ? '上架' : '下架'
+          }}</strong
+          ><span>下架后将停止新的预约和借出。</span>
+        </div>
+        <div class="staff-form-footer">
+          <span
+            ><el-icon><InfoFilled /></el-icon>保存后可继续为本书添加实体副本。</span
+          ><RouterLink to="/staff/books"><el-button :icon="Back">返回列表</el-button></RouterLink
+          ><el-button type="primary" native-type="submit" :icon="Check" :loading="busy"
+            >保存书目</el-button
+          >
+        </div>
+      </el-form>
     </section></LoadState
   >
 </template>
-<style scoped>
-.cover-preview {
-  display: block;
-  width: 90px;
-  height: 125px;
-  object-fit: cover;
-  margin-top: 8px;
-  border-radius: 8px;
-}
-</style>

@@ -1,0 +1,19 @@
+Use case ui-mockup. Create realistic production-quality Chinese UI with strong hierarchy, crisp readable typography, purposeful book imagery and intentional whitespace. One independent administrator “预约管理” screen named direction “待取核对工作台”. Target 1440 × 1024. Flat full-screen desktop app screenshot only, no device/browser chrome, no comparison board or numeric concept captions.
+Input 1 approved borrowing master-detail page gives the layout inspiration, input 2 approved book-management page gives visual system, input 3 corrected reservation table gives exact valid reservation data. Keep same navy sidebar, white topbar, pale-blue background, white rounded content and blue actions.
+Purpose: administrator selects a reservation, reviews reader and pickup eligibility, checks allocated copy and deadline, can navigate to existing checkout page or cancel with mandatory reason in confirmation flow. Main detail shows an active READY reservation due TODAY. Do not implement a separate fulfill/mark-taken button. “前往办理借出” is navigation to existing checkout flow, not immediate fulfillment. No staff-created reservation, student IDs, reader usernames/phones, manual copy assignment, bulk cancellation, reordering queues, SMS or fees.
+Palette #142747–#1a3156 navy, #f3f7fc canvas, #152747 ink, #70809c muted, #e7edf6 rules, #2775ea blue, #7659c9 queue purple, #159f85 fulfilled mint, #d98a22 amber deadline, #d94b5f danger. Chinese sans-serif body 14–16px and heading 28px, corners 12–14px, very subtle shadow. Use spacing, grouping and thin separators before any borders; no nested cards or metric tiles.
+Shell 248px sidebar brand 图书管理系统 / LIBRARY MANAGEMENT. Nav 首页概览, 图书管理, active 借阅管理 expanded 办理借出, 办理归还, 借阅记录, selected 预约管理; below 读者管理, 分类管理, 数据统计, 系统设置. 60px white topbar global search and administrator identity.
+Header 预约管理, subtitle “核对待取副本与截止时间，处理有效预约”. No big create action. Clean shared filter band “读者姓名或账号”, “书目编号（可选）”, dropdown “全部状态”, small blue “查询”, light “重置”.
+Two panes beneath, about 61% list and 39% selected detail, 18px gutter. Left white list heading “预约记录”, quiet “共 18 条”. Four columns “图书”, “读者”, “状态”, “队列 / 截止”. Eight clean rows with tiny realistic covers and title only; reader NAME ONLY, no secondary ID, barcode or ISBN. Selected second row pale-blue background with short blue left edge.
+List rows anchored TODAY 2026-10-08 Asia/Shanghai:
+Java编程思想 / 苏晴 / 待取 / 2026-10-09.
+人类简史 / 陈晨 / 待取 / 2026-10-08, amber 今日截止, SELECTED.
+解忧杂货店 / 顾宁 / 排队中 / 第 1 位.
+解忧杂货店 / 林晓 / 排队中 / 第 2 位.
+数据结构与算法 / 周明 / 待取 / 2026-10-09.
+经济学原理 / 赵六 / 已履约 / —.
+活着 / 刘洋 / 已取消 / —.
+三体 / 李四 / 已过期 / 2026-10-04.
+READY blue, WAITING purple, FULFILLED mint, CANCELLED gray, EXPIRED muted red. Waiting has queue only and NO allocated copy or pickup deadline. No cancellation button clutter in list because selected active record action lives on detail panel. Footer 每页 10 条 and pagination 1 2.
+Right white detail pane heading “预约详情” with blue “待取”. Realistic 人类简史 cover about 95×130 beside bold title 人类简史, author 尤瓦尔·赫拉利. Clean key-value fields: “读者” 陈晨, “申请时间” 2026-10-03 10:20, “待取开始” 2026-10-05 09:30, “待取截止” 2026-10-08 当日结束前, “副本条码” BK0015, “馆藏位置” A 区 3 排. These are exactly the allocated-copy fields for selected READY record. Do not use BK0012, which is another currently borrowed copy. Do not add student number or account identifier.
+After divider a small amber notice “今日截止” with line “请在当日结束前办理取书”. It must remain READY, not already expired. At bottom prominent blue “前往办理借出” and small red text “取消预约”, with a short muted note “取书时核对读者和副本”. No direct fulfill action, no “发送提醒”, no success-completed status. Selected detail dates and reader must match selected row exactly. Body must fit comfortably with no clipped actions. All data illustrative. Render one cohesive independent concept only.

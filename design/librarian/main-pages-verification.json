@@ -1,0 +1,137 @@
+{
+  "date": "2026-10-20",
+  "role": "LIBRARIAN",
+  "historical_snapshot": true,
+  "superseded_by": "final-audit.json",
+  "selected_main_pages": 14,
+  "verification": "All fourteen previously selected final PNG files exist and decode. Selections remain grounded in per-page records. This is file-integrity verification, not completion of supplemental-state design.",
+  "supplemental_states_complete": false,
+  "pages": [
+    {
+      "page": "dashboard",
+      "route": "/staff/dashboard",
+      "file": "design\\librarian\\dashboard\\final.png",
+      "format": "PNG",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "34c60699d9b4876a3d58e4640c4fa32cb925663c07df4c93450162ebf01e0e52"
+    },
+    {
+      "page": "checkout",
+      "route": "/staff/checkout",
+      "file": "design\\librarian\\checkout\\final.png",
+      "format": "PNG",
+      "width": 1486,
+      "height": 1058,
+      "sha256": "1ceeb7e326fb27e309023ad3136f1540beafb216b165c2f70f09ff6cba43c3b7"
+    },
+    {
+      "page": "return",
+      "route": "/staff/return",
+      "file": "design\\librarian\\return\\final.png",
+      "format": "PNG",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "a4a5ea5a7e9a695387ce8e087e9f59f73cd5545d206704f31492ee45a9fe6888"
+    },
+    {
+      "page": "loans",
+      "route": "/staff/loans",
+      "file": "design\\librarian\\loans\\final.png",
+      "format": "PNG",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "b3bfb57afc887081919dcd9b491e234ded0f13804c545ead6899c522a8e39b0a"
+    },
+    {
+      "page": "reservations",
+      "route": "/staff/reservations",
+      "file": "design\\librarian\\reservations\\final.png",
+      "format": "PNG",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "58d5b6233fda51c55f82ae74008d83c90f06f23e2c09a3f1865a83c37e1dbfb9"
+    },
+    {
+      "page": "books",
+      "route": "/staff/books",
+      "file": "design\\librarian\\books\\final.png",
+      "format": "PNG",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "b11b3469537b2e3ae1681f5eea81120fdee8a0ba7bee3c32acbbceaa8be30ee3"
+    },
+    {
+      "page": "book-create",
+      "route": "/staff/books/new",
+      "file": "design\\librarian\\book-create\\final.png",
+      "format": "PNG",
+      "width": 1486,
+      "height": 1058,
+      "sha256": "ef72e20ed4b8eaab1e31f2824e01560ec74b7876570d631d601647d00ca7ad5f"
+    },
+    {
+      "page": "book-edit",
+      "route": "/staff/books/:id/edit",
+      "file": "design\\librarian\\book-edit\\final.png",
+      "format": "PNG",
+      "width": 1484,
+      "height": 1060,
+      "sha256": "13d86dd02d55acb83b1bfbcf69963f902e385517af4987534e37af7c01663c7d"
+    },
+    {
+      "page": "book-copies",
+      "route": "/staff/books/:id/copies",
+      "file": "design\\librarian\\book-copies\\final.png",
+      "format": "PNG",
+      "width": 1484,
+      "height": 1060,
+      "sha256": "033477fa5499b763690222135bd152a3b58768399ac7a2ca8de505db7714f2d6"
+    },
+    {
+      "page": "categories",
+      "route": "/staff/categories",
+      "file": "design\\librarian\\categories\\final.png",
+      "format": "PNG",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "4da318911124d050267333ca1efe6f07e27d5a7200cfc8e1142be0c9a0e49277"
+    },
+    {
+      "page": "notices",
+      "route": "/staff/notices",
+      "file": "design\\librarian\\notices\\final.png",
+      "format": "PNG",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "c33e5e30c3d85611f40f651a47d8c45468b101c81595197cf59cbca3bb3a4a78"
+    },
+    {
+      "page": "stats",
+      "route": "/staff/stats",
+      "file": "design\\librarian\\stats\\final.png",
+      "format": "PNG",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "38f65efe2fe3fac7f2ea19e7c00bddef447aa1234e76b36ea7f117f2f2909a3d"
+    },
+    {
+      "page": "profile",
+      "route": "/me/profile",
+      "file": "design\\librarian\\profile\\final.png",
+      "format": "PNG",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "97ba9159270f9fd2c1d83154ba1857267ed690f794747ac85f54cd7a38b441b3"
+    },
+    {
+      "page": "change-password",
+      "route": "/change-password",
+      "file": "design\\librarian\\change-password\\final.png",
+      "format": "PNG",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "32c75816badd17804cfc9290ba4e148f7ecf631e41fda80ea1898e8202ba5e7e"
+    }
+  ]
+}

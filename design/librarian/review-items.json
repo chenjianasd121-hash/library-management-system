@@ -1,0 +1,592 @@
+[
+  {
+    "id": "item-01",
+    "title": "馆员首页",
+    "file": "dashboard/final.png",
+    "group": "已选主页面",
+    "status": "已选定",
+    "note": "",
+    "route": "/staff/dashboard",
+    "new": false
+  },
+  {
+    "id": "item-02",
+    "title": "办理借出",
+    "file": "checkout/final.png",
+    "group": "已选主页面",
+    "status": "已选定",
+    "note": "",
+    "route": "/staff/checkout",
+    "new": false
+  },
+  {
+    "id": "item-03",
+    "title": "办理归还",
+    "file": "return/final.png",
+    "group": "已选主页面",
+    "status": "已选定",
+    "note": "",
+    "route": "/staff/return",
+    "new": false
+  },
+  {
+    "id": "item-04",
+    "title": "借阅记录",
+    "file": "loans/final.png",
+    "group": "已选主页面",
+    "status": "已选定",
+    "note": "",
+    "route": "/staff/loans",
+    "new": false
+  },
+  {
+    "id": "item-05",
+    "title": "预约管理",
+    "file": "reservations/final.png",
+    "group": "已选主页面",
+    "status": "已选定",
+    "note": "",
+    "route": "/staff/reservations",
+    "new": false
+  },
+  {
+    "id": "item-06",
+    "title": "图书管理",
+    "file": "books/final.png",
+    "group": "已选主页面",
+    "status": "已选定",
+    "note": "",
+    "route": "/staff/books",
+    "new": false
+  },
+  {
+    "id": "item-07",
+    "title": "新增书目",
+    "file": "book-create/final.png",
+    "group": "已选主页面",
+    "status": "已选定",
+    "note": "",
+    "route": "/staff/books/new",
+    "new": false
+  },
+  {
+    "id": "item-08",
+    "title": "编辑书目",
+    "file": "book-edit/final.png",
+    "group": "已选主页面",
+    "status": "已选定",
+    "note": "",
+    "route": "/staff/books/:id/edit",
+    "new": false
+  },
+  {
+    "id": "item-09",
+    "title": "实体副本管理",
+    "file": "book-copies/final.png",
+    "group": "已选主页面",
+    "status": "已选定",
+    "note": "",
+    "route": "/staff/books/:id/copies",
+    "new": false
+  },
+  {
+    "id": "item-10",
+    "title": "分类管理",
+    "file": "categories/final.png",
+    "group": "已选主页面",
+    "status": "已选定",
+    "note": "",
+    "route": "/staff/categories",
+    "new": false
+  },
+  {
+    "id": "item-11",
+    "title": "公告管理",
+    "file": "notices/final.png",
+    "group": "已选主页面",
+    "status": "已选定",
+    "note": "",
+    "route": "/staff/notices",
+    "new": false
+  },
+  {
+    "id": "item-12",
+    "title": "数据统计",
+    "file": "stats/final.png",
+    "group": "已选主页面",
+    "status": "已选定",
+    "note": "",
+    "route": "/staff/stats",
+    "new": false
+  },
+  {
+    "id": "item-13",
+    "title": "个人资料",
+    "file": "profile/final.png",
+    "group": "已选主页面",
+    "status": "已选定",
+    "note": "",
+    "route": "/me/profile",
+    "new": false
+  },
+  {
+    "id": "item-14",
+    "title": "修改密码",
+    "file": "change-password/final.png",
+    "group": "已选主页面",
+    "status": "已选定",
+    "note": "",
+    "route": "/change-password",
+    "new": false
+  },
+  {
+    "id": "item-15",
+    "title": "新增分类弹窗",
+    "file": "categories/states/create/final.png",
+    "group": "已选弹窗",
+    "status": "已选第 3 版",
+    "note": "",
+    "route": "",
+    "new": false
+  },
+  {
+    "id": "item-16",
+    "title": "新建公告弹窗",
+    "file": "notices/states/create/final.png",
+    "group": "已选弹窗",
+    "status": "已选第 1 版",
+    "note": "保留已选布局的页脚修正版",
+    "route": "",
+    "new": false
+  },
+  {
+    "id": "item-17",
+    "title": "编辑分类",
+    "file": "categories/states/edit-category.png",
+    "group": "分类维护",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": false
+  },
+  {
+    "id": "item-18",
+    "title": "分类停用前确认",
+    "file": "categories/states/disable-confirmation.png",
+    "group": "分类维护",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": false
+  },
+  {
+    "id": "item-19",
+    "title": "分类必填校验",
+    "file": "categories/states/required-validation.png",
+    "group": "分类维护",
+    "status": "用户已确认",
+    "note": "",
+    "route": "",
+    "new": false
+  },
+  {
+    "id": "item-20",
+    "title": "编辑公告草稿",
+    "file": "notices/states/edit-notice.png",
+    "group": "公告维护",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": false
+  },
+  {
+    "id": "item-21",
+    "title": "公告只读预览",
+    "file": "notices/states/preview-notice.png",
+    "group": "公告维护",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": false
+  },
+  {
+    "id": "item-22",
+    "title": "公告发布前确认",
+    "file": "notices/states/publish-confirmation.png",
+    "group": "公告维护",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": false
+  },
+  {
+    "id": "item-23",
+    "title": "公告已发布筛选",
+    "file": "notices/states/published-list.png",
+    "group": "公告维护",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": false
+  },
+  {
+    "id": "item-24",
+    "title": "公告撤下前确认",
+    "file": "notices/states/withdraw-confirmation.png",
+    "group": "公告维护",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": false
+  },
+  {
+    "id": "item-25",
+    "title": "公告已撤下筛选",
+    "file": "notices/states/withdrawn-list.png",
+    "group": "公告维护",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": false
+  },
+  {
+    "id": "item-26",
+    "title": "公告必填校验",
+    "file": "notices/states/required-validation.png",
+    "group": "公告维护",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": false
+  },
+  {
+    "id": "item-27",
+    "title": "修改馆藏位置",
+    "file": "book-copies/states/location-dialog.png",
+    "group": "副本与书目",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": false
+  },
+  {
+    "id": "item-28",
+    "title": "副本转维修确认",
+    "file": "book-copies/states/maintenance-confirmation.png",
+    "group": "副本与书目",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": false
+  },
+  {
+    "id": "item-29",
+    "title": "重复条码校验",
+    "file": "book-copies/states/barcode-validation.png",
+    "group": "副本与书目",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": false
+  },
+  {
+    "id": "item-30",
+    "title": "书目字段校验",
+    "file": "book-create/states/field-validation.png",
+    "group": "副本与书目",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": false
+  },
+  {
+    "id": "item-31",
+    "title": "ISBN 已存在",
+    "file": "book-create/states/isbn-conflict.png",
+    "group": "副本与书目",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": false
+  },
+  {
+    "id": "item-32",
+    "title": "封面上传状态板",
+    "file": "book-create/states/cover-feedback.png",
+    "group": "副本与书目",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": false
+  },
+  {
+    "id": "item-33",
+    "title": "书目停用前确认",
+    "file": "books/states/disable-confirmation.png",
+    "group": "副本与书目",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": false
+  },
+  {
+    "id": "item-34",
+    "title": "借出受限：读者逾期",
+    "file": "checkout/states/blocked-checkout.png",
+    "group": "借还与清单",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": false
+  },
+  {
+    "id": "item-35",
+    "title": "借出办理成功",
+    "file": "checkout/states/checkout-success.png",
+    "group": "借还与清单",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": false
+  },
+  {
+    "id": "item-36",
+    "title": "归还：无在借记录",
+    "file": "return/states/no-active-loan.png",
+    "group": "借还与清单",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": true
+  },
+  {
+    "id": "item-37",
+    "title": "归还成功：恢复可借",
+    "file": "return/states/return-success.png",
+    "group": "借还与清单",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": true
+  },
+  {
+    "id": "item-38",
+    "title": "逾期借阅筛选",
+    "file": "loans/states/overdue-filter.png",
+    "group": "借还与清单",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": true
+  },
+  {
+    "id": "item-39",
+    "title": "待取预约筛选",
+    "file": "reservations/states/ready-filter.png",
+    "group": "借还与清单",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": true
+  },
+  {
+    "id": "item-40",
+    "title": "排队预约筛选",
+    "file": "reservations/states/waiting-filter.png",
+    "group": "借还与清单",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": true
+  },
+  {
+    "id": "item-41",
+    "title": "取消预约原因校验",
+    "file": "reservations/states/cancel-reason-validation.png",
+    "group": "借还与清单",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": true
+  },
+  {
+    "id": "item-42",
+    "title": "显示名校验",
+    "file": "profile/states/display-name-validation.png",
+    "group": "账号与密码",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": true
+  },
+  {
+    "id": "item-43",
+    "title": "资料保存中",
+    "file": "profile/states/save-pending.png",
+    "group": "账号与密码",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": true
+  },
+  {
+    "id": "item-44",
+    "title": "资料保存成功",
+    "file": "profile/states/save-success.png",
+    "group": "账号与密码",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": true
+  },
+  {
+    "id": "item-45",
+    "title": "资料保存失败",
+    "file": "profile/states/save-failed.png",
+    "group": "账号与密码",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": true
+  },
+  {
+    "id": "item-46",
+    "title": "当前密码错误",
+    "file": "change-password/states/current-password-incorrect.png",
+    "group": "账号与密码",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": true
+  },
+  {
+    "id": "item-47",
+    "title": "两次密码不一致",
+    "file": "change-password/states/password-mismatch.png",
+    "group": "账号与密码",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": true
+  },
+  {
+    "id": "item-48",
+    "title": "首次登录必须改密",
+    "file": "change-password/states/first-login-required.png",
+    "group": "账号与密码",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": true
+  },
+  {
+    "id": "item-49",
+    "title": "列表加载中",
+    "file": "shared/list-loading.png",
+    "group": "通用与统计",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": true
+  },
+  {
+    "id": "item-50",
+    "title": "列表空结果",
+    "file": "shared/list-empty.png",
+    "group": "通用与统计",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": true
+  },
+  {
+    "id": "item-51",
+    "title": "列表请求失败",
+    "file": "shared/list-failed.png",
+    "group": "通用与统计",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": true
+  },
+  {
+    "id": "item-52",
+    "title": "统计无数据",
+    "file": "stats/states/empty-data.png",
+    "group": "通用与统计",
+    "status": "待审阅",
+    "note": "",
+    "route": "",
+    "new": true
+  },
+  {
+    "id": "item-53",
+    "title": "馆员登录",
+    "file": "public/login.png",
+    "group": "公共页适配",
+    "status": "待审阅",
+    "note": "",
+    "route": "/login",
+    "new": true
+  },
+  {
+    "id": "item-54",
+    "title": "馆员公开目录",
+    "file": "public/catalogue.png",
+    "group": "公共页适配",
+    "status": "待审阅",
+    "note": "",
+    "route": "/books",
+    "new": true
+  },
+  {
+    "id": "item-55",
+    "title": "馆员书目详情",
+    "file": "public/book-detail.png",
+    "group": "公共页适配",
+    "status": "待审阅",
+    "note": "",
+    "route": "/books/:id",
+    "new": true
+  },
+  {
+    "id": "item-56",
+    "title": "公开公告正文",
+    "file": "public/references/reader-notices.png",
+    "group": "正文复用参考",
+    "status": "正文复用参考",
+    "note": "图中是读者原版；馆员使用该正文与已选馆员外壳组合，详见公共页复用说明。",
+    "route": "/notices",
+    "new": false
+  },
+  {
+    "id": "item-57",
+    "title": "公告详情正文",
+    "file": "public/references/reader-notice-detail.png",
+    "group": "正文复用参考",
+    "status": "正文复用参考",
+    "note": "图中是读者原版；馆员使用该正文与已选馆员外壳组合，详见公共页复用说明。",
+    "route": "/notices/:id",
+    "new": false
+  },
+  {
+    "id": "item-58",
+    "title": "无权限结果区",
+    "file": "public/references/reader-forbidden.png",
+    "group": "正文复用参考",
+    "status": "正文复用参考",
+    "note": "图中是读者原版；馆员使用该正文与已选馆员外壳组合，详见公共页复用说明。",
+    "route": "/403",
+    "new": false
+  },
+  {
+    "id": "item-59",
+    "title": "页面不存在结果区",
+    "file": "public/references/reader-not-found.png",
+    "group": "正文复用参考",
+    "status": "正文复用参考",
+    "note": "图中是读者原版；馆员使用该正文与已选馆员外壳组合，详见公共页复用说明。",
+    "route": "/:pathMatch(.*)*",
+    "new": false
+  }
+]

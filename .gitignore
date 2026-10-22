@@ -14,6 +14,8 @@
 # Local credentials; keep examples and the three public portal settings.
 .env
 .env.*
+*.private.json
+*.private.env
 !.env.example
 !/frontend/.env.reader
 !/frontend/.env.librarian

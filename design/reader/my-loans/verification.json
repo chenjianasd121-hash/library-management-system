@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-09",
+  "timezone": "Asia/Shanghai",
+  "target_dimensions": [
+    1440,
+    1024
+  ],
+  "status": "selected",
+  "verification": "PNG decoding and source-copy hashes checked programmatically; visible dates, barcodes, renewal eligibility and two corrected labels checked by visual inspection.",
+  "candidates": [
+    {
+      "display_number": 1,
+      "file": "clear-loans-table.png",
+      "format": "PNG",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "4d3feee76bb8fd892ca898b0eafafab22bd7a83fcf3382af0721ae9e0feddae3",
+      "source": "C:\\Users\\en\\.codex\\worktrees\\6241\\基于SpringBoot+vue的图书管理系统\\design\\reader\\my-loans\\clear-loans-table.png",
+      "identical_to_source": true
+    },
+    {
+      "display_number": 2,
+      "file": "reading-record-list.png",
+      "format": "PNG",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "e3e107b3d39e360222ab5777b81756c1f51716577ecdaebaaff47075cd158567",
+      "source": "C:\\Users\\en\\.codex\\worktrees\\6241\\基于SpringBoot+vue的图书管理系统\\design\\reader\\my-loans\\reading-record-list.png",
+      "identical_to_source": true
+    },
+    {
+      "display_number": 3,
+      "file": "due-date-panels.png",
+      "format": "PNG",
+      "width": 1485,
+      "height": 1059,
+      "sha256": "4b2d4533869c4ce79ffa6a7df321922b309825b3e87338a7c85456502d5e852a",
+      "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef4-36af-73d3-90c7-93d4c3d0608d\\exec-e82ad424-6ffc-4137-8175-c66a2e7de24d.png",
+      "identical_to_source": true
+    }
+  ],
+  "selected_display_number": 1,
+  "final_file": "final.png",
+  "final_sha256": "4d3feee76bb8fd892ca898b0eafafab22bd7a83fcf3382af0721ae9e0feddae3"
+}

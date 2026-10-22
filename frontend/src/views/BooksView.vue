@@ -7,6 +7,7 @@ import type { BookSummary, Category } from '@/api/types'
 import PageHeading from '@/components/PageHeading.vue'
 import LoadState from '@/components/LoadState.vue'
 import BookCard from '@/components/BookCard.vue'
+import { Search } from '@element-plus/icons-vue'
 const route = useRoute()
 const router = useRouter()
 const form = reactive({ keyword: '', categoryId: '', availableOnly: false })
@@ -17,6 +18,7 @@ const page = ref(1)
 const loading = ref(false)
 const error = ref('')
 const categoryError = ref('')
+let loadVersion = 0
 function sync() {
   form.keyword = String(route.query.keyword || '')
   form.categoryId = String(route.query.categoryId || '')
@@ -24,6 +26,7 @@ function sync() {
   page.value = Math.max(1, Number(route.query.page) || 1)
 }
 async function load() {
+  const version = ++loadVersion
   loading.value = true
   error.value = ''
   try {
@@ -32,14 +35,15 @@ async function load() {
       categoryId: form.categoryId,
       availableOnly: form.availableOnly || undefined,
       page: page.value,
-      size: 9,
+      size: 6,
     })
+    if (version !== loadVersion) return
     books.value = data.items
     total.value = data.total
   } catch (e) {
-    error.value = errorText(e)
+    if (version === loadVersion) error.value = errorText(e)
   } finally {
-    loading.value = false
+    if (version === loadVersion) loading.value = false
   }
 }
 function apply(next = 1) {
@@ -73,17 +77,19 @@ onMounted(async () => {
 </script>
 <template>
   <PageHeading title="图书目录" description="检索馆藏，查看可借数量，找到下一本想读的书" />
-  <section class="panel">
+  <section class="panel filter-panel catalogue-filter">
     <form class="list-toolbar" @submit.prevent="apply()">
       <el-input
         v-model="form.keyword"
-        placeholder="书名、作者或 ISBN"
+        placeholder="输入书名、作者或 ISBN 搜索馆藏"
         clearable
         @keyup.enter="apply()"
-      /><el-select v-model="form.categoryId" placeholder="全部分类" clearable
+        ><template #prefix
+          ><el-icon><Search /></el-icon></template></el-input
+      ><el-select v-model="form.categoryId" placeholder="全部分类" clearable
         ><el-option v-for="c in categories" :key="c.id" :label="c.name" :value="c.id" /></el-select
       ><el-checkbox v-model="form.availableOnly">仅看可借</el-checkbox
-      ><el-button type="primary" native-type="submit">搜索</el-button>
+      ><el-button type="primary" native-type="submit" :icon="Search">搜索</el-button>
     </form>
     <el-alert
       v-if="categoryError"
@@ -92,7 +98,11 @@ onMounted(async () => {
       :closable="false"
       class="form-alert"
     />
-    <div class="results-anchor" />
+  </section>
+  <div class="results-anchor catalogue-total">
+    共找到 <strong>{{ total }}</strong> 本图书
+  </div>
+  <section class="catalogue-results">
     <LoadState
       :loading="loading"
       :error="error"
@@ -105,7 +115,7 @@ onMounted(async () => {
           background
           layout="prev, pager, next"
           :total="total"
-          :page-size="9"
+          :page-size="6"
           :current-page="page"
           @current-change="apply"
         /></div

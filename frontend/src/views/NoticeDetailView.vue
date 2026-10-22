@@ -27,12 +27,12 @@ watch(() => route.params.id, load)
 <template>
   <div class="page-heading">
     <div>
-      <div class="eyebrow">NOTICE</div>
       <h1>公告详情</h1>
+      <p>了解图书馆最新开放与服务信息</p>
     </div>
-    <RouterLink to="/notices">← 返回公告</RouterLink>
+    <RouterLink to="/notices"><el-button>返回公告列表</el-button></RouterLink>
   </div>
-  <section class="panel">
+  <section class="panel notice-article">
     <LoadState :loading="loading" :error="error" :empty="!item" @retry="load"
       ><article v-if="item">
         <h2>{{ item.title }}</h2>

@@ -1,0 +1,24 @@
+Create ONE polished high-fidelity desktop screenshot for a Chinese library management system, LIBRARIAN role, 图书管理 / 书目列表. Single complete web app frame approximately1440×1024. All10 books and pagination visible. No browser chrome, no perspective, no numbered design labels, no collage. Current date anchor2026-10-19 Asia/Shanghai; do not display a date.
+Direction: “分类封面目录”. Independently redesign this page with a category navigation rail and two-column compact illustrated book catalogue.
+References in order: selected administrator cover catalogue = visual tone only; selected librarian dashboard = role shell; existing staff book page = functionality only. Do not copy old six-book pagination, old data or administrator identity from references.
+
+Design system: navy sidebar230px #142747–#1a3156, white topbar60px; pale blue-gray #f3f7fc canvas, navy #152747 ink, blue #2775ea primary, teal #159f85 enabled status, red #d94b5f停用, amber zero availability. Chinese sans serif with exceptionally clear aligned typography, subtle borders #e7edf6, white surfaces,12px corners, restrained shadows and spacious visual rhythm.
+Sidebar brand 图书管理系统 / LIBRARY MANAGEMENT. Nav 首页概览; 图书管理 expanded with 书目列表 selected, 新增书目, 公开目录; 借阅管理 collapsed; 读者查找; 分类管理; 数据统计; 系统设置. Only 图书管理 and 书目列表 active. Do not show admin-only user management or audit. Global search 搜索图书、作者、分类等… in topbar; right blue avatar 馆, 欢迎回来，馆员.
+Page top breadcrumb 馆员工作台 / 图书管理; title 书目管理 with subtitle 维护馆藏书目信息与上架状态. Main primary top-right ＋ 新增书目.
+
+Below header a compact search toolbar: empty keyword field 搜索书名、作者、ISBN; dropdown 全部状态; blue 筛选. Classification handled by left category rail, do not duplicate category dropdown.
+Below toolbar, two functional columns: left narrow white category rail about150px headed 图书分类, simple stacked entries 全部分类 active, 计算机类, 文学类, 历史类, 经济管理. No fake counts, no other filters, no decorative giant empty panel. Right content label 书目列表 and 共20个书目, then TWO equal columns and FIVE rows of compact horizontal book cards, exactly10 distinct records. Each card about125px tall with real original illustrated portrait cover about65×92px at left and readable title, author, category at right. Lower metadata line explicitly labeled 可借 / 总册数, colored availability and muted total, enabled-state chip. Small actions 编辑 blue, 副本 blue, 停用 red or 上架 green at bottom right. Avoid crowded overlaps, keep text readable. Show title outside cover; realistic cover illustration is a visual affordance, not the only title text.
+Books in EXACT row-major order (left then right):
+Row1 LEFT Java编程思想 | Bruce Eckel | 计算机类 | 可借 / 总册数 3 / 8 | 已上架 | 编辑 副本 停用.
+Row1 RIGHT 人类简史 | 尤瓦尔·赫拉利 | 历史类 | 2 / 8 | 已上架 | 编辑 副本 停用.
+Row2 LEFT 解忧杂货店 | 东野圭吾 | 文学类 | 0 / 8 | 已上架 | 编辑 副本 停用.
+Row2 RIGHT 数据结构与算法 | 王道论坛 | 计算机类 | 4 / 10 | 已上架 | 编辑 副本 停用.
+Row3 LEFT 活着 | 余华 | 文学类 | 4 / 6 | 已上架 | 编辑 副本 停用.
+Row3 RIGHT 三体 | 刘慈欣 | 文学类 | 0 / 8 | 已上架 | 编辑 副本 停用.
+Row4 LEFT 经济学原理 | 曼昆 | 经济管理 | 3 / 8 | 已上架 | 编辑 副本 停用.
+Row4 RIGHT 月亮与六便士 | 毛姆 | 文学类 | 2 / 5 | 已上架 | 编辑 副本 停用.
+Row5 LEFT 围城 | 钱钟书 | 文学类 | 0 / 6 | 已下架 gray chip | 编辑 副本 上架 green.
+Row5 RIGHT 百年孤独 | 加西亚·马尔克斯 | 文学类 | 0 / 6 | 已上架 | 编辑 副本 停用.
+CRITICAL: all0-available books remain 已上架 except 围城 which is explicitly disabled. All10 distinct titles and exact stocks required.
+Original illustrative demo covers: Java black-gold tree/night; 人类简史 cream-red texture; 解忧 blue-orange night shop; 数据 blue-white graphics; 活着 ink landscape red lettering; 三体 dark orange eclipse; 经济 pale-blue geometry; 月亮 teal moon; 围城 gray-green city wall; 百年 green botanical. Do not repeat identical covers, no gray placeholders. Keep decorative cover lettering subordinate to correct readable external titles.
+Footer under all five card rows: 第1–10条，共20条; 上一页 disabled,1 active blue,2,下一页. Fixed10perpage, no size selector. No selection checkboxes, delete, bulk actions, import, export, metrics, fake ratings, popularity, price, shelf location, barcode, confirmation popup or business not in brief. Entire catalogue with footer fits screenshot without cropping. Professional polished coherent software design with generous yet efficient spacing.

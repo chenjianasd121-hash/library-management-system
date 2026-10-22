@@ -1,0 +1,19 @@
+Create a realistic production-quality Chinese desktop web-app borrowing-management UI, one independent screen, named direction “借阅核对工作台”. 1440 × 1024 target. Flat full-screen app UI only, no devices, browser chrome, multi-concept board or numeric labels.
+Input image 1 is user's approved book-management visual design. Preserve its recognisable navy sidebar, white topbar, pale-blue canvas, 12–14px white rounded surfaces, Chinese type and blue buttons. Input image 2 is actual existing loan list for supported functionality. Input image 3 is the newly generated table loan design for visual and mock-date consistency, not a layout to reproduce.
+Design a focused master-detail borrowing-records workspace. Administrator searches loan records, selects one to check its book, reader, barcode and due date, and proceeds to return processing. The right panel shows selected record detail and a navigation action, NOT an embedded actual return form. Essential controls: reader keyword, copy barcode, loan status, pagination, selection, return-processing entry, borrowing entry. No staff renewal, fines, SMS, bulk return, exports or extra analytics.
+Palette: sidebar #142747 to #1a3156; canvas #f3f7fc; ink #152747; muted #70809c; lines #e7edf6; blue #2775ea; mint #159f85; red #d94b5f. Chinese sans-serif body 14–16px, heading 28px. Whitespace, typography, subtle separators first; no metric cards or card-in-card nesting.
+Shell 248px navy side navigation, 60px white topbar. Brand “图书管理系统” / LIBRARY MANAGEMENT. Nav “首页概览”, “图书管理”, active “借阅管理”, expanded “办理借出”, “办理归还”, active child “借阅记录”, “预约管理”; then “读者管理”, “分类管理”, “数据统计”, “系统设置”. Top global search and admin account identical in spirit to approved reference.
+Content heading “借阅管理”, subtitle “选中借阅记录，核对信息后办理归还”. Top right subtle outlined “办理借出”, no second big blue global primary because selected-record return action is primary. Under header filter toolbar with “读者姓名或账号”, “副本条码”, dropdown “全部状态”, blue “查询”, light “重置”.
+Below one spacious two-pane workspace. Left about 62% width is a white list, right 38% is selected-record detail. 18px gutter. Left header “借阅记录” and subtle “共 28 条”. Table columns “图书 / 条码”, “读者”, “应还日期”, “状态”. Include 8 rows with a tiny realistic cover, semibold title, barcode below, reader name, due date and status. Selected second row 人类简史 has pale blue highlight and a short blue edge, while overdue state pill remains red. Other rows thin ruled not alternating heavy stripes.
+Records anchored on TODAY 2026-10-08 Asia/Shanghai:
+Java编程思想, BK0001, 张三, due 2026-10-20, 在借.
+人类简史, BK0012, 李四, due 2026-10-02, 逾期 6 天 (selected).
+解忧杂货店, BK0025, 王五, due 2026-10-25, 在借.
+数据结构与算法, BK0033, 赵六, due 2026-10-04, 逾期 4 天.
+经济学原理, BK0041, 陈晨, due 2026-10-10, 已归还.
+活着, BK0052, 林晓, due 2026-10-28, 在借.
+Python编程, BK0064, 周明, due 2026-10-15, 已归还.
+三体, BK0073, 刘洋, due 2026-10-31, 在借.
+Active blue text badge, returned mint, overdue red textual state. Footer “每页 10 条” and pagination “1 2 3”.
+Right pane heading “借阅详情” and red “逾期 6 天” badge. At top a tasteful portrait cover for 人类简史 about 100×140, adjacent title “人类简史” and author “尤瓦尔·赫拉利”. Separate clean metadata section: “借阅者” 李四; “副本条码” BK0012; “借出时间” 2026-09-02 10:18; “应还日期” 2026-10-02; “借阅状态” 在借 · 已逾期; “续借次数” 0 次. No invented personal phone/address/reader limit data.
+A quiet faint-pink notice with red outline clock icon says “已超过应还日期 6 天” and small “请核对图书与条码后办理归还”. This is contextual due-state text, not a dashboard warning. At lower end of detail pane, one prominent blue button “去办理归还”, with small muted explanatory line “在归还页面核对条码后确认”. No checkbox, no record deletion. Detail selected data must match the selected row exactly. Large clear breathing space and all actions visible. The entire screen should feel efficient, calm and consistent with approved design, not crowded. All data illustrative.

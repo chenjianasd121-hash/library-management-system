@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-20",
+  "timezone": "Asia/Shanghai",
+  "role": "LIBRARIAN",
+  "status": "selected",
+  "verification": "PNG decoding and source-copy SHA-256 checked programmatically. Username staff and librarian role read-only, display name馆员2/40 required, phone empty/optional, save and change-password actions, static avatar and librarian profile navigation checked visually.",
+  "candidates": [
+    {
+      "display_number": 1,
+      "file": "identity-profile-split.png",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "040fc9dbe5e4ce5838b05d8383e168d40ff446d89ba0369249d5b6aa4af8613d",
+      "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-c41c44c4-ba60-4057-a326-2cb162811652.png",
+      "identical_to_source": true
+    },
+    {
+      "display_number": 2,
+      "file": "sectioned-profile-form.png",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "b8e19a0db5e74d01f44a8614920ef745594cfcc2d540eda8f5135a4b0e45c781",
+      "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-d0c1c1a7-7a69-42ed-83ad-e1824ebb4121.png",
+      "identical_to_source": true
+    },
+    {
+      "display_number": 3,
+      "file": "profile-account-panels.png",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "97ba9159270f9fd2c1d83154ba1857267ed690f794747ac85f54cd7a38b441b3",
+      "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-bd5b8dab-7355-481c-a8ca-0edfb8dc47f9.png",
+      "identical_to_source": true
+    }
+  ],
+  "pending_supplemental_states": [
+    "display-name validation",
+    "saving",
+    "save success",
+    "request failure"
+  ],
+  "selected_candidate": 3,
+  "selected_date": "2026-10-20",
+  "final_file": "final.png",
+  "final_sha256": "97ba9159270f9fd2c1d83154ba1857267ed690f794747ac85f54cd7a38b441b3"
+}

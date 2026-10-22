@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-20",
+  "role": "LIBRARIAN",
+  "file": "edit-notice.png",
+  "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-32d43673-7f41-430e-8112-37b4bf0f2941.png",
+  "width": 1486,
+  "height": 1058,
+  "sha256": "fe49b6435cd5479fcf8477fa4007cdbef8be0ac413ed79e2e55b98e782fe35c4",
+  "identical_to_source": true,
+  "visual_check": "Edit header and filled first draft, title14/120 and body42/10000 including newline; same selected compact modal, preview/cancel/save-draft/close and librarian identity. Public footer remains all visitors. No initial error or new field.",
+  "review_status": "ready_for_user_review"
+}

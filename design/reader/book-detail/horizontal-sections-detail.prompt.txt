@@ -1,0 +1,13 @@
+Use case ui-mockup. Create ONE substantially different Chinese READER book detail, direction 横向分区详情. Target1440x1024 desktop full flat screenshot, no browser/device, numbering or comparison board. Use provided reference for app shell, typography, real Java book cover and exact data; rearrange main content into horizontal sections, not full-height cover-left metadata-right or reservation-right sidebar.
+Keep navy248px sidebar#142747–#1a3156, white60px topbar, pale#f3f7fc base, white12–14px round surfaces, blue#2775ea, teal#159f85, text#152747, muted#70809c, rules#e7edf6. Chinese body14–16px and page title28px, purposeful whitespace, thin dividers, no nested cards.
+Brand 图书管理系统 / LIBRARY MANAGEMENT and subtle 读者端. Reader-only sidebar 首页概览, active 图书目录, 系统公告, 我的借阅, 我的预约, 个人中心. Topbar avatar 张, 欢迎回来，张三 / 读者 and compact global search. Breadcrumb 图书目录 / 图书详情, heading 图书详情, upper-right ← 返回目录.
+Main first white horizontal BOOK OVERVIEW section, approx270px high: a modest portrait cover145x200px on left, book title Java编程思想, author Bruce Eckel and 计算机类 on right, small green 馆内有可借副本. Beneath title/author in this overview, ONE clean horizontal stock row 总册8 · 可借3 · 待取1 · 借出4, green emphasis on 可借3. Do not use four nested metric cards. No ISBN table or primary reserve button in upper overview.
+Second full-width white section below, heading 书目信息. Spacious two-column read-only definition grid:
+ISBN: 9787115546081
+出版社: 机械工业出版社
+出版日期: 2020-01-01
+关键词: Java,编程
+Each exactly once, no editable input controls. Divider, heading 内容简介 and EXACT sentence 系统介绍 Java 编程语言及面向对象思想。 No expanded fake paragraphs, tabs, related-book list or reviews.
+Bottom of SAME second surface after a fine rule: a broad calm action footer. Left helper 预约成功后，可在我的预约查看取书信息. Right blue PRIMARY 预约待取 and outline secondary 查看我的预约. One primary reserve button total. All fields, intro and footer fit uncut with comfortable bottom margin, no empty invented section to fill space. Do not put another reservation sidebar on right.
+State: existing enabled book, eligible logged-in reader before reservation, no overdue/no active loan or reservation of this book, primary enabled. Counts are library stock and add up8=3+1+4. No assigned barcode, pickup deadline, queue number, assumed pickup-days/loan policy, success/loading/error or restriction banners. No buy, borrow-now, e-reader, favorites, ratings, algorithm recommendations, quantity/copy selector, admin edit/delete or technical IDs.
+Keep accurate cover and legible external book title, ISBN digits and all source values. Anchor2026-10-09 Asia/Shanghai; preserve publication date2020-01-01. Render one complete polished independent UI screen.

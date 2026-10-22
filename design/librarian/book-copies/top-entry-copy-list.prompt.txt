@@ -1,0 +1,20 @@
+Create ONE polished high-fidelity desktop UI screenshot for Chinese library management system, LIBRARIAN physical book copy management. Direction “上方录入清单”: compact book summary, fullwidth horizontal add form ABOVE fullwidth copy table. Whole screen about1440×1024; all nine records, form and pagination visible. No browser chrome, collage or option label. Date anchor2026-10-20 Asia/Shanghai; no visible date. Use selected librarian editor reference for exact brand/role shell, restrained palette and original Java cover art; this is the NEXT page, not another editor.
+
+Navy sidebar230–250px #142747–#1a3156, white topbar60px, pale #f3f7fc canvas, ink #152747, muted #70809c, primaryblue #2775ea, subtle #e7edf6 lines, white12px rounded surfaces and restrained shadows. Chinese sans-serif clear14–16px body,26–28px title. Brand 图书管理系统 / LIBRARY MANAGEMENT. Nav 首页概览; 图书管理 expanded, 书目列表 activeblue, 新增书目 unselected, 公开目录; 借阅管理 collapsed; 读者查找; 分类管理; 数据统计; 系统设置. No administrator user/audit links. Topbar search 搜索图书、作者、分类等… and right avatar 馆, 欢迎回来，馆员.
+
+Heading breadcrumb 图书管理 / 副本管理. Title 副本管理 · Java编程思想. Subtitle 批量录入条码并维护实体副本. Top-right secondary 返回书目.
+Compact summary strip below, original small black/gold Java tree/night mock cover45×60px, Java编程思想, Bruce Eckel · 计算机类, ISBN9787115546081 optional if room. Right small readable summary 在册8册 / 可借3册, muted 总册数不含退役副本. No giant KPI tiles, no other metrics.
+Next white panel 新增副本. Compact horizontal form: left required label 条码 and EMPTY multiline input about55%width, placeholder 一行一个条码，最多50个; middle required label 馆藏位置 and EMPTY singleline input placeholder 例如：A 区 2 排; right main primaryblue 添加副本. Helper 每次添加1–50个条码，本批共用同一馆藏位置. Initial inputs genuinely empty, no errors or prefilled codes.
+Below, fullwidth white list card. Toolbar heading 副本列表; at right dropdown 全部状态 and outlined 刷新 button, no extra search or filterbutton.
+Table columns 条码 | 馆藏位置 | 状态 | 操作. No version/checkbox column. Exactly nine rows, compact40–44px high, all readable. All locations EXACT A 区 2 排.
+JAVA-001 | A 区 2 排 | 可借 teal chip | 位置 blue, 转维修 amber, 退役 red.
+JAVA-002 | A 区 2 排 | 可借 | 位置, 转维修, 退役.
+JAVA-003 | A 区 2 排 | 可借 | 位置, 转维修, 退役.
+JAVA-004 | A 区 2 排 | 待取 blue chip | ONLY位置 blue.
+JAVA-005 | A 区 2 排 | 借出 purple chip | ONLY位置 blue.
+JAVA-006 | A 区 2 排 | 借出 purple chip | ONLY位置 blue.
+JAVA-007 | A 区 2 排 | 维修 amber chip | 位置 blue, 恢复可用 teal, 退役 red.
+JAVA-008 | A 区 2 排 | 维修 amber chip | 位置 blue, 恢复可用 teal, 退役 red.
+JAVA-009 | A 区 2 排 | 退役 gray chip | ONLY位置 disabled gray, no state action.
+Keep availability and physical state accurate: 3可借+1待取+2借出+2维修=8在册, plus1退役=9records. Do not say totalcopies9; list count9 includesretired. Table footer 共9条副本记录（含退役），每页10条; disabled 上一页, active1, disabled 下一页. Onlyonepage, no size selector.
+Small understated rule note if space permits 待取与借出副本不能直接变更状态. No confirmation dialog shown in initial state. Existing transitions only, do not offer state change for borrowed/ready/retired. No bulk state operations, delete, export/import, barcode generation, printing/scanning, copy number field, prices, loan/return/reservation actions, fake statistics or business not described. Mature focused practical library maintenance screen, fine alignment and efficient density with all9 rows and main form complete.

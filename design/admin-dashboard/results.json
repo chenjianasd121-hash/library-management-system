@@ -1,0 +1,36 @@
+{
+  "portal": "admin",
+  "page": "dashboard",
+  "date": "2026-10-21",
+  "status": "confirmed-final",
+  "sourceOriginal": "C:\\Users\\en\\.codex\\worktrees\\2f69\\基于SpringBoot+vue的图书管理系统\\design\\admin-dashboard\\final.png",
+  "localReference": "reference-selected.png",
+  "sourceSha256": "0127af4684cf331a202e91589e91cd4f3bb2ceb57d4240c7b99d61d67a969330",
+  "prompt": "reader-metric-correction.prompt.txt",
+  "output": "reader-metric-corrected.png",
+  "nextUnfinishedItem": "管理员端设计已全部确认，无待设计项。馆员、读者端由各自聊天维护；三端设计全部完成并确认后再进入应用代码实现。",
+  "recoveryNote": "The prior stalled request returned no output. The resumed built-in edit succeeded on 2026-10-21; its image was saved and checked.",
+  "resumedOn": "2026-10-21",
+  "toolMode": "built-in-imagegen-edit",
+  "generatedSource": "C:\\Users\\en\\.codex\\generated_images\\01a15cec-dde6-7cd3-ba15-cf6f6e020cba\\exec-3b5c776c-1645-45ee-b40b-4bf9dd76325e.png",
+  "outputSha256": "cc3aa9936af9355e0a1770c717336ed2089400d5a97da63107f985ce4061d93e",
+  "outputBytes": 1762154,
+  "dimensions": [
+    1487,
+    1058
+  ],
+  "mode": "RGB",
+  "exactCopyVerified": true,
+  "visualReview": {
+    "readerLabel": "读者数",
+    "readerValue": "1,532",
+    "readerCaption": "正常读者账号",
+    "layoutAndContent": "Existing dashboard layout, other metric values, chart labels, table rows, and 2026-10-09 demonstration dates visually retained.",
+    "approval": "User explicitly confirmed final on 2026-10-21."
+  },
+  "confirmedAt": "2026-10-21",
+  "userConfirmation": "用户明确回复“确认定稿”：首页读者指标修正图已确认，读者数／1,532／正常读者账号。",
+  "final": "final.png",
+  "finalSha256": "cc3aa9936af9355e0a1770c717336ed2089400d5a97da63107f985ce4061d93e",
+  "finalCopyHashMatches": true
+}

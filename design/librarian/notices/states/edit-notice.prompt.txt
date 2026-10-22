@@ -1,0 +1,9 @@
+Precise UI edit of attached USER-SELECTED librarian new-notice dialog. Whole1487×1058 desktop screenshot, dateanchor2026-10-20 Asia/Shanghai. This is a fixed supplementary state, NOT another design alternative. Preserve selected modal layout, dimensions, spacing, colors, typography, required marks, fields, counters, guidance, 3footeractions andcloseX. Preserve dimmed library sidebar,馆identity,公告管理 active andoriginal six-draft background; publicfooter stays 发布后公告将对所有访客可见。 No browserchrome/collage/annotations/newfeatures.
+Only change from create to EDIT existing firstdraft:
+Header 编辑公告.
+Title input actual "关于图书馆开放时间调整的通知", count 14/120.
+Plain body textarea actual2lines:
+图书馆将调整开放时间，请读者留意现场通知。
+具体开放安排将在公告正式发布后对外展示。
+Bodycount 42/10000 INCLUDING the single newline. Readable actualtext in navy, notplaceholder. Keep title/bodyrequired, title1–120 andbodymax10000 helper.
+Footer预览 onleft,取消 andblue保存草稿 onright; existing quiet 保存后为草稿。 remains. No publishbutton, statuspicker, toolbars, success/error/loading ornewfield. Allfields/footer fullyvisible. Initial edit state before anychanges; background firstrecord still draft withpublishedtime—.

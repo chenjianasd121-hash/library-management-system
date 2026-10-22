@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-21",
+  "role": "LIBRARIAN",
+  "file": "checkout-success.png",
+  "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-a134a25c-775e-4a05-8969-1b33fe3832d9.png",
+  "width": 1487,
+  "height": 1058,
+  "sha256": "dae795c7fc8be77fdd2d414cf65f8d2eecdfc64e55a208d623d7be52914ded9f",
+  "identical_to_source": true,
+  "visual_check": "Checkout success with empty username and barcode, reset verification cards, disabled checkout button, retained loan 11268 due 2026-11-20, processed 2026-10-21 14:32.",
+  "review_status": "ready_for_user_review"
+}

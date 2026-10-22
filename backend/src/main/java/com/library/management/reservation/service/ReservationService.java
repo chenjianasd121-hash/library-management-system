@@ -16,6 +16,7 @@ import java.util.List;
 import java.util.Map;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.annotation.Isolation;
 
 @Service
 public class ReservationService {
@@ -32,8 +33,8 @@ public class ReservationService {
     public Map<String,Object> readyForCopy(long copyId) { Map<String,Object> r=mapper.readyForCopy(copyId);return r==null?null:Rows.row(r); }
     public boolean hasWaiting(long bookId) { return mapper.countWaiting(bookId)>0; }
     public boolean hasActiveForBook(long bookId) { return mapper.countActiveBook(bookId)>0; }
-    @Transactional public Map<String,Object> create(long readerId,long bookId,String key) {
-        return idempotency.execute(readerId,"POST","/api/v1/reservations",key,Map.of("bookId",bookId),201,() -> createInternal(readerId,bookId));
+    @Transactional(isolation=Isolation.READ_COMMITTED) public Map<String,Object> create(long readerId,long bookId,String key) {
+        return idempotency.execute(readerId,"POST","/api/v1/reservations",key,Map.of("bookId",bookId),201,() -> users.lock(readerId),() -> createInternal(readerId,bookId));
     }
     private Map<String,Object> createInternal(long readerId,long bookId) {
         Map<String,Object> user=users.lock(readerId);
@@ -50,8 +51,11 @@ public class ReservationService {
         allocate(bookId);
         return dto(byId(id));
     }
-    @Transactional public Map<String,Object> cancel(long actorId,boolean staff,long id,String reason,String key) {
-        return idempotency.execute(actorId,"POST","/api/v1/reservations/"+id+"/cancel",key,Map.of("reason",reason==null?"":reason),200,() -> cancelInternal(actorId,staff,id,reason));
+    @Transactional(isolation=Isolation.READ_COMMITTED) public Map<String,Object> cancel(long actorId,boolean staff,long id,String reason,String key) {
+        return idempotency.execute(actorId,"POST","/api/v1/reservations/"+id+"/cancel",key,Map.of("reason",reason==null?"":reason),200,() -> {
+            long readerId=((Number)byId(id).get("readerId")).longValue();
+            if(!staff && actorId!=readerId) throw ApiException.notFound();users.lock(readerId);
+        },() -> cancelInternal(actorId,staff,id,reason));
     }
     private Map<String,Object> cancelInternal(long actorId,boolean staff,long id,String reason) {
         Map<String,Object> initial=byId(id);

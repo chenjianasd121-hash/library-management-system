@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-21",
+  "role": "LIBRARIAN",
+  "file": "maintenance-confirmation.png",
+  "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-bffe2a0b-5e4e-45a0-80f8-d5cf663ec4c6.png",
+  "width": 1484,
+  "height": 1060,
+  "sha256": "82b5115dfe778b3c5918171a271a638c41fa6cff36a919f07c8c551f1e020d70",
+  "identical_to_source": true,
+  "visual_check": "Warning confirmation before maintenance, original available row and counts unchanged; only cancel and confirm.",
+  "review_status": "ready_for_user_review"
+}

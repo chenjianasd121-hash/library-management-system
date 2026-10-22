@@ -1,0 +1,24 @@
+Create ONE independent polished Chinese LIBRARIAN 公告管理 desktop UI screenshot, direction “列表预览工作台”: LEFT six-record compact notice list, RIGHT readonly preview of selected first draft. Full frame approx1440×1024, allsixrecords and pagination visible, no browserchrome/collage/designnumbers. Dateanchor2026-10-20 Asia/Shanghai, no dates needed. Use reference for exactshell/data/style, recompose existing notice content into an inline readonly preview, not a texteditor.
+
+Navy230–250px sidebar #142747–#1a3156, white60px topbar, pale #f3f7fc canvas, ink #152747, muted #70809c, blue #2775ea primary, amber draftchips, teal publishlinks, #e7edf6 fine rules,12px rounded white surfaces, restrained shadow, readable Chinese sans-serif14–16px and28px title.
+Brand 图书管理系统 / LIBRARY MANAGEMENT. Sidebar 首页概览, 图书管理 collapsed, 借阅管理 collapsed, 读者查找, 分类管理, 数据统计, 系统设置 EXPANDED with 公告管理 ACTIVEblue, 个人资料, 公开公告. No admin user/audit. Topbar global 搜索图书、作者、分类等… and avatar 馆, 欢迎回来，馆员.
+Main breadcrumb 系统设置 / 公告管理; title 公告管理; subtitle 保存草稿、预览并发布馆内通知; top-right sole primaryblue ＋ 新建公告.
+Compact toolbar underheader across content: status dropdown selected 草稿, outlined 刷新; no local keyword/datefilter or duplicate tabs.
+
+Below toolbar split main workspace with20pxgutter. LEFT white list card about680–710pxwide; RIGHT readonly-preview white card about420–450pxwide, naturalheight about450–520px, no need to fill bottom blankspace with fake data.
+LEFT heading 公告列表, small 共6条草稿. Table/list columns 公告标题 | 状态 | 发布时间 | 操作, typography sized for entiretitles; allow two lines where needed rather than truncate. Exact six orderedrows, roughly80px each:
+关于图书馆开放时间调整的通知 | 草稿 | — | 编辑 blue / 预览 navy / 发布 teal.
+新书上架与主题书展通知 | 草稿 | — | 编辑 / 预览 / 发布.
+关于馆内网络维护的通知 | 草稿 | — | 编辑 / 预览 / 发布.
+图书借阅与归还办理提示 | 草稿 | — | 编辑 / 预览 / 发布.
+关于阅览区域使用的温馨提示 | 草稿 | — | 编辑 / 预览 / 发布.
+关于图书馆消防演练的通知 | 草稿 | — | 编辑 / 预览 / 发布.
+FIRST row selected with very light blue background and narrow blue left indicator. Allsix remain 草稿 amberchips and 发布时间—, no fake dates, no 撤下/delete for draft. No selectioncheckboxes.
+Left footer 共6条草稿 · 每页10条; disabled 上一页, activeblue1, disabled 下一页; onlyonepage/no pagesize selector.
+
+RIGHT preview heading 公告预览 and a small subtle 只读预览 label. Show selectedfirst notice only, amber 草稿 tag, 发布时间：—. Readable article title EXACT 关于图书馆开放时间调整的通知. Then existing draft body in two paragraphs EXACT:
+图书馆将调整开放时间，请读者留意现场通知。
+具体开放安排将在公告正式发布后对外展示。
+Articlebody clean Chinese16px, comfortable lineheight, no editableinputs or formattingtoolbar. Header/content separated by a light rule. Natural whitecard height; don't invent extra paragraphs or fill remainingcanvas. Small note 草稿预览，仅供内容核对 if needed.
+Quiet note below workspace 发布后公告将对所有访客可见。 Publishing still requires existing preview/confirmation, not shown as instant publish. Keep per-record edit/publish entrypoints in leftlist; don't duplicate save/publish buttons inside preview.
+No editor/openmodal, success/error/loading, fakepublishedstate, author/approval/readcounts, coverart, category/priority/pin, attachments, scheduledpublish, fulltextsearch, filters, global statuscounts, sorting, import/export, bulk/delete, charts/KPIs or extra fields. Existing title/content only used in readonly preview. Complete coherent focused library notice workflow with allsixrecords, clear selection and accurate state.

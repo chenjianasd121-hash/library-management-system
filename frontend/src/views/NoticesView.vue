@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
+import { Bell } from '@element-plus/icons-vue'
 import { api } from '@/api'
 import { errorText } from '@/api/http'
 import type { Notice } from '@/api/types'
@@ -15,7 +16,7 @@ async function load() {
   loading.value = true
   error.value = ''
   try {
-    const d = await api.notices({ page: page.value, size: 10 })
+    const d = await api.notices({ status: 'PUBLISHED', page: page.value, size: 10 })
     items.value = d.items
     total.value = d.total
   } catch (e) {
@@ -28,10 +29,10 @@ onMounted(load)
 </script>
 <template>
   <PageHeading title="系统公告" description="了解图书馆最新开放与服务信息" />
-  <section class="panel">
+  <section class="panel notice-list-panel">
     <LoadState :loading="loading" :error="error" :empty="!items.length" @retry="load"
       ><div v-for="item in items" :key="item.id" class="notice-list-item">
-        <span class="notice-dot" />
+        <el-icon><Bell /></el-icon>
         <div>
           <RouterLink :to="`/notices/${item.id}`"
             ><h3>{{ item.title }}</h3></RouterLink
@@ -57,22 +58,3 @@ onMounted(load)
     ></LoadState>
   </section>
 </template>
-<style scoped>
-.notice-list-item {
-  display: flex;
-  gap: 14px;
-  border-bottom: 1px solid #eef2f8;
-  padding: 16px 4px;
-}
-.notice-list-item h3 {
-  margin: 0;
-  color: #142a52;
-}
-.notice-list-item p {
-  margin: 7px 0;
-  line-height: 1.5;
-}
-.notice-dot {
-  margin-top: 9px;
-}
-</style>

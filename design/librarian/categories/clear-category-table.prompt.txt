@@ -1,0 +1,18 @@
+Create ONE polished high-fidelity Chinese library management desktop UI screenshot for LIBRARIAN 分类管理. Independent direction “清晰分类表”: one calm readable white table with six category records. Full desktop frame approx1440×1024, no browser chrome, collage or option labels. Date anchor2026-10-20 Asia/Shanghai; no visible dates.
+Attached selected librarian copy-management screenshot is VISUAL SHELL reference ONLY. Replace the book/copy content entirely with category content. Do not retain Java book, cover, counts, barcode form, book-return link or pagination.
+
+Visual system: navy sidebar230–250px #142747–#1a3156, white topbar60px, #f3f7fc pale blue-gray canvas, navy ink #152747, muted #70809c, primaryblue #2775ea, teal #159f85 enabled status, gray disabled status, fine rules #e7edf6,12px corners, restrained shadows. Beautiful readable Chinese sans-serif, title28px, labels14–16px. Thoughtful spacious but efficient professional software UI.
+Brand 图书管理系统 / LIBRARY MANAGEMENT. Sidebar exactly seven main items: 首页概览; 图书管理 collapsed; 借阅管理 collapsed; 读者查找; 分类管理 ACTIVE blue; 数据统计; 系统设置. Books/borrowing submenu children HIDDEN, only 分类管理 selected. No account management or audit. Topbar global search 搜索图书、作者、分类等… and right blue avatar 馆, 欢迎回来，馆员.
+
+Main breadcrumb 馆员工作台 / 分类管理. Title 分类管理, subtitle 维护目录分类及启用状态. Main primary action top-right ＋ 新增分类. Only one primary action.
+Below one large white table card headed 分类列表. Understated inline count 共6个分类 · 启用5个 · 停用1个. Small secondary note 按排序值升序展示, not an interactive sorting control.
+Table columns 分类名称 | 分类编码 | 排序 | 状态 | 操作. Soft blue-gray table header, generous64–72px rows, clear alignment, category name strong, optional small restrained category icon. Codes in readable uppercase compact mono-like font, sort plain centered numbers (not input steppers). Status subtle teal 启用 or gray 停用. Exactly six ordered records:
+计算机类 | CS | 1 | 启用 | 编辑 blue.
+文学类 | LIT | 2 | 启用 | 编辑 blue.
+历史类 | HIS | 3 | 启用 | 编辑 blue.
+经济管理 | ECON | 4 | 启用 | 编辑 blue.
+自然科学 | SCI | 5 | 启用 | 编辑 blue.
+艺术类 | ART | 6 | 停用 | 编辑 blue.
+All records complete and legible. No active row selection, all existing loaded, no dialog. Sole action per record 编辑 opens existing category editor. Do not add inline toggle, direct 启用/停用 links or delete. Disabled category can still be edited.
+At table-card footer quiet useful note 停用分类后，读者将不能按该分类检索。 Smallinfo icon okay, not a big warning/banner. Do not claim books automatically taken offline or borrowing disabled.
+Category API is an unpaginated array: NO pagination, search box, filters, refresh, checkboxes, drag handles, sort arrows, import/export, cover art, book counts, popularity, charts, KPI tiles, tree nesting or batch operations. Six categories total, fiveenabled one disabled, no unsupported data. Keep calm intentional whitespace below card rather than adding fake modules. Initial loaded category overview, no loading/errors/toast or open create/edit modal. Main title and action, complete six-row hierarchy and librarian active navigation must look production-ready.

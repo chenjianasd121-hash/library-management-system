@@ -7,6 +7,7 @@ import { ApiError, errorText } from '@/api/http'
 import type { BookDetail, Copy, CopyStatus } from '@/api/types'
 import { statusLabel, statusTone } from '@/utils/format'
 import LoadState from '@/components/LoadState.vue'
+import { Reading, Plus, Refresh, Back, InfoFilled } from '@element-plus/icons-vue'
 import PageHeading from '@/components/PageHeading.vue'
 const route = useRoute(),
   id = computed(() => String(route.params.id)),
@@ -112,68 +113,98 @@ watch(id, () => {
 })
 </script>
 <template>
-  <PageHeading
-    :title="`副本管理${book ? ' · ' + book.title : ''}`"
-    description="批量录入条码并维护实体副本"
-    ><RouterLink to="/staff/books"><el-button>返回书目</el-button></RouterLink></PageHeading
+  <div class="staff-breadcrumb">图书管理 / <span>副本管理</span></div>
+  <PageHeading title="副本管理" description="维护实体图书条码、馆藏位置与流通状态。"
+    ><RouterLink to="/staff/books"
+      ><el-button :icon="Back">返回书目</el-button></RouterLink
+    ></PageHeading
   >
+  <section v-if="book" class="panel copies-book-summary">
+    <div class="staff-cover">
+      <img v-if="book.coverPath" :src="book.coverPath" :alt="book.title" /><el-icon v-else
+        ><Reading
+      /></el-icon>
+    </div>
+    <div>
+      <h2>{{ book.title }}</h2>
+      <p>{{ book.author }}</p>
+      <p>ISBN：{{ book.isbn || '未填写' }}</p>
+    </div>
+    <div class="copies-book-count">
+      馆藏 <strong>{{ book.totalCopies }}</strong> 册 · 可借
+      <strong class="text-success">{{ book.availableCopies }}</strong> 册
+      <p>副本状态变更后，馆藏数量自动更新</p>
+    </div>
+  </section>
   <section class="panel add-copy">
-    <h2>新增副本</h2>
+    <h2>
+      <el-icon><Plus /></el-icon>新增副本
+    </h2>
     <el-alert
       v-if="formError"
       type="error"
       :title="formError"
       :closable="false"
       class="form-alert"
+      show-icon
     />
     <div class="copy-form">
-      <el-input
-        v-model="barcodes"
-        type="textarea"
-        :rows="4"
-        placeholder="一行一个条码，最多 50 个"
-      /><el-input v-model="location" placeholder="馆藏位置，例如 A 区 2 排" /><el-button
+      <label for="copy-barcodes">副本条码</label>
+      <div>
+        <el-input
+          id="copy-barcodes"
+          v-model="barcodes"
+          type="textarea"
+          :rows="2"
+          placeholder="请输入条码，每行一个"
+        />
+        <p class="staff-hint">每次最多添加 50 个条码，请勿输入重复条码。</p>
+      </div>
+      <label for="copy-location">馆藏位置</label
+      ><el-input id="copy-location" v-model="location" placeholder="如：A 区 2 排 3 层" /><el-button
         type="primary"
+        :icon="Plus"
         :loading="busy"
         @click="add"
         >添加副本</el-button
       >
     </div>
   </section>
-  <section class="panel">
-    <div class="list-toolbar">
-      <el-select
-        v-model="filter"
-        placeholder="全部状态"
-        @change="
-          () => {
-            page = 1
-            load()
-          }
-        "
-        ><el-option label="全部状态" value="" /><el-option
-          v-for="s in ['AVAILABLE', 'READY', 'BORROWED', 'MAINTENANCE', 'RETIRED']"
-          :key="s"
-          :label="statusLabel[s as CopyStatus]"
-          :value="s" /></el-select
-      ><el-button @click="load">刷新</el-button>
+  <section class="panel staff-table-panel copies-list">
+    <div class="section-head">
+      <h2>副本列表</h2>
+      <div class="section-tools">
+        <el-select
+          v-model="filter"
+          placeholder="全部状态"
+          @change="
+            () => {
+              page = 1
+              load()
+            }
+          "
+          ><el-option label="全部状态" value="" /><el-option
+            v-for="s in ['AVAILABLE', 'READY', 'BORROWED', 'MAINTENANCE', 'RETIRED']"
+            :key="s"
+            :label="statusLabel[s as CopyStatus]"
+            :value="s" /></el-select
+        ><el-button :icon="Refresh" @click="load">刷新</el-button>
+      </div>
     </div>
     <LoadState :loading="loading" :error="error" :empty="!items.length" @retry="load"
       ><div class="table-scroll">
         <el-table :data="items" class="data-table" stripe
-          ><el-table-column prop="barcode" label="条码" min-width="150" /><el-table-column
+          ><el-table-column prop="barcode" label="副本条码" min-width="220" /><el-table-column
             prop="shelfLocation"
             label="馆藏位置"
-            min-width="160"
-          /><el-table-column label="状态" width="110"
+            min-width="230"
+          /><el-table-column label="状态" width="180"
             ><template #default="s"
               ><el-tag :type="statusTone(s.row.status)">{{
                 statusLabel[s.row.status as CopyStatus]
               }}</el-tag></template
             ></el-table-column
-          ><el-table-column prop="version" label="版本" width="75" /><el-table-column
-            label="操作"
-            width="300"
+          ><el-table-column label="操作" min-width="300"
             ><template #default="s"
               ><el-button
                 link
@@ -181,7 +212,7 @@ watch(id, () => {
                 :loading="rowBusy === s.row.id"
                 :disabled="s.row.status === 'RETIRED'"
                 @click="edit(s.row)"
-                >位置</el-button
+                >修改位置</el-button
               ><el-button
                 v-if="s.row.status === 'AVAILABLE'"
                 link
@@ -193,7 +224,7 @@ watch(id, () => {
                 link
                 type="success"
                 @click="edit(s.row, 'AVAILABLE')"
-                >恢复可用</el-button
+                >恢复可借</el-button
               ><el-button
                 v-if="['AVAILABLE', 'MAINTENANCE'].includes(s.row.status)"
                 link
@@ -205,37 +236,27 @@ watch(id, () => {
           ></el-table
         >
       </div>
-      <div class="pager">
-        <el-pagination
-          background
-          layout="prev, pager, next"
-          :current-page="page"
-          :page-size="10"
-          :total="total"
-          @current-change="
-            (n: number) => {
-              page = n
-              load()
-            }
-          "
-        /></div
+      <div class="staff-list-footer">
+        <p>
+          <el-icon><InfoFilled /></el-icon
+          >待取、借出中的副本不能直接变更流通状态；退役副本仅供查看。
+        </p>
+        <div class="pager">
+          <span>共 {{ total }} 条记录</span
+          ><el-pagination
+            background
+            layout="prev, pager, next"
+            :current-page="page"
+            :page-size="10"
+            :total="total"
+            @current-change="
+              (n: number) => {
+                page = n
+                load()
+              }
+            "
+          />
+        </div></div
     ></LoadState>
   </section>
 </template>
-<style scoped>
-.add-copy {
-  margin-bottom: 14px;
-}
-.add-copy h2 {
-  font-size: 17px;
-  margin-top: 0;
-}
-.copy-form {
-  display: grid;
-  gap: 10px;
-  max-width: 600px;
-}
-.copy-form .el-button {
-  justify-self: start;
-}
-</style>

@@ -25,9 +25,12 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import java.util.HexFormat;
+import java.security.MessageDigest;
 import java.util.concurrent.Callable;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -117,6 +120,49 @@ class MySqlWorkflowTest {
         assertThat(jdbc.queryForObject("SELECT COUNT(*) FROM loans WHERE copy_id=? AND status='ACTIVE'",Integer.class,f.copyId())).isEqualTo(1);
         assertThat(inventory.byId(f.copyId()).get("status")).isEqualTo("BORROWED");
     }
+    private <T> List<T> concurrent(List<Callable<T>> actions) throws Exception {
+        CountDownLatch start=new CountDownLatch(1);
+        var pool=Executors.newFixedThreadPool(actions.size());
+        try {
+            var futures=actions.stream().map(action -> pool.submit(() -> {start.await();return action.call();})).toList();
+            start.countDown();
+            List<T> results=new ArrayList<>();
+            for(var future:futures) results.add(future.get(60,TimeUnit.SECONDS));
+            return results;
+        } finally {pool.shutdownNow();}
+    }
+    @Test void concurrentSameKeyCheckoutReplaysTheCommittedResult() throws Exception {
+        Fixture f=book();long reader=insertUser("READER","T"+UUID.randomUUID());String key=UUID.randomUUID().toString();
+        List<Callable<String>> actions=new ArrayList<>();
+        for(int i=0;i<20;i++) actions.add(() -> loans.checkout(librarian,reader,f.barcode(),key).get("id").toString());
+        assertThat(concurrent(actions)).hasSize(20).allMatch(id -> id.equals(String.valueOf(jdbc.queryForObject("SELECT id FROM loans WHERE copy_id=? AND status='ACTIVE'",Long.class,f.copyId()))));
+        assertThat(jdbc.queryForObject("SELECT COUNT(*) FROM loans WHERE copy_id=?",Integer.class,f.copyId())).isEqualTo(1);
+    }
+    @Test void concurrentCheckoutsWithDistinctKeysRespectReaderLimit() throws Exception {
+        long reader=insertUser("READER","T"+UUID.randomUUID());List<Callable<Boolean>> actions=new ArrayList<>();
+        for(int i=0;i<20;i++) {Fixture f=book();actions.add(() -> {
+            try {loans.checkout(librarian,reader,f.barcode(),UUID.randomUUID().toString());return true;}
+            catch(ApiException ex) {assertThat(ex.code()).isEqualTo("BORROW_LIMIT_REACHED");return false;}
+        });}
+        assertThat(concurrent(actions).stream().filter(Boolean::booleanValue).count()).isEqualTo(5);
+        assertThat(jdbc.queryForObject("SELECT COUNT(*) FROM loans WHERE reader_id=? AND status='ACTIVE'",Integer.class,reader)).isEqualTo(5);
+    }
+    @Test void concurrentReservationsWithDistinctKeysRespectReaderLimit() throws Exception {
+        long reader=insertUser("READER","T"+UUID.randomUUID());List<Callable<Boolean>> actions=new ArrayList<>();
+        for(int i=0;i<20;i++) {Fixture f=book();actions.add(() -> {
+            try {reservations.create(reader,f.bookId(),UUID.randomUUID().toString());return true;}
+            catch(ApiException ex) {assertThat(ex.code()).isEqualTo("RESERVATION_LIMIT_REACHED");return false;}
+        });}
+        assertThat(concurrent(actions).stream().filter(Boolean::booleanValue).count()).isEqualTo(3);
+        assertThat(jdbc.queryForObject("SELECT COUNT(*) FROM reservations WHERE reader_id=? AND status IN ('WAITING','READY')",Integer.class,reader)).isEqualTo(3);
+    }
+    @Test void concurrentReadersCanQueueWithoutLockingEachOthersUserRows() throws Exception {
+        Fixture f=book();List<Callable<Long>> actions=new ArrayList<>();
+        for(int i=0;i<20;i++) {long reader=insertUser("READER","T"+UUID.randomUUID());actions.add(() -> Rows.id(reservations.create(reader,f.bookId(),UUID.randomUUID().toString())));}
+        assertThat(concurrent(actions)).hasSize(20);
+        assertThat(jdbc.queryForObject("SELECT COUNT(*) FROM reservations WHERE book_id=? AND status='READY'",Integer.class,f.bookId())).isEqualTo(1);
+        assertThat(jdbc.queryForObject("SELECT COUNT(*) FROM reservations WHERE book_id=? AND status='WAITING'",Integer.class,f.bookId())).isEqualTo(19);
+    }
     @Test void queueCancellationAndExpiryReassignInOrder() {
         Fixture f=book();long first=insertUser("READER","T"+UUID.randomUUID());long second=insertUser("READER","T"+UUID.randomUUID());long third=insertUser("READER","T"+UUID.randomUUID());
         long loanId=Rows.id(loans.checkout(librarian,first,f.barcode(),null));
@@ -149,7 +195,22 @@ class MySqlWorkflowTest {
         assertThat(loans.checkout(librarian,reader,f.barcode(),key).get("id").toString()).isEqualTo(first.get("id").toString());
         assertThatThrownBy(() -> loans.checkout(librarian,reader,"different",key)).isInstanceOf(ApiException.class)
             .satisfies(ex -> assertThat(((ApiException)ex).code()).isEqualTo("IDEMPOTENCY_CONFLICT"));
+        assertThatThrownBy(() -> loans.checkout(librarian,Long.MAX_VALUE,f.barcode(),key)).isInstanceOf(ApiException.class)
+            .satisfies(ex -> assertThat(((ApiException)ex).code()).isEqualTo("IDEMPOTENCY_CONFLICT"));
         assertThatThrownBy(() -> inventory.update(f.copyId(),"B-2","MAINTENANCE",0,librarian)).isInstanceOf(ApiException.class);
+    }
+    @Test void legacyCheckoutHashesReplayRegardlessOfMapFieldOrdering() throws Exception {
+        Fixture f=book();long reader=insertUser("READER","T"+UUID.randomUUID());String key=UUID.randomUUID().toString();
+        Map<String,Object> original=loans.checkout(librarian,reader,f.barcode(),key);
+        for(boolean reverse:List.of(false,true)) {
+            Map<String,Object> payload=new LinkedHashMap<>();
+            if(reverse) {payload.put("readerId",reader);payload.put("copyBarcode",f.barcode());}
+            else {payload.put("copyBarcode",f.barcode());payload.put("readerId",reader);}
+            String hash=HexFormat.of().formatHex(MessageDigest.getInstance("SHA-256").digest(json.writeValueAsBytes(payload)));
+            jdbc.update("UPDATE idempotency_records SET request_hash=? WHERE actor_id=? AND idempotency_key=?",hash,librarian,key);
+            assertThat(loans.checkout(librarian,reader,f.barcode(),key).get("id").toString()).isEqualTo(original.get("id").toString());
+        }
+        assertThat(jdbc.queryForObject("SELECT COUNT(*) FROM loans WHERE copy_id=?",Integer.class,f.copyId())).isEqualTo(1);
     }
     @Test void sessionCsrfAndRoleContract() throws Exception {
         assertError(mvc.perform(get("/api/v1/users")).andReturn(),401,"AUTH_REQUIRED");
@@ -181,6 +242,9 @@ class MySqlWorkflowTest {
         String bookBody=json.writeValueAsString(Map.of("title","不可入库","author","测试作者","categoryId",disabledCategoryId,"enabled",true));
         assertError(mvc.perform(post("/api/v1/books").session(session).cookie(cookie).header("X-XSRF-TOKEN",token)
             .contentType(MediaType.APPLICATION_JSON).content(bookBody)).andReturn(),422,"STATE_CONFLICT");
+        String invalidDate=json.writeValueAsString(Map.of("title","日期校验","author","测试作者","categoryId",String.valueOf(category),"enabled",true,"publishedOn","2026-99-99"));
+        assertError(mvc.perform(post("/api/v1/books").session(session).cookie(cookie).header("X-XSRF-TOKEN",token)
+            .contentType(MediaType.APPLICATION_JSON).content(invalidDate)).andReturn(),400,"VALIDATION_ERROR");
         assertError(mvc.perform(post("/api/v1/auth/logout").session(session).cookie(cookie)).andReturn(),403,"FORBIDDEN");
         assertThat(mvc.perform(post("/api/v1/auth/logout").session(session).cookie(cookie).header("X-XSRF-TOKEN",token)).andReturn().getResponse().getStatus()).isEqualTo(200);
         assertThat(mvc.perform(get("/api/v1/auth/me").session(session).cookie(cookie)).andReturn().getResponse().getStatus()).isEqualTo(401);

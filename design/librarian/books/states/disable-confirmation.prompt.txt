@@ -1,0 +1,5 @@
+Use case: ui-mockup. Edit attached selected librarian 图书管理 six-book cover-directory screen into a stop-book confirmation state, keeping the entire existing 1487×1058 desktop design and all six original cards beneath a neutral25% modal backdrop. Preserve category rail, query controls, counts and pagination; Java编程思想 still 已上架 / 可借3 / 共8册 before confirmation, 三体 still 已下架.
+Centered white warning dialog about640×300px, 12px corners, understated shadow, navy typography and primary blue matching reference. Header 确认书目状态, close X. Orange warning icon.
+Exact readable body:
+停用《Java编程思想》会阻止新的预约和借出；有效预约将取消并释放相应副本。确认停用？
+Footer right only 取消 outlined and 确定 blue. No reason input, no delete or permanent-loss claim, no success/error/loading, no added business operations. Do not change any card state before confirmation. One screenshot, no collage/numbered alternatives/browser chrome.

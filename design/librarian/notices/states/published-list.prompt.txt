@@ -1,0 +1,10 @@
+Precise UI edit of attached selected librarian 公告管理 main, ONE fixed Published-filter state. Full1487×1058, clientdateanchor2026-10-20 Asia/Shanghai. Preserve selected navy sidebar/white topbar/馆identity,系统设置expanded/公告管理active, heading, subtitle,新建公告 and original three status tabs. No modal or dimoverlay.
+Change active tab from草稿 to已发布, blue underline only under已发布. 草稿/已撤下inactive. Refresh stays. Total text now 共1条已发布. This is the SAME demo where only the former firstdraft was published, other5remainDRAFT and are NOTshown in this filteredlist.
+Exactly ONE record:
+title 关于图书馆开放时间调整的通知
+subtitle 图书馆将调整开放时间，请读者留意现场通知。
+status 已发布 in green/turquoise pill, notdraft.
+发布时间 2026-10-19 10:00 (Shanghai; previousday). Use a readable label-andvalue arrangement if needed.
+Onlyrowactions 预览 and撤下 (red withdrawal link). NO编辑/发布/deletion for publisheditem.
+Listgroup uses same white surface/light separators as selected, contentpanel may shrink naturally to fit one record, no six emptyrowplaceholders or extra resultcards. Pager bottomright 上一页 disabled,1selected,下一页disabled. Footer count 共1条已发布 · 每页10条.
+Underlyingbasepage pale#f3f7fc,blue#2775ea,ink#152747, muted#70809c. Existingnote 发布后公告将对所有访客可见。 remains correct. Do notinventauthor/readcounts/datefilters/bulkactions or change navigation. No success/toast/loading/error, no browserchrome/collage/annotation.

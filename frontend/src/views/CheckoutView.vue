@@ -1,10 +1,18 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { ElMessage } from 'element-plus'
 import { api } from '@/api'
 import { ApiError, errorText } from '@/api/http'
 import type { CopyLookup, LoanItem, Policy, ReaderLookup } from '@/api/types'
 import { dateTime, dueDate, expectedDueDate, newKey, statusLabel } from '@/utils/format'
+import {
+  UserFilled,
+  Reading,
+  Search,
+  CircleCheckFilled,
+  Back,
+  Check,
+} from '@element-plus/icons-vue'
 import PageHeading from '@/components/PageHeading.vue'
 const username = ref(''),
   barcode = ref(''),
@@ -17,42 +25,72 @@ const username = ref(''),
   busy = ref(false),
   operationKey = ref(''),
   operationPayload = ref('')
+let readerLookupVersion = 0
+let copyLookupVersion = 0
+watch(
+  username,
+  () => {
+    readerLookupVersion++
+    reader.value = null
+    policy.value = null
+    if (!busy.value) result.value = null
+  },
+  { flush: 'sync' },
+)
+watch(
+  barcode,
+  () => {
+    copyLookupVersion++
+    copy.value = null
+    if (!busy.value) result.value = null
+  },
+  { flush: 'sync' },
+)
 const block = computed(() =>
   reader.value?.status === 'DISABLED'
     ? '读者账号已禁用'
     : (reader.value?.overdueLoanCount || 0) > 0
       ? '读者存在逾期借阅'
-      : copy.value?.copy.status === 'READY' && copy.value.readyForReaderId !== reader.value?.id
-        ? '此副本已留给其他读者'
-        : copy.value && !['AVAILABLE', 'READY'].includes(copy.value.copy.status)
-          ? '副本当前不可借'
-          : '',
+      : reader.value && policy.value && reader.value.activeLoanCount >= policy.value.maxActiveLoans
+        ? `读者在借数量已达到 ${policy.value.maxActiveLoans} 本上限`
+        : copy.value?.copy.status === 'READY' && copy.value.readyForReaderId !== reader.value?.id
+          ? '此副本已留给其他读者'
+          : copy.value && !['AVAILABLE', 'READY'].includes(copy.value.copy.status)
+            ? '副本当前不可借'
+            : '',
 )
 async function lookupReader() {
+  const version = ++readerLookupVersion
+  const query = username.value.trim()
   error.value = ''
   reader.value = null
   result.value = null
   if (!username.value.trim()) return
   lookupBusy.value = true
   try {
-    reader.value = await api.reader(username.value.trim())
-    policy.value = await api.policy()
+    const [currentReader, currentPolicy] = await Promise.all([api.reader(query), api.policy()])
+    if (version !== readerLookupVersion || query !== username.value.trim()) return
+    reader.value = currentReader
+    policy.value = currentPolicy
   } catch (e) {
-    error.value = errorText(e)
+    if (version === readerLookupVersion) error.value = errorText(e)
   } finally {
     lookupBusy.value = false
   }
 }
 async function lookupCopy() {
+  const version = ++copyLookupVersion
+  const query = barcode.value.trim()
   error.value = ''
   copy.value = null
   result.value = null
   if (!barcode.value.trim()) return
   lookupBusy.value = true
   try {
-    copy.value = await api.lookupCopy(barcode.value.trim())
+    const currentCopy = await api.lookupCopy(query)
+    if (version === copyLookupVersion && query === barcode.value.trim()) copy.value = currentCopy
   } catch (e) {
-    error.value = errorText(e)
+    if (version === copyLookupVersion) error.value = errorText(e)
   } finally {
     lookupBusy.value = false
   }
@@ -89,82 +127,180 @@ async function submit() {
 }
 </script>
 <template>
-  <PageHeading title="办理借出" description="先精确查找读者，再核对实体副本与预约优先权" />
-  <section class="workflow">
-    <div class="panel">
-      <h2>① 查找读者</h2>
+  <div class="staff-breadcrumb">借阅管理 / <span>办理借出</span></div>
+  <PageHeading title="办理借出" description="核对读者与图书副本信息，确认无误后办理借出。"
+    ><RouterLink to="/staff/loans"
+      ><el-button :icon="Back">返回借阅列表</el-button></RouterLink
+    ></PageHeading
+  >
+  <el-steps
+    class="checkout-steps"
+    :active="reader && copy ? 2 : reader ? 1 : 0"
+    align-center
+    finish-status="success"
+    ><el-step title="查找读者" /><el-step title="核对副本" /><el-step title="确认借出"
+  /></el-steps>
+  <section class="checkout-workflow">
+    <div class="panel circulation-panel">
+      <h2>
+        <el-icon><UserFilled /></el-icon>查找读者
+      </h2>
+      <label class="circulation-label">读者账号</label>
       <div class="input-action">
         <el-input
           v-model="username"
-          placeholder="输入完整读者用户名"
+          placeholder="请输入完整读者账号"
+          :prefix-icon="Search"
           @keyup.enter="lookupReader"
-        /><el-button :loading="lookupBusy" @click="lookupReader">查找</el-button>
-      </div>
-      <el-descriptions v-if="reader" :column="1" border class="verify-box"
-        ><el-descriptions-item label="姓名">{{ reader.displayName }}</el-descriptions-item
-        ><el-descriptions-item label="账号">{{ reader.username }}</el-descriptions-item
-        ><el-descriptions-item label="状态">{{
-          reader.status === 'ACTIVE' ? '正常' : '已禁用'
-        }}</el-descriptions-item
-        ><el-descriptions-item label="当前在借"
-          >{{ reader.activeLoanCount }} / {{ policy?.maxActiveLoans ?? '—' }}</el-descriptions-item
-        ><el-descriptions-item label="逾期"
-          >{{ reader.overdueLoanCount }} 本</el-descriptions-item
-        ></el-descriptions
-      >
-    </div>
-    <div class="panel">
-      <h2>② 扫描或输入条码</h2>
-      <div class="input-action">
-        <el-input v-model="barcode" placeholder="副本条码" @keyup.enter="lookupCopy" /><el-button
-          :loading="lookupBusy"
-          @click="lookupCopy"
-          >核对</el-button
+        /><el-button type="primary" plain :loading="lookupBusy" @click="lookupReader"
+          >查找</el-button
         >
       </div>
-      <el-descriptions v-if="copy" :column="1" border class="verify-box"
-        ><el-descriptions-item label="书名">{{ copy.copy.bookTitle }}</el-descriptions-item
-        ><el-descriptions-item label="条码">{{ copy.copy.barcode }}</el-descriptions-item
-        ><el-descriptions-item label="状态">{{
-          statusLabel[copy.copy.status]
-        }}</el-descriptions-item
-        ><el-descriptions-item label="馆藏位置">{{ copy.copy.shelfLocation }}</el-descriptions-item
-        ><el-descriptions-item label="待取预约">{{
-          copy.readyForReaderId
-            ? copy.readyForReaderId === reader?.id
-              ? '属于当前读者'
-              : '属于其他读者'
-            : '无'
-        }}</el-descriptions-item></el-descriptions
-      >
+      <template v-if="reader"
+        ><div class="verified-identity">
+          <div class="identity-icon">
+            <el-icon><UserFilled /></el-icon>
+          </div>
+          <div>
+            <h3>{{ reader.displayName }}</h3>
+            <p>
+              {{ reader.username }}
+              <el-tag :type="reader.status === 'ACTIVE' ? 'success' : 'danger'">{{
+                reader.status === 'ACTIVE' ? '账号正常' : '账号已禁用'
+              }}</el-tag>
+            </p>
+          </div>
+        </div>
+        <dl class="verification-details">
+          <div>
+            <dt>当前在借</dt>
+            <dd>
+              <strong>{{ reader.activeLoanCount }}</strong> / {{ policy?.maxActiveLoans ?? '—' }} 本
+            </dd>
+          </div>
+          <div>
+            <dt>逾期借阅</dt>
+            <dd :class="reader.overdueLoanCount ? 'text-danger' : 'text-success'">
+              <strong>{{ reader.overdueLoanCount }}</strong> 本
+            </dd>
+          </div>
+        </dl>
+        <div v-if="!block" class="verification-success">
+          <el-icon><CircleCheckFilled /></el-icon>读者状态正常，可以办理借阅
+        </div>
+        <el-alert v-else :title="block" type="warning" :closable="false" show-icon
+      /></template>
+      <div v-else class="verification-placeholder">
+        <el-icon><UserFilled /></el-icon>
+        <p>输入读者账号后，查找并核对读者信息</p>
+      </div>
     </div>
-    <div class="panel workflow-confirm">
-      <h2>③ 核对并办理</h2>
+    <div class="panel circulation-panel">
+      <h2>
+        <el-icon><Reading /></el-icon>核对图书副本
+      </h2>
+      <label class="circulation-label">副本条码</label>
+      <div class="input-action">
+        <el-input
+          v-model="barcode"
+          placeholder="请扫描或输入副本条码"
+          :prefix-icon="Search"
+          @keyup.enter="lookupCopy"
+        /><el-button type="primary" plain :loading="lookupBusy" @click="lookupCopy">核对</el-button>
+      </div>
+      <template v-if="copy"
+        ><div class="verified-identity">
+          <div class="identity-icon book-identity">
+            <el-icon><Reading /></el-icon>
+          </div>
+          <div>
+            <h3>{{ copy.copy.bookTitle }}</h3>
+            <p>实体馆藏副本</p>
+          </div>
+        </div>
+        <dl class="verification-details copy-details">
+          <div>
+            <dt>副本条码</dt>
+            <dd>{{ copy.copy.barcode }}</dd>
+          </div>
+          <div>
+            <dt>馆藏位置</dt>
+            <dd>{{ copy.copy.shelfLocation }}</dd>
+          </div>
+          <div>
+            <dt>副本状态</dt>
+            <dd>
+              <el-tag
+                :type="['AVAILABLE', 'READY'].includes(copy.copy.status) ? 'success' : 'warning'"
+                >{{ statusLabel[copy.copy.status] }}</el-tag
+              >
+            </dd>
+          </div>
+          <div>
+            <dt>待取预约</dt>
+            <dd>
+              {{
+                copy.readyForReaderId
+                  ? copy.readyForReaderId === reader?.id
+                    ? '属于当前读者'
+                    : '已为其他读者保留'
+                  : '无待取预约'
+              }}
+            </dd>
+          </div>
+        </dl>
+        <div
+          v-if="['AVAILABLE', 'READY'].includes(copy.copy.status) && !block"
+          class="verification-success"
+        >
+          <el-icon><CircleCheckFilled /></el-icon>副本状态符合借出条件
+        </div></template
+      >
+      <div v-else class="verification-placeholder">
+        <el-icon><Reading /></el-icon>
+        <p>扫描副本条码后，核对馆藏与预约信息</p>
+      </div>
+    </div>
+    <div class="panel checkout-confirm">
+      <h2>
+        <el-icon><CircleCheckFilled /></el-icon>确认借出信息
+      </h2>
       <el-alert
         v-if="error"
         type="error"
         :title="error"
         :closable="false"
         class="form-alert"
-      /><el-alert v-if="block" type="warning" :title="block" :closable="false" class="form-alert" />
-      <p class="muted">
-        <span v-if="reader && copy">{{ reader.displayName }} 借阅《{{ copy.copy.bookTitle }}》</span
-        ><span v-else>请完成读者和副本核对</span>
-      </p>
-      <p class="muted">
-        借期 {{ policy?.loanDays ?? '—' }} 天；预计到期日
-        {{
-          policy ? dueDate(expectedDueDate(policy.loanDays)) : '待查询'
-        }}。实际日期以提交后的服务端结果为准。
-      </p>
-      <el-button
-        type="primary"
-        size="large"
-        :disabled="!reader || !copy || !!block"
-        :loading="busy"
-        @click="submit"
-        >确认借出</el-button
-      ><el-result
+        show-icon
+      />
+      <div class="checkout-confirm-body">
+        <div>
+          <p class="checkout-summary">
+            {{
+              reader && copy
+                ? `${reader.displayName} 借阅《${copy.copy.bookTitle}》`
+                : '请先完成读者和图书副本核对'
+            }}
+          </p>
+          <div class="checkout-policy">
+            <span
+              >借阅期限 <strong>{{ policy?.loanDays ?? '—' }}</strong> 天</span
+            ><span
+              >预计到期日 <strong>{{ policy ? expectedDueDate(policy.loanDays) : '待核对' }}</strong
+              ><small>到期当日结束前归还，以服务端办理结果为准</small></span
+            >
+          </div>
+        </div>
+        <el-button
+          type="primary"
+          :icon="Check"
+          :disabled="!reader || !copy || !!block"
+          :loading="busy"
+          @click="submit"
+          >确认借出</el-button
+        >
+      </div>
+      <el-result
         v-if="result"
         icon="success"
         title="借出完成"
@@ -173,32 +309,3 @@ async function submit() {
     </div>
   </section>
 </template>
-<style scoped>
-.workflow {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
-.workflow-confirm {
-  grid-column: span 2;
-}
-.panel h2 {
-  font-size: 17px;
-  margin: 0 0 17px;
-}
-.input-action {
-  display: flex;
-  gap: 9px;
-}
-.verify-box {
-  margin-top: 20px;
-}
-@media (max-width: 760px) {
-  .workflow {
-    grid-template-columns: 1fr;
-  }
-  .workflow-confirm {
-    grid-column: auto;
-  }
-}
-</style>

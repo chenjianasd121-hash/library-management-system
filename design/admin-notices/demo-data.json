@@ -1,0 +1,82 @@
+{
+  "anchorDate": "2026-10-19",
+  "timezone": "Asia/Shanghai",
+  "mockData": true,
+  "filter": "DRAFT",
+  "page": 1,
+  "size": 10,
+  "total": 6,
+  "previewNoticeId": "2101",
+  "drafts": [
+    {
+      "id": "2101",
+      "title": "十月新书推荐与阅读指南",
+      "status": "DRAFT",
+      "publishedAt": null,
+      "content": "读者朋友们：\n十月新书推荐书目已整理完成，欢迎到馆查阅与借阅。\n请通过公开图书目录查询书目和可借副本，办理借阅时携带有效读者证件。\n具体书目以馆内目录显示为准。"
+    },
+    {
+      "id": "2102",
+      "title": "周末阅读分享会活动预告",
+      "status": "DRAFT",
+      "publishedAt": null,
+      "content": "本月阅读分享会正在筹备，活动安排确定后将在公开公告中发布。"
+    },
+    {
+      "id": "2103",
+      "title": "图书借阅办理流程说明",
+      "status": "DRAFT",
+      "publishedAt": null,
+      "content": "办理借阅请到馆内服务台，由馆员核对读者和图书副本后完成借出。"
+    },
+    {
+      "id": "2104",
+      "title": "馆内安静阅读温馨提示",
+      "status": "DRAFT",
+      "publishedAt": null,
+      "content": "请保持安静，手机调至静音，共同维护舒适的阅读环境。"
+    },
+    {
+      "id": "2105",
+      "title": "预约取书注意事项",
+      "status": "DRAFT",
+      "publishedAt": null,
+      "content": "预约书目进入待取状态后，请在截止时间前到馆取书。"
+    },
+    {
+      "id": "2106",
+      "title": "阅览区域座位使用须知",
+      "status": "DRAFT",
+      "publishedAt": null,
+      "content": "请文明使用阅览座位，离馆时带走个人物品。"
+    }
+  ],
+  "publishedForSupplementaryStates": [
+    {
+      "id": "2001",
+      "title": "秋季阅读活动报名开放",
+      "status": "PUBLISHED",
+      "publishedAt": "2026-10-09T08:00:00+08:00"
+    },
+    {
+      "id": "2002",
+      "title": "国庆后开放时间安排",
+      "status": "PUBLISHED",
+      "publishedAt": "2026-10-08T09:30:00+08:00"
+    },
+    {
+      "id": "2003",
+      "title": "图书归还与预约取书提醒",
+      "status": "PUBLISHED",
+      "publishedAt": "2026-10-07T11:00:00+08:00"
+    }
+  ],
+  "withdrawnForSupplementaryStates": [
+    {
+      "id": "1991",
+      "title": "九月阅读活动安排",
+      "status": "WITHDRAWN",
+      "publishedAt": "2026-09-15T09:00:00+08:00"
+    }
+  ]
+}

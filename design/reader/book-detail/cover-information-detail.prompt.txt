@@ -1,0 +1,16 @@
+Use case ui-mockup. One production-quality Chinese logged-in READER book detail, direction 封面信息详情, 1440x1024 desktop, complete flat screenshot without browser/device chrome or option numbers. Reference1 user-approved reader catalogue supplies palette, app shell and Java book cover; reference2 old detail screenshot supplies exact supported information, adapt its visitor state to logged-in reader.
+Same navy248px sidebar#142747–#1a3156, white60px topbar, pale#f3f7fc canvas, white12–14px rounded surface, blue#2775ea, ink#152747, muted#70809c, teal#159f85. Chinese14–16px body,28px page title, purposeful whitespace and fine dividers, no nested cards.
+Reader-only sidebar brand 图书管理系统 / LIBRARY MANAGEMENT, 读者端; 首页概览, ACTIVE 图书目录, 系统公告, 我的借阅, 我的预约, 个人中心. Topbar compact search and avatar 张, 欢迎回来，张三 / 读者. No login/register or staff controls.
+Main breadcrumb 图书目录 / 图书详情, page title 图书详情, upper-right outlined ← 返回目录.
+ONE broad white book-detail surface. Left about26% large realistic portrait cover Java编程思想 about220x310px, matching approved catalogue artwork. Right about74% clear book reading information: small green 馆内有可借副本, bold Java编程思想, author Bruce Eckel and category 计算机类.
+Below title, clean two-column metadata definition rows, NOT editable form:
+ISBN 9787115546081
+出版社 机械工业出版社
+出版日期 2020-01-01
+关键词 Java,编程
+Preserve digits and source date exactly, all values readable.
+Light divider and grouped single-line availability strip: 总册 8 · 可借 3 · 待取 1 · 借出 4, emphasize green 可借3 without dashboard metric cards. These counts belong to library stock, not personal reservations.
+Below metadata/stock group heading 内容简介 and exact sentence 系统介绍 Java 编程语言及面向对象思想。 No invented long description.
+At bottom of reading-info column, visible one blue primary 预约待取, secondary outline 查看我的预约, small helper 预约成功后，可在我的预约查看取书信息. Fit all content without cropping, use natural breathing room. Preserve one wide book surface, no separate right reservation sidebar in this direction, no duplicate primary action.
+State is eligible logged-in reader before reservation: book enabled, no overdue, no current loan or active reservation of THIS book. Primary enabled, no loading/success/errors or restriction banners. Do NOT render assigned barcode, pickup deadline, queue position, fixed pickup-days policy or reservation-success state. No buy, borrow-now, e-reader, ratings, favorites, recommended books, quantity selector, physical-copy choice, admin edit/delete or technical IDs.
+Anchor2026-10-09 Asia/Shanghai, source publication date stays2020-01-01. Exact metadata are illustrative source fixture values, not factual publishing claims. Render ONE clean complete independent screen.

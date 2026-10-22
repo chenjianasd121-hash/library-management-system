@@ -1,0 +1,6 @@
+Edit attached librarian Published-notice list screenshot to show ONE withdrawal confirmation. Same1487×1058frame anddateanchor2026-10-20 Asia/Shanghai, no browserchrome/annotations/collage.
+Freeze screenshot beneathneutral20–30% dimbackdrop: sidebar馆identity/公告管理active,已发布tabactive, exactlyonepublished firstnotice, timestamp2026-10-19 10:00, originaltitle/subtitle/actions/count1/page10. Before confirm nothing has beenwithdrawn. No previewdialog behind, since source withdrawal opens confirmation directly.
+Centeredwhite warningmessagebox about570pxwide and260pxhigh,12pxcorners, subduedshadow,#152747ink,#2775eaprimary,#d98a22warning. Header 确认操作, orange warningicon, closeX.
+Exactmessage: 确认撤下公告《关于图书馆开放时间调整的通知》？公开页面将不再显示。
+Readable2–3lines, no invented consequencesorrequiredreason. Footer ONLY取消 secondary and确定 blueprimary at right.
+No additional inputs, preview/editor, deleting, success/error/loading, statuschangeinbackground ornewcontrols. Preserve selecteddesign spacing/typography andoriginal publicfooter all访客.

@@ -1,0 +1,15 @@
+Use case: ui-mockup. One realistic production-quality Chinese logged-in READER homepage, direction 搜索优先首页. Desktop1440 x1024, full flat app screenshot, no browser or device, no concept numbering. Sharp Chinese14–16px body and28px heading, spacious balanced layout.
+Image1 approved catalogue gives navy/blue system and realistic book-cover styling. Image2 existing public homepage gives supported search/books/notices. Image3 user's dashboard gives soft-blue atmosphere. Adapt to reader 张三; use correct reader navigation.
+Navy248px sidebar #142747–#1a3156, canvas#f3f7fc, white60px topbar and white rounded surfaces, blue#2775ea, teal#159f85, orange#d98a22, text#152747, muted#70809c, separators#e7edf6. 12–14px corners and subtle shadows, simple dividers before borders.
+Sidebar brand 图书管理系统 / LIBRARY MANAGEMENT, subtle 读者端; ONLY active 首页概览, 图书目录, 系统公告, 我的借阅, 我的预约, 个人中心. No staff/admin menus. Topbar small global search 搜索图书、作者、分类等… and avatar 张, 欢迎回来，张三, 读者 identity; no login/register.
+Search-centered hero at top, about220px high, soft light-blue university-library photograph fading into white. Headline 让阅读，遇见更好的自己; supporting 搜索馆藏，找到下一本想读的书. Prominent EMPTY search input 输入书名、作者或 ISBN 搜索馆藏 and blue primary 搜索图书 button. Below quiet 浏览图书目录 → and 我的预约 →. No technical stack or graduation-project heading.
+Below hero TWO columns: left70% white 新到馆藏 with 查看全部 → and four books in spacious2x2 horizontal entries, each real portrait cover about80x120px, readable title/author/category, numeric availability, status and 查看详情 →; light row separation, no heavy nested cards. Right30% white 最新公告 with 查看全部 → and three announcement rows, then divider and modest 我的阅读 links. All content fits without cropping.
+Exact book data:
+Java编程思想 / Bruce Eckel / 计算机类 / 可借 3 / 总册 8 / 可预约待取.
+人类简史 / 尤瓦尔·赫拉利 / 历史类 / 可借 2 / 总册 8 / 可预约待取.
+解忧杂货店 / 东野圭吾 / 文学类 / 可借 0 / 总册 8 / 预约排队.
+数据结构与算法 / 王道论坛 / 计算机类 / 可借 2 / 总册 8 / 可预约待取.
+Teal available reservation labels, orange queue label. Exact counts and names, realistic actual book-cover artwork, no empty placeholders, no ISBN strings or added descriptions needed. Only 查看详情 card links, no direct borrowing or stock edit actions.
+Announcement dates exact: 关于图书馆开放时间调整的通知 — 2026-10-08; 新增馆藏已开放查询 — 2026-10-06; 借阅与预约服务说明 — 2026-10-03.
+Under notices within same right group: 我的借阅 — 查看在借与归还记录 → and 我的预约 — 查看排队与待取状态 →. Existing page links only, no fabricated personal metrics, overdue alerts or unread counts.
+Current anchor2026-10-09 Asia/Shanghai, announcement dates in past. No metrics/charts, algorithmic recommendations, ratings, favorites, e-reader, fines/payment, self checkout or administrative features. Focused reader service screen with search as the one primary action. Render one complete independent image.

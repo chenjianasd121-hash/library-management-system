@@ -1,0 +1,152 @@
+{
+  "phase": 5,
+  "status": "assets saved; code and API checks passed; Chrome comparison pending",
+  "assets": [
+    {
+      "source": "design/frontend-handoff/读者端/pages/login.png",
+      "reference_crop": "design/asset-work/reader-login-left-reference.png",
+      "generated_source": "C:\\Users\\en\\.codex\\generated_images\\01a161af-9738-74b3-866c-ee4f89aca399\\exec-4deb9eb1-8e25-4c36-ac22-c5d1e5464095.png",
+      "generated_size": [
+        1107,
+        1421
+      ],
+      "output": "frontend\\public\\design\\login-reader-scene.png",
+      "width": 824,
+      "height": 1058,
+      "status": "saved",
+      "sha256": "75dc18c0cc3a3433e7807980770d4fcbadc9a56da7d5902d64774af03d5afb3d",
+      "mode": "built-in imagegen edit",
+      "prompt": "Remove all UI text, branding and bottom quote from cropped reader login left scene; preserve navy blue arcs, library architecture, trees, lighting and the exact three 3D books; no redesign or new objects."
+    },
+    {
+      "source": "design/frontend-handoff/管理员端/pages/login.png",
+      "output": "frontend\\public\\design\\login-admin-background.png",
+      "status": "saved",
+      "method": "built-in imagegen edit; size normalization only via Pillow",
+      "original_generated_dimensions": [
+        1488,
+        1057
+      ],
+      "dimensions": [
+        1487,
+        1058
+      ],
+      "sha256": "f3dfb069f9bffb0b251f4487daa9a621c1a1cf2f8939004f06f66255c3d2605a",
+      "prompt": "Remove all foreground login UI, logos and text; seamlessly restore original blue-sky modern glass library courtyard photograph; preserve composition, books, trees, palette and lighting."
+    },
+    {
+      "source": "design\\frontend-handoff\\读者端\\pages\\login.png",
+      "output": "frontend\\public\\design\\brand-mark.png",
+      "operation": "exact crop",
+      "box": [
+        69,
+        54,
+        124,
+        110
+      ],
+      "sha256": "d7a338f263b5bd7a9ed2f4f47b2168a074d4682e0c6518052a9be0629c9b48d3"
+    },
+    {
+      "source": "design/frontend-handoff/读者端/pages/home.png",
+      "output": "frontend/public/design/sidebar-art.png",
+      "dimensions": [
+        274,
+        248
+      ],
+      "method": "exact crop (0,690,274,938)",
+      "status": "saved",
+      "sha256": "567a9fd136a772b7b6d031eae3c22d22b49a1ec71f4d645b767e95b83ccc2c22"
+    },
+    {
+      "source": "design/frontend-handoff/读者端/pages/home.png",
+      "output": "frontend/public/design/hero-reader.png",
+      "dimensions": [
+        1165,
+        333
+      ],
+      "method": "imagegen edit: remove foreground UI and restore obscured original background",
+      "status": "saved",
+      "sha256": "22c8d32c58559f9b1a68089e6ea338fa90b1277aef74ebe89dbc9ab4522b5177"
+    },
+    {
+      "source": "design/frontend-handoff/管理员端/pages/dashboard.png",
+      "output": "frontend/public/design/hero-admin.png",
+      "dimensions": [
+        1164,
+        210
+      ],
+      "method": "imagegen edit: remove foreground UI and restore obscured original background",
+      "status": "saved",
+      "sha256": "3e55e593cf4507beb9b2e0c8dd9a9c4422cf724efc38bdb1b82b0ea0415620ed"
+    },
+    {
+      "source": "design/frontend-handoff/读者端/states/states-empty.png",
+      "output": "frontend/public/design/state-empty.png",
+      "box": [
+        758,
+        487,
+        991,
+        698
+      ],
+      "method": "exact crop",
+      "dimensions": [
+        233,
+        211
+      ],
+      "sha256": "623136f4d4ffdb70bdd733d4cff45423b50b999321530bc9675d27c1543a8beb",
+      "status": "saved"
+    },
+    {
+      "source": "design/frontend-handoff/读者端/states/states-load-error.png",
+      "output": "frontend/public/design/state-error.png",
+      "box": [
+        691,
+        512,
+        788,
+        608
+      ],
+      "method": "exact crop",
+      "dimensions": [
+        97,
+        96
+      ],
+      "sha256": "3a575451299a0c4cb06d3a330d59bd458850fb3466e5b8ba9c0500d24ec60336",
+      "status": "saved"
+    },
+    {
+      "source": "design/frontend-handoff/读者端/pages/forbidden.png",
+      "output": "frontend/public/design/state-forbidden.png",
+      "box": [
+        405,
+        334,
+        890,
+        786
+      ],
+      "method": "exact crop",
+      "dimensions": [
+        485,
+        452
+      ],
+      "sha256": "dffc32a96b6475720180165aa38ddf96b8d3a3e5a68cc77b2e961aab0828767d",
+      "status": "saved"
+    },
+    {
+      "source": "design/frontend-handoff/读者端/pages/not-found.png",
+      "output": "frontend/public/design/state-not-found.png",
+      "box": [
+        404,
+        309,
+        894,
+        794
+      ],
+      "method": "exact crop",
+      "dimensions": [
+        490,
+        485
+      ],
+      "sha256": "4fd69c306a0e44be88c4432dac1e2be8fea189e4837a0b4ea9144b40c147bcb2",
+      "status": "saved"
+    }
+  ],
+  "next": "Chrome 100% visual comparison at reference sizes, 1366x768 and 1920x1080; color/layout calibration and manual real-backend browser flow"
+}

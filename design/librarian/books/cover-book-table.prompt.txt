@@ -1,0 +1,25 @@
+Design one polished high-fidelity desktop UI mockup for a Chinese library management system, LIBRARIAN role, 图书管理 / 书目列表 page. One standalone screenshot only, no browser chrome, no option label, no multiple panels showing alternative designs. Wide desktop canvas approximately 1440×1024, every edge and all ten records and pagination visible. Current date anchor 2026-10-19 Asia/Shanghai; no date needs displaying.
+
+Use the three provided references in their given order: (1) selected administrator catalogue for visual system and illustrated cover tone only; (2) selected librarian dashboard for exact role shell and identity; (3) existing librarian books screenshot as functional evidence only. Replace the references' old content with the exact content below. This is an independently composed new page, direction “封面书目表格”.
+
+Visual system: navy sidebar about230px, white topbar60px, very pale blue-gray canvas #f3f7fc, dark ink #152747, muted #70809c, thin rules #e7edf6, primary blue #2775ea, success teal #159f85, error red #d94b5f. Chinese sans serif, beautifully typeset readable text. Rounded white surfaces12px, restrained shadow, precise aligned spacing. Style is professional university library software, pleasant and quiet. No ornamental KPI tiles or hero banner.
+
+Brand in sidebar 图书管理系统, small LIBRARY MANAGEMENT. Navigation: 首页概览; 图书管理 expanded with 书目列表 active in blue, 新增书目, 公开目录; 借阅管理 collapsed; 读者查找; 分类管理; 数据统计; 系统设置. Only 图书管理 parent and 书目列表 child selected. Do not show administrator account management or audit. Topbar has search placeholder 搜索图书、作者、分类等… and right avatar 馆, 欢迎回来，馆员.
+
+Content header breadcrumb 馆员工作台 / 图书管理, large title 书目管理, subtitle 维护馆藏书目信息与上架状态. Single main primary action ＋ 新增书目 top right.
+Below, a compact white filter strip: keyword input placeholder 搜索书名、作者、ISBN, 分类 dropdown 全部分类, 上架状态 dropdown 全部状态, blue 筛选 button. No reset or export.
+A single large white table section under the filters, label 书目列表 and understated 共20个书目. Fixed10 records on current page. Columns 书目信息 (small actual portrait cover thumbnail and title), 作者, 分类, 可借 / 总册数, 上架状态, 操作. Table around1040px wide; rows approximately54px high so all10 fit. Illustrated cover thumbnails about32×44px, real visible art, not gray placeholders. Readable book titles outside covers. Table header lightly blue-gray. Availability number highlighted teal if positive, amber if0; total muted. State chips subtle teal 已上架; sole disabled 围城 gray 已下架. Actions on each row 编辑 blue, 副本 blue, 停用 red except 围城 has 上架 green. No checkbox, no delete, no bulk operations.
+Exact ordered rows, keep numbers and states independent:
+1 Java编程思想 | Bruce Eckel | 计算机类 | 3 / 8 | 已上架 | 编辑 副本 停用.
+2 人类简史 | 尤瓦尔·赫拉利 | 历史类 | 2 / 8 | 已上架 | 编辑 副本 停用.
+3 解忧杂货店 | 东野圭吾 | 文学类 | 0 / 8 | 已上架 | 编辑 副本 停用.
+4 数据结构与算法 | 王道论坛 | 计算机类 | 4 / 10 | 已上架 | 编辑 副本 停用.
+5 活着 | 余华 | 文学类 | 4 / 6 | 已上架 | 编辑 副本 停用.
+6 三体 | 刘慈欣 | 文学类 | 0 / 8 | 已上架 | 编辑 副本 停用.
+7 经济学原理 | 曼昆 | 经济管理 | 3 / 8 | 已上架 | 编辑 副本 停用.
+8 月亮与六便士 | 毛姆 | 文学类 | 2 / 5 | 已上架 | 编辑 副本 停用.
+9 围城 | 钱钟书 | 文学类 | 0 / 6 | 已下架 | 编辑 副本 上架.
+10 百年孤独 | 加西亚·马尔克斯 | 文学类 | 0 / 6 | 已上架 | 编辑 副本 停用.
+Important: zero available NEVER changes the enabled state; 三体 and 百年孤独 remain 已上架.
+Illustrative mock covers: Java black/gold tree/night; 人类简史 cream/red texture; 解忧 blue-orange night shop; 数据 blue-white geometric; 活着 ink landscape/red lettering; 三体 orange eclipse in dark space; 经济 pale blue geometry; 月亮 teal moon; 围城 gray-green city wall; 百年 green botanical. These are original illustrative mock covers.
+Table footer: 第1–10条，共20条, 上一页 disabled, blue active1,2,下一页. Fixed10perpage, no page-size control. No invented statistics, dates, locations, barcodes, prices, ratings, popular tags, upload, import/export or confirmation dialog. Carefully align all columns, leave intentional breathing room but show all10 rows. This must feel like a finished production-ready design screenshot.

@@ -9,8 +9,7 @@ export const portal: Portal =
 export const portalRole: Role =
   portal === 'admin' ? 'ADMIN' : portal === 'librarian' ? 'LIBRARIAN' : 'READER'
 
-export const portalHome =
-  portal === 'reader' ? '/me/loans' : '/staff/dashboard'
+export const portalHome = portal === 'reader' ? '/me/loans' : '/staff/dashboard'
 
 export const portalTitle =
   portal === 'admin' ? '管理员入口' : portal === 'librarian' ? '馆员入口' : '读者入口'

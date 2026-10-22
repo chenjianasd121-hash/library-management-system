@@ -1,0 +1,22 @@
+Use case: ui-mockup. Create one realistic production-quality Chinese LIBRARIAN “借阅记录” screen, direction “借阅记录核对台”. Target1440 x1024 landscape full desktop app. No browser/device chrome, comparison board, concept number or external caption.
+Input1 approved librarian home gives role-specific navy/blue design system, input2 approved librarian return gives consistent detail surfaces, input3 old librarian loan list grounds filters and return navigation. NEW master/detail composition: top full-width compact filter bar, LEFT approx62% a compact ten-row records table, RIGHT38% a read-only summary of selected final record. This is existing LoanItem information presented for verification, not a new API, business action, transaction form or popup.
+Chinese sans-serif14–16px body,28px title, purposeful whitespace,12–14px corners, restrained shadows. Navy#142747–#1a3156 sidebar, #f3f7fc canvas, white surfaces, #152747 ink, #70809c muted, #e7edf6 rules, #2775ea blue, #159f85 returned green, #d98a22 overdue orange. Simple table separators, not individual row cards.
+248px sidebar 图书管理系统 / LIBRARY MANAGEMENT. Neutral 首页概览 and collapsed 图书管理; active expanded 借阅管理 with neutral 办理借出/办理归还, activeblue 借阅记录, neutral预约管理; neutral读者查找/分类管理/数据统计/系统设置. No admin account, employee or audit items. White60px topbar global catalogue search 搜索图书、作者、分类等… and 馆 avatar, 欢迎回来，馆员.
+Header title借阅记录, subtitle选中记录核对借阅信息，进入归还流程. Small OUTLINED 办理归还 navigation button at right so summary's blue action is visually primary.
+Top full-width white filter toolbar: empty读者关键词 input, empty副本条码 input, dropdown全部 (other supported choices在借/已归还/逾期), small blue筛选. No date/sort/export/reset tools or status counters.
+Below two sibling white surfaces, left records, right summary,16px gap. Left heading借阅清单, tiny helper点选记录查看右侧信息. Four aligned columns图书与副本, 读者, 借出 / 应还, 状态. Book title and barcode stacked in first column. Dates can omit time here and use two lines labelled借出YYYY-MM-DD / 应还YYYY-MM-DD; full selected time is visible at right. Rows about49px, all10 plus pager fit, no horizontal clipping or fake scrollbar.
+EXACT descending records, both dates must match:
+Java编程思想|张三|BK0001|2026-10-18|2026-11-17|在借
+三体|陈晨|BK0028|2026-10-18|2026-11-17|在借
+数据结构与算法|赵六|BK0034|2026-10-17|2026-11-16|在借
+活着|林悦|BK0042|2026-10-16|2026-11-15|已归还
+经济学原理|刘洋|BK0056|2026-10-15|2026-11-14|在借
+围城|周宁|BK0061|2026-10-12|2026-11-11|已归还
+月亮与六便士|苏晴|BK0073|2026-10-10|2026-11-09|在借
+乡土中国|郑宇|BK0084|2026-10-08|2026-11-07|已归还
+解忧杂货店|王五|BK0013|2026-09-04|2026-10-04|在借 + 逾期15天
+人类简史|李四|BK0012|2026-09-02|2026-10-02|在借 + 逾期17天
+在借 blue-tinted, 已归还 green. Last two keep在借 and small orange overdue15/17 text, never replace with returned. Highlight ONLY LAST ROW 人类简史/李四/BK0012 with subtle blue selection tint and left selection stripe. No checkboxes or row-level instant-return buttons. Row selection only changes right readonly view.
+Left footer每页10条 · 共20条 plain text, disabledprevious, activeblue1, neutral2, enablednext. Fixed10perpage, no dropdown or jump input.
+Right white surface heading记录核对, small当前选中. Simple book-outline icon (no cover photograph) and large title人类简史. Blue在借 pill and orange逾期17天 notice. Readonly labelled rows借阅人李四; 副本条码BK0012; 借出时间2026-09-02 10:18; 应还日期2026-10-02 with当日结束前. Thin separators, natural height, no nested cards. Blue full-width 去归还 button near bottom, tiny helper进入归还页核对副本. This navigates to existing return page, DOES NOT submit return or promise prefilled barcode. No editable controls or extra actions in summary.
+Current date2026-10-19 Asia/Shanghai; overdue days15/17 exact. Same ten demo records as other candidates, no invented IDs, usernames, account states, quotas, other-loan counts, contacts, locations, author/ISBN or renew information. Do not reuse reference return's historical overdue7. No 归还完成, confirm transaction, fines/payments, export/import, bulk actions, reminders/SMS, delete/renew, charts or API/server/framework mechanics. Keep every record, correct selected-detail mapping and main action clearly visible in frame. Render one coherent independent complete screenshot.

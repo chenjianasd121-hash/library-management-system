@@ -57,14 +57,20 @@ async function save() {
       auth.user?.mustChangePassword ? '首次登录需要先设置新密码' : '定期更新密码以保护账号'
     "
   />
-  <section class="panel form-panel">
+  <section class="panel account-panel">
+    <h2>账号安全</h2>
     <el-alert
       v-if="error"
       type="error"
       :title="error"
       :closable="false"
       class="form-alert"
-    /><el-form :model="form" :rules="rules" label-width="110px" @submit.prevent="save"
+    /><el-form
+      class="account-form"
+      :model="form"
+      :rules="rules"
+      label-width="120px"
+      @submit.prevent="save"
       ><el-form-item label="当前密码" prop="oldPassword" :error="fields.oldPassword" required
         ><el-input
           v-model="form.oldPassword"
@@ -76,7 +82,9 @@ async function save() {
           v-model="form.newPassword"
           type="password"
           show-password
-          autocomplete="new-password" /></el-form-item
+          autocomplete="new-password"
+        />
+        <p class="field-hint">8–64 位，建议使用字母、数字和符号组合。</p></el-form-item
       ><el-form-item label="确认新密码" prop="confirm" required
         ><el-input
           v-model="form.confirm"

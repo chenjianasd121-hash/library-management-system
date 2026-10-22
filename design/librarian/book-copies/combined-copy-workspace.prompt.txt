@@ -1,0 +1,24 @@
+Create ONE polished high-fidelity Chinese LIBRARIAN library physical-copy management screenshot, independent direction “书目录入联合台”. Full desktop frame approx1440×1024, all9rows and form controls visible, no browser chrome/collage/design number. Reference is previous copy-page data/style only: RECOMPOSE so upper workspace has TWO cards side-by-side (book summary LEFT, larger horizontal add form RIGHT), with a fullwidth table BELOW. Do not keep a fullwidth summary above a separate fullwidth add form, nor left narrow add panel next to table. Currentdate2026-10-20 Asia/Shanghai, no visibledate.
+
+Preserve navy230–250px sidebar #142747–#1a3156, white60px topbar, #f3f7fc canvas, #152747 ink, #70809c muted, primaryblue #2775ea, #e7edf6 rules,12px rounded white surfaces and subtle shadows. Clear Chinese14–16px body/26–28px title, precise spacing. Brand 图书管理系统 / LIBRARY MANAGEMENT. Sidebar 首页概览; 图书管理 expanded, 书目列表 activeblue, 新增书目 unselected, 公开目录; 借阅管理 collapsed; 读者查找; 分类管理; 数据统计; 系统设置. No admin account/audit menu. Topbar 搜索图书、作者、分类等… and avatar 馆, 欢迎回来，馆员.
+Header breadcrumb 图书管理 / 副本管理, title 副本管理 · Java编程思想, subtitle 批量录入条码并维护实体副本, secondary outlined 返回书目 at right.
+
+UPPER paired cards start under header and are about210–220px tall.
+LEFT card about340px width: modest existing original black/gold tree/night Java cover about65×90px, readable Java编程思想, Bruce Eckel, 计算机类, ISBN9787115546081 if room. Neatly below small summary 在册8册 / 可借3册 with muted 总册数不含退役副本. Compact book context, not marketing hero or giant KPI.
+RIGHT card about790px width: heading 新增副本. A horizontal functional add form: required *条码 label over EMPTY multiline textarea about430×95px placeholder 一行一个条码，最多50个; required *馆藏位置 over EMPTY input about260pxwide placeholder 例如：A 区 2 排, with mainblue 添加副本 button beneath location. Muted helper 每次添加1–50个条码，本批共用同一馆藏位置. No errors or actual typedcodes.
+Keep uppercards balanced; all form content fits, no cropped helper.
+
+BELOW uppercards, one fullwidth white table card. Heading 副本列表, toolbar right dropdown 全部状态 and outlined 刷新. No keywordsearch/filterbutton.
+Table columns 条码 | 馆藏位置 | 状态 | 操作. Nine EXACTorderedrows; all locations A 区 2 排:
+JAVA-001 | A 区 2 排 | 可借 teal | 位置 blue / 转维修 amber / 退役 red.
+JAVA-002 | A 区 2 排 | 可借 | 位置 / 转维修 / 退役.
+JAVA-003 | A 区 2 排 | 可借 | 位置 / 转维修 / 退役.
+JAVA-004 | A 区 2 排 | 待取 blue | ONLY位置 blue.
+JAVA-005 | A 区 2 排 | 借出 purple | ONLY位置 blue.
+JAVA-006 | A 区 2 排 | 借出 purple | ONLY位置 blue.
+JAVA-007 | A 区 2 排 | 维修 amber | 位置 blue / 恢复可用 teal / 退役 red.
+JAVA-008 | A 区 2 排 | 维修 amber | 位置 / 恢复可用 / 退役.
+JAVA-009 | A 区 2 排 | 退役 gray | ONLY位置 disabledgray, nootheractions.
+Compact40–44px rows, nine complete records and clear typography. Do not add versioncolumn/checkboxes. State controls are actionlinks, not dropdowns; retiredlocationdisabled and borrowed/ready cannot change state.
+Footer below table quiet note 待取与借出副本不能直接变更状态. 共9条副本记录（含退役） · 每页10条. Disabled 上一页, blueactive1, disabled 下一页; onlyonepage/no page-size selector.
+3可借+1待取+2借出+2维修=8在册; 1退役 makes9listedrecords. Booksummary must remain8/3. No barcodegeneration, import/export, printing/scanning, loan/return/reservation actions, quantityinput, prices/ratings, delete, bulk actions, confirmationmodal, loading/errors/success, KPI cards or unsupported business. A complete professional librarian workbench with practical table density and a distinctive upper book-and-entry workspace.

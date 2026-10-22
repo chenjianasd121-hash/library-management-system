@@ -1,0 +1,19 @@
+Create ONE complete polished high-fidelity desktop UI screenshot for the Chinese library management system, LIBRARIAN “新增书目”. Independent alternative direction “连贯分区表单”: one wide unified white form card with orderly horizontal sections and a bottom action bar, NOT separate left form and tall right cover card. Entire screenshot approximately1440×1024; no browser chrome, no collage, no design number. Date anchor2026-10-20 Asia/Shanghai; do not show a current date.
+
+References in order: selected librarian book catalogue for style/role; admin new-book screenshot for field visual treatment only; old librarian form for supported functionality. Replace administrator identity, preserve librarian permissions. This screen is a new EMPTY book form, not book editing. Do not copy book titles or covers from catalogue reference.
+
+Visual system: navy left sidebar about230px #142747–#1a3156, white topbar60px, canvas #f3f7fc, white card12px corners, fine rules #e7edf6, subtle shadows. Ink #152747, secondary #70809c, primaryblue #2775ea, readable Chinese sans-serif with28px title and14–16px form text. Brand 图书管理系统 / LIBRARY MANAGEMENT. Sidebar 首页概览; 图书管理 expanded, 书目列表 unselected, 新增书目 active blue, 公开目录; 借阅管理 collapsed; 读者查找; 分类管理; 数据统计; 系统设置. No account management/audit. Topbar 搜索图书、作者、分类等… and right avatar 馆 with 欢迎回来，馆员.
+
+Content breadcrumb 图书管理 / 新增书目, title 新增书目, subtitle 录入书目信息后可继续添加实体副本.
+ONE generous wide form card occupies nearly all main width, with internal padding24px and compact intelligent spacing so all sections plus buttons fit. Use small restrained blue section icons, no giant step numbers, no fake tabs.
+Section 基本信息, right small note * 为必填项. Two equally wide columns:
+row1 *书名 empty placeholder 请输入书名, counter0 / 200; *作者 empty placeholder 请输入作者.
+row2 ISBN-13 empty placeholder 可留空，填写时校验 ISBN-13; *分类 dropdown placeholder 请选择分类, not selected.
+Thin separator.
+Section 出版与检索. Two-column row 出版社 empty placeholder 请输入出版社（可选）, 出版日期 blank calendar control placeholder 选择日期. Below fullwidth 关键词 empty placeholder 多个关键词使用逗号分隔.
+Thin separator.
+Section 展示与上架. At left about70%width: label 内容简介 above large EMPTY textarea about125px tall with placeholder 填写图书内容简介（可选） and0 / 5000 bottom-right. At right about30%width: label 封面 above a compact horizontal upload area, with small portrait EMPTY frame80×110px showing image icon and 未上传, alongside outlined 上传封面 file-selection button and muted helper JPEG / PNG / WebP, 最大2 MiB wrapping neatly. No real book art, no broken image, no drag/drop, no URL input.
+Beneath this section fullwidth understated row: label 上架状态, blue toggle ON, visible 上架 text, helper 上架后读者可在目录中检索. Keep this row within unified card rather than separate detached settings card.
+Card bottom action bar separated by rule: left small muted helper 保存书目后进入实体副本管理; right secondary 返回列表 and prominentblue 保存并添加副本. Exactly ONE primary save action, visible without scroll.
+
+Important correctness: star ONLY 书名、作者、分类. ISBN, publisher, publicationdate, keywords,description,cover are optional. All text values blank; light placeholder text is not actual typed data. Category unselected and date unset. Enabled is only preselected state, ON. No errors, no success alerts, no loading, no draft, no next-step button, no required-cover marker. No quantity, barcode, shelf location, price, rating, AI-generation, automatic ISBN lookup, import/export, delete or save-and-create-another. Saving existing form goes to copies page, hence primary 保存并添加副本. Elegant continuous reading order and confident software UI spacing; obvious visual distinction from a two-card split form.

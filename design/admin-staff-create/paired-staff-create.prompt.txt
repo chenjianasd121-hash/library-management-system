@@ -1,0 +1,23 @@
+Use case: ui-mockup.
+Create ONE realistic production-quality Simplified Chinese administrator web-app screenshot of the 创建员工账号 modal, opened over the attached USER-SELECTED 账号管理 page. Desktop viewport target1440 x1024, natural modal proportions, preserve generated native aspect ratio. One flat screenshot, no device/browser frame, no collage, no numbered design badge. Clear hierarchy, readable Chinese typography, purposeful whitespace.
+
+INPUT IMAGE: the selected administrator account-management screenshot is the exact shell and background reference. Preserve its navy sidebar, white topbar, pale blue-gray canvas, account table, filter bar, current-account protection and administrator identity. Add only the employee-creation modal as the focused foreground. Use the established design family, not a new brand or style.
+
+SHARED SHELL: navy sidebar about248px #142747–#1a3156, book icon, brand 图书管理系统 / LIBRARY MANAGEMENT. Root links in order 首页概览, 图书管理, 借阅管理, 读者管理, 分类管理, 数据统计, 系统设置. Only 读者管理 is blue active for this existing /admin/users route; other roots neutral/collapsed, no submenu and no extra 账号管理 root. White topbar about70px with grid icon, book search 搜索图书、作者、分类等... / 搜索, blue 管 avatar and 欢迎回来，管理员. Canvas #edf3fa–#f3f7fc, ink #152747, secondary #70809c, primary #2775ea, rules #e7edf6. Background should be softly blue-gray, not an overly white empty canvas. Restrained12–14px radii, sparse soft shadow.
+
+BACKGROUND: preserve the selected page heading 账号管理 and description 管理员维护员工与读者账号, top-right ＋ 创建员工. Filter bar 用户名或显示名 / 全部角色 / 全部状态 / 筛选. Grouped table 账号列表 / 共23个账号, columns 用户名,显示名,角色,状态,操作; lightweight row separators. Existing page1 ten rows: admin / 管理员 / 管理员 / 正常 / 当前账号 with gray disabled 禁用 and active 重置密码; admin_backup / 备用管理员 / 管理员 / 正常; librarian_01 / 陈晓 / 馆员 / 正常; librarian_02 / 林悦 / 馆员 / 禁用; zhangsan / 张三 / 读者 / 正常; lisi / 李四 / 读者 / 正常; wangwu / 王五 / 读者 / 正常; zhaoliu / 赵六 / 读者 / 禁用; qianqi / 钱七 / 读者 / 正常; zhouba / 周八 / 读者 / 正常. Normal accounts have 禁用 and 重置密码 actions, disabled accounts 启用 and 重置密码; current admin 禁用 unavailable. Pagination1 active then2 and3. This is before creation, so total stays23 and no new row is inserted. Background is gently dimmed by a translucent gray-blue blocking overlay. Hidden rows need not be moved around the modal.
+
+FOREGROUND EXACT STATE: title 创建员工账号, small close x at top-right. Initial unopened form values: three text/password inputs EMPTY, and role default 馆员. EXACTLY FOUR required fields, each with a small red asterisk:
+用户名 — empty input placeholder 请输入用户名; small neutral helper 4–32位字母、数字或下划线.
+显示名 — empty input placeholder 请输入显示名; small neutral helper 2–40字.
+角色 — closed select showing 馆员 with a down chevron; only supported choices are 馆员 and 管理员, but do not open the dropdown in this frame.
+初始密码 — empty password input placeholder 请输入初始密码 with one trailing eye/visibility control. Small neutral helper 8–64位，首次登录需修改密码.
+No entered password, no bullet dots in an empty field, no password meter.
+Footer EXACTLY 取消 neutral outlined, then 创建账号 primary BLUE, both enabled and no spinner. No submission has happened. Body14–16px, heading20–22px, inputs42–46px high, generous consistent gutters, compact readable helpers. Title and footer span the dialog width.
+Use alignment, whitespace and a fine divider before any extra surfaces. No nested cards or separate info panels.
+
+Function grounding: UsersView.vue open() initializes username, displayName, initialPassword empty and roleLIBRARIAN. create() validates four existing fields; successful creation forces a password change on first login. The current frame is normal initial state, not error/loading/success. No red validation borders or alert, no success toast, no already-created account.
+Do NOT add phone, email, department, employee number, avatar upload, confirmation password, permissions, status switch, reader role option, invitation delivery, send-email checkbox, generated-password action, tabs or wizard steps. No reader-account creation here. No duplicated form fields or unrelated illustration.
+Current date anchor2026-10-21 Asia/Shanghai; no dates visible. One focused finished screen.
+
+LAYOUT DIRECTION — 双列员工表单. A wider centered modal about680px wide and400px tall. Balanced TWO-COLUMN grid without nested panels: username and display name in the top row, role and initial password in the second row. Top labels, equal control widths, helpers below each relevant control; allow password helper to wrap. Title full width, footer full width, 取消 then 创建账号 right aligned. Whitespace and alignment create a compact form with no added fields.

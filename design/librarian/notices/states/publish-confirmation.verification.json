@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-20",
+  "role": "LIBRARIAN",
+  "file": "publish-confirmation.png",
+  "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-86593936-630e-491f-837f-cd161b27abc9.png",
+  "width": 1487,
+  "height": 1058,
+  "sha256": "20c80c5e6430dab623aa86eebf8e4989490f684887e5ba9a8d6ad1e44d1cccaf",
+  "identical_to_source": true,
+  "visual_check": "Warning confirmation layered above readonly preview; existing notice title and all-visitors visibility. Cancel/confirm/close, no published result or extra field.",
+  "review_status": "ready_for_user_review"
+}

@@ -1,0 +1,20 @@
+Produce ONE high-fidelity desktop web-app design screenshot for a Chinese library management system, LIBRARIAN new-book form 新增书目. Entire frame approximately1440×1024, all form controls and primary save action visible, no cropping/browser chrome/collage/option number. Date anchor2026-10-20 Asia/Shanghai; no visible date.
+Independent alternative layout “封面引导工作台”: LEFT narrow cover-and-status panel, RIGHT broad complete metadata form, a small read-only workflow explanation ABOVE these panels and a unified footer action bar BELOW. This reverses the traditional left-form/right-cover arrangement. Design with balanced proportions and purposeful whitespace, not an empty stretched sidebar.
+
+References in order: selected librarian catalogue for palette and role shell; admin new-book form for correct form visual vocabulary only; old librarian new-book screenshot for supported fields only. Replace admin identity. This is an INITIAL NEW BOOK state, all text inputs empty, cover not uploaded, classification and date not chosen, only 上架 status ON. Do not prefill a title, author, ISBN, date, category or actual book cover.
+
+Visual system: navy sidebar230–250px #142747–#1a3156; white topbar60px; pale blue-gray canvas #f3f7fc; ink #152747; secondary #70809c; primaryblue #2775ea; rules #e7edf6; white12px rounded cards with restrained shadows. Polished Chinese sans-serif typography,28px title,14–16px field text. Sidebar brand 图书管理系统 / LIBRARY MANAGEMENT. Nav 首页概览; 图书管理 expanded, 书目列表 UNSELECTED, 新增书目 activeblue, 公开目录; 借阅管理 collapsed; 读者查找; 分类管理; 数据统计; 系统设置. No administrator account/audit entries. Topbar 搜索图书、作者、分类等…; right avatar 馆, 欢迎回来，馆员.
+
+Page heading breadcrumb 图书管理 / 新增书目, title 新增书目, subtitle 录入书目信息后可继续添加实体副本.
+Below heading place a compact readonly horizontal process strip, not clickable steps or tabs: blue circle1 录入书目 → muted circle2 添加实体副本, with small helper 保存后进入副本管理. All book fields shown at once; do not turn screen into a multistep wizard.
+Main workspace under strip: LEFT white panel roughly280px wide titled 封面与上架. Center portrait EMPTY cover upload frame approx165×220px with pale fine dashed outline, small image icon and 尚未上传封面. Under it outlined 上传封面 button invoking file picker; small readable JPEG / PNG / WebP，最大2 MiB. No actual book image, no broken placeholder and no drag/drop text. Horizontal rule then 上架状态, blue toggle ON with visible 上架 label, helper 上架后读者可在目录中检索. Keep consistent spacing, panel fits screen.
+RIGHT broad white form card about820px wide, title 基本书目信息, small * 为必填项. Balanced two-column aligned inputs:
+row1 *书名 EMPTY placeholder 请输入书名 with0 / 200 counter; *作者 EMPTY placeholder 请输入作者.
+row2 ISBN-13 EMPTY placeholder 可留空，填写时校验 ISBN-13; *分类 dropdown unselected placeholder 请选择分类.
+row3 出版社 EMPTY placeholder 请输入出版社（可选）; 出版日期 blank calendar input placeholder 选择日期.
+row4 关键词 fullwidth EMPTY placeholder 多个关键词使用逗号分隔.
+Then content separator and 内容简介 above EMPTY textarea about120px high with placeholder 填写图书内容简介（可选）, bottom-right0 / 5000.
+Labels ABOVE controls for a clear reading rhythm. Exactly three required asterisks beside 书名,作者,分类; ISBN,publisher,date,keywords,description,cover are optional. No validation error before submission.
+Bottom unified action bar spans workspace, perhaps its own shallow white rounded surface or aligned bottom of form, visible within canvas: muted helper 保存书目后进入实体副本管理 at left; secondary 返回列表 and single primaryblue 保存并添加副本 at right. No other action buttons. Process strip has no 下一步 or 返回上一步 controls; existing save operation does the transition.
+
+Keep fields blank with light muted placeholders, not sample values. No physical copy counts, barcode, shelf location, price, ratings, AI-text, automatic ISBN data retrieval, cover URLs, import/export, delete, save draft, save-and-create-another, approval or loading. Book copy fields belong to the following page. Make this visually distinct from the other layouts using left cover emphasis and a thoughtful complete-form flow. Finished professional library software screenshot with correct Chinese text, clear alignment, and all controls visible.

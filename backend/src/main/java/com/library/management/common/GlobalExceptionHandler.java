@@ -1,6 +1,7 @@
 package com.library.management.common;
 
 import java.util.List;
+import java.time.DateTimeException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -26,7 +27,7 @@ public class GlobalExceptionHandler {
             .map(e -> new ApiResponse.FieldError(e.getField(), e.getDefaultMessage())).toList();
         return ResponseEntity.badRequest().body(ApiResponse.error("VALIDATION_ERROR", "参数不合法", details));
     }
-    @ExceptionHandler({HttpMessageNotReadableException.class, MissingServletRequestParameterException.class, MethodArgumentTypeMismatchException.class, IllegalArgumentException.class})
+    @ExceptionHandler({HttpMessageNotReadableException.class, MissingServletRequestParameterException.class, MethodArgumentTypeMismatchException.class, IllegalArgumentException.class, DateTimeException.class})
     ResponseEntity<?> malformed(Exception ex) { return ResponseEntity.badRequest().body(ApiResponse.error("VALIDATION_ERROR", "参数不合法", List.of())); }
     @ExceptionHandler(MaxUploadSizeExceededException.class)
     ResponseEntity<?> uploadTooLarge(MaxUploadSizeExceededException ex) {

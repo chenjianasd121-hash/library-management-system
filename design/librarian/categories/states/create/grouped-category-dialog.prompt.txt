@@ -1,0 +1,14 @@
+Edit the attached selected LIBRARIAN 分类管理 screenshot to show ONE “新增分类” modal, independent second alternative “双列分组弹窗”. Keep whole1487×1058 desktopframe. This is another layout of SAME empty CREATEdialog, not edit-category/disableconfirmation/newmainpage. Dateanchor2026-10-20 Asia/Shanghai, no datesadded, browserchrome/collage/optionlabels.
+PRESERVE underlyingselectedmain page: navy sidebar andwhite topbar, librarian馆avatar/welcome, brand图书管理系统/LIBRARY MANAGEMENT, 分类管理 active, two statusgroups5enabled/1disabled. Exactoriginal records计算机类CS排序1启用,文学类LIT2启用,历史类HIS3启用,经济管理ECON4启用,自然科学SCI5启用,艺术类ART6停用. Do not reorganize background aroundmodal; naturalocclusion correct. Keep originalgroups/columns/icons/actionpositions and no newfilters/pagination.
+Dim neutral20–30% backdrop across screen; modalfocus.
+
+Centered WHITE modal about640pxwide and430–480pxhigh,12–14px corners, restrainedshadow. Navy #152747, muted #70809c, primaryblue #2775ea, fine #e7edf6 borders, crisp14–16px Chinese. Header title新增分类 withoptional smallbluefoldericon, closeX upperright.
+RECOMPOSE modalcontent into TWO COLUMNS with clearfieldlabelsabove:
+Firstrow LEFT *分类名称 EMPTY input placeholder请输入分类名称; helper最多80字.
+Firstrow RIGHT *分类编码 EMPTY input placeholder请输入分类编码; helper2–32位字母、数字、下划线或连字符, wrap neatlyifneeded.
+Secondrow LEFT 排序 numericstepper actual0, min0, minusdisabled/plusenabled; helper数字越小，显示越靠前.
+Secondrow RIGHT 启用 blueON switch withvisible启用text. No requiredstar here.
+Exactly4fields, onlyname/code starred, no actualvalues inblankname/code, no counters.
+Usefulalignedgrid, consistent44px inputs,24pxgap, no oversizedemptyspace or unrelatedillustration.
+Footer fine rule: secondary取消 and primaryblue保存 alignedright; exactlythese pluscloseX. Initial state no errors/loading/success or warningconfirmation.
+Do not add parentcategory, color/iconselector, codegeneration/availabilitylookup, hierarchy, search, preview, validationcheckmarks or newactions. Originalmainpage remainsunchanged underoverlay. Elegant compact paired-field modal, materiallydifferent from four verticallystacked fields while preserving samefunctions/values.

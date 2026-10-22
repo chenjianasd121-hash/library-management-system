@@ -1,0 +1,16 @@
+Use case: ui-mockup. Create one production-quality Chinese library READER homepage, named “阅读服务首页”, target1440 x1024 desktop landscape. One full flat app screenshot without browser/device chrome, option numbering or comparison board. Strong hierarchy, realistic readable Chinese UI, intentional book cover imagery, purposeful spacing.
+Input images first approved catalogue gives palette/covers, second existing public homepage gives supported functions, third original user dashboard gives shared blue mood. This is logged-in READER 张三.
+Use navy #142747–#1a3156 sidebar248px, white60px topbar, pale #f3f7fc canvas, text #152747, muted #70809c, rules #e7edf6, blue #2775ea, teal #159f85, orange #d98a22. Chinese sans-serif14–16px body, title28px,12–14px radii, soft shadows. Reader-only sidebar brand 图书管理系统 / LIBRARY MANAGEMENT with subtle 读者端; active 首页概览, 图书目录, 系统公告, 我的借阅, 我的预约, 个人中心. Topbar compact global search, avatar 张 and 欢迎回来，张三 with small 读者 label. No administrator or librarian menus, login or register controls.
+Vary information hierarchy: compact personal greeting “张三，你好” and subtitle “查找馆藏，管理你的阅读安排”, no large photo hero. Then one wide search row, input placeholder 输入书名、作者或 ISBN 搜索馆藏 and one blue 搜索图书 button. Quiet 浏览图书目录 → secondary link.
+Main content two columns: left approx68% width grouped white “新到馆藏” LIST of four book rows, right32% a white reader-services area. This is a vertical list, not a 2x2 grid or a 4-column bookshelf. Each book row about125px high with realistic portrait cover about70x95px left, title/author/category middle, availability/status and 查看详情 → on right. Thin horizontal separators instead of separate cards. Exact data:
+Java编程思想 / Bruce Eckel / 计算机类 / 可借 3 / 总册 8 / teal 可预约待取.
+人类简史 / 尤瓦尔·赫拉利 / 历史类 / 可借 2 / 总册 8 / teal 可预约待取.
+解忧杂货店 / 东野圭吾 / 文学类 / 可借 0 / 总册 8 / orange 预约排队.
+数据结构与算法 / 王道论坛 / 计算机类 / 可借 2 / 总册 8 / teal 可预约待取.
+Each title legible outside artwork, no ISBN needed. Header right 查看全部 →. Cards are entry to details only, no direct borrowing or admin stock controls.
+Right same white service surface top header 我的阅读. Two understated icon navigation rows 我的借阅 with helper 查看在借与归还记录 and arrow; 我的预约 with helper 查看排队与待取状态 and arrow. No fabricated personal counts, notifications, overdue records or deadlines. Thin rule below, 最新公告 section with 查看全部 →, three clear announcement rows:
+关于图书馆开放时间调整的通知 — 2026-10-08
+新增馆藏已开放查询 — 2026-10-06
+借阅与预约服务说明 — 2026-10-03
+Use readable dates and balanced whitespace; do not fill blank space with invented features. The services group offers navigation only.
+All four list rows and right notices must fit uncut in viewport with bottom margin. No metrics, staff charts, algorithmic recommendations, payment, e-reader, favorites, ratings, chat, appointment calendar, draft content or instant self checkout. Primary action search; supporting book-detail links and personal page navigation. Current date anchor2026-10-09 Asia/Shanghai; all notice dates are historical. Render one complete independent screen.

@@ -1,0 +1,16 @@
+{
+  "source": "design/frontend-handoff/读者端/pages/login.png",
+  "reference_crop": "design/asset-work/reader-login-left-reference.png",
+  "generated_source": "C:\\Users\\en\\.codex\\generated_images\\01a161af-9738-74b3-866c-ee4f89aca399\\exec-4deb9eb1-8e25-4c36-ac22-c5d1e5464095.png",
+  "generated_size": [
+    1107,
+    1421
+  ],
+  "output": "frontend\\public\\design\\login-reader-scene.png",
+  "width": 824,
+  "height": 1058,
+  "status": "saved",
+  "sha256": "75dc18c0cc3a3433e7807980770d4fcbadc9a56da7d5902d64774af03d5afb3d",
+  "mode": "built-in imagegen edit",
+  "prompt": "Remove all UI text, branding and bottom quote from cropped reader login left scene; preserve navy blue arcs, library architecture, trees, lighting and the exact three 3D books; no redesign or new objects."
+}

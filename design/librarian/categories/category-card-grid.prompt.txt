@@ -1,0 +1,18 @@
+Create ONE new independent high-fidelity Chinese LIBRARIAN 分类管理 desktop UI screenshot. Direction “双列分类卡片”: RECOMPOSE the reference table as TWO columns and THREE rows of well-designed category cards, same exact content/functions. Complete frame about1440×1024, no browser chrome, collage or design numbers. Date anchor2026-10-20 Asia/Shanghai, no visible date. Reference establishes precise brand palette, librarian shell and6category data only; don't retain table layout.
+
+Navy sidebar230–250px #142747–#1a3156, white60px topbar, pale #f3f7fc canvas, ink #152747, secondary #70809c, primaryblue #2775ea, teal enabled chips, gray disabled chip, fine #e7edf6 borders,12px card corners and restrained shadows. Clear Chinese sans-serif,28px title,14–16px readable metadata, balanced tasteful spacing.
+Brand 图书管理系统 / LIBRARY MANAGEMENT. Sidebar seven main items: 首页概览, 图书管理 COLLAPSED with right-pointing chevron and no children, 借阅管理 COLLAPSED, 读者查找, 分类管理 ACTIVEblue, 数据统计, 系统设置. Only categoryselected; no administrator user/audit. Topbar global search 搜索图书、作者、分类等…; avatar 馆, 欢迎回来，馆员.
+
+Breadcrumb 馆员工作台 / 分类管理; title 分类管理; subtitle 维护目录分类及启用状态. Topright mainblue ＋ 新增分类. Below compact list heading 分类列表 and modest 共6个分类 · 启用5个 · 停用1个, not dashboard KPI tiles.
+Six generously readable category cards arranged exact row-major:
+Row1LEFT 计算机类, 分类编码CS, 排序1, 启用.
+Row1RIGHT 文学类, 分类编码LIT, 排序2, 启用.
+Row2LEFT 历史类, 分类编码HIS, 排序3, 启用.
+Row2RIGHT 经济管理, 分类编码ECON, 排序4, 启用.
+Row3LEFT 自然科学, 分类编码SCI, 排序5, 启用.
+Row3RIGHT 艺术类, 分类编码ART, 排序6, 停用.
+Each card: small beautifully restrained category icon at upperleft (monitor, open book, classical building, bars, flask, palette), strong categoryname next to icon; top-right subtle textual status chip. Mid-card shows 分类编码 in uppercase correct letters and plain 排序 number, aligned labels. Bottom-right only secondary 编辑 link or slimoutlined button with pencil icon. No other action. Card height about165–180px, width about550px; spacious clear metadata and no decorative giant illustrations. ART card remains editable, statusgray; don't show it as disabled whole card.
+Reading order by sort values1..6. Use same icon color vocabulary as reference without making icons new editable fields. All six categories visible, not placeholder/add-card. Single primary remains global 新增分类.
+
+Below cards a quiet small information sentence 停用分类后，读者将不能按该分类检索。 No blanket claim that books automatically offline or unborrowable.
+Initial fully loaded overview, no row selection, no dialog, no errors/loading/toast. Create/edit open existing modal for name/code/sort/enabled; do NOT add on-card status toggles or direct停用/启用 actions. NO pagination, local search/statusfilter, refresh, sorting controls, draghandles, checkboxes, batch, delete, import/export, tree hierarchy, book counts, popularity, charts, cover art, user management or fake extra fields. Respect simple category array capability. No book-copy form or Java reference content. Intentional whitespace, polished library software with a clear alternative to the table.

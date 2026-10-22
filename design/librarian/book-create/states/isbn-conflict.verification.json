@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-21",
+  "role": "LIBRARIAN",
+  "file": "isbn-conflict.png",
+  "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-c2d6fe08-4d60-4a13-a1f2-5e0271491947.png",
+  "width": 1485,
+  "height": 1059,
+  "sha256": "802fae395cc9f0532c2ac27f51f86ec949ba3042854bddccec4374a054ab594b",
+  "identical_to_source": true,
+  "visual_check": "Server ISBN_EXISTS global alert, valid ISBN and full form retained, no overwrite or merge action; original footer visible.",
+  "review_status": "ready_for_user_review"
+}

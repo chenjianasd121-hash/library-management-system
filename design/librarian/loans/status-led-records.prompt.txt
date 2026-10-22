@@ -1,0 +1,21 @@
+Use case: ui-mockup. Create one realistic production-quality Chinese LIBRARIAN “借阅记录” screen, direction “状态导航清单”. Target1440 x1024 landscape full desktop app screenshot. No browser/device chrome, comparison board, concept number or outside caption.
+Input1 approved librarian home gives navy/blue role-specific style, input2 approved librarian return gives consistent work surfaces, input3 original loan-list test screenshot grounds filters and return navigation. Vary hierarchy clearly: status NAVIGATION TABS across the top of one white records surface, keyword/barcode filters beneath, then a grouped records list with BOOK TITLE AND COPY BARCODE COMBINED in one column. No status dropdown, no extra dashboard metrics, no cover cards.
+Navy#142747–#1a3156 sidebar, pale#f3f7fc canvas, white surfaces, ink#152747, muted#70809c, rules#e7edf6, blue#2775ea, returned green#159f85, overdue orange#d98a22. Chinese sans-serif14–16px body,28px title,12–14px corners, restrained shadow, simple dividers and typography, no nested cards.
+Sidebar248px 图书管理系统 / LIBRARY MANAGEMENT. Neutral 首页概览 and collapsed 图书管理; expanded active 借阅管理 with 办理借出/办理归还 neutral, 借阅记录 ACTIVEblue, 预约管理 neutral; neutral 读者查找, 分类管理, 数据统计, 系统设置. No admin account/employee/audit items. White60px topbar global search 搜索图书、作者、分类等…; blue 馆 avatar and 欢迎回来，馆员.
+Header title借阅记录, subtitle按借阅状态查看记录，核对副本与归还信息. Blue main navigation button办理归还 at upper-right.
+One broad white surface. Top tabs全部、在借、已归还、逾期, 全部 selected with blue underline. No count bubbles or fabricated status totals. Under tabs: empty读者关键词 input (placeholder输入读者关键词), empty副本条码 input (placeholder输入副本条码), small blue筛选 button. No extra reset, date range, export or sort tools.
+Below one continuous aligned record list/table, headers图书与副本, 读者, 借出时间, 应还日期, 状态, 操作. Title bold15–16px with barcode beneath in muted13px, no physical cover illustration or author. Borrowed date can be two lines YYYY-MM-DD and HH:mm. Due-date header includes small当日结束前 helper applying to every row, so due cells can contain date only. Ten rows about48–52px each, subtle separators, not individual cards. Fit every row and pager fully in frame with comfortable readable spacing.
+EXACT ordered record data (title|reader|barcode|borrowed|due|status|action):
+Java编程思想|张三|BK0001|2026-10-18 16:20|2026-11-17|在借|去归还
+三体|陈晨|BK0028|2026-10-18 10:32|2026-11-17|在借|去归还
+数据结构与算法|赵六|BK0034|2026-10-17 14:10|2026-11-16|在借|去归还
+活着|林悦|BK0042|2026-10-16 09:25|2026-11-15|已归还|—
+经济学原理|刘洋|BK0056|2026-10-15 15:40|2026-11-14|在借|去归还
+围城|周宁|BK0061|2026-10-12 11:18|2026-11-11|已归还|—
+月亮与六便士|苏晴|BK0073|2026-10-10 10:05|2026-11-09|在借|去归还
+乡土中国|郑宇|BK0084|2026-10-08 14:50|2026-11-07|已归还|—
+解忧杂货店|王五|BK0013|2026-09-04 15:26|2026-10-04|在借 + 逾期15天|去归还
+人类简史|李四|BK0012|2026-09-02 10:18|2026-10-02|在借 + 逾期17天|去归还
+Blue-tinted在借, green已归还; last two retain在借 plus small orange逾期15天/逾期17天 text. Returned rows show em dash, no return action. 去归还 navigates to existing return workflow, no immediate transaction or new dialog.
+Footer plain每页10条 · 共20条, pager disabledprevious, blue1, neutral2, enablednext. No page-size selector or jump field. Current page1 shows all10.
+Current date2026-10-19 Asia/Shanghai, precise overdue differences15 and17. All data illustrative. Do not copy older source dates, historical overdue7 or reference return-page fields. No username/account status, phone/student IDs, author/ISBN/cover/shelf-location data, fines, renew/delete, bulk checkboxes, exports, messages, charts, API/server/framework mechanics or unsupported metadata. Render one complete coherent independent focused screenshot.

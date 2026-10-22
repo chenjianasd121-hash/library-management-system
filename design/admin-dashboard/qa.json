@@ -1,0 +1,23 @@
+{
+  "status": "confirmed-final",
+  "toolMode": "built-in-imagegen-edit",
+  "output": "reader-metric-corrected.png",
+  "outputSha256": "cc3aa9936af9355e0a1770c717336ed2089400d5a97da63107f985ce4061d93e",
+  "dimensions": [
+    1487,
+    1058
+  ],
+  "copyVerified": true,
+  "visualChecks": {
+    "readerLabel": true,
+    "readerValue1532": true,
+    "readerCaption": true,
+    "otherMetricValues": true,
+    "layoutAndDemonstrationDates": true
+  },
+  "approval": "用户明确回复“确认定稿”：首页读者指标修正图已确认，读者数／1,532／正常读者账号。",
+  "confirmedAt": "2026-10-21",
+  "final": "final.png",
+  "finalSha256": "cc3aa9936af9355e0a1770c717336ed2089400d5a97da63107f985ce4061d93e",
+  "finalCopyHashMatches": true
+}

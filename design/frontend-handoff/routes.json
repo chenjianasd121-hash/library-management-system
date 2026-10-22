@@ -1,0 +1,249 @@
+{
+  "router_source": "C:\\Users\\en\\OneDrive\\桌面\\基于SpringBoot+vue的图书管理系统\\frontend\\src\\router\\index.ts",
+  "router_sha256": "450c29c3f7df622989b3f0db7bfdf11d851ccec580ed0eb6f8dac9f1550099eb",
+  "routes": [
+    {
+      "route": "/",
+      "view": "frontend/src/views/HomeView.vue",
+      "role_assets": {
+        "admin": null,
+        "librarian": null,
+        "reader": "reader-home"
+      }
+    },
+    {
+      "route": "/login",
+      "view": "frontend/src/views/LoginView.vue",
+      "role_assets": {
+        "admin": "admin-login",
+        "librarian": "librarian-public-login",
+        "reader": "reader-login"
+      }
+    },
+    {
+      "route": "/register",
+      "view": "frontend/src/views/RegisterView.vue",
+      "role_assets": {
+        "admin": null,
+        "librarian": null,
+        "reader": "reader-register"
+      }
+    },
+    {
+      "route": "/books",
+      "view": "frontend/src/views/BooksView.vue",
+      "role_assets": {
+        "admin": "admin-public-catalogue",
+        "librarian": "librarian-public-catalogue",
+        "reader": "reader-catalogue"
+      }
+    },
+    {
+      "route": "/books/:id",
+      "view": "frontend/src/views/BookDetailView.vue",
+      "role_assets": {
+        "admin": "admin-book-detail",
+        "librarian": "librarian-public-book-detail",
+        "reader": "reader-book-detail"
+      }
+    },
+    {
+      "route": "/notices",
+      "view": "frontend/src/views/NoticesView.vue",
+      "role_assets": {
+        "admin": "admin-public-notices",
+        "librarian": "librarian-public-references-reader-notices",
+        "reader": "reader-notices"
+      }
+    },
+    {
+      "route": "/notices/:id",
+      "view": "frontend/src/views/NoticeDetailView.vue",
+      "role_assets": {
+        "admin": "admin-notice-detail",
+        "librarian": "librarian-public-references-reader-notice-detail",
+        "reader": "reader-notice-detail"
+      }
+    },
+    {
+      "route": "/me/loans",
+      "view": "frontend/src/views/MyLoansView.vue",
+      "role_assets": {
+        "admin": null,
+        "librarian": null,
+        "reader": "reader-my-loans"
+      }
+    },
+    {
+      "route": "/me/reservations",
+      "view": "frontend/src/views/MyReservationsView.vue",
+      "role_assets": {
+        "admin": null,
+        "librarian": null,
+        "reader": "reader-my-reservations"
+      }
+    },
+    {
+      "route": "/me/profile",
+      "view": "frontend/src/views/ProfileView.vue",
+      "role_assets": {
+        "admin": "admin-profile",
+        "librarian": "librarian-profile",
+        "reader": "reader-profile"
+      }
+    },
+    {
+      "route": "/change-password",
+      "view": "frontend/src/views/ChangePasswordView.vue",
+      "role_assets": {
+        "admin": "admin-change-password",
+        "librarian": "librarian-change-password",
+        "reader": "reader-change-password"
+      }
+    },
+    {
+      "route": "/staff/dashboard",
+      "view": "frontend/src/views/DashboardView.vue",
+      "role_assets": {
+        "admin": "admin-dashboard",
+        "librarian": "librarian-dashboard",
+        "reader": null
+      }
+    },
+    {
+      "route": "/staff/books",
+      "view": "frontend/src/views/StaffBooksView.vue",
+      "role_assets": {
+        "admin": "admin-book-management",
+        "librarian": "librarian-books",
+        "reader": null
+      }
+    },
+    {
+      "route": "/staff/books/new",
+      "view": "frontend/src/views/BookFormView.vue",
+      "role_assets": {
+        "admin": "admin-book-create",
+        "librarian": "librarian-book-create",
+        "reader": null
+      }
+    },
+    {
+      "route": "/staff/books/:id/edit",
+      "view": "frontend/src/views/BookFormView.vue",
+      "role_assets": {
+        "admin": "admin-book-edit",
+        "librarian": "librarian-book-edit",
+        "reader": null
+      }
+    },
+    {
+      "route": "/staff/books/:id/copies",
+      "view": "frontend/src/views/CopiesView.vue",
+      "role_assets": {
+        "admin": "admin-book-copies",
+        "librarian": "librarian-book-copies",
+        "reader": null
+      }
+    },
+    {
+      "route": "/staff/categories",
+      "view": "frontend/src/views/CategoriesView.vue",
+      "role_assets": {
+        "admin": "admin-categories",
+        "librarian": "librarian-categories",
+        "reader": null
+      }
+    },
+    {
+      "route": "/staff/checkout",
+      "view": "frontend/src/views/CheckoutView.vue",
+      "role_assets": {
+        "admin": "admin-checkout",
+        "librarian": "librarian-checkout",
+        "reader": null
+      }
+    },
+    {
+      "route": "/staff/return",
+      "view": "frontend/src/views/ReturnView.vue",
+      "role_assets": {
+        "admin": "admin-return",
+        "librarian": "librarian-return",
+        "reader": null
+      }
+    },
+    {
+      "route": "/staff/loans",
+      "view": "frontend/src/views/StaffLoansView.vue",
+      "role_assets": {
+        "admin": "admin-loan-management",
+        "librarian": "librarian-loans",
+        "reader": null
+      }
+    },
+    {
+      "route": "/staff/reservations",
+      "view": "frontend/src/views/StaffReservationsView.vue",
+      "role_assets": {
+        "admin": "admin-reservations",
+        "librarian": "librarian-reservations",
+        "reader": null
+      }
+    },
+    {
+      "route": "/staff/notices",
+      "view": "frontend/src/views/StaffNoticesView.vue",
+      "role_assets": {
+        "admin": "admin-notices",
+        "librarian": "librarian-notices",
+        "reader": null
+      }
+    },
+    {
+      "route": "/staff/stats",
+      "view": "frontend/src/views/StatsView.vue",
+      "role_assets": {
+        "admin": "admin-statistics",
+        "librarian": "librarian-stats",
+        "reader": null
+      }
+    },
+    {
+      "route": "/admin/users",
+      "view": "frontend/src/views/UsersView.vue",
+      "role_assets": {
+        "admin": "admin-users",
+        "librarian": null,
+        "reader": null
+      }
+    },
+    {
+      "route": "/admin/audit",
+      "view": "frontend/src/views/AuditView.vue",
+      "role_assets": {
+        "admin": "admin-audit",
+        "librarian": null,
+        "reader": null
+      }
+    },
+    {
+      "route": "/403",
+      "view": "frontend/src/views/ForbiddenView.vue",
+      "role_assets": {
+        "admin": "admin-forbidden",
+        "librarian": "librarian-public-references-reader-forbidden",
+        "reader": "reader-forbidden"
+      }
+    },
+    {
+      "route": "/:pathMatch(.*)*",
+      "view": "frontend/src/views/NotFoundView.vue",
+      "role_assets": {
+        "admin": "admin-not-found",
+        "librarian": "librarian-public-references-reader-not-found",
+        "reader": "reader-not-found"
+      }
+    }
+  ]
+}

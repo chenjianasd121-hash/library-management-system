@@ -1,0 +1,10 @@
+Edit the attached selected Chinese library ADMIN announcement UI. Preserve its exact1487 x1058 canvas, deep navy sidebar, white topbar, blue-gray background, all navigation, typography style, page heading, primary 新建公告, status tabs 草稿/已发布/已撤下, 刷新, six titles/order, fine row dividers, per-row 编辑/预览/发布 actions, static10/page count and single-page pagination.
+Make ONLY this information-hierarchy cleanup: remove the two independent repeated table columns 状态 and 发布时间, including their header labels, six duplicated 草稿 badges in the middle column and six duplicated em-dashes in the next column. Keep EACH row's one 草稿 badge and 发布时间：— directly UNDER its title. There should be exactly ONE draft badge and ONE publication placeholder PER row, both underneath title. Keep the title on the first line and its metadata on second line. Redistribute freed horizontal space to title area and right-aligned action group, making a clean wide list. Header can contain 标题 at left and 操作 at right, with NO middle columns or blank placeholder columns.
+Exact six draft titles remain:
+十月新书推荐与阅读指南
+周末阅读分享会活动预告
+图书借阅办理流程说明
+馆内安静阅读温馨提示
+预约取书注意事项
+阅览区域座位使用须知
+All are草稿, all publication times unknown represented—, all actions 编辑 / 预览 / 发布. No invented features, dates, row, column, image, hero or preview pane. Current date anchor2026-10-19 Asia/Shanghai, no new visible dates needed. Preserve readable14–16px body and original spacing/style. Output ONE complete revised screenshot, no option number, annotation, before/after or comparison collage. This is the user's selected title-led design corrected, not a new visual concept.

@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-21",
+  "role": "LIBRARIAN",
+  "historical_snapshot": true,
+  "superseded_by": "continuation-2026-10-21.manifest.json",
+  "phase": "recovery-cover-and-checkout",
+  "phase_complete": true,
+  "all_remaining_designs_complete": false,
+  "application_code_written": false,
+  "image_limit_per_phase": 3,
+  "images": [
+    {
+      "project_path": "C:\\Users\\en\\.codex\\worktrees\\9acd\\基于SpringBoot+vue的图书管理系统\\design\\librarian\\book-create\\states\\cover-feedback.png",
+      "relative_path": "book-create/states/cover-feedback.png",
+      "source_path": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-f39fc6fd-0f0b-499d-85aa-ab05fbb96b3b.png",
+      "bytes": 1265228,
+      "width": 1586,
+      "height": 992,
+      "sha256": "067ea389cdb2444c9dbde518d6430f8460281e167127d3299f8a984e0e7c079c",
+      "review_status": "ready_for_user_review"
+    },
+    {
+      "project_path": "C:\\Users\\en\\.codex\\worktrees\\9acd\\基于SpringBoot+vue的图书管理系统\\design\\librarian\\checkout\\states\\blocked-checkout.png",
+      "relative_path": "checkout/states/blocked-checkout.png",
+      "source_path": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-a3b41991-3685-42ab-84b2-eae31e2ea681.png",
+      "bytes": 1573400,
+      "width": 1487,
+      "height": 1058,
+      "sha256": "a103ef77252eaf5c8a68a70eebf145937ddebdecdd1d2f877535918ef97caf75",
+      "review_status": "ready_for_user_review"
+    },
+    {
+      "project_path": "C:\\Users\\en\\.codex\\worktrees\\9acd\\基于SpringBoot+vue的图书管理系统\\design\\librarian\\checkout\\states\\checkout-success.png",
+      "relative_path": "checkout/states/checkout-success.png",
+      "source_path": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-a134a25c-775e-4a05-8969-1b33fe3832d9.png",
+      "bytes": 1590541,
+      "width": 1487,
+      "height": 1058,
+      "sha256": "dae795c7fc8be77fdd2d414cf65f8d2eecdfc64e55a208d623d7be52914ded9f",
+      "review_status": "ready_for_user_review"
+    }
+  ],
+  "next_unfinished": {
+    "state": "return-no-active-loan",
+    "target": "design/librarian/return/states/no-active-loan.png",
+    "status": "not_submitted",
+    "reference": "design/librarian/return/final.png"
+  },
+  "following_phase": [
+    "return-success",
+    "overdue-loan-filter"
+  ],
+  "remaining_batches": [
+    "reservation-waiting-and-cancel-reason",
+    "profile-and-password-states",
+    "shared-loading-empty-error-and-submit-feedback",
+    "statistics-empty-panels",
+    "librarian-public-role-differences-and-final-audit"
+  ],
+  "notes": [
+    "Preserve all selected main pages and completed states.",
+    "No app implementation before all three roles designs and necessary states are selected.",
+    "Generated fixed states await user review; they are not automatically approved."
+  ]
+}

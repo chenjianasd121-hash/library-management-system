@@ -1,0 +1,14 @@
+Edit the attached SELECTED librarian category-management screenshot to show ONE high-fidelity “新增分类” modal, first alternative direction “简洁纵向弹窗”. Keep full1487×1058 desktop canvas. This is a supplemental CREATE dialog, NOT a new category-overview design. Dateanchor2026-10-20 Asia/Shanghai, no datesadded. No browserchrome/collage/optionlabels.
+
+PRESERVE the underlying chosen image's navy sidebar, white topbar, pale blue-gray canvas, librarianavatar馆/welcome, brand 图书管理系统 / LIBRARY MANAGEMENT, 分类管理 active, and exact two statusgroups. Underlying records remain 计算机类/CS/1/启用, 文学类/LIT/2/启用, 历史类/HIS/3/启用, 经济管理/ECON/4/启用, 自然科学/SCI/5/启用, 艺术类/ART/6/停用. Preserve groupheaders启用分类5个/停用分类1个, global共6个分类, originalposition/spacing/icons/actions. Do not move tablecolumns/rows to avoid modal; naturalocclusion under overlay is correct. Do not add pagination, searchfilters or new fields behind dialog.
+Add a dim neutral semi-transparent backdrop20–30% so selected page remainsrecognizable but modal is focus.
+
+Centered WHITE modal approximately520pxwide and570–610pxhigh,12–14px corners, subtlemodalshadow. Navytext #152747, muted #70809c, primaryblue #2775ea, fine #e7edf6 inputborders, crisp Chinese14–16px labels. Header smallbluefoldericon(optional), title 新增分类, closeX upperright.
+Bodyfourfields arranged VERTICALLY with labelsabove controls, clearaligned spacing:
+*分类名称: EMPTY fullwidth input, lightplaceholder请输入分类名称, helper最多80字.
+*分类编码: EMPTY fullwidth input, lightplaceholder请输入分类编码, helper2–32位字母、数字、下划线或连字符.
+排序: compact numericstepper value0, min0; minusdisabled, plusenabled. Helper数字越小，显示越靠前.
+启用: blueON switch, visible启用 text. Initialenabledtrue.
+Onlyname/code requiredstars, no stars forsort/switch. Name/code areblank not exampledata. Exactlyfourfields, no countersneeded.
+Footer separated byfine rule: secondary取消 and primaryblue保存 alignedright. Exactlythese2footerbuttons pluscloseX, no保存并新增/reset/delete.
+InitialCREATE state: no validationerrors, no loading/successtoast, no editedexistingcategoryvalues. No parentcategory, icon/colorselector, automaticcodegeneration, hierarchy, previews, hiddencontrols, warningconfirmation or extraactions. Underlyingpagecomesfromselectedmain, not anotherrole. Beautiful natural-sized readable modal with practicalform density, allfieldsandfooter visible.

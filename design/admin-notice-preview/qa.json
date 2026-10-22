@@ -1,0 +1,47 @@
+{
+  "status": "selected-copy-verified",
+  "required": [
+    "单层公告预览，草稿列表背景",
+    "原文标题正文完整",
+    "仅关闭X，无底部按钮",
+    "品牌一致，无虚构日期或元数据"
+  ],
+  "candidates": [
+    {
+      "number": 1,
+      "file": "compact-reading-preview.png",
+      "dimensions": [
+        1484,
+        1060
+      ],
+      "mode": "RGB",
+      "copyHashMatches": true,
+      "review": "Single modal, correct title and body, X-only action, no footer or invented metadata, approved brand retained."
+    },
+    {
+      "number": 2,
+      "file": "wide-reading-preview.png",
+      "dimensions": [
+        1484,
+        1060
+      ],
+      "mode": "RGB",
+      "copyHashMatches": true,
+      "review": "Single wide modal, correct article and explicit paragraphs, X-only action, no footer or extra metadata, approved navy/blue style."
+    },
+    {
+      "number": 3,
+      "file": "centered-title-preview.png",
+      "dimensions": [
+        1484,
+        1060
+      ],
+      "mode": "RGB",
+      "copyHashMatches": true,
+      "review": "One airy modal, centered article title, complete plain-text paragraphs, X-only action, no footer or invented metadata."
+    }
+  ],
+  "displayOrderVerified": true,
+  "selection": 2,
+  "finalHashMatches": true
+}

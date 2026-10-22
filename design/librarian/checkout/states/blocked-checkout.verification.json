@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-21",
+  "role": "LIBRARIAN",
+  "file": "blocked-checkout.png",
+  "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-a3b41991-3685-42ab-84b2-eae31e2ea681.png",
+  "width": 1487,
+  "height": 1058,
+  "sha256": "a103ef77252eaf5c8a68a70eebf145937ddebdecdd1d2f877535918ef97caf75",
+  "identical_to_source": true,
+  "visual_check": "Reader active, 2 of 5 current loans with 1 overdue; copy BK0001 available; amber block message and disabled checkout button; 30-day fixture due 2026-11-20.",
+  "review_status": "ready_for_user_review"
+}

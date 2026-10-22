@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-20",
+  "timezone": "Asia/Shanghai",
+  "role": "LIBRARIAN",
+  "status": "selected",
+  "verification": "PNG decoding and source-copy hashes checked programmatically. Six draft titles, status, null publication times, editor/preview/publish actions, librarian settings navigation and single-page pagination checked visually. Third direction selects first draft with matching read-only title and two-paragraph body.",
+  "recovery": "Recovered already-successful third image after old request was manually stopped; existing candidates and prompts retained; no image regenerated.",
+  "candidates": [
+    {
+      "display_number": 1,
+      "file": "clear-draft-table.png",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "c572d65fdf28b2b57e57856c47b8dbb8a6740da7544afaf21d8bda9fa43e0e80",
+      "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-a9c8b893-bd27-419d-ae75-cc3b5cbd8bf0.png",
+      "identical_to_source": true
+    },
+    {
+      "display_number": 2,
+      "file": "status-notice-list.png",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "c33e5e30c3d85611f40f651a47d8c45468b101c81595197cf59cbca3bb3a4a78",
+      "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-db7b89d2-deb6-4f2a-a1a3-9664e9504dab.png",
+      "identical_to_source": true
+    },
+    {
+      "display_number": 3,
+      "file": "notice-preview-desk.png",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "9e49cc1af23eede7a634ebb1b912c024967378471a7b027885e6942db0ea2889",
+      "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-199b8606-b3dd-4eb1-a7ba-dcf608931bee.png",
+      "identical_to_source": true
+    }
+  ],
+  "pending_supplemental_states": [
+    "new/edit notice dialog",
+    "preview and publish confirmation",
+    "withdraw confirmation",
+    "published and withdrawn filters",
+    "empty/error/validation states"
+  ],
+  "selected_candidate": 2,
+  "selected_date": "2026-10-20",
+  "final_file": "final.png",
+  "final_sha256": "c33e5e30c3d85611f40f651a47d8c45468b101c81595197cf59cbca3bb3a4a78"
+}

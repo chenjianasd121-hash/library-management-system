@@ -1,0 +1,32 @@
+Create ONE polished high-fidelity desktop UI design screenshot for Chinese LIBRARIAN library 数据统计 page. Independent direction “均衡统计总览”: seven metrics in4+3 rows, then trendchart left and popular-book donut plus full10-book legend right. Full frame approx1440×1024, ALL7metrics, trend, all10rankingentries and timestamp visible. No browserchrome/collage/optionnumber. Dateanchor2026-10-20 Asia/Shanghai; this is illustrative data snapshot10:00.
+Reference selected librarian notice page is SHELL/style only. Remove notice content/status tabs/draft records/create button/settings children. Do not redesign homepage; this page has statistics only.
+
+Navy230–250px sidebar #142747–#1a3156, white60px topbar, pale #f3f7fc canvas, #152747 ink, #70809c muted, primaryblue #2775ea, subtle #e7edf6 dividers,12px rounded white surfaces and restrained shadows. Chinese sans-serif28px pageheading,14–16px body,28px metricvalues. Sidebar brand 图书管理系统 / LIBRARY MANAGEMENT. Exactly7 main nav items 首页概览, 图书管理 collapsed, 借阅管理 collapsed, 读者查找, 分类管理, 数据统计 ACTIVEblue, 系统设置 collapsed. No submenu/admin account/audit. Topbar 搜索图书、作者、分类等… and avatar 馆, 欢迎回来，馆员.
+
+Breadcrumb 馆员工作台 / 数据统计. Title 数据统计, subtitle 实时聚合馆藏、借阅与预约信息. Topright only primaryblue 刷新数据 with refreshicon.
+7white metrictiles arranged FIRSTROW4, SECONDROW3 (no empty8thtile). Each has small restrained colored icon, label, largevalue+unit, small definition:
+书目数126种 — 全部书目，含下架.
+总册数12,860册 — 不含退役副本.
+可借册数12,520册 — 可借状态副本.
+在借数268笔 — 当前未归还借阅.
+逾期数39笔 — 在借中的逾期借阅 (subtle red).
+待取数18条 — 待取预约.
+读者数1,532人 — 启用读者账号.
+Keep numbers exact. No growthpercent, comparisons or sparklines. Under metrics quiet 数据生成时间：2026-10-20 10:00（Asia/Shanghai）.
+
+Below two aligned white chartcards with20pxgutter, leftabout65% right35%, heightabout480–520px.
+LEFT title 近30天借出与归还趋势, small 2026-09-21 至 2026-10-20. Two fine smooth lines with subtle translucent fill: BLUE借出, PURPLE归还. Legend precise. Yaxis name 次, scale0,10,20,30,40,50; xaxis labeled09-21,09-27,10-03,10-09,10-15,10-20. 30datepoints with plausible modestwaves, not a rising growthchart; first28/30, peaksabout39, low21, last27/24. Shape guide borrowed[28,32,35,38,36,37,37,37,32,30,28,27,22,22,22,23,21,24,28,31,31,34,37,39,36,36,36,34,29,27], returned[30,29,32,35,33,39,34,34,29,27,30,24,19,19,19,25,18,21,25,28,33,31,34,36,33,38,33,31,26,24]. Footer30个日期记录 · 单位：次.
+RIGHT title 近30天热门书目, subtitle 按借出次数排序 · 单位：次. Moderate donutwith10coloredsegments, center 借出次数 (no inventorycounts/percentages). Beneath legible legend/ranking10entries, two columns of5 if needed, with coloredswatches, booktitle and count次. Exactrank:
+1 Java编程思想52次
+2 人类简史44次
+3 解忧杂货店36次
+4 数据结构与算法28次
+5 经济学原理20次
+6 活着18次
+7 月亮与六便士16次
+8 三体14次
+9 围城12次
+10 百年孤独10次.
+Alltennames and numbers legible. Donut is borrowfrequency among displayedtop10, NOT bookcategory/inventory distribution. No fake “其他” segment or extra books.
+
+No export/date-picker/range selector,7/30/90switch, autorefreshsetting, actionshortcuts, notifications, loanslist, pagecontrols, searchfilters, todaycount, ratios or inventedmetrics. Window is quiet text not clickable selector. This is loaded mainstate with no errors/empty/loading. Beautiful coherent practical software UI, complete visible metrics and charts without crop. Charts are designillustrations; labels/values/window must be accurate.

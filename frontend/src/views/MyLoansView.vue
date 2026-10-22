@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
+import { Reading, Refresh } from '@element-plus/icons-vue'
 import { api } from '@/api'
 import { ApiError, errorText } from '@/api/http'
 import type { LoanItem, Policy } from '@/api/types'
@@ -78,8 +79,8 @@ onMounted(load)
     title="存在逾期借阅：当前无法新借、预约或续借。请到馆归还逾期图书。"
     :description="overdue.map((i) => `${i.bookTitle} 逾期 ${i.overdueDays} 天`).join('；')"
   />
-  <section class="panel">
-    <div class="list-toolbar">
+  <section class="panel reader-records">
+    <div class="record-toolbar">
       <el-radio-group
         v-model="filter"
         @change="
@@ -91,20 +92,28 @@ onMounted(load)
         ><el-radio-button value="ACTIVE">在借</el-radio-button
         ><el-radio-button value="RETURNED">已归还</el-radio-button
         ><el-radio-button value="ALL">全部</el-radio-button></el-radio-group
-      ><el-button @click="load">刷新</el-button>
+      ><el-button :icon="Refresh" @click="load">刷新</el-button>
     </div>
     <LoadState :loading="loading" :error="error" :empty="!items.length" @retry="load"
       ><div class="table-scroll">
-        <el-table :data="items" class="data-table" stripe
-          ><el-table-column prop="bookTitle" label="书名" min-width="180" /><el-table-column
-            prop="copyBarcode"
-            label="副本条码"
-            width="145"
-          /><el-table-column label="借出时间" width="175"
+        <el-table :data="items" class="data-table loan-table"
+          ><el-table-column label="图书" min-width="245"
+            ><template #default="s"
+              ><RouterLink :to="`/books/${s.row.bookId}`" class="record-book"
+                ><el-icon><Reading /></el-icon
+                ><span class="record-book-title">{{ s.row.bookTitle }}</span></RouterLink
+              ></template
+            ></el-table-column
+          ><el-table-column prop="copyBarcode" label="副本条码" min-width="145" /><el-table-column
+            label="借出时间"
+            min-width="170"
             ><template #default="s">{{ dateTime(s.row.borrowedAt) }}</template></el-table-column
-          ><el-table-column label="到期日" width="175"
-            ><template #default="s">{{ dueDate(s.row.dueDate) }}</template></el-table-column
-          ><el-table-column label="状态" width="130"
+          ><el-table-column label="到期日" min-width="165"
+            ><template #default="s"
+              ><strong class="record-due-date">{{ s.row.dueDate }}</strong
+              ><small class="record-sub">当日结束前归还</small></template
+            ></el-table-column
+          ><el-table-column label="状态" min-width="120"
             ><template #default="s"
               ><el-tag :type="statusTone(s.row.status)">{{
                 statusLabel[s.row.status as keyof typeof statusLabel]
@@ -113,11 +122,11 @@ onMounted(load)
                 逾期 {{ s.row.overdueDays }} 天</span
               ></template
             ></el-table-column
-          ><el-table-column label="操作" width="170"
+          ><el-table-column label="操作" min-width="150"
             ><template #default="s"
               ><el-button
                 v-if="s.row.allowedActions?.canRenew"
-                link
+                plain
                 type="primary"
                 :loading="busy === s.row.id"
                 @click="renew(s.row)"

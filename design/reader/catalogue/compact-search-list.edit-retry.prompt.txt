@@ -1,0 +1,10 @@
+Use case ui-mockup / edit. Transform this provided reader catalogue image into a DIFFERENT compact six-row LIST layout. Target1440x1024. Preserve navy reader sidebar, active 图书目录, white topbar, 欢迎回来，张三 / 读者, title 图书目录 and the top EMPTY search, 全部分类 dropdown, UNCHECKED 仅看可借 and blue 搜索. Keep style, Chinese typography and six book cover artworks.
+Replace only the entire 3x2 book grid with ONE wide white table/list, SIX horizontal rows, thin dividers, small55x75px portrait covers beside each title/author. Column headings 图书 | 分类 | 可借／总册 | 预约提示 | 操作. No separate cards, no descriptions.
+Rows exact:
+Java编程思想 / Bruce Eckel | 计算机类 | 3 / 8 | 可预约待取 | 查看详情 →
+人类简史 / 尤瓦尔·赫拉利 | 历史类 | 2 / 8 | 可预约待取 | 查看详情 →
+解忧杂货店 / 东野圭吾 | 文学类 | 0 / 8 | 预约排队 | 查看详情 →
+数据结构与算法 / 王道论坛 | 计算机类 | 2 / 8 | 可预约待取 | 查看详情 →
+经济学原理 / 曼昆 | 经济管理 | 0 / 8 | 预约排队 | 查看详情 →
+活着 / 余华 | 文学类 | 2 / 8 | 可预约待取 | 查看详情 →
+Green available reservation labels, orange queue labels. All six rows and footer 共 6 本图书 / disabled previous / blue1 / disabled next fit completely with bottom margin. All text readable14–16px. Do not add controls, pages, direct borrow/reserve, admin actions, sort, favorites or dates. Date anchor2026-10-09 Asia/Shanghai. Output ONE complete standalone full-screen screenshot, no numbering, comparison board or browser frame.

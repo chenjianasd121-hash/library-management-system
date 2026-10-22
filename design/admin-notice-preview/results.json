@@ -1,0 +1,63 @@
+{
+  "page": "管理员公告预览弹窗",
+  "portal": "admin",
+  "route": "/staff/notices",
+  "state": "preview-draft-from-list",
+  "createdDate": "2026-10-21",
+  "timezone": "Asia/Shanghai",
+  "status": "selected",
+  "selection": {
+    "number": 2,
+    "file": "wide-reading-preview.png",
+    "final": "final.png",
+    "sha256": "e032e087a826b32dd842c358d92956aaaf6395c3d05bdecd6d6f4b1e2d175c63",
+    "selectedDate": "2026-10-21",
+    "userMessage": "2"
+  },
+  "toolMode": "built-in Image Gen",
+  "reference": "../admin-notices/final.png",
+  "displayOrder": [
+    {
+      "direction": "紧凑阅读式",
+      "file": "compact-reading-preview.png",
+      "prompt": "compact-reading-preview.prompt.txt",
+      "status": "generated-reviewed",
+      "number": 1,
+      "original": "C:\\Users\\en\\.codex\\generated_images\\01a15cec-dde6-7cd3-ba15-cf6f6e020cba\\exec-ed206355-d536-4df6-9418-0c19b8152d1a.png",
+      "sha256": "8aa9ea2945c88fc0b97eaec997d23a58430a5b6909a9661a043a21be5067610a",
+      "dimensions": [
+        1484,
+        1060
+      ]
+    },
+    {
+      "direction": "宽幅阅读式",
+      "file": "wide-reading-preview.png",
+      "prompt": "wide-reading-preview.prompt.txt",
+      "status": "generated-reviewed",
+      "number": 2,
+      "original": "C:\\Users\\en\\.codex\\generated_images\\01a15cec-dde6-7cd3-ba15-cf6f6e020cba\\exec-06d5e9a5-ddff-4309-9064-f12b246f8d51.png",
+      "sha256": "e032e087a826b32dd842c358d92956aaaf6395c3d05bdecd6d6f4b1e2d175c63",
+      "dimensions": [
+        1484,
+        1060
+      ]
+    },
+    {
+      "direction": "居中标题式",
+      "file": "centered-title-preview.png",
+      "prompt": "centered-title-preview.prompt.txt",
+      "status": "generated-reviewed",
+      "number": 3,
+      "original": "C:\\Users\\en\\.codex\\generated_images\\01a15cec-dde6-7cd3-ba15-cf6f6e020cba\\exec-4d3b2b00-431b-4e9b-80f2-170981df7887.png",
+      "sha256": "495895e0d46d38902e122978df190162c9cb31c21f63f1871eb960d4e3c39d21",
+      "dimensions": [
+        1484,
+        1060
+      ]
+    }
+  ],
+  "nextUnfinishedItem": "操作确认三方案",
+  "displayedInThread": "codex://threads/01a15cec-dde6-7cd3-ba15-cf6f6e020cba",
+  "lastCheckpointDate": "2026-10-21"
+}

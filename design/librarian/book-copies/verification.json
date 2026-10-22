@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-20",
+  "timezone": "Asia/Shanghai",
+  "role": "LIBRARIAN",
+  "status": "selected",
+  "verification": "PNG decoding and source-copy hashes checked programmatically; role shell, nine copy records, legal per-state actions, empty add form, book8/available3 and list9-including-retired counts, one-page pagination checked visually.",
+  "candidates": [
+    {
+      "display_number": 1,
+      "file": "top-entry-copy-list.png",
+      "width": 1484,
+      "height": 1060,
+      "sha256": "033477fa5499b763690222135bd152a3b58768399ac7a2ca8de505db7714f2d6",
+      "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-042202fd-b36a-496f-8cff-24c34d94c276.png",
+      "identical_to_source": true
+    },
+    {
+      "display_number": 2,
+      "file": "side-entry-copy-desk.png",
+      "width": 1484,
+      "height": 1060,
+      "sha256": "e8c299c9d61554ca9048beb8220218ed7f9f04bdc8325dcc3b2a03b5484e6554",
+      "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-3da5b9cf-64fd-4ab5-a053-635bc0c7c65c.png",
+      "identical_to_source": true
+    },
+    {
+      "display_number": 3,
+      "file": "combined-copy-workspace.png",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "1c25b648f1f4eb17f50af4e8e21fef7fe5db5edac82b4c7160823cc44649fcac",
+      "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-88e1666a-b063-4365-abf3-454d4d414011.png",
+      "identical_to_source": true
+    }
+  ],
+  "selected_candidate": 1,
+  "selected_date": "2026-10-20",
+  "final_file": "final.png",
+  "final_sha256": "033477fa5499b763690222135bd152a3b58768399ac7a2ca8de505db7714f2d6"
+}

@@ -15,7 +15,7 @@
  <select id="countWaiting" resultType="int">SELECT COUNT(*) FROM reservations WHERE book_id=#{bookId} AND status='WAITING'</select>
  <select id="hasActiveReaderBook" resultType="int">SELECT COUNT(*) FROM reservations WHERE reader_id=#{readerId} AND book_id=#{bookId} AND status IN ('WAITING','READY')</select>
  <select id="hasActiveLoan" resultType="int">SELECT COUNT(*) FROM loans WHERE reader_id=#{readerId} AND book_id=#{bookId} AND status='ACTIVE'</select>
- <select id="firstWaiting" resultType="com.library.management.common.DbRecord">SELECT r.id,r.reader_id FROM reservations r JOIN users u ON u.id=r.reader_id WHERE r.book_id=#{bookId} AND r.status='WAITING' AND u.status='ACTIVE' ORDER BY r.requested_at,r.id LIMIT 1 FOR UPDATE</select>
+ <select id="firstWaiting" resultType="com.library.management.common.DbRecord">SELECT r.id,r.reader_id FROM reservations r WHERE r.book_id=#{bookId} AND r.status='WAITING' AND EXISTS(SELECT 1 FROM users u WHERE u.id=r.reader_id AND u.status='ACTIVE') ORDER BY r.requested_at,r.id LIMIT 1 FOR UPDATE</select>
  <select id="readyForCopy" resultType="com.library.management.common.DbRecord">SELECT id,reader_id,book_id,pickup_deadline FROM reservations WHERE copy_id=#{copyId} AND status='READY' FOR UPDATE</select>
  <select id="expiredForBook" resultType="com.library.management.common.DbRecord">SELECT id,copy_id FROM reservations WHERE book_id=#{bookId} AND status='READY' AND pickup_deadline &lt; #{today} ORDER BY id FOR UPDATE</select>
  <select id="expiredBookIds" resultType="long">SELECT DISTINCT book_id FROM reservations WHERE status='READY' AND pickup_deadline &lt; #{today} ORDER BY book_id</select>

@@ -1,0 +1,32 @@
+{
+  "page": "账号管理",
+  "route": "/admin/users",
+  "createdDate": "2026-10-09",
+  "timezone": "Asia/Shanghai",
+  "status": "selected",
+  "selection": 1,
+  "displayOrder": [
+    {
+      "number": 1,
+      "direction": "清晰账号表格",
+      "file": "clear-account-table.png",
+      "original": "exec-d1b77dd9-2405-4556-8bb1-f87ca8235ea2.png"
+    },
+    {
+      "number": 2,
+      "direction": "身份清单与侧边筛选",
+      "file": "identity-account-list.png",
+      "original": "exec-dad7957c-856f-42a8-915f-e702a27978f2.png"
+    },
+    {
+      "number": 3,
+      "direction": "选中账号维护台",
+      "file": "selected-account-workspace.png",
+      "original": "exec-e6bcf8f7-1417-429f-a0f3-24603c43e302.png"
+    }
+  ],
+  "format": "PNG",
+  "width": 1487,
+  "height": 1058,
+  "mode": "RGB"
+}

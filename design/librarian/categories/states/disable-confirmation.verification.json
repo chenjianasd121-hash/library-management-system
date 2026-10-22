@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-20",
+  "role": "LIBRARIAN",
+  "state": "category-disable-confirmation",
+  "file": "disable-confirmation.png",
+  "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-e7bfd185-da93-4fdf-aeb8-0996d7eeea47.png",
+  "width": 1485,
+  "height": 1059,
+  "sha256": "8bfdb992476256b292449b2298ffc248387d9f34a21e83a7755e3d607daf9a32",
+  "identical_to_source": true,
+  "visual_check": "Warning confirmation above retained edit modal; title/body/cancel/confirm/close present. Existing CS category form sort1 and unsaved OFF toggle. Background still enabled5/disabled1. No new fields, saved result, or success state.",
+  "approval_status": "supplementary_state_ready_for_review"
+}

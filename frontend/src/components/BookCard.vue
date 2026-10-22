@@ -1,26 +1,31 @@
 <script setup lang="ts">
 import type { BookSummary } from '@/api/types'
+import { Reading, ArrowRight } from '@element-plus/icons-vue'
 defineProps<{ book: BookSummary }>()
 </script>
 <template>
-  <RouterLink :to="`/books/${book.id}`" class="book-card surface"
+  <RouterLink :to="`/books/${book.id}`" class="book-card"
     ><div class="book-cover">
-      <img v-if="book.coverPath" :src="book.coverPath" :alt="`${book.title}封面`" /><span
-        v-else
-        aria-label="暂无封面"
-        >📖</span
-      >
+      <img v-if="book.coverPath" :src="book.coverPath" :alt="`${book.title}封面`" />
+      <div v-else class="cover-placeholder">
+        <el-icon><Reading /></el-icon><span>暂无封面</span>
+      </div>
     </div>
     <div class="book-info">
-      <el-tag size="small" :type="book.availableCopies ? 'success' : 'warning'">{{
+      <h3>{{ book.title }}</h3>
+      <p class="book-author">{{ book.author }}</p>
+      <el-tag class="category-tag" type="info">{{ book.categoryName }}</el-tag>
+      <p class="book-isbn">ISBN {{ book.isbn || '暂无' }}</p>
+      <div class="book-count">
+        <span
+          >可借 <strong>{{ book.availableCopies }}</strong> / 总册 {{ book.totalCopies }}</span
+        >
+      </div>
+      <el-tag class="availability-tag" :type="book.availableCopies ? 'success' : 'warning'">{{
         book.availableCopies ? '可预约待取' : '预约排队'
       }}</el-tag>
-      <h3>{{ book.title }}</h3>
-      <p>{{ book.author }}</p>
-      <p>{{ book.categoryName }} · ISBN {{ book.isbn || '暂无' }}</p>
-      <div class="book-count">
-        可借 {{ book.availableCopies }} / 总册 {{ book.totalCopies }} <span>查看详情 →</span>
-      </div>
-    </div></RouterLink
-  >
+      <span class="book-detail-link"
+        >查看详情 <el-icon><ArrowRight /></el-icon
+      ></span></div
+  ></RouterLink>
 </template>

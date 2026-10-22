@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-20",
+  "timezone": "Asia/Shanghai",
+  "role": "LIBRARIAN",
+  "status": "selected",
+  "verification": "PNG decoding and source-copy SHA-256 checked programmatically. Three required empty password fields, show/hide icons, 8-64 new-password length and matching confirmation, staff librarian context, single confirm action and ordinary return-to-librarian-home flow checked visually. No actual password values included.",
+  "candidates": [
+    {
+      "display_number": 1,
+      "file": "focused-password-form.png",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "bb699ab6583effd6f797007cd6f31bfcb8e6843e52fe845438c0ddc35918d784",
+      "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-de976453-c555-44d6-8d04-3d6908be953c.png",
+      "identical_to_source": true
+    },
+    {
+      "display_number": 2,
+      "file": "account-password-split.png",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "d1b08ea66c40348b9551d9b4df79e4c5cb66e2868e06f0ed56299a6c4f248477",
+      "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-0c48a361-4c50-46c7-b652-4041580e582e.png",
+      "identical_to_source": true
+    },
+    {
+      "display_number": 3,
+      "file": "sectioned-password-workspace.png",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "32c75816badd17804cfc9290ba4e148f7ecf631e41fda80ea1898e8202ba5e7e",
+      "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-489bd1f3-213a-45e9-bb58-1ed4adda01bd.png",
+      "identical_to_source": true
+    }
+  ],
+  "pending_supplemental_states": [
+    "empty/current-password incorrect",
+    "new-password length validation",
+    "confirmation mismatch",
+    "submitting",
+    "request failure",
+    "success",
+    "first-login forced change"
+  ],
+  "selected_candidate": 3,
+  "selected_date": "2026-10-20",
+  "final_file": "final.png",
+  "final_sha256": "32c75816badd17804cfc9290ba4e148f7ecf631e41fda80ea1898e8202ba5e7e"
+}

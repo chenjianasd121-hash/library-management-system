@@ -1,0 +1,16 @@
+Use case: ui-mockup. Create ONE production-quality Chinese logged-in READER book catalogue, direction 封面网格目录, target1440 x1024 desktop landscape, flat full-screen app without browser/device chrome, comparison board or numbering. Clear Chinese14–16px body,28px heading, intentional realistic book covers, generous usable spacing.
+References: image1 selected reader homepage is the style/identity target; image2 existing public catalogue gives supported filters and demo data; image3 approved admin catalogue is cover-art inspiration only, no admin UI actions.
+Style same navy248px sidebar#142747–#1a3156, white60px topbar, pale#f3f7fc canvas, white12–14px radius surfaces, ink#152747, muted#70809c, rules#e7edf6, blue#2775ea, teal#159f85, orange#d98a22. Restrained shadows and dividers, avoid cards inside cards.
+Reader-only sidebar: 图书管理系统 / LIBRARY MANAGEMENT, subtle 读者端, 首页概览, active blue 图书目录, 系统公告, 我的借阅, 我的预约, 个人中心. Topbar compact search, avatar 张, 欢迎回来，张三 and 读者 identity; no login/register or staff menus.
+Main heading 图书目录, subtitle 浏览馆藏，找到下一本想读的书. Compact full-width white filter strip: empty search input 书名、作者或 ISBN, category dropdown 全部分类, UNCHECKED 仅看可借 checkbox, primary blue 搜索. No side category list in this design. Initial all categories and no keyword.
+Below results header 共 6 本图书. SIX books in THREE columns by TWO rows; each vertical book presentation has a prominent realistic portrait cover about100x140px, title, author, category, numeric availability, reservation hint and understated 查看详情 →. Keep rows compact about285px so all six and footer fit; do not make giant covers or waste height. Use simple standalone white book entries on pale base without another nested enclosing card. Balanced same-sized entries, light separation.
+Exact row-major book data:
+Java编程思想 / Bruce Eckel / 计算机类 / 可借 3 / 总册 8 / teal 可预约待取.
+人类简史 / 尤瓦尔·赫拉利 / 历史类 / 可借 2 / 总册 8 / teal 可预约待取.
+解忧杂货店 / 东野圭吾 / 文学类 / 可借 0 / 总册 8 / orange 预约排队.
+数据结构与算法 / 王道论坛 / 计算机类 / 可借 2 / 总册 8 / teal 可预约待取.
+经济学原理 / 曼昆 / 经济管理 / 可借 0 / 总册 8 / orange 预约排队.
+活着 / 余华 / 文学类 / 可借 2 / 总册 8 / teal 可预约待取.
+Every book has legible title outside cover, realistic cover art, no placeholder blocks. Economics cover is tasteful textbook art with accurate Chinese title. OMIT ISBN values and descriptions, do not invent publisher metadata. Numeric counts must match exactly.
+Footer full visible: 共 6 本图书, previous disabled, active blue 1, next disabled. This is six total results fitting existing page size9, no page2/3 or page-size dropdown. Nothing cropped at bottom.
+Only book action 查看详情 → to existing detail/reservation page. No direct borrowing/reserving buttons, sorting, favorites, ratings, recommendations, personal loan records, export, admin editing, stock management, e-reader, payment or success/errors. One primary search action and supporting detail links. Current date anchor2026-10-09 Asia/Shanghai, no visible dates necessary. Focused complete coherent reader catalogue screen.

@@ -1,0 +1,17 @@
+Design ONE high-fidelity desktop web-app mockup, Chinese library management system LIBRARIAN “新增书目” page. Single complete screenshot about1440×1024, no browser frame, no option number, no collage. Date anchor2026-10-20 Asia/Shanghai; no visible date. This is a new independently composed design, direction “编目与封面双栏”.
+Use references: selected librarian book catalogue for visual system and role shell; administrator new-book design for form visual reference only, replace its administrator identity; old staff form screenshot for functionality only. No prefilled book data or existing covers from the catalogue. All controls in NEW BOOK INITIAL EMPTY STATE.
+
+Consistent shell: navy sidebar230–250px #142747 to #1a3156, white topbar60px, canvas #f3f7fc, white12px rounded panels, subtle #e7edf6 borders and shadows; navy text #152747, muted #70809c, primaryblue #2775ea. Clear elegant Chinese sans-serif, readable labels14–16px, title28px, very careful aligned spacing. Brand 图书管理系统 / LIBRARY MANAGEMENT. Sidebar 首页概览; 图书管理 expanded with 书目列表 UNSELECTED, 新增书目 ONLY selected child, 公开目录; 借阅管理 collapsed; 读者查找; 分类管理; 数据统计; 系统设置. No admin-only account management or audit. Topbar global search 搜索图书、作者、分类等… and right avatar 馆, 欢迎回来，馆员.
+
+Main header breadcrumb 图书管理 / 新增书目; title 新增书目; subtitle 录入书目信息后可继续添加实体副本.
+Main body two columns: left abouttwo-thirds width white form card, right aboutone-third width white cover/status card. Left title 基本书目信息 and understated note * 为必填项. Fields arranged in two columns:
+row1 *书名 with EMPTY text input placeholder 请输入书名 and 0 / 200 counter, *作者 EMPTY input 请输入作者;
+row2 ISBN-13 EMPTY input placeholder 可留空，填写时校验 ISBN-13, *分类 dropdown no selection placeholder 请选择分类;
+row3 出版社 EMPTY input placeholder 请输入出版社（可选）, 出版日期 blank date control calendar icon placeholder 选择日期;
+row4 关键词 fullwidth EMPTY input placeholder 多个关键词使用逗号分隔.
+Then section divider and 内容简介: EMPTY textarea approximately140px high, placeholder 填写图书内容简介（可选）, bottom-right0 / 5000 counter.
+Only required stars beside 书名、作者、分类, not ISBN/publisher/date/keywords/description/cover/status.
+
+Right white card heading 封面与上架. Portrait-proportioned upload empty area around180×230px with light thin dashed border, simple image icon and 尚未上传封面. This is correctly an EMPTY upload state, not a broken image or real book jacket. Beneath is outlined 上传封面 button invoking file selection. Helper JPEG / PNG / WebP，最大2 MiB. No drag-and-drop wording, no automatic ISBN cover lookup. Lower divider and heading 上架状态, blue switch ON and visible text 上架. Small explanation 上架后读者可在目录中检索. No approval badge, no loading/errors.
+
+Bottom of LEFT form card: prominent blue 保存并添加副本, secondary outlined 返回列表, small helper 保存书目后进入实体副本管理. These actions and all fields must be visible within screen without cropping. No duplicate header save button, no disabled primary, no fake progress wizard. Do not add quantity, price, physical barcode, shelf location, ISBN auto-fetch, AI text, save draft, import/export, save-and-create-another or delete. Book inventory is managed after saving in existing copies page. All fields remain blank except enabled state ON; placeholders are visibly light gray. Distinct thoughtful panel proportions, beautiful restrained design faithful to selected library system.

@@ -1,0 +1,18 @@
+Design ONE polished high-fidelity Chinese library management desktop UI screenshot, LIBRARIAN 编辑书目. Independent alternative “封面领衔编辑”: ONE white surface with LEFT cover/status column about270px and RIGHT broad metadata form, separated by subtle vertical rule; bottom action bar integrated across surface. Not a tall sequence of horizontal sections. Full frame approximately1440×1024, no browser chrome/collage/option label. Date anchor2026-10-20 Asia/Shanghai; preserve existing publication date2020-01-01.
+References: selected librarian new-book form for visual tokens and supported controls; selected librarian catalogue for role identity and Java mock cover. Existing loaded book EDIT state, not new blank creation.
+
+Style: navy sidebar230–250px #142747–#1a3156, white60px topbar, pale #f3f7fc canvas, ink #152747, muted #70809c, primaryblue #2775ea, fine borders #e7edf6,12px corners, restrained shadows. Clear elegant Chinese sans-serif, title28px, controls14–16px. Brand 图书管理系统 / LIBRARY MANAGEMENT. Sidebar 首页概览; 图书管理 expanded with 书目列表 activeblue, 新增书目 unselected, 公开目录; 借阅管理 collapsed; 读者查找; 分类管理; 数据统计; 系统设置. No administrator user/audit links. Topbar 搜索图书、作者、分类等… and avatar 馆, 欢迎回来，馆员.
+
+Heading breadcrumb 图书管理 / 编辑书目; title 编辑书目; subtitle 更新书目信息与上架状态.
+Wide unified white editor panel roughly1150px wide and760px tall.
+LEFT internal column label 封面与上架. Existing portrait illustrated Java book cover about170×235px, black/gold typography, warm tree and night landscape as in catalogue. It is original demo artwork, not official jacket. Below outlined 上传封面 file-picker button and small helper JPEG / PNG / WebP，最大2 MiB. No empty-cover placeholder, delete cover, drag/drop or URL input. Lower divider, 上架状态 label, blue switchON and visible 上架. Small text 上架后读者可在目录中检索.
+RIGHT column heading 书目信息, small * 为必填项. All values darktext, fully loaded and unchanged:
+row1 *书名 editable input Java编程思想, counter8 / 200; *作者 editable input Bruce Eckel.
+row2 ISBN-13 input9787115546081 (exact13digits); *分类 selected dropdown 计算机类.
+row3 出版社 input机械工业出版社; 出版日期 calendar input2020-01-01.
+row4 关键词 fullwidth editable inputJava,编程; small helper 多个关键词使用逗号分隔.
+row5 内容简介 fullwidth editable textarea exacttext 系统介绍 Java 编程语言及面向对象思想。 and counter22 / 5000.
+Use generous36–44px controls, labelsabove fields, balanced two equal column inputs, textarea120–150px. Ensure all eight fields present and no overlaps. Required stars ONLY书名、作者、分类. Other fields optional, ISBN not required.
+Bottom integrated bar below a fine rule: muted 保存后进入副本管理 at left, secondary 返回列表 then primaryblue 保存修改 at right. Exactly one save action. No extra header buttons.
+
+Important: all existing values visibly filled, no placeholder-like gray values, no new-book stepper. Do not show a saved toast, errors, loading, changed/unsaved warning, review, version history, reset, undo, drafts, price/rating, inventory count, physical barcode, shelf location, delete, ISBN auto lookup, AI text, bulk import/export or duplicate saves. Retain same exact data as brief; currentdate not inserted into publication field. Strong cover-led balance with clean complete form hierarchy, high-quality university library operations software.

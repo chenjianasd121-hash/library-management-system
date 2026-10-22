@@ -1,0 +1,102 @@
+{
+  "anchorDate": "2026-10-21",
+  "timezone": "Asia/Shanghai",
+  "mockData": true,
+  "state": "reset-password-initial-empty",
+  "targetAccountId": "3",
+  "targetUsername": "librarian_01",
+  "targetDisplayName": "陈晓",
+  "password": "",
+  "busy": false,
+  "validationError": "",
+  "mustChangePasswordAfterSuccess": true,
+  "background": {
+    "anchorDate": "2026-10-09",
+    "timezone": "Asia/Shanghai",
+    "mockData": true,
+    "page": 1,
+    "size": 10,
+    "total": 23,
+    "activeAdminCount": 2,
+    "currentAccountId": "1",
+    "filter": {
+      "keyword": "",
+      "role": "",
+      "status": ""
+    },
+    "users": [
+      {
+        "id": "1",
+        "username": "admin",
+        "displayName": "管理员",
+        "role": "ADMIN",
+        "status": "ACTIVE",
+        "currentAccount": true
+      },
+      {
+        "id": "2",
+        "username": "admin_backup",
+        "displayName": "备用管理员",
+        "role": "ADMIN",
+        "status": "ACTIVE"
+      },
+      {
+        "id": "3",
+        "username": "librarian_01",
+        "displayName": "陈晓",
+        "role": "LIBRARIAN",
+        "status": "ACTIVE"
+      },
+      {
+        "id": "4",
+        "username": "librarian_02",
+        "displayName": "林悦",
+        "role": "LIBRARIAN",
+        "status": "DISABLED"
+      },
+      {
+        "id": "5",
+        "username": "zhangsan",
+        "displayName": "张三",
+        "role": "READER",
+        "status": "ACTIVE"
+      },
+      {
+        "id": "6",
+        "username": "lisi",
+        "displayName": "李四",
+        "role": "READER",
+        "status": "ACTIVE"
+      },
+      {
+        "id": "7",
+        "username": "wangwu",
+        "displayName": "王五",
+        "role": "READER",
+        "status": "ACTIVE"
+      },
+      {
+        "id": "8",
+        "username": "zhaoliu",
+        "displayName": "赵六",
+        "role": "READER",
+        "status": "DISABLED"
+      },
+      {
+        "id": "9",
+        "username": "qianqi",
+        "displayName": "钱七",
+        "role": "READER",
+        "status": "ACTIVE"
+      },
+      {
+        "id": "10",
+        "username": "zhouba",
+        "displayName": "周八",
+        "role": "READER",
+        "status": "ACTIVE"
+      }
+    ],
+    "selectedAccountIdForMaintenanceDirection": "3"
+  }
+}

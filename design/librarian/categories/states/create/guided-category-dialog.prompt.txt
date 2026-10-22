@@ -1,0 +1,19 @@
+Edit the attached selected LIBRARIAN 分类管理 screenshot to show ONE “新增分类” modal, independent third alternative “说明辅助弹窗”. Whole1487×1058 desktopframe; no browserchrome/collage/optionnumber. This is sameinitialCREATEstate with emptyfields, not editing existingcategory or disableconfirmation. Dateanchor2026-10-20 Asia/Shanghai, no dateadded.
+
+FREEZE underlyingselectedmain screenshot layout/brand/role: navy sidebar andwhite topbar,馆avatar and欢迎回来，馆员,分类管理active,originaltwo statusgroups5enabled/1disabled. Records remain计算机类CS1启用,文学类LIT2启用,历史类HIS3启用,经济管理ECON4启用,自然科学SCI5启用,艺术类ART6停用. Keep positions/columns/icons/actions; don't relocate rows aroundmodal. Naturalocclusion is correct. No newbackgroundfilters/search/pagination or otherrole.
+Add dimneutral20–30% backdrop over fullscreen to focus whiteforegroundmodal.
+
+Centered WHITE modal about700pxwide and500–550pxhigh,12–14px corners, subtlemodalshadow, navytext #152747, muted #70809c, primaryblue #2775ea, fine #e7edf6 controlborders. Crisp readable Chinese14–16px. Header title 新增分类 withsmalloptionalbluefoldericon, closeX upperright.
+Modalbody TWO areas: LEFT form about400pxwide, RIGHT narrow pale-blue informationblock about190–210pxwide, separated by20pxgap. This isn't an extra formsection or newfunction.
+LEFT form:
+*分类名称 EMPTY fullwidthinput placeholder请输入分类名称.
+*分类编码 EMPTY fullwidthinput placeholder请输入分类编码.
+Lowerrow 排序 numericstepper actual0,min0, minusdisabled/plusenabled; beside it 启用 blueONswitch withvisible启用text.
+Onlyname/code starred, exactlyfourfields, no examplesfilled, no counters. Labelsaboveinputs, enoughspacing.
+RIGHT plainhelperblock heading 填写说明, smallinfoiconoptional. Exactlytheseexistingfieldfacts in clear modestparagraphs:
+分类名称最多80字。
+编码为2–32位字母、数字、下划线或连字符。
+排序数字越小，显示越靠前。
+No checkmarks implyingvalidationpassed, no links/buttons, no extra suggestedvalues or workflowpromises. Helpertextwrapsreadably.
+Bottomfullwidth modalfooter withfine divider: secondary取消 and primaryblue保存 alignedright. Exactly2footeractions pluscloseX. No reset/delete/save-and-add/preview.
+Initialenabledtrue, sort0, name/codeblank, no errors/loading/success/confirmation. No parentcategory, icon/colorfield, codegenerator, validationlookup, hierarchy, permissionfields or extraactions. Mainoverviewremainsselectedoriginal underdimoverlay. Distinctform-with-guidance organization, practicaldensity, allfields/footer visible and elegant coherent librarysoftware appearance.

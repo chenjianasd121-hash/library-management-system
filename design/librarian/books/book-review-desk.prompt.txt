@@ -1,0 +1,29 @@
+Create ONE polished high-fidelity desktop web-app UI screenshot for a Chinese library system, LIBRARIAN role, 图书管理 / 书目列表 page. Single full desktop frame approximately1440×1024; show entire screen, all10 list records and pagination with no cropping. No browser chrome, no collage, no design option number. Current client date2026-10-20 Asia/Shanghai; page does not need to display dates.
+Independent layout direction “书目详情核对台”: compact library book list on the LEFT of main content, selected book's cover, metadata and inventory breakdown on the RIGHT. This is an image design, not code.
+
+Use the three references in order: administrator selected cover catalogue for palette, covers and polished software tone only; librarian selected dashboard for role identity and shell; current staff book screenshot for existing functionality only. Do not copy the administrator identity or old six-record layout. New content below overrides reference book values and states.
+
+Design system: dark navy left navigation about230px #142747–#1a3156; white topbar60px; very pale blue-gray #f3f7fc canvas, white cards12px radius, subtle borders #e7edf6 and restrained shadows; dark ink #152747, secondary #70809c, blue #2775ea primary, success teal #159f85, warning amber, red #d94b5f. High-quality clear Chinese sans-serif. Calm structured university library operations software.
+Sidebar brand 图书管理系统 / LIBRARY MANAGEMENT. Nav: 首页概览; 图书管理 expanded with 书目列表 active blue, 新增书目, 公开目录; 借阅管理 collapsed; 读者查找; 分类管理; 数据统计; 系统设置. Only 图书管理 parent and 书目列表 selected. No administrator account management or audit. Topbar global search 搜索图书、作者、分类等…; right avatar 馆 and 欢迎回来，馆员.
+
+Main header breadcrumb 馆员工作台 / 图书管理, large title 书目管理, subtitle 维护馆藏书目信息与上架状态. Top right main primary action ＋ 新增书目.
+Compact white filter strip across main content below header: empty keyword input 搜索书名、作者、ISBN; dropdown 全部分类; dropdown 全部状态; blue 筛选. No reset, export or extra filters.
+Below filters, a deliberate split workspace: LEFT white table card approximatelytwo-thirds of content width and RIGHT white detail card aboutone-third, with16–20px gutter. No giant blank areas. Left card heading 书目列表, muted 共20个书目; subtext 点击书目查看详情. Table header: 书目信息, 分类, 可借 / 总册数, 上架状态. In each row, actual illustrated small cover thumbnail, readable title and smaller author on second line. Compact rows53–56px. First Java row selected with pale blue background and narrow blue left indicator, other rows white. Clear visible hover/select affordance. Availability teal when positive and amber when0; enabled chip teal 已上架, sole disabled 围城 gray 已下架.
+EXACT ordered10 left rows:
+1 Java编程思想 / Bruce Eckel | 计算机类 | 3 / 8 | 已上架.
+2 人类简史 / 尤瓦尔·赫拉利 | 历史类 | 2 / 8 | 已上架.
+3 解忧杂货店 / 东野圭吾 | 文学类 | 0 / 8 | 已上架.
+4 数据结构与算法 / 王道论坛 | 计算机类 | 4 / 10 | 已上架.
+5 活着 / 余华 | 文学类 | 4 / 6 | 已上架.
+6 三体 / 刘慈欣 | 文学类 | 0 / 8 | 已上架.
+7 经济学原理 / 曼昆 | 经济管理 | 3 / 8 | 已上架.
+8 月亮与六便士 / 毛姆 | 文学类 | 2 / 5 | 已上架.
+9 围城 / 钱钟书 | 文学类 | 0 / 6 | 已下架.
+10 百年孤独 / 加西亚·马尔克斯 | 文学类 | 0 / 6 | 已上架.
+All10 visible, no missing records. Left footer 第1–10条，共20条; 上一页 disabled,1 active,2,下一页. Fixed10perpage, no size selector.
+
+RIGHT detail card represents SELECTED FIRST ROW, Java编程思想, NOT a different book. Heading 当前书目, subtle selected state. Beautiful original black-gold Java cover about110×155px, tree/night illustration with warm orange ground. Adjacent title Java编程思想, author Bruce Eckel, category 计算机类, teal chip 已上架. Read-only basic information section label 基本信息, ISBN 9787115546081 (all13digits exact). No publisher, location or invented fields.
+Read-only inventory section heading 副本概况, text 总册数8; show exactly THREE small aligned inventory tiles: 可借3 teal, 借出4 blue, 待取1 amber. 3+4+1=8. These are physical copy statuses of selected Java, NOT aggregate system KPIs. Brief muted note 总册数不含退役副本 if space permits. Never make0available mean disabled.
+Actions in right panel available for selected book: 编辑书目, 副本管理, 停用 red. Use two restrained outlined buttons and red text action; the page's main primary remains ＋ 新增书目. These actions are the selected-row maintenance entrances, no per-row extra columns needed. No inline stock editing, no save, no delete, no bulk selection, no confirmation modal in this initial state.
+Illustrative demo cover tones in left list: Java black-gold tree; 人类简史 cream/red texture; 解忧 blue-orange night shop; 数据 blue/white graphics; 活着 ink landscape red typography; 三体 dark orange eclipse; 经济 pale-blue geometry; 月亮 teal moon; 围城 gray-green city wall; 百年 green botanical. External titles must be readable and accurate, no gray placeholders. Covers are original mock illustrations.
+Do not add fake popularity, ratings, prices, IDs, individual copy barcodes, shelf locations, importing/exporting, decorative metrics or charts. Accurate data, elegant practical density, consistent navigation, clear selection and complete readable pagination. This should be a convincing finished web-app design screenshot.

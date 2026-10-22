@@ -1,0 +1,7 @@
+UI screenshot precise state edit. Input1 is selected librarian公告管理 main; input2 is selected new-notice modal for style. Produce ONE fixed read-only 公告预览 state, whole1487×1058, dateanchor2026-10-20 Asia/Shanghai, noaddedvisible dates.
+Preserve librarian navy sidebar/white topbar,馆identity,公告管理active, original six-draft list/tab草稿 and original publicfooter all访客. Neutral20–30% dimoverlay. A single centered white preview dialog about680pxwide, 12pxcorners andsubtleshadow, same typography/palette as selectedmodal. This preview is opened directly from the list, so NO edit dialog behind it.
+Dialogheader 公告预览 withsmallnoticeicon andcloseX upperright. Body read-onlyarticle, bold navy headline "关于图书馆开放时间调整的通知" and two plain-text paragraphs exactly:
+图书馆将调整开放时间，请读者留意现场通知。
+具体开放安排将在公告正式发布后对外展示。
+Readable16pxbody,lineheight1.8, comfortablewhite space. No inputs, requiredstars, counts, extra status/time/author, markdown-toolbar or attachments.
+OnlycloseX is anaction in this previewdialog, matching source. No footerbuttons, publish/edit/back/save/cancel, scheduleddates, inventedoperation. Let dialog fit the actualshortcontent naturally around350pxhigh rather than hugeemptyeditor. Selectedvisualsystem,#152747text,#70809cmuted,#2775eablue,#e7edf6rules. No browserchrome/collage/annotation/optionnumber.

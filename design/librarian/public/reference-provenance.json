@@ -1,0 +1,65 @@
+[
+  {
+    "page": "login",
+    "selected_variant": 1,
+    "source": "C:\\Users\\en\\.codex\\worktrees\\6241\\基于SpringBoot+vue的图书管理系统\\design\\reader\\login\\final.png",
+    "file": "public/references/reader-login.png",
+    "sha256": "0087bbbc783cb2c4e2bfaa70c28fd884fcfd99f7af22626999619e20607b0d0c",
+    "bytes": 1403636,
+    "purpose": "Selected reader reference, not a confirmed librarian final"
+  },
+  {
+    "page": "catalogue",
+    "selected_variant": 1,
+    "source": "C:\\Users\\en\\.codex\\worktrees\\6241\\基于SpringBoot+vue的图书管理系统\\design\\reader\\catalogue\\final.png",
+    "file": "public/references/reader-catalogue.png",
+    "sha256": "78e2b5f69af9b33394ea098d1acd79e0de59f2073eabc7c7775f41bcf2f03892",
+    "bytes": 1587281,
+    "purpose": "Selected reader reference, not a confirmed librarian final"
+  },
+  {
+    "page": "book-detail",
+    "selected_variant": 3,
+    "source": "C:\\Users\\en\\.codex\\worktrees\\6241\\基于SpringBoot+vue的图书管理系统\\design\\reader\\book-detail\\final.png",
+    "file": "public/references/reader-book-detail.png",
+    "sha256": "be74fafd66de47616ee64ce1929c76e0da6836b66f4a16717521e9209ddad63d",
+    "bytes": 1576111,
+    "purpose": "Selected reader reference, not a confirmed librarian final"
+  },
+  {
+    "page": "notices",
+    "selected_variant": 2,
+    "source": "C:\\Users\\en\\.codex\\worktrees\\6241\\基于SpringBoot+vue的图书管理系统\\design\\reader\\notices\\final.png",
+    "file": "public/references/reader-notices.png",
+    "sha256": "2383996e7ca4e41d6f8327e45345532f2322035cc1525470f1b35cb63ee0f1eb",
+    "bytes": 1392325,
+    "purpose": "Selected reader reference, not a confirmed librarian final"
+  },
+  {
+    "page": "notice-detail",
+    "selected_variant": 2,
+    "source": "C:\\Users\\en\\.codex\\worktrees\\6241\\基于SpringBoot+vue的图书管理系统\\design\\reader\\notice-detail\\final.png",
+    "file": "public/references/reader-notice-detail.png",
+    "sha256": "298586f44cd52bb8041c007f9fd158e49414d8b51de37f03e3d55de4aa73c81a",
+    "bytes": 1295953,
+    "purpose": "Selected reader reference, not a confirmed librarian final"
+  },
+  {
+    "page": "forbidden",
+    "selected_variant": 2,
+    "source": "C:\\Users\\en\\.codex\\worktrees\\6241\\基于SpringBoot+vue的图书管理系统\\design\\reader\\forbidden\\final.png",
+    "file": "public/references/reader-forbidden.png",
+    "sha256": "3e441b50d6b144461c5d529e0aaf9c4b650f81fbf6a6edbf8d270580a2a20e74",
+    "bytes": 1256964,
+    "purpose": "Selected reader reference, not a confirmed librarian final"
+  },
+  {
+    "page": "not-found",
+    "selected_variant": 1,
+    "source": "C:\\Users\\en\\.codex\\worktrees\\6241\\基于SpringBoot+vue的图书管理系统\\design\\reader\\not-found\\final.png",
+    "file": "public/references/reader-not-found.png",
+    "sha256": "752457589ebfa31840dd203f80ca6487db7bee6a4f2c4932783f4c99a4566d70",
+    "bytes": 1389851,
+    "purpose": "Selected reader reference, not a confirmed librarian final"
+  }
+]

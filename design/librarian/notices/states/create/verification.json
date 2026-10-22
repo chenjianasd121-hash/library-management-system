@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-20",
+  "role": "LIBRARIAN",
+  "state": "create-notice-initial",
+  "status": "selected_footer_corrected_and_saved",
+  "candidates": [
+    {
+      "display_number": 1,
+      "file": "compact-notice-dialog.png",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "b958d58f120b92ad87ce9c7c87d441864148b485ca626cb793830ba0f7ccafdc",
+      "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-0574347c-c66a-497a-8ccd-c09e6491f46f.png",
+      "identical_to_source": true,
+      "visual_check": "Empty required title and plain body, counters0/120 and0/10000, preview/cancel/save-draft/close, helper lengths. Librarian context and selected draft list retained.",
+      "known_caveat": "Dimmed background footer changed public visitors wording to readers. If selected, correct footer to all visitors before final approval; public visibility follows source, not narrower wording.",
+      "caveat_resolved_in_final": true
+    },
+    {
+      "display_number": 2,
+      "file": "guided-notice-dialog.png",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "da59287c25e304fdd9dade3b0495fd6c83543066cc75e251ee19221f44433027",
+      "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-af7c58c9-7de4-4131-a7fb-8e132db4a3e1.png",
+      "identical_to_source": true,
+      "visual_check": "Empty required title and plain body, counters0/120 and0/10000, guidance panel with accurate lengths and separate publish workflow, preview/cancel/save-draft/close. Librarian context retained, background public visibility correctly says all visitors."
+    },
+    {
+      "display_number": 3,
+      "file": "wide-notice-dialog.png",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "bb1cb78fa9c88042bf4bbc7fea7ff109992912493ace5eac2b0674805c8e3653",
+      "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-748bbc90-5ef7-447e-a19e-fd95bb9a9507.png",
+      "identical_to_source": true,
+      "visual_check": "Wide modal with left aligned label rail and large plain body. Empty required title/body, counters0/120 and0/10000, accurate helper text, preview/cancel/save-draft/close. Public visibility correctly all visitors. No errors or added business fields."
+    }
+  ],
+  "numbering_basis": "Actual three generated-image displays in this new-notice ideation set, including first image shown before interruption.",
+  "selected_display_number": 1,
+  "selected_candidate": "compact-notice-dialog.png",
+  "selection_evidence": "User explicitly selected original generated image exec-0574347c-c66a-497a-8ccd-c09e6491f46f.png. Leading slash before C: in attachment path normalized for Windows access.",
+  "final_image": {
+    "file": "final.png",
+    "corrected_file": "compact-notice-dialog-footer-corrected.png",
+    "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-9f3dd477-4c69-45e5-87d4-d816f56afc50.png",
+    "width": 1487,
+    "height": 1058,
+    "sha256": "fc61df08ac41395047a945424b143dc11b5dc548902c2c84a067ddc0e9643e5e",
+    "identical_to_source": true,
+    "visual_check": "Selected compact new-notice modal preserved with required blank title/body, counters0/120 and0/10000, preview/cancel/save-draft/close and unchanged librarian context. Background footer now correctly says all visitors."
+  }
+}

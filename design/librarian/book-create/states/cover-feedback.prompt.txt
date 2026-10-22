@@ -1,0 +1,9 @@
+Use case: ui-mockup. Create one high-fidelity component STATE SPECIFICATION BOARD for the already-selected librarian book editor. Attached screenshot is the visual reference for the cover upload component. This is not a webpage or alternative layouts.
+1600×1000 landscape, #f3f7fc canvas, heading 封面上传 · 状态规范, subheading 同一组件的三个固定状态. Three equal white panels with generous gaps, fine borders,12px corners,#152747 text,#2775ea primary.
+Each panel is a magnified crop of the SAME 封面 section: existing black/gold Java tree cover on left, 上传封面 outlined button on right, helper JPEG / PNG / WebP，最大2 MiB. Preserve original controls; no file list, drag area, crop/delete or percentage.
+Panel headings outside components: 上传中, 上传完成, 文件不支持.
+上传中: retain cover; button has small blue spinner and subdued disabled appearance, label 上传封面. No success message.
+上传完成: normal button; same cover after reuploading the same demo image. Single floating pale-green message above component, check icon, 封面上传完成.
+文件不支持: normal button and original cover. Single floating pale-red message above component, error icon, exact text 仅支持 2 MiB 以内的 JPEG、PNG 或 WebP, wrap into two lines.
+Bottom small annotation outside product components: 上传失败保留已有封面。
+Faithful crisp Chinese typography, ample whitespace. No numbered choices, browser chrome, sidebar, decorative illustration, invented actions or additional feedback.

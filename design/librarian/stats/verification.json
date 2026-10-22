@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-20",
+  "timezone": "Asia/Shanghai",
+  "role": "LIBRARIAN",
+  "status": "selected",
+  "verification": "PNG decoding and source-copy SHA-256 checked programmatically; seven metric values/units, overdue subset, active-reader definition, timestamp and30-day date window, ten exact ranked books/counts, librarian navigation and sole refresh action checked visually.",
+  "chart_limit": "Generated curves, donut slices and bar lengths are illustrative, not exact quantitative evidence. Future implementation must plot actual API data.",
+  "candidates": [
+    {
+      "display_number": 1,
+      "file": "balanced-statistics.png",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "c97deb706c10f23139c9aec58dad59154b8e9ef85156db3e9f911de4c631e19b",
+      "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-c678615e-df66-4ec4-93f3-5ddecea5f02c.png",
+      "identical_to_source": true
+    },
+    {
+      "display_number": 2,
+      "file": "trend-first-statistics.png",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "38f65efe2fe3fac7f2ea19e7c00bddef447aa1234e76b36ea7f117f2f2909a3d",
+      "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-3d966b3a-14e4-4e0f-97f8-fb89022cf1f5.png",
+      "identical_to_source": true
+    },
+    {
+      "display_number": 3,
+      "file": "side-metric-statistics.png",
+      "width": 1487,
+      "height": 1058,
+      "sha256": "1d13778726efe02bd5f5a9f8e91bff8f30b48b82e1559d42a60aa2a3116e1906",
+      "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-95444f4b-8bea-45c9-8fb5-a0779a4bc554.png",
+      "identical_to_source": true
+    }
+  ],
+  "pending_supplemental_states": [
+    "empty trend",
+    "empty popular books",
+    "loading",
+    "request failure"
+  ],
+  "selected_candidate": 2,
+  "selected_date": "2026-10-20",
+  "final_file": "final.png",
+  "final_sha256": "38f65efe2fe3fac7f2ea19e7c00bddef447aa1234e76b36ea7f117f2f2909a3d"
+}

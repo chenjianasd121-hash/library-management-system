@@ -1,0 +1,16 @@
+Use case: ui-mockup. One production-quality Chinese READER catalogue, direction 紧凑检索目录, desktop1440 x1024 landscape. Complete flat app screenshot, no browser/device chrome or option labels. Sharp readable Chinese14–16px, clear28px title, purposeful spacing, real book cover thumbnails.
+References image1 selected reader homepage establishes style/identity, image2 existing catalogue establishes supported fields/filters, image3 approved admin catalogue provides book art only. Reader-specific functionality.
+Same navy248px sidebar#142747–#1a3156, white60px topbar, pale canvas#f3f7fc, white content#ffffff, text#152747, muted#70809c, rules#e7edf6, blue#2775ea, teal#159f85, orange#d98a22.12–14px corners, very subtle shadow. One broad white results surface with light row rules, no individual book cards.
+Sidebar 图书管理系统 / LIBRARY MANAGEMENT, subtle 读者端; ONLY 首页概览, active 图书目录, 系统公告, 我的借阅, 我的预约, 个人中心. Topbar small global search, avatar 张, 欢迎回来，张三 and 读者. No visitor login or staff navigation.
+Main title 图书目录, subtitle 搜索馆藏，快速比较可借情况. White top filter row with EMPTY search 书名、作者或 ISBN, category dropdown 全部分类, UNCHECKED checkbox 仅看可借, blue primary 搜索. No sorting selector, view toggle or extra secondary actions.
+Below a white results surface header 共 6 本图书. LIST with table-like column headers 图书, 分类, 可借／总册, 预约提示, 操作. Six comfortable horizontal rows about95px high. First wide column contains real portrait55x75px cover, bold title and muted author. Category small chip, numeric count centered, teal/orange status text, blue 查看详情 → link as only row action. No checkbox, selection, row ordinal, technical ID, barcode or ISBN values. No book descriptions.
+Exact six rows:
+Java编程思想 / Bruce Eckel / 计算机类 / 3 / 8 / teal 可预约待取.
+人类简史 / 尤瓦尔·赫拉利 / 历史类 / 2 / 8 / teal 可预约待取.
+解忧杂货店 / 东野圭吾 / 文学类 / 0 / 8 / orange 预约排队.
+数据结构与算法 / 王道论坛 / 计算机类 / 2 / 8 / teal 可预约待取.
+经济学原理 / 曼昆 / 经济管理 / 0 / 8 / orange 预约排队.
+活着 / 余华 / 文学类 / 2 / 8 / teal 可预约待取.
+All six covers realistic, readable titles outside artwork, no placeholders. Economics textbook cover Chinese title accurate. Counts/states must match.
+Footer visible under all rows: 共 6 本图书 and pagination disabled previous arrow, active blue 1, disabled next arrow ONLY. Six total results fit current page size9. No page2/3, page-size control or invented extra result counts.
+Initial all categories, keyword empty, availability checkbox off. Reader clicks 查看详情 to access existing details/reservations; no direct borrowing or reservation buttons, no admin edit/stock/delete, export, favorites, ratings, recommendation algorithm, e-reader, payments, fabricated personal data or success/error alerts. Strong aligned columns and realistic whitespace; all six rows, header and footer fit with comfortable bottom margin. Current anchor2026-10-09 Asia/Shanghai; no date needed. Render one cohesive complete independent screen.

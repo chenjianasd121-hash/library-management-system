@@ -1,0 +1,13 @@
+Use case ui-mockup. ONE realistic Chinese logged-in READER 图书目录 screen, 1440x1024 desktop, complete flat app without browser/device, comparison board or option number. Direction 紧凑检索目录. Reference1 selected reader homepage: match navy sidebar, white topbar, pale blue-gray canvas, blue buttons, Chinese type and book covers. Reference2 old catalogue: match supported filters.
+Sidebar248px: 图书管理系统 / LIBRARY MANAGEMENT, 读者端; 首页概览, ACTIVE 图书目录, 系统公告, 我的借阅, 我的预约, 个人中心. Topbar60px: global search and 欢迎回来，张三 / 读者. Colors navy#142747, base#f3f7fc, blue#2775ea, ink#152747, muted#70809c, green#159f85, orange#d98a22. Body14–16px, title28px, corners12px, subtle rules.
+Page heading 图书目录, subtitle 搜索馆藏，快速比较可借情况. White filter row: EMPTY 书名、作者或 ISBN input, 全部分类 dropdown, UNCHECKED 仅看可借, blue 搜索.
+Main content ONE broad white TABLE/LIST with SIX horizontal rows, NOT book cards or grid. Column headers 图书 | 分类 | 可借／总册 | 预约提示 | 操作. Each row95px, first column real55x75px cover thumbnail plus title/author, thin dividers.
+Rows exactly:
+Java编程思想 / Bruce Eckel | 计算机类 | 3 / 8 | 可预约待取 | 查看详情 →
+人类简史 / 尤瓦尔·赫拉利 | 历史类 | 2 / 8 | 可预约待取 | 查看详情 →
+解忧杂货店 / 东野圭吾 | 文学类 | 0 / 8 | 预约排队 | 查看详情 →
+数据结构与算法 / 王道论坛 | 计算机类 | 2 / 8 | 可预约待取 | 查看详情 →
+经济学原理 / 曼昆 | 经济管理 | 0 / 8 | 预约排队 | 查看详情 →
+活着 / 余华 | 文学类 | 2 / 8 | 可预约待取 | 查看详情 →
+Reservation hints green except both 预约排队 orange. Realistic cover artwork, legible titles outside covers. No ISBN values or descriptions.
+Footer 共 6 本图书, disabled previous, blue1, disabled next ONLY. Six total results fit existing page size9. All rows, footer and search visible uncut with bottom margin. Only supported search/category/availability and detail links. NO direct borrow/reserve, sorting, view toggles, favorites, ratings, export, admin edits, counts unrelated to these books, payment, e-reader or alerts. Anchor2026-10-09 Asia/Shanghai, no date visible. Render one clean complete independent screenshot.

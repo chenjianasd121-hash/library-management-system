@@ -1,0 +1,78 @@
+{
+  "status": "selected-verified",
+  "images": [
+    {
+      "file": "top-label-notice-edit.png",
+      "original": "C:\\Users\\en\\.codex\\generated_images\\01a15cec-dde6-7cd3-ba15-cf6f6e020cba\\exec-a1a4ab9d-530c-46cd-ab16-224e8e274fc7.png",
+      "sha256": "00109d02292eb0dbc562aa6022c34983722444d91d3b55f01630af834305b026",
+      "matchesOriginal": true,
+      "dimensions": [
+        1484,
+        1060
+      ],
+      "mode": "RGB",
+      "visualReview": {
+        "dialogTitleCorrect": true,
+        "twoRequiredFields": true,
+        "exactTitleAndContent": true,
+        "correctCharacterCounters": true,
+        "plainTextarea": true,
+        "previewCancelSaveDraftOnly": true,
+        "adminNoticeBackground": true,
+        "noErrorsOrLoading": true,
+        "readableAndUnclipped": true
+      },
+      "notes": "顶部标签、全文与计数准确，预览左置，取消和保存草稿右置。"
+    },
+    {
+      "file": "left-label-notice-edit.png",
+      "original": "C:\\Users\\en\\.codex\\generated_images\\01a15cec-dde6-7cd3-ba15-cf6f6e020cba\\exec-9fe0d034-18c2-4712-8fbc-fe578e837e00.png",
+      "sha256": "28bf43f9a2f6f6439e44ee6e06973e1cbfefe3f926bffadf018c529dd19b0fd9",
+      "matchesOriginal": true,
+      "dimensions": [
+        1484,
+        1060
+      ],
+      "mode": "RGB",
+      "visualReview": {
+        "dialogTitleCorrect": true,
+        "twoRequiredFields": true,
+        "exactTitleAndContent": true,
+        "correctCharacterCounters": true,
+        "plainTextarea": true,
+        "previewCancelSaveDraftOnly": true,
+        "adminNoticeBackground": true,
+        "noErrorsOrLoading": true,
+        "readableAndUnclipped": true
+      },
+      "notes": "左侧标签与控件横向对齐，标题与完整正文准确，计数及全部按钮清晰。"
+    },
+    {
+      "file": "wide-writing-notice-edit.png",
+      "original": "C:\\Users\\en\\.codex\\generated_images\\01a15cec-dde6-7cd3-ba15-cf6f6e020cba\\exec-a49d1925-703b-40b3-9d6f-65afecd7bcc1.png",
+      "sha256": "a6c03fdde9c2cea7927bb63f8dc474038826948bfa4b6dc8f6edba28e7ad5c6a",
+      "matchesOriginal": true,
+      "dimensions": [
+        1484,
+        1060
+      ],
+      "mode": "RGB",
+      "visualReview": {
+        "dialogTitleCorrect": true,
+        "twoRequiredFields": true,
+        "exactTitleAndContent": true,
+        "correctCharacterCounters": true,
+        "plainTextarea": true,
+        "previewCancelSaveDraftOnly": true,
+        "adminNoticeBackground": true,
+        "noErrorsOrLoading": true,
+        "readableAndUnclipped": true
+      },
+      "notes": "宽幅写作区、完整正文、精确计数和全部操作均清晰；预览左置，取消与保存草稿右置。"
+    }
+  ],
+  "applicationCodeChanged": false,
+  "selection": 1,
+  "finalMatchesSelected": true,
+  "finalSha256": "00109d02292eb0dbc562aa6022c34983722444d91d3b55f01630af834305b026"
+}

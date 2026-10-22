@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-20",
+  "role": "LIBRARIAN",
+  "state": "edit-category-initial",
+  "file": "edit-category.png",
+  "source": "C:\\Users\\en\\.codex\\generated_images\\01a11ef2-6176-7dc0-8ad3-3bc134cf3f21\\exec-dc8a7f9a-5c03-458a-8e93-55f38630d23e.png",
+  "width": 1487,
+  "height": 1058,
+  "sha256": "ee898fae7bd0e01f677a3d027ca4e8286bc97674c229ac20c7bbd27d3d7f3aa3",
+  "identical_to_source": true,
+  "visual_check": "Preserves selected create dialog layout. Title edit category, name 计算机类, code CS, sort 1, enabled ON. Required name/code, guidance, cancel/save/close present. No error or success state. Existing main remains enabled5/disabled1.",
+  "remaining": [
+    "disable-confirmation",
+    "required-validation",
+    "saving",
+    "save-success",
+    "save-failure"
+  ]
+}
