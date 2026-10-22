@@ -1,6 +1,8 @@
 # 图书管理系统
 
-Git 已建立本地版本管理，保存版本和撤回修改的方法见 [Git 保存与回退指南](./GIT_GUIDE.md)。初始代码恢复点为 `project-baseline`。
+公开仓库：[chenjianasd121-hash/library-management-system](https://github.com/chenjianasd121-hash/library-management-system)。保存版本和撤回修改的方法见 [Git 保存与回退指南](./GIT_GUIDE.md)。初始代码恢复点为 `project-baseline`。
+
+仓库包含前后端源码、三端设计稿、页面素材和测试脚本。本机密码、数据库、上传的封面、依赖及构建输出不进入版本库；克隆到新电脑后按下文配置并启动，原本机测试账号和运行数据不会随代码复制。
 
 Vue 3 前端位于 [`frontend`](./frontend)，Java 17 / Spring Boot 3.5.16 / MyBatis 3.0.5 后端位于 [`backend`](./backend)。所有业务数据保存到 MySQL 8.x；Flyway 管理结构，服务端 Session 与 CSRF 保护写请求。接口统一使用 `/api/v1`，详见 [`API_CONTRACT.md`](./API_CONTRACT.md) 和 [`后端开发规范.md`](./后端开发规范.md)。
 

@@ -86,5 +86,5 @@ PowerShell 中要给 `stash@{0}` 加单引号。根据列表选取需要的编�
 - 记录前后端源代码、依赖锁文件、数据库迁移 SQL、启动脚本、测试脚本、必要的图片素材和项目说明。
 - 忽略本机密码文件 `backend/.env`、依赖目录、编译产物、运行日志、生成的截图报告及 `output/`。三个前端 `.env` 入口文件仅包含公开的入口名称，已纳入版本管理。
 - MySQL 数据库内容、Docker 数据卷和 `backend/data/` 中上传的封面不会随 Git 回退。涉及数据修改或数据库迁移时，需要另行备份数据库及封面。
-- 仓库目前只在本机，没有连接远程仓库。代码与历史都保存在项目目录中；备份目录时应包含隐藏的 `.git`。迁移机器时还要单独带上需要的本机配置和运行数据。
+- 远程公开仓库为 [chenjianasd121-hash/library-management-system](https://github.com/chenjianasd121-hash/library-management-system)，本地远程名称为 `origin`，主分支为 `main`。完成本地提交后执行 `git push` 上传；初始恢复标签 `project-baseline` 也保存在远程。备份项目目录时应包含隐藏的 `.git`，迁移机器时还要单独带上需要的本机配置和运行数据。
 - 未配置提交身份时，本仓库使用本地身份 `en <en@localhost>`。可用 `git config --local user.name "你的名字"` 和 `git config --local user.email "你的邮箱"` 更新，仅影响本项目。
